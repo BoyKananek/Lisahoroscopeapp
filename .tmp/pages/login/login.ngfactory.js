@@ -239,7 +239,7 @@ var _View_LoginPage0 = (function (_super) {
         this._el_55 = this.renderer.createElement(this._el_53, 'button', null);
         this.renderer.setElementAttribute(this._el_55, 'clear', '');
         this.renderer.setElementAttribute(this._el_55, 'ion-button', '');
-        this.renderer.setElementAttribute(this._el_55, 'style', 'color:#fa8cb4;font-weight: bold;');
+        this.renderer.setElementAttribute(this._el_55, 'style', 'color:#fa8cb4;font-weight: bold;left:50%;-webkit-transform:translateX(-50%);transform: translateX(-50%);');
         this._appEl_55 = new import3.AppElement(55, 53, this, this._el_55);
         var compView_55 = import17.viewFactory_Button0(this.viewUtils, this.injector(55), this._appEl_55);
         this._Button_55_4 = new import17.Wrapper_Button(null, '', this.parentInjector.get(import18.Config), new import19.ElementRef(this._el_55), this.renderer);
