@@ -1,30 +1,34 @@
-<ion-header>
-  <!--<ion-navbar>
-    <ion-title>
-     Lisa Horoscope
-    </ion-title>
-  </ion-navbar> -->
-</ion-header>
 
 <ion-content padding>
-  <img src="assets/img/logo.png" class="img-circle"  width="304" height="236">
-  <ion-card>
-  <ion-card-header>
-   <h4 style="text-align: center;"> Lisa Horoscope </h4>
-  </ion-card-header>
-  <ion-card-content>
-
-    <ion-item>
-      <ion-input placeholder="Email Address" type="email" ></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input placeholder="Password" type="password" ></ion-input>
-    </ion-item>
-    <br>
-    <button ion-button block>Login</button>
-    <button ion-button block  style="background-color:#3b5998;"><i class="fa fa-facebook" aria-hidden="true">&nbsp;</i> Log in with Facebook</button>
-    <button ion-button clear  > Sign up </button><button ion-button clear  >Forgot password</button>
-  </ion-card-content>
-  </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col><div><br></div></ion-col>
+        </ion-row>
+    </ion-grid>
+    <img src="assets/img/logo.png" style="display:block;margin: auto;">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div>
+                    <br>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <img src="assets/img/facebook.png" style="display:block;margin: auto;">
+    <h3 style="text-align: center; color:#c8c8c8"> OR </h3>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input placeholder="Email Address" type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Password" type="password"></ion-input>
+            </ion-item>
+            </ion-card-content>
+    </ion-card>
+    <button ion-button block style="color:#ffffff;background-color:#f85394;font-weight: bold;">Login</button>
+    <div style="align-items: center;">
+        <button ion-button clear style="color:#fa8cb4;font-weight: bold;left:50%;-webkit-transform:translateX(-50%);transform: translateX(-50%);" >Forgot Password?</button>
+    </div>
 </ion-content>
