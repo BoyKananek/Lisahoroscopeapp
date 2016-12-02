@@ -15,6 +15,5 @@ export class ProfilePage {
   }
   logout(){
     console.log(this.navCtrl.length);
-    this.navCtrl.pop();
   }
 }
