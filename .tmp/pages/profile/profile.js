@@ -4,11 +4,10 @@ export var ProfilePage = (function () {
     function ProfilePage(navCtrl, params) {
         this.navCtrl = navCtrl;
         this.data = params.data;
-        console.log("profile:::" + JSON.parse(this.data));
+        console.log("profile:::" + JSON.stringify(this.data));
     }
     ProfilePage.prototype.logout = function () {
         console.log(this.navCtrl.length);
-        this.navCtrl.pop();
     };
     ProfilePage.decorators = [
         { type: Component, args: [{

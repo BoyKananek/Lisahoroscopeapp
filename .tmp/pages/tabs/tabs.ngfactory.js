@@ -91,7 +91,7 @@ var _View_TabsPage0 = (function (_super) {
     _View_TabsPage0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-tabs', null);
-        this.renderer.setElementAttribute(this._el_0, 'selectedIndex', '1');
+        this.renderer.setElementAttribute(this._el_0, 'selectedIndex', '0');
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = import12.viewFactory_Tabs0(this.viewUtils, this.injector(0), this._appEl_0);
         this._Tabs_0_4 = new import12.Wrapper_Tabs(this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import14.ViewController, null), this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_0), this.parentInjector.get(import18.Platform), this.renderer, this.parentInjector.get(import19.DeepLinker));
@@ -193,7 +193,7 @@ var _View_TabsPage0 = (function (_super) {
         return notFoundResult;
     };
     _View_TabsPage0.prototype.detectChangesInternal = function (throwOnChange) {
-        var currVal_0 = '1';
+        var currVal_0 = '0';
         this._Tabs_0_4.check_selectedIndex(currVal_0, throwOnChange, false);
         this._Tabs_0_4.detectChangesInternal(this, this._el_0, throwOnChange);
         var currVal_1 = this.context.tab1Root;

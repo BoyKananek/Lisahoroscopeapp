@@ -11,10 +11,9 @@ export class ProfilePage {
   birthdate : any;
   constructor(public navCtrl: NavController, params: NavParams) {
     this.data = params.data;
-    console.log("profile:::"+JSON.parse(this.data));
+    console.log("profile:::"+JSON.stringify(this.data));
   }
   logout(){
     console.log(this.navCtrl.length);
-    this.navCtrl.pop();
   }
 }
