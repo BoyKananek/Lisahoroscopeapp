@@ -12,6 +12,8 @@ export var TabsPage = (function () {
         this.tab3Root = ContactPage;
         this.tab4Root = ProfilePage;
     }
+    TabsPage.prototype.logout = function () {
+    };
     TabsPage.decorators = [
         { type: Component, args: [{
                     templateUrl: 'tabs.html'

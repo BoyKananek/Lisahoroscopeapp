@@ -18,4 +18,7 @@ export class TabsPage {
   constructor() {
 
   }
+  logout(){
+    
+  }
 }

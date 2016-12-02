@@ -153,6 +153,7 @@ var _View_TabsPage0 = (function (_super) {
         this._expr_9 = import7.UNINITIALIZED;
         this._expr_13 = import7.UNINITIALIZED;
         this._expr_14 = import7.UNINITIALIZED;
+        var disposable_0 = this.renderer.listen(this._el_8, 'click', this.eventHandler(this._handle_click_8_0.bind(this)));
         this._expr_18 = import7.UNINITIALIZED;
         this._expr_19 = import7.UNINITIALIZED;
         this.init([], [
@@ -167,7 +168,7 @@ var _View_TabsPage0 = (function (_super) {
             this._el_8,
             this._text_9,
             this._text_10
-        ], [], []);
+        ], [disposable_0], []);
         return null;
     };
     _View_TabsPage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
@@ -211,8 +212,6 @@ var _View_TabsPage0 = (function (_super) {
         var currVal_12 = 'share-alt';
         this._Tab_6_4.check_tabIcon(currVal_12, throwOnChange, false);
         this._Tab_6_4.detectChangesInternal(this, this._el_6, throwOnChange);
-        var currVal_15 = this.context.tab4Root;
-        this._Tab_8_4.check_root(currVal_15, throwOnChange, false);
         var currVal_16 = 'PROFILE';
         this._Tab_8_4.check_tabTitle(currVal_16, throwOnChange, false);
         var currVal_17 = 'contact';
@@ -268,6 +267,11 @@ var _View_TabsPage0 = (function (_super) {
     };
     _View_TabsPage0.prototype.destroyInternal = function () {
         this._Tabs_0_4.context.ngOnDestroy();
+    };
+    _View_TabsPage0.prototype._handle_click_8_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.logout() !== false);
+        return (true && pd_0);
     };
     return _View_TabsPage0;
 }(import1.AppView));

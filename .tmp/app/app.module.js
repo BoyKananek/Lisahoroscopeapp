@@ -5,6 +5,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 export var AppModule = (function () {
@@ -20,6 +21,7 @@ export var AppModule = (function () {
                         HomePage,
                         TabsPage,
                         LoginPage,
+                        SignupPage,
                     ],
                     imports: [
                         IonicModule.forRoot(MyApp)
@@ -32,7 +34,8 @@ export var AppModule = (function () {
                         ProfilePage,
                         HomePage,
                         TabsPage,
-                        LoginPage
+                        LoginPage,
+                        SignupPage,
                     ],
                     providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
                 },] },

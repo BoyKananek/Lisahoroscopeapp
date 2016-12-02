@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>SIGN UP</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <br>
+    <h2 style="color:#9b9b9b;text-align: center;font-weight: bold;">Please fill up details below</h2>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input placeholder="Name" type="text" [(ngModel)]="name"></ion-input>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input placeholder="Email Address" type="email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input placeholder="Re-password" type="password" [(ngModel)]="repassword"></ion-input>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <br>
+    <button ion-button block style="color:#ffffff;background-color:#f85394;font-weight: bold;" [disabled]="disableSubmit" (click)="signUpEmail()">Sign up</button>
+</ion-content>

@@ -178,6 +178,7 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
     this._expr_9 = import7.UNINITIALIZED;
     this._expr_13 = import7.UNINITIALIZED;
     this._expr_14 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_8,'click',this.eventHandler(this._handle_click_8_0.bind(this)));
     this._expr_18 = import7.UNINITIALIZED;
     this._expr_19 = import7.UNINITIALIZED;
     this.init(([] as any[]),[
@@ -193,7 +194,7 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
       this._text_9,
       this._text_10
     ]
-    ,([] as any[]),([] as any[]));
+    ,[disposable_0],([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
@@ -227,8 +228,6 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
     const currVal_12:any = 'share-alt';
     this._Tab_6_4.check_tabIcon(currVal_12,throwOnChange,false);
     this._Tab_6_4.detectChangesInternal(this,this._el_6,throwOnChange);
-    const currVal_15:any = this.context.tab4Root;
-    this._Tab_8_4.check_root(currVal_15,throwOnChange,false);
     const currVal_16:any = 'PROFILE';
     this._Tab_8_4.check_tabTitle(currVal_16,throwOnChange,false);
     const currVal_17:any = 'contact';
@@ -280,6 +279,11 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
   }
   destroyInternal():void {
     this._Tabs_0_4.context.ngOnDestroy();
+  }
+  private _handle_click_8_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.logout()) !== false);
+    return (true && pd_0);
   }
 }
 export function viewFactory_TabsPage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.TabsPage> {
