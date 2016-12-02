@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 export var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        console.log("Home");
     }
     HomePage.decorators = [
         { type: Component, args: [{

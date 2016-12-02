@@ -3,6 +3,7 @@ import { Facebook } from 'ionic-native';
 import { NavController, AlertController, Events, LoadingController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
+import { ProfilePage } from '../profile/profile';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -116,7 +117,12 @@ export var LoginPage = (function () {
             console.log('getting info');
             console.log(data.birthdate);
             _this.birthdate = data.birthdate;
-            _this.navCtrl.push(TabsPage, { user: _this.data, date: _this.birthdate });
+            if (_this.birthdate == null) {
+                _this.navCtrl.push(ProfilePage, { user: _this.data, date: _this.birthdate });
+            }
+            else {
+                _this.navCtrl.push(TabsPage, { user: _this.data, date: _this.birthdate });
+            }
         }, function (error) {
             console.log(error);
         });
@@ -131,7 +137,6 @@ export var LoginPage = (function () {
     LoginPage.prototype.loginEmail = function () {
         var _this = this;
         this.disableSubmit = true;
-        console.log(this.navCtrl.length());
         var data = {
             email: this.email,
             password: this.password
@@ -193,22 +198,21 @@ export var LoginPage = (function () {
         var events = this.events;
         facebookConnectPlugin.login(['public_profile', 'email'], function (response) {
             console.log("Starting login with FBBBBB!");
-            facebookConnectPlugin.api("me/?fields=id,email,name", ["email"], function (result) {
+            facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"], function (result) {
                 var id = result["id"];
                 var token = result["token"];
                 var email = result["email"];
                 var name = result["name"];
+                var picture = result["picture"];
                 var dataObj = {
                     id: id,
                     token: token,
                     email: email,
                     name: name,
+                    picture: picture
                 };
-                //events.publish('logined',dataObj);//trigger the event to start
                 http.post("https://lisahoroscope.herokuapp.com/api/users", dataObj)
                     .subscribe(function (data) {
-                    //this.data = data.json();
-                    //console.log("FBBBBBBBBB" + JSON.stringify(data));
                     events.publish('logined', dataObj); //trigger the event to start
                     console.log("Successful");
                 }, function (error) {

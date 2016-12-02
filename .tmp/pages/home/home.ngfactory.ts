@@ -100,16 +100,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
   _el_11:any;
   _text_12:any;
   _text_13:any;
-  _el_14:any;
-  _text_15:any;
-  _text_16:any;
-  _el_17:any;
-  _text_18:any;
-  _el_19:any;
-  _text_20:any;
-  _text_21:any;
-  _text_22:any;
-  _text_23:any;
+  _text_14:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
@@ -159,32 +150,19 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     this._text_10 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'h2',(null as any));
     this._text_12 = this.renderer.createText(this._el_11,'Welcome to Ionic!',(null as any));
-    this._text_13 = this.renderer.createText((null as any),'\n  ',(null as any));
-    this._el_14 = this.renderer.createElement((null as any),'p',(null as any));
-    this._text_15 = this.renderer.createText(this._el_14,'\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  ',(null as any));
-    this._text_16 = this.renderer.createText((null as any),'\n  ',(null as any));
-    this._el_17 = this.renderer.createElement((null as any),'p',(null as any));
-    this._text_18 = this.renderer.createText(this._el_17,'\n    Take a look at the ',(null as any));
-    this._el_19 = this.renderer.createElement(this._el_17,'code',(null as any));
-    this._text_20 = this.renderer.createText(this._el_19,'src/pages/',(null as any));
-    this._text_21 = this.renderer.createText(this._el_17,' directory to add or change tabs,\n    update any existing page or create new pages.\n  ',(null as any));
-    this._text_22 = this.renderer.createText((null as any),'\n',(null as any));
+    this._text_13 = this.renderer.createText((null as any),'\n',(null as any));
     compView_9.create(this._Content_9_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
         this._text_10,
         this._el_11,
-        this._text_13,
-        this._el_14,
-        this._text_16,
-        this._el_17,
-        this._text_22
+        this._text_13
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_23 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_14 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
@@ -203,16 +181,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
       this._el_11,
       this._text_12,
       this._text_13,
-      this._el_14,
-      this._text_15,
-      this._text_16,
-      this._el_17,
-      this._text_18,
-      this._el_19,
-      this._text_20,
-      this._text_21,
-      this._text_22,
-      this._text_23
+      this._text_14
     ]
     ,([] as any[]),([] as any[]));
     return (null as any);
@@ -221,7 +190,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     if (((token === import23.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
     if (((token === import24.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
     if (((token === import19.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import25.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Content_9_4.context; }
+    if (((token === import25.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 13)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

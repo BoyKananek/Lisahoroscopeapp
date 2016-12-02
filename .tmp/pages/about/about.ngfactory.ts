@@ -90,14 +90,19 @@ class _View_AboutPage0 extends import1.AppView<import0.AboutPage> {
   /*private*/ _appEl_4:import3.AppElement;
   _ToolbarTitle_4_4:import13.Wrapper_ToolbarTitle;
   _text_5:any;
-  _text_6:any;
+  _el_6:any;
   _text_7:any;
-  _text_8:any;
-  _el_9:any;
-  /*private*/ _appEl_9:import3.AppElement;
-  _Content_9_4:import14.Wrapper_Content;
+  _el_8:any;
+  _text_9:any;
   _text_10:any;
   _text_11:any;
+  _text_12:any;
+  _text_13:any;
+  _el_14:any;
+  /*private*/ _appEl_14:import3.AppElement;
+  _Content_14_4:import14.Wrapper_Content;
+  _text_15:any;
+  _text_16:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
@@ -121,9 +126,21 @@ class _View_AboutPage0 extends import1.AppView<import0.AboutPage> {
     var compView_4:any = import13.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
     this._ToolbarTitle_4_4 = new import13.Wrapper_ToolbarTitle(this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import19.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'\n      About\n    ',(null as any));
-    compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
-    this._text_6 = this.renderer.createText((null as any),'\n  ',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'\n      ',(null as any));
+    this._el_6 = this.renderer.createElement((null as any),'h4',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'style','color:#fa8cb4;font-weight: bold');
+    this._text_7 = this.renderer.createText(this._el_6,'HOROSCOPE',(null as any));
+    this._el_8 = this.renderer.createElement((null as any),'h4',(null as any));
+    this._text_9 = this.renderer.createText(this._el_8,' APP',(null as any));
+    this._text_10 = this.renderer.createText((null as any),'\n    ',(null as any));
+      compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([
+        this._text_5,
+        this._el_6,
+        this._el_8,
+        this._text_10
+      ]
+    )],(null as any));
+    this._text_11 = this.renderer.createText((null as any),'\n  ',(null as any));
     compView_2.create(this._Navbar_2_4.context,[
       ([] as any[]),
       ([] as any[]),
@@ -131,27 +148,27 @@ class _View_AboutPage0 extends import1.AppView<import0.AboutPage> {
       ([] as any[]).concat([
         this._text_3,
         this._el_4,
-        this._text_6
+        this._text_11
       ]
       )
     ]
     ,(null as any));
-    this._text_7 = this.renderer.createText(this._el_0,'\n',(null as any));
-    this._text_8 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
-    this._el_9 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
-    this.renderer.setElementAttribute(this._el_9,'padding','');
-    this._appEl_9 = new import3.AppElement(9,(null as any),this,this._el_9);
-    var compView_9:any = import14.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._Content_9_4 = new import14.Wrapper_Content(this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import18.App),this.parentInjector.get(import20.Keyboard),this.parentInjector.get(import21.NgZone),this.parentInjector.get(import17.ViewController,(null as any)),this.parentInjector.get(import22.Tabs,(null as any)));
-    this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
-    this._text_10 = this.renderer.createText((null as any),'\n\n',(null as any));
-    compView_9.create(this._Content_9_4.context,[
+    this._text_12 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this._text_13 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
+    this._el_14 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
+    this.renderer.setElementAttribute(this._el_14,'padding','');
+    this._appEl_14 = new import3.AppElement(14,(null as any),this,this._el_14);
+    var compView_14:any = import14.viewFactory_Content0(this.viewUtils,this.injector(14),this._appEl_14);
+    this._Content_14_4 = new import14.Wrapper_Content(this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_14),this.renderer,this.parentInjector.get(import18.App),this.parentInjector.get(import20.Keyboard),this.parentInjector.get(import21.NgZone),this.parentInjector.get(import17.ViewController,(null as any)),this.parentInjector.get(import22.Tabs,(null as any)));
+    this._appEl_14.initComponent(this._Content_14_4.context,([] as any[]),compView_14);
+    this._text_15 = this.renderer.createText((null as any),'\n\n',(null as any));
+    compView_14.create(this._Content_14_4.context,[
       ([] as any[]),
-      ([] as any[]).concat([this._text_10]),
+      ([] as any[]).concat([this._text_15]),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_11 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_16 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
@@ -162,28 +179,33 @@ class _View_AboutPage0 extends import1.AppView<import0.AboutPage> {
       this._text_3,
       this._el_4,
       this._text_5,
-      this._text_6,
+      this._el_6,
       this._text_7,
-      this._text_8,
-      this._el_9,
+      this._el_8,
+      this._text_9,
       this._text_10,
-      this._text_11
+      this._text_11,
+      this._text_12,
+      this._text_13,
+      this._el_14,
+      this._text_15,
+      this._text_16
     ]
     ,([] as any[]),([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import23.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
-    if (((token === import24.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
-    if (((token === import19.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import25.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Content_9_4.context; }
+    if (((token === import23.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._ToolbarTitle_4_4.context; }
+    if (((token === import24.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 11)))) { return this._Navbar_2_4.context; }
+    if (((token === import19.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 12)))) { return this._Header_0_3.context; }
+    if (((token === import25.Content) && ((14 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._Content_14_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this._Header_0_3.detectChangesInternal(this,this._el_0,throwOnChange);
     this._Navbar_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     if (this._ToolbarTitle_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
-    if (this._Content_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
+    if (this._Content_14_4.detectChangesInternal(this,this._el_14,throwOnChange)) { this._appEl_14.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = this._Navbar_2_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
@@ -195,16 +217,16 @@ class _View_AboutPage0 extends import1.AppView<import0.AboutPage> {
       this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_1);
       this._expr_1 = currVal_1;
     }
-    const currVal_2:any = this._Content_9_4.context._sbPadding;
+    const currVal_2:any = this._Content_14_4.context._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_2);
+      this.renderer.setElementClass(this._el_14,'statusbar-padding',currVal_2);
       this._expr_2 = currVal_2;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }
   }
   destroyInternal():void {
-    this._Content_9_4.context.ngOnDestroy();
+    this._Content_14_4.context.ngOnDestroy();
   }
 }
 export function viewFactory_AboutPage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.AboutPage> {

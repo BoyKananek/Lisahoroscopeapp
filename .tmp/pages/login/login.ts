@@ -3,6 +3,7 @@ import { Facebook } from 'ionic-native';
 import { NavController,AlertController,Events,LoadingController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
+import { ProfilePage } from '../profile/profile';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
@@ -120,7 +121,12 @@ export class LoginPage {
           console.log('getting info');
           console.log(data.birthdate);
           this.birthdate = data.birthdate;
-          this.navCtrl.push(TabsPage,{user : this.data,date: this.birthdate});
+          if(this.birthdate == null){
+            this.navCtrl.push(ProfilePage, {user : this.data, date: this.birthdate});
+          }
+          else{ 
+            this.navCtrl.push(TabsPage,{user : this.data,date: this.birthdate});
+          }
       }, error => {
           console.log(error);
       })
@@ -135,7 +141,6 @@ export class LoginPage {
   }
   loginEmail(){
     this.disableSubmit = true;
-    console.log(this.navCtrl.length());
     var data = {
       email : this.email,
       password : this.password
@@ -197,23 +202,22 @@ export class LoginPage {
         var events = this.events;
         facebookConnectPlugin.login(['public_profile', 'email'], function(response) {
           console.log("Starting login with FBBBBB!")
-            facebookConnectPlugin.api("me/?fields=id,email,name",["email"],
+            facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)",["email"],
             function(result){ // Access api successful
               var id = result["id"];
               var token = result["token"];
               var email = result["email"];
               var name = result["name"];
+              var picture = result["picture"];
               var dataObj:any = {
                 id :  id,
                 token: token,
                 email : email,
                 name : name,
+                picture : picture
               };
-              //events.publish('logined',dataObj);//trigger the event to start
               http.post("https://lisahoroscope.herokuapp.com/api/users",dataObj)
               .subscribe(data =>{
-                //this.data = data.json();
-                //console.log("FBBBBBBBBB" + JSON.stringify(data));
                 events.publish('logined',dataObj);//trigger the event to start
                 console.log("Successful");
 

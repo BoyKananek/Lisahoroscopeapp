@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 export var ProfilePage = (function () {
-    function ProfilePage(navCtrl) {
+    function ProfilePage(navCtrl, params) {
         this.navCtrl = navCtrl;
+        this.data = params.data;
+        console.log("profile:::" + JSON.parse(this.data));
     }
+    ProfilePage.prototype.logout = function () {
+        console.log(this.navCtrl.length);
+        this.navCtrl.pop();
+    };
     ProfilePage.decorators = [
         { type: Component, args: [{
                     selector: 'page-profile',
@@ -13,6 +19,7 @@ export var ProfilePage = (function () {
     /** @nocollapse */
     ProfilePage.ctorParameters = [
         { type: NavController, },
+        { type: NavParams, },
     ];
     return ProfilePage;
 }());
