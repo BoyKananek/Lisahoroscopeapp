@@ -105,14 +105,13 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
   _map_0:any;
   /*private*/ _expr_4:any;
   /*private*/ _expr_5:any;
-  _map_1:any;
+  /*private*/ _expr_9:any;
   /*private*/ _expr_10:any;
-  /*private*/ _expr_11:any;
+  /*private*/ _expr_14:any;
   /*private*/ _expr_15:any;
-  /*private*/ _expr_16:any;
-  _map_2:any;
+  _map_1:any;
+  /*private*/ _expr_20:any;
   /*private*/ _expr_21:any;
-  /*private*/ _expr_22:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_TabsPage0,renderType_TabsPage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -186,6 +185,12 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
     });
     this._expr_4 = import7.UNINITIALIZED;
     this._expr_5 = import7.UNINITIALIZED;
+    this._expr_9 = import7.UNINITIALIZED;
+    this._expr_10 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_6,'ionSelect',this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
+    this._expr_14 = import7.UNINITIALIZED;
+    this._expr_15 = import7.UNINITIALIZED;
+    const subscription_0:any = this._Tab_6_4.context.ionSelect.subscribe(this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
     this._map_1 = import4.pureProxy2((p0:any,p1:any):{[key: string]:any} => {
       return {
         data: p0,
@@ -193,21 +198,8 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
       }
       ;
     });
-    this._expr_10 = import7.UNINITIALIZED;
-    this._expr_11 = import7.UNINITIALIZED;
-    var disposable_0:Function = this.renderer.listen(this._el_6,'ionSelect',this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
-    this._expr_15 = import7.UNINITIALIZED;
-    this._expr_16 = import7.UNINITIALIZED;
-    const subscription_0:any = this._Tab_6_4.context.ionSelect.subscribe(this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
-    this._map_2 = import4.pureProxy2((p0:any,p1:any):{[key: string]:any} => {
-      return {
-        data: p0,
-        date: p1
-      }
-      ;
-    });
+    this._expr_20 = import7.UNINITIALIZED;
     this._expr_21 = import7.UNINITIALIZED;
-    this._expr_22 = import7.UNINITIALIZED;
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -245,26 +237,24 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
     this._Tab_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     const currVal_6:any = this.context.tab2Root;
     this._Tab_4_4.check_root(currVal_6,throwOnChange,false);
-    const currVal_7:any = this._map_1(this.context.data,this.context.date);
-    this._Tab_4_4.check_rootParams(currVal_7,throwOnChange,false);
-    const currVal_8:any = 'BROWSE';
-    this._Tab_4_4.check_tabTitle(currVal_8,throwOnChange,false);
-    const currVal_9:any = 'apps';
-    this._Tab_4_4.check_tabIcon(currVal_9,throwOnChange,false);
+    const currVal_7:any = 'BROWSE';
+    this._Tab_4_4.check_tabTitle(currVal_7,throwOnChange,false);
+    const currVal_8:any = 'apps';
+    this._Tab_4_4.check_tabIcon(currVal_8,throwOnChange,false);
     this._Tab_4_4.detectChangesInternal(this,this._el_4,throwOnChange);
-    const currVal_13:any = 'SHARE';
-    this._Tab_6_4.check_tabTitle(currVal_13,throwOnChange,false);
-    const currVal_14:any = 'share-alt';
-    this._Tab_6_4.check_tabIcon(currVal_14,throwOnChange,false);
+    const currVal_12:any = 'SHARE';
+    this._Tab_6_4.check_tabTitle(currVal_12,throwOnChange,false);
+    const currVal_13:any = 'share-alt';
+    this._Tab_6_4.check_tabIcon(currVal_13,throwOnChange,false);
     this._Tab_6_4.detectChangesInternal(this,this._el_6,throwOnChange);
-    const currVal_17:any = this.context.tab4Root;
-    this._Tab_8_4.check_root(currVal_17,throwOnChange,false);
-    const currVal_18:any = this._map_2(this.context.data,this.context.date);
-    this._Tab_8_4.check_rootParams(currVal_18,throwOnChange,false);
-    const currVal_19:any = 'PROFILE';
-    this._Tab_8_4.check_tabTitle(currVal_19,throwOnChange,false);
-    const currVal_20:any = 'contact';
-    this._Tab_8_4.check_tabIcon(currVal_20,throwOnChange,false);
+    const currVal_16:any = this.context.tab4Root;
+    this._Tab_8_4.check_root(currVal_16,throwOnChange,false);
+    const currVal_17:any = this._map_1(this.context.data,this.context.date);
+    this._Tab_8_4.check_rootParams(currVal_17,throwOnChange,false);
+    const currVal_18:any = 'PROFILE';
+    this._Tab_8_4.check_tabTitle(currVal_18,throwOnChange,false);
+    const currVal_19:any = 'contact';
+    this._Tab_8_4.check_tabIcon(currVal_19,throwOnChange,false);
     this._Tab_8_4.detectChangesInternal(this,this._el_8,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_4:any = this._Tab_2_4.context._tabId;
@@ -277,35 +267,35 @@ class _View_TabsPage0 extends import1.AppView<import0.TabsPage> {
       this.renderer.setElementAttribute(this._el_2,'aria-labelledby',((currVal_5 == (null as any))? (null as any): currVal_5.toString()));
       this._expr_5 = currVal_5;
     }
-    const currVal_10:any = this._Tab_4_4.context._tabId;
+    const currVal_9:any = this._Tab_4_4.context._tabId;
+    if (import4.checkBinding(throwOnChange,this._expr_9,currVal_9)) {
+      this.renderer.setElementAttribute(this._el_4,'id',((currVal_9 == (null as any))? (null as any): currVal_9.toString()));
+      this._expr_9 = currVal_9;
+    }
+    const currVal_10:any = this._Tab_4_4.context._btnId;
     if (import4.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
-      this.renderer.setElementAttribute(this._el_4,'id',((currVal_10 == (null as any))? (null as any): currVal_10.toString()));
+      this.renderer.setElementAttribute(this._el_4,'aria-labelledby',((currVal_10 == (null as any))? (null as any): currVal_10.toString()));
       this._expr_10 = currVal_10;
     }
-    const currVal_11:any = this._Tab_4_4.context._btnId;
-    if (import4.checkBinding(throwOnChange,this._expr_11,currVal_11)) {
-      this.renderer.setElementAttribute(this._el_4,'aria-labelledby',((currVal_11 == (null as any))? (null as any): currVal_11.toString()));
-      this._expr_11 = currVal_11;
+    const currVal_14:any = this._Tab_6_4.context._tabId;
+    if (import4.checkBinding(throwOnChange,this._expr_14,currVal_14)) {
+      this.renderer.setElementAttribute(this._el_6,'id',((currVal_14 == (null as any))? (null as any): currVal_14.toString()));
+      this._expr_14 = currVal_14;
     }
-    const currVal_15:any = this._Tab_6_4.context._tabId;
+    const currVal_15:any = this._Tab_6_4.context._btnId;
     if (import4.checkBinding(throwOnChange,this._expr_15,currVal_15)) {
-      this.renderer.setElementAttribute(this._el_6,'id',((currVal_15 == (null as any))? (null as any): currVal_15.toString()));
+      this.renderer.setElementAttribute(this._el_6,'aria-labelledby',((currVal_15 == (null as any))? (null as any): currVal_15.toString()));
       this._expr_15 = currVal_15;
     }
-    const currVal_16:any = this._Tab_6_4.context._btnId;
-    if (import4.checkBinding(throwOnChange,this._expr_16,currVal_16)) {
-      this.renderer.setElementAttribute(this._el_6,'aria-labelledby',((currVal_16 == (null as any))? (null as any): currVal_16.toString()));
-      this._expr_16 = currVal_16;
+    const currVal_20:any = this._Tab_8_4.context._tabId;
+    if (import4.checkBinding(throwOnChange,this._expr_20,currVal_20)) {
+      this.renderer.setElementAttribute(this._el_8,'id',((currVal_20 == (null as any))? (null as any): currVal_20.toString()));
+      this._expr_20 = currVal_20;
     }
-    const currVal_21:any = this._Tab_8_4.context._tabId;
+    const currVal_21:any = this._Tab_8_4.context._btnId;
     if (import4.checkBinding(throwOnChange,this._expr_21,currVal_21)) {
-      this.renderer.setElementAttribute(this._el_8,'id',((currVal_21 == (null as any))? (null as any): currVal_21.toString()));
+      this.renderer.setElementAttribute(this._el_8,'aria-labelledby',((currVal_21 == (null as any))? (null as any): currVal_21.toString()));
       this._expr_21 = currVal_21;
-    }
-    const currVal_22:any = this._Tab_8_4.context._btnId;
-    if (import4.checkBinding(throwOnChange,this._expr_22,currVal_22)) {
-      this.renderer.setElementAttribute(this._el_8,'aria-labelledby',((currVal_22 == (null as any))? (null as any): currVal_22.toString()));
-      this._expr_22 = currVal_22;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Tabs_0_4.context.ngAfterViewInit(); } }

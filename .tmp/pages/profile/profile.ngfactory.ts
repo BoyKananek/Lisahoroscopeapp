@@ -342,7 +342,7 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
     var compView_47:any = import28.viewFactory_Button0(this.viewUtils,this.injector(47),this._appEl_47);
     this._Button_47_4 = new import28.Wrapper_Button((null as any),'',this.parentInjector.get(import29.Config),new import30.ElementRef(this._el_47),this.renderer);
     this._appEl_47.initComponent(this._Button_47_4.context,([] as any[]),compView_47);
-    this._text_48 = this.renderer.createText((null as any),'Submit',(null as any));
+    this._text_48 = this.renderer.createText((null as any),'Save',(null as any));
     compView_47.create(this._Button_47_4.context,[([] as any[]).concat([this._text_48])],(null as any));
     this._text_49 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_50 = this.renderer.createElement((null as any),'button',(null as any));

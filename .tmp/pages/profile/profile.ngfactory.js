@@ -256,7 +256,7 @@ var _View_ProfilePage0 = (function (_super) {
         var compView_47 = import28.viewFactory_Button0(this.viewUtils, this.injector(47), this._appEl_47);
         this._Button_47_4 = new import28.Wrapper_Button(null, '', this.parentInjector.get(import29.Config), new import30.ElementRef(this._el_47), this.renderer);
         this._appEl_47.initComponent(this._Button_47_4.context, [], compView_47);
-        this._text_48 = this.renderer.createText(null, 'Submit', null);
+        this._text_48 = this.renderer.createText(null, 'Save', null);
         compView_47.create(this._Button_47_4.context, [[].concat([this._text_48])], null);
         this._text_49 = this.renderer.createText(null, '\n    ', null);
         this._el_50 = this.renderer.createElement(null, 'button', null);
