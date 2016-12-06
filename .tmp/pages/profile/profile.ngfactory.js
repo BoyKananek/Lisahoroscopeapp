@@ -35,6 +35,7 @@ import * as import25 from 'ionic-angular/components/toolbar/toolbar-title';
 import * as import26 from 'ionic-angular/components/navbar/navbar';
 import * as import27 from 'ionic-angular/components/button/button';
 import * as import28 from 'ionic-angular/components/content/content';
+import * as import29 from '@angular/core/src/security';
 export var Wrapper_ProfilePage = (function () {
     function Wrapper_ProfilePage(p0, p1) {
         this.changed = false;
@@ -133,17 +134,20 @@ var _View_ProfilePage0 = (function (_super) {
         this._el_11 = this.renderer.createElement(null, 'br', null);
         this._el_12 = this.renderer.createElement(null, 'br', null);
         this._text_13 = this.renderer.createText(null, '\n    ', null);
-        this._text_14 = this.renderer.createText(null, '\n    ', null);
-        this._el_15 = this.renderer.createElement(null, 'button', null);
-        this.renderer.setElementAttribute(this._el_15, 'block', '');
-        this.renderer.setElementAttribute(this._el_15, 'ion-button', '');
-        this._appEl_15 = new import3.AppElement(15, 9, this, this._el_15);
-        var compView_15 = import16.viewFactory_Button0(this.viewUtils, this.injector(15), this._appEl_15);
-        this._Button_15_4 = new import16.Wrapper_Button(null, '', this.parentInjector.get(import17.Config), new import18.ElementRef(this._el_15), this.renderer);
-        this._appEl_15.initComponent(this._Button_15_4.context, [], compView_15);
-        this._text_16 = this.renderer.createText(null, ' Logout ', null);
-        compView_15.create(this._Button_15_4.context, [[].concat([this._text_16])], null);
-        this._text_17 = this.renderer.createText(null, '\n   \n', null);
+        this._el_14 = this.renderer.createElement(null, 'img', null);
+        this.renderer.setElementAttribute(this._el_14, 'id', 'profile_image');
+        this.renderer.setElementAttribute(this._el_14, 'style', 'display:block;margin: auto;border-radius:50%;box-shadow:0 0 5px gray;border:2px solid #fff;height:200px;width:200px;');
+        this._text_15 = this.renderer.createText(null, ' \n    ', null);
+        this._el_16 = this.renderer.createElement(null, 'button', null);
+        this.renderer.setElementAttribute(this._el_16, 'block', '');
+        this.renderer.setElementAttribute(this._el_16, 'ion-button', '');
+        this._appEl_16 = new import3.AppElement(16, 9, this, this._el_16);
+        var compView_16 = import16.viewFactory_Button0(this.viewUtils, this.injector(16), this._appEl_16);
+        this._Button_16_4 = new import16.Wrapper_Button(null, '', this.parentInjector.get(import17.Config), new import18.ElementRef(this._el_16), this.renderer);
+        this._appEl_16.initComponent(this._Button_16_4.context, [], compView_16);
+        this._text_17 = this.renderer.createText(null, ' Logout ', null);
+        compView_16.create(this._Button_16_4.context, [[].concat([this._text_17])], null);
+        this._text_18 = this.renderer.createText(null, '\n   \n', null);
         compView_9.create(this._Content_9_4.context, [
             [],
             [].concat([
@@ -151,16 +155,19 @@ var _View_ProfilePage0 = (function (_super) {
                 this._el_11,
                 this._el_12,
                 this._text_13,
-                this._text_14,
-                this._el_15,
-                this._text_17
+                this._el_14,
+                this._text_15,
+                this._el_16,
+                this._text_18
             ]),
             []
         ], null);
+        this._text_19 = this.renderer.createText(parentRenderNode, '\n', null);
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
         this._expr_3 = import7.UNINITIALIZED;
-        var disposable_0 = this.renderer.listen(this._el_15, 'click', this.eventHandler(this._handle_click_15_0.bind(this)));
+        this._expr_4 = import7.UNINITIALIZED;
+        var disposable_0 = this.renderer.listen(this._el_16, 'click', this.eventHandler(this._handle_click_16_0.bind(this)));
         this.init([], [
             this._el_0,
             this._text_1,
@@ -176,10 +183,12 @@ var _View_ProfilePage0 = (function (_super) {
             this._el_11,
             this._el_12,
             this._text_13,
-            this._text_14,
-            this._el_15,
-            this._text_16,
-            this._text_17
+            this._el_14,
+            this._text_15,
+            this._el_16,
+            this._text_17,
+            this._text_18,
+            this._text_19
         ], [disposable_0], []);
         return null;
     };
@@ -193,10 +202,10 @@ var _View_ProfilePage0 = (function (_super) {
         if (((token === import21.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
             return this._Header_0_3.context;
         }
-        if (((token === import27.Button) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
-            return this._Button_15_4.context;
+        if (((token === import27.Button) && ((16 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
+            return this._Button_16_4.context;
         }
-        if (((token === import28.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
+        if (((token === import28.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 18)))) {
             return this._Content_9_4.context;
         }
         return notFoundResult;
@@ -212,15 +221,15 @@ var _View_ProfilePage0 = (function (_super) {
         if (this._Content_9_4.detectChangesInternal(this, this._el_9, throwOnChange)) {
             this._appEl_9.componentView.markAsCheckOnce();
         }
-        var currVal_5 = '';
-        this._Button_15_4.check_block(currVal_5, throwOnChange, false);
-        if (this._Button_15_4.detectChangesInternal(this, this._el_15, throwOnChange)) {
-            this._appEl_15.componentView.markAsCheckOnce();
+        var currVal_6 = '';
+        this._Button_16_4.check_block(currVal_6, throwOnChange, false);
+        if (this._Button_16_4.detectChangesInternal(this, this._el_16, throwOnChange)) {
+            this._appEl_16.componentView.markAsCheckOnce();
         }
         this.detectContentChildrenChanges(throwOnChange);
         if (!throwOnChange) {
             if ((this.numberOfChecks === 0)) {
-                this._Button_15_4.context.ngAfterContentInit();
+                this._Button_16_4.context.ngAfterContentInit();
             }
         }
         var currVal_1 = this._Navbar_2_4.context._hidden;
@@ -238,6 +247,11 @@ var _View_ProfilePage0 = (function (_super) {
             this.renderer.setElementClass(this._el_9, 'statusbar-padding', currVal_3);
             this._expr_3 = currVal_3;
         }
+        var currVal_4 = import4.interpolate(1, '', this.context.image, '');
+        if (import4.checkBinding(throwOnChange, this._expr_4, currVal_4)) {
+            this.renderer.setElementProperty(this._el_14, 'src', this.viewUtils.sanitizer.sanitize(import29.SecurityContext.URL, currVal_4));
+            this._expr_4 = currVal_4;
+        }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {
             if ((this.numberOfChecks === 0)) {
@@ -248,7 +262,7 @@ var _View_ProfilePage0 = (function (_super) {
     _View_ProfilePage0.prototype.destroyInternal = function () {
         this._Content_9_4.context.ngOnDestroy();
     };
-    _View_ProfilePage0.prototype._handle_click_15_0 = function ($event) {
+    _View_ProfilePage0.prototype._handle_click_16_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
         var pd_0 = (this.context.logout() !== false);
         return (true && pd_0);

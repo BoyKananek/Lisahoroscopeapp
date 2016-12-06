@@ -11,6 +11,7 @@ export class HomePage {
   
   constructor(public navCtrl: NavController) {
     console.log("Home");
+    console.log(this.navCtrl.length);
   }
 
 }

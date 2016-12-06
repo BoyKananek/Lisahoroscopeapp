@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -9,11 +10,18 @@ import { NavController,NavParams } from 'ionic-angular';
 export class ProfilePage {
   data : any;
   birthdate : any;
+  image : any;
   constructor(public navCtrl: NavController, params: NavParams) {
-    this.data = params.data;
-    console.log("profile:::"+JSON.stringify(this.data));
+    this.data = params.get('data');
+    //check image which is exist or not
+    if(this.data.type == 'email'){
+      this.image = 'assets/img/profile.jpg';
+    }else{
+      this.image = this.data.picture.data.url;
+    }
   }
   logout(){
-    console.log(this.navCtrl.length);
+    console.log("LOGOUT");
+    this.navCtrl.setRoot(LoginPage);
   }
 }

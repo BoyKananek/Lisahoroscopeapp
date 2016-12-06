@@ -33,6 +33,7 @@ import * as import25 from 'ionic-angular/components/toolbar/toolbar-title';
 import * as import26 from 'ionic-angular/components/navbar/navbar';
 import * as import27 from 'ionic-angular/components/button/button';
 import * as import28 from 'ionic-angular/components/content/content';
+import * as import29 from '@angular/core/src/security';
 export class Wrapper_ProfilePage {
   context:import0.ProfilePage;
   changed:boolean;
@@ -103,15 +104,18 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
   _el_11:any;
   _el_12:any;
   _text_13:any;
-  _text_14:any;
-  _el_15:any;
-  /*private*/ _appEl_15:import3.AppElement;
-  _Button_15_4:import16.Wrapper_Button;
-  _text_16:any;
+  _el_14:any;
+  _text_15:any;
+  _el_16:any;
+  /*private*/ _appEl_16:import3.AppElement;
+  _Button_16_4:import16.Wrapper_Button;
   _text_17:any;
+  _text_18:any;
+  _text_19:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
+  /*private*/ _expr_4:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_ProfilePage0,renderType_ProfilePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -160,17 +164,20 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
     this._el_11 = this.renderer.createElement((null as any),'br',(null as any));
     this._el_12 = this.renderer.createElement((null as any),'br',(null as any));
     this._text_13 = this.renderer.createText((null as any),'\n    ',(null as any));
-    this._text_14 = this.renderer.createText((null as any),'\n    ',(null as any));
-    this._el_15 = this.renderer.createElement((null as any),'button',(null as any));
-    this.renderer.setElementAttribute(this._el_15,'block','');
-    this.renderer.setElementAttribute(this._el_15,'ion-button','');
-    this._appEl_15 = new import3.AppElement(15,9,this,this._el_15);
-    var compView_15:any = import16.viewFactory_Button0(this.viewUtils,this.injector(15),this._appEl_15);
-    this._Button_15_4 = new import16.Wrapper_Button((null as any),'',this.parentInjector.get(import17.Config),new import18.ElementRef(this._el_15),this.renderer);
-    this._appEl_15.initComponent(this._Button_15_4.context,([] as any[]),compView_15);
-    this._text_16 = this.renderer.createText((null as any),' Logout ',(null as any));
-    compView_15.create(this._Button_15_4.context,[([] as any[]).concat([this._text_16])],(null as any));
-    this._text_17 = this.renderer.createText((null as any),'\n   \n',(null as any));
+    this._el_14 = this.renderer.createElement((null as any),'img',(null as any));
+    this.renderer.setElementAttribute(this._el_14,'id','profile_image');
+    this.renderer.setElementAttribute(this._el_14,'style','display:block;margin: auto;border-radius:50%;box-shadow:0 0 5px gray;border:2px solid #fff;height:200px;width:200px;');
+    this._text_15 = this.renderer.createText((null as any),' \n    ',(null as any));
+    this._el_16 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_16,'block','');
+    this.renderer.setElementAttribute(this._el_16,'ion-button','');
+    this._appEl_16 = new import3.AppElement(16,9,this,this._el_16);
+    var compView_16:any = import16.viewFactory_Button0(this.viewUtils,this.injector(16),this._appEl_16);
+    this._Button_16_4 = new import16.Wrapper_Button((null as any),'',this.parentInjector.get(import17.Config),new import18.ElementRef(this._el_16),this.renderer);
+    this._appEl_16.initComponent(this._Button_16_4.context,([] as any[]),compView_16);
+    this._text_17 = this.renderer.createText((null as any),' Logout ',(null as any));
+    compView_16.create(this._Button_16_4.context,[([] as any[]).concat([this._text_17])],(null as any));
+    this._text_18 = this.renderer.createText((null as any),'\n   \n',(null as any));
     compView_9.create(this._Content_9_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
@@ -178,18 +185,21 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
         this._el_11,
         this._el_12,
         this._text_13,
-        this._text_14,
-        this._el_15,
-        this._text_17
+        this._el_14,
+        this._text_15,
+        this._el_16,
+        this._text_18
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
+    this._text_19 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
     this._expr_3 = import7.UNINITIALIZED;
-    var disposable_0:Function = this.renderer.listen(this._el_15,'click',this.eventHandler(this._handle_click_15_0.bind(this)));
+    this._expr_4 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_16,'click',this.eventHandler(this._handle_click_16_0.bind(this)));
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -205,10 +215,12 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
       this._el_11,
       this._el_12,
       this._text_13,
-      this._text_14,
-      this._el_15,
-      this._text_16,
-      this._text_17
+      this._el_14,
+      this._text_15,
+      this._el_16,
+      this._text_17,
+      this._text_18,
+      this._text_19
     ]
     ,[disposable_0],([] as any[]));
     return (null as any);
@@ -217,8 +229,8 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
     if (((token === import25.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
     if (((token === import26.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
     if (((token === import21.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import27.Button) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 16)))) { return this._Button_15_4.context; }
-    if (((token === import28.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 17)))) { return this._Content_9_4.context; }
+    if (((token === import27.Button) && ((16 <= requestNodeIndex) && (requestNodeIndex <= 17)))) { return this._Button_16_4.context; }
+    if (((token === import28.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 18)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -228,11 +240,11 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
     this._Navbar_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     if (this._ToolbarTitle_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
     if (this._Content_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
-    const currVal_5:any = '';
-    this._Button_15_4.check_block(currVal_5,throwOnChange,false);
-    if (this._Button_15_4.detectChangesInternal(this,this._el_15,throwOnChange)) { this._appEl_15.componentView.markAsCheckOnce(); }
+    const currVal_6:any = '';
+    this._Button_16_4.check_block(currVal_6,throwOnChange,false);
+    if (this._Button_16_4.detectChangesInternal(this,this._el_16,throwOnChange)) { this._appEl_16.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
-    if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Button_15_4.context.ngAfterContentInit(); } }
+    if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Button_16_4.context.ngAfterContentInit(); } }
     const currVal_1:any = this._Navbar_2_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
       this.renderer.setElementProperty(this._el_2,'hidden',currVal_1);
@@ -248,13 +260,18 @@ class _View_ProfilePage0 extends import1.AppView<import0.ProfilePage> {
       this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_3);
       this._expr_3 = currVal_3;
     }
+    const currVal_4:any = import4.interpolate(1,'',this.context.image,'');
+    if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
+      this.renderer.setElementProperty(this._el_14,'src',this.viewUtils.sanitizer.sanitize(import29.SecurityContext.URL,currVal_4));
+      this._expr_4 = currVal_4;
+    }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }
   }
   destroyInternal():void {
     this._Content_9_4.context.ngOnDestroy();
   }
-  private _handle_click_15_0($event:any):boolean {
+  private _handle_click_16_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.logout()) !== false);
     return (true && pd_0);

@@ -3,7 +3,6 @@ import { Facebook } from 'ionic-native';
 import { NavController,AlertController,Events,LoadingController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
-import { ProfilePage } from '../profile/profile';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
@@ -121,12 +120,8 @@ export class LoginPage {
           console.log('getting info');
           console.log(data.birthdate);
           this.birthdate = data.birthdate;
-          if(this.birthdate == null){
-            this.navCtrl.push(ProfilePage, {user : this.data, date: this.birthdate});
-          }
-          else{ 
-            this.navCtrl.push(TabsPage,{user : this.data,date: this.birthdate});
-          }
+          this.navCtrl.push(TabsPage,{data : this.data,date: this.birthdate});
+          
       }, error => {
           console.log(error);
       })
