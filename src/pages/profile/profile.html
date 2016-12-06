@@ -5,8 +5,27 @@
 </ion-header>
 
 <ion-content padding>
-    <br><br>
-    <img src="{{image}}" id="profile_image" style="display:block;margin: auto;border-radius:50%;box-shadow:0 0 5px gray;border:2px solid #fff;height:200px;width:200px;"> 
-    <button ion-button block (click)="logout();"> Logout </button>
-   
+    <br>
+    <img src="{{image}}" id="profile_image" style="display:block;margin: auto;border-radius:50%;box-shadow:0 0 5px gray;border:2px solid #fff;height:200px;width:200px;">
+    <ion-card>
+        <ion-card-content>
+            <p> Email : {{data.email}} </p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <p> Name : {{data.name}} </p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label> Birthday: </ion-label>
+                <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="date"></ion-datetime>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;"  (click)="submit()">Submit</button>
+    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;"  (click)="logout();"> Logout </button>
+
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController} from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
+import { BrowsePage } from '../browse/browse';
 import { ContactPage } from '../contact/contact';
 import { ProfilePage } from '../profile/profile';
 
@@ -15,7 +15,7 @@ export class TabsPage {
   data : any;
   date : any;
   tab1Root: any = HomePage;
-  tab2Root: any = AboutPage;
+  tab2Root: any = BrowsePage;
   tab3Root: any = ContactPage;
   tab4Root: any = ProfilePage;
   constructor(public navCtrl: NavController, params: NavParams,public alertCtrl: AlertController) {

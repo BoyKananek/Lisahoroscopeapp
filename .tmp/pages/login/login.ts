@@ -38,13 +38,6 @@ export class LoginPage {
       this.loginHandler(dataObj);
     };
     this.events.subscribe('logined', this._loginsub);
-
-    /*this.events.subscribe('logined', (dataObj) => {
-      this.data = dataObj[0];
-      console.log(this.data);
-      console.log("Login with facebook Successful");
-      this.gotoProfile();
-    });*/
   }
   ionViewDidLeave() {
     console.log('Leaving this page');
