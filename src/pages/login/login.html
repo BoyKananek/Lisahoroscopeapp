@@ -27,12 +27,12 @@
             </ion-item>
             </ion-card-content>
     </ion-card>
-    <button ion-button block style="color:#ffffff;background-color:#f85394;font-weight: bold;" (click)="loginEmail();">Login</button>
-    <button ion-button clear style="color:#fa8cb4;font-weight: bold;left:50%;-webkit-transform:translateX(-50%);transform: translateX(-50%);" (click)="forgotPassword();">Forgot Password?</button>
+    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;" (click)="loginEmail();">Login</button>
+    <button ion-button clear [disabled]="disableSubmit" style="color:#fa8cb4;font-weight: bold;left:50%;-webkit-transform:translateX(-50%);transform: translateX(-50%);" (click)="forgotPassword();">Forgot Password?</button>
     <br>
     <br>
         <ion-row>
-            <p style="color:#9b9b9b;font-weight: bold;">Don't have a account?</p><button ion-button clear style="font-weight:bold;font-size:13px;color:#fa8cb4;" (click)="gotoSignUp();"> Sign up </button>
+            <p style="color:#9b9b9b;font-weight: bold;">Don't have a account?</p><button ion-button clear [disabled]="disableSubmit" style="font-weight:bold;font-size:13px;color:#fa8cb4;" (click)="gotoSignUp();"> Sign up </button>
         </ion-row>
     <hr>
     <p style="color:#c8c8c8;font-size:12px;">By using HOROSCOPE APP,you agree to our Terms of Services and Privacy Policy </p>

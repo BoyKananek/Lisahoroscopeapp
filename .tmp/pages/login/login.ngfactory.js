@@ -356,8 +356,11 @@ var _View_LoginPage0 = (function (_super) {
         this._expr_17 = import8.UNINITIALIZED;
         this._expr_18 = import8.UNINITIALIZED;
         this._expr_19 = import8.UNINITIALIZED;
+        this._expr_23 = import8.UNINITIALIZED;
         var disposable_3 = this.renderer.listen(this._el_50, 'click', this.eventHandler(this._handle_click_50_0.bind(this)));
+        this._expr_26 = import8.UNINITIALIZED;
         var disposable_4 = this.renderer.listen(this._el_53, 'click', this.eventHandler(this._handle_click_53_0.bind(this)));
+        this._expr_29 = import8.UNINITIALIZED;
         var disposable_5 = this.renderer.listen(this._el_64, 'click', this.eventHandler(this._handle_click_64_0.bind(this)));
         this.init([], [
             this._text_0,
@@ -562,19 +565,19 @@ var _View_LoginPage0 = (function (_super) {
         var currVal_21 = 'password';
         this._TextInput_45_7.check_type(currVal_21, throwOnChange, false);
         this._TextInput_45_7.detectChangesInternal(this, this._el_45, throwOnChange);
-        var currVal_23 = '';
-        this._Button_50_4.check_block(currVal_23, throwOnChange, false);
+        var currVal_24 = '';
+        this._Button_50_4.check_block(currVal_24, throwOnChange, false);
         if (this._Button_50_4.detectChangesInternal(this, this._el_50, throwOnChange)) {
             this._appEl_50.componentView.markAsCheckOnce();
         }
-        var currVal_25 = '';
-        this._Button_53_4.check_clear(currVal_25, throwOnChange, false);
+        var currVal_27 = '';
+        this._Button_53_4.check_clear(currVal_27, throwOnChange, false);
         if (this._Button_53_4.detectChangesInternal(this, this._el_53, throwOnChange)) {
             this._appEl_53.componentView.markAsCheckOnce();
         }
         this._Row_60_3.detectChangesInternal(this, this._el_60, throwOnChange);
-        var currVal_27 = '';
-        this._Button_64_4.check_clear(currVal_27, throwOnChange, false);
+        var currVal_30 = '';
+        this._Button_64_4.check_clear(currVal_30, throwOnChange, false);
         if (this._Button_64_4.detectChangesInternal(this, this._el_64, throwOnChange)) {
             this._appEl_64.componentView.markAsCheckOnce();
         }
@@ -682,6 +685,21 @@ var _View_LoginPage0 = (function (_super) {
         if (import5.checkBinding(throwOnChange, this._expr_19, currVal_19)) {
             this.renderer.setElementClass(this._el_45, 'ng-invalid', currVal_19);
             this._expr_19 = currVal_19;
+        }
+        var currVal_23 = this.context.disableSubmit;
+        if (import5.checkBinding(throwOnChange, this._expr_23, currVal_23)) {
+            this.renderer.setElementProperty(this._el_50, 'disabled', currVal_23);
+            this._expr_23 = currVal_23;
+        }
+        var currVal_26 = this.context.disableSubmit;
+        if (import5.checkBinding(throwOnChange, this._expr_26, currVal_26)) {
+            this.renderer.setElementProperty(this._el_53, 'disabled', currVal_26);
+            this._expr_26 = currVal_26;
+        }
+        var currVal_29 = this.context.disableSubmit;
+        if (import5.checkBinding(throwOnChange, this._expr_29, currVal_29)) {
+            this.renderer.setElementProperty(this._el_64, 'disabled', currVal_29);
+            this._expr_29 = currVal_29;
         }
         this.detectViewChildrenChanges(throwOnChange);
     };

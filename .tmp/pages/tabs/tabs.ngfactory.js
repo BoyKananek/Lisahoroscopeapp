@@ -92,7 +92,6 @@ var _View_TabsPage0 = (function (_super) {
     _View_TabsPage0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-tabs', null);
-        this.renderer.setElementAttribute(this._el_0, 'selectedIndex', '0');
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = import13.viewFactory_Tabs0(this.viewUtils, this.injector(0), this._appEl_0);
         this._Tabs_0_4 = new import13.Wrapper_Tabs(this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import15.ViewController, null), this.parentInjector.get(import16.App), this.parentInjector.get(import17.Config), new import18.ElementRef(this._el_0), this.parentInjector.get(import19.Platform), this.renderer, this.parentInjector.get(import20.DeepLinker));
@@ -156,19 +155,19 @@ var _View_TabsPage0 = (function (_super) {
                 date: p1
             };
         });
+        this._expr_4 = import7.UNINITIALIZED;
         this._expr_5 = import7.UNINITIALIZED;
-        this._expr_6 = import7.UNINITIALIZED;
         this._map_1 = import4.pureProxy2(function (p0, p1) {
             return {
                 data: p0,
                 date: p1
             };
         });
+        this._expr_10 = import7.UNINITIALIZED;
         this._expr_11 = import7.UNINITIALIZED;
-        this._expr_12 = import7.UNINITIALIZED;
         var disposable_0 = this.renderer.listen(this._el_6, 'ionSelect', this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
+        this._expr_15 = import7.UNINITIALIZED;
         this._expr_16 = import7.UNINITIALIZED;
-        this._expr_17 = import7.UNINITIALIZED;
         var subscription_0 = this._Tab_6_4.context.ionSelect.subscribe(this.eventHandler(this._handle_ionSelect_6_0.bind(this)));
         this._map_2 = import4.pureProxy2(function (p0, p1) {
             return {
@@ -176,8 +175,8 @@ var _View_TabsPage0 = (function (_super) {
                 date: p1
             };
         });
+        this._expr_21 = import7.UNINITIALIZED;
         this._expr_22 = import7.UNINITIALIZED;
-        this._expr_23 = import7.UNINITIALIZED;
         this.init([], [
             this._el_0,
             this._text_1,
@@ -212,81 +211,79 @@ var _View_TabsPage0 = (function (_super) {
         return notFoundResult;
     };
     _View_TabsPage0.prototype.detectChangesInternal = function (throwOnChange) {
-        var currVal_0 = '0';
-        this._Tabs_0_4.check_selectedIndex(currVal_0, throwOnChange, false);
         this._Tabs_0_4.detectChangesInternal(this, this._el_0, throwOnChange);
-        var currVal_1 = this.context.tab1Root;
-        this._Tab_2_4.check_root(currVal_1, throwOnChange, false);
-        var currVal_2 = this._map_0(this.context.data, this.context.date);
-        this._Tab_2_4.check_rootParams(currVal_2, throwOnChange, false);
-        var currVal_3 = 'TODAY';
-        this._Tab_2_4.check_tabTitle(currVal_3, throwOnChange, false);
-        var currVal_4 = 'calendar';
-        this._Tab_2_4.check_tabIcon(currVal_4, throwOnChange, false);
+        var currVal_0 = this.context.tab1Root;
+        this._Tab_2_4.check_root(currVal_0, throwOnChange, false);
+        var currVal_1 = this._map_0(this.context.data, this.context.date);
+        this._Tab_2_4.check_rootParams(currVal_1, throwOnChange, false);
+        var currVal_2 = 'TODAY';
+        this._Tab_2_4.check_tabTitle(currVal_2, throwOnChange, false);
+        var currVal_3 = 'calendar';
+        this._Tab_2_4.check_tabIcon(currVal_3, throwOnChange, false);
         this._Tab_2_4.detectChangesInternal(this, this._el_2, throwOnChange);
-        var currVal_7 = this.context.tab2Root;
-        this._Tab_4_4.check_root(currVal_7, throwOnChange, false);
-        var currVal_8 = this._map_1(this.context.data, this.context.date);
-        this._Tab_4_4.check_rootParams(currVal_8, throwOnChange, false);
-        var currVal_9 = 'BROWSE';
-        this._Tab_4_4.check_tabTitle(currVal_9, throwOnChange, false);
-        var currVal_10 = 'apps';
-        this._Tab_4_4.check_tabIcon(currVal_10, throwOnChange, false);
+        var currVal_6 = this.context.tab2Root;
+        this._Tab_4_4.check_root(currVal_6, throwOnChange, false);
+        var currVal_7 = this._map_1(this.context.data, this.context.date);
+        this._Tab_4_4.check_rootParams(currVal_7, throwOnChange, false);
+        var currVal_8 = 'BROWSE';
+        this._Tab_4_4.check_tabTitle(currVal_8, throwOnChange, false);
+        var currVal_9 = 'apps';
+        this._Tab_4_4.check_tabIcon(currVal_9, throwOnChange, false);
         this._Tab_4_4.detectChangesInternal(this, this._el_4, throwOnChange);
-        var currVal_14 = 'SHARE';
-        this._Tab_6_4.check_tabTitle(currVal_14, throwOnChange, false);
-        var currVal_15 = 'share-alt';
-        this._Tab_6_4.check_tabIcon(currVal_15, throwOnChange, false);
+        var currVal_13 = 'SHARE';
+        this._Tab_6_4.check_tabTitle(currVal_13, throwOnChange, false);
+        var currVal_14 = 'share-alt';
+        this._Tab_6_4.check_tabIcon(currVal_14, throwOnChange, false);
         this._Tab_6_4.detectChangesInternal(this, this._el_6, throwOnChange);
-        var currVal_18 = this.context.tab4Root;
-        this._Tab_8_4.check_root(currVal_18, throwOnChange, false);
-        var currVal_19 = this._map_2(this.context.data, this.context.date);
-        this._Tab_8_4.check_rootParams(currVal_19, throwOnChange, false);
-        var currVal_20 = 'PROFILE';
-        this._Tab_8_4.check_tabTitle(currVal_20, throwOnChange, false);
-        var currVal_21 = 'contact';
-        this._Tab_8_4.check_tabIcon(currVal_21, throwOnChange, false);
+        var currVal_17 = this.context.tab4Root;
+        this._Tab_8_4.check_root(currVal_17, throwOnChange, false);
+        var currVal_18 = this._map_2(this.context.data, this.context.date);
+        this._Tab_8_4.check_rootParams(currVal_18, throwOnChange, false);
+        var currVal_19 = 'PROFILE';
+        this._Tab_8_4.check_tabTitle(currVal_19, throwOnChange, false);
+        var currVal_20 = 'contact';
+        this._Tab_8_4.check_tabIcon(currVal_20, throwOnChange, false);
         this._Tab_8_4.detectChangesInternal(this, this._el_8, throwOnChange);
         this.detectContentChildrenChanges(throwOnChange);
-        var currVal_5 = this._Tab_2_4.context._tabId;
+        var currVal_4 = this._Tab_2_4.context._tabId;
+        if (import4.checkBinding(throwOnChange, this._expr_4, currVal_4)) {
+            this.renderer.setElementAttribute(this._el_2, 'id', ((currVal_4 == null) ? null : currVal_4.toString()));
+            this._expr_4 = currVal_4;
+        }
+        var currVal_5 = this._Tab_2_4.context._btnId;
         if (import4.checkBinding(throwOnChange, this._expr_5, currVal_5)) {
-            this.renderer.setElementAttribute(this._el_2, 'id', ((currVal_5 == null) ? null : currVal_5.toString()));
+            this.renderer.setElementAttribute(this._el_2, 'aria-labelledby', ((currVal_5 == null) ? null : currVal_5.toString()));
             this._expr_5 = currVal_5;
         }
-        var currVal_6 = this._Tab_2_4.context._btnId;
-        if (import4.checkBinding(throwOnChange, this._expr_6, currVal_6)) {
-            this.renderer.setElementAttribute(this._el_2, 'aria-labelledby', ((currVal_6 == null) ? null : currVal_6.toString()));
-            this._expr_6 = currVal_6;
+        var currVal_10 = this._Tab_4_4.context._tabId;
+        if (import4.checkBinding(throwOnChange, this._expr_10, currVal_10)) {
+            this.renderer.setElementAttribute(this._el_4, 'id', ((currVal_10 == null) ? null : currVal_10.toString()));
+            this._expr_10 = currVal_10;
         }
-        var currVal_11 = this._Tab_4_4.context._tabId;
+        var currVal_11 = this._Tab_4_4.context._btnId;
         if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
-            this.renderer.setElementAttribute(this._el_4, 'id', ((currVal_11 == null) ? null : currVal_11.toString()));
+            this.renderer.setElementAttribute(this._el_4, 'aria-labelledby', ((currVal_11 == null) ? null : currVal_11.toString()));
             this._expr_11 = currVal_11;
         }
-        var currVal_12 = this._Tab_4_4.context._btnId;
-        if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
-            this.renderer.setElementAttribute(this._el_4, 'aria-labelledby', ((currVal_12 == null) ? null : currVal_12.toString()));
-            this._expr_12 = currVal_12;
+        var currVal_15 = this._Tab_6_4.context._tabId;
+        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
+            this.renderer.setElementAttribute(this._el_6, 'id', ((currVal_15 == null) ? null : currVal_15.toString()));
+            this._expr_15 = currVal_15;
         }
-        var currVal_16 = this._Tab_6_4.context._tabId;
+        var currVal_16 = this._Tab_6_4.context._btnId;
         if (import4.checkBinding(throwOnChange, this._expr_16, currVal_16)) {
-            this.renderer.setElementAttribute(this._el_6, 'id', ((currVal_16 == null) ? null : currVal_16.toString()));
+            this.renderer.setElementAttribute(this._el_6, 'aria-labelledby', ((currVal_16 == null) ? null : currVal_16.toString()));
             this._expr_16 = currVal_16;
         }
-        var currVal_17 = this._Tab_6_4.context._btnId;
-        if (import4.checkBinding(throwOnChange, this._expr_17, currVal_17)) {
-            this.renderer.setElementAttribute(this._el_6, 'aria-labelledby', ((currVal_17 == null) ? null : currVal_17.toString()));
-            this._expr_17 = currVal_17;
+        var currVal_21 = this._Tab_8_4.context._tabId;
+        if (import4.checkBinding(throwOnChange, this._expr_21, currVal_21)) {
+            this.renderer.setElementAttribute(this._el_8, 'id', ((currVal_21 == null) ? null : currVal_21.toString()));
+            this._expr_21 = currVal_21;
         }
-        var currVal_22 = this._Tab_8_4.context._tabId;
+        var currVal_22 = this._Tab_8_4.context._btnId;
         if (import4.checkBinding(throwOnChange, this._expr_22, currVal_22)) {
-            this.renderer.setElementAttribute(this._el_8, 'id', ((currVal_22 == null) ? null : currVal_22.toString()));
+            this.renderer.setElementAttribute(this._el_8, 'aria-labelledby', ((currVal_22 == null) ? null : currVal_22.toString()));
             this._expr_22 = currVal_22;
-        }
-        var currVal_23 = this._Tab_8_4.context._btnId;
-        if (import4.checkBinding(throwOnChange, this._expr_23, currVal_23)) {
-            this.renderer.setElementAttribute(this._el_8, 'aria-labelledby', ((currVal_23 == null) ? null : currVal_23.toString()));
-            this._expr_23 = currVal_23;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {

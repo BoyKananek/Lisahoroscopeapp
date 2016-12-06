@@ -16,22 +16,33 @@ export var LoginPage = (function () {
         this.disableSubmit = false;
         this.data = null;
     }
+    LoginPage.prototype.loginHandler = function (dataObj) {
+        this.data = dataObj[0];
+        console.log(this.data);
+        console.log("Login with facebook Successful");
+        this.gotoProfile();
+    };
     LoginPage.prototype.ngOnInit = function () {
         var _this = this;
         //Wait for events login wiht Facebook
-        this.events.subscribe('logined', function (dataObj) {
-            _this.disableSubmit = true;
-            _this.data = dataObj[0];
-            console.log(_this.data);
-            console.log("Login with facebook Successful");
-            _this.gotoProfile();
-            _this.disableSubmit = false;
-        });
+        this._loginsub = function (dataObj) {
+            _this.loginHandler(dataObj);
+        };
+        this.events.subscribe('logined', this._loginsub);
+        /*this.events.subscribe('logined', (dataObj) => {
+          this.data = dataObj[0];
+          console.log(this.data);
+          console.log("Login with facebook Successful");
+          this.gotoProfile();
+        });*/
     };
-    LoginPage.prototype.onPageDidLeave = function () {
-        return this.events.unsubscribe('logined', function () {
-            console.log('Leaving page');
-        });
+    LoginPage.prototype.ionViewDidLeave = function () {
+        console.log('Leaving this page');
+        if (this._loginsub) {
+            this.events.unsubscribe('logined', this._loginsub);
+            this._loginsub = undefined;
+            console.log("clear events");
+        }
     };
     LoginPage.prototype.forgotPassword = function () {
         var _this = this;
