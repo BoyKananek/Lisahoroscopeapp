@@ -31,6 +31,7 @@ export class LoginPage {
     console.log(this.data);
     console.log("Login with facebook Successful");
     this.gotoProfile();
+    this.data = null;
   }
   ngOnInit() {
     //Wait for events login wiht Facebook
@@ -180,7 +181,6 @@ export class LoginPage {
             this.disableSubmit = false;
           }
           else {
-
             console.log('Login Successful');
             this.disableSubmit = false;
             this.gotoProfile();

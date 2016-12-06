@@ -21,6 +21,7 @@ export var LoginPage = (function () {
         console.log(this.data);
         console.log("Login with facebook Successful");
         this.gotoProfile();
+        this.data = null;
     };
     LoginPage.prototype.ngOnInit = function () {
         var _this = this;
