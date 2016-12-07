@@ -14,7 +14,6 @@ export var TabsPage = (function () {
         this.tab4Root = ProfilePage;
         this.data = params.get('data');
         this.date = params.get('date');
-        this.navCtrl.pop();
     }
     TabsPage.prototype.share = function () {
         var alert = this.alertCtrl.create({
