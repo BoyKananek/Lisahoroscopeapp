@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { Facebook } from 'ionic-native';
-import { NavController, AlertController, Events, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, Events, LoadingController, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 export var LoginPage = (function () {
-    function LoginPage(navCtrl, alertCtrl, http, events, loadingCtrl) {
+    function LoginPage(navCtrl, alertCtrl, http, events, loadingCtrl, app) {
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
         this.http = http;
         this.events = events;
         this.loadingCtrl = loadingCtrl;
+        this.app = app;
         this.disableSubmit = false;
         this.data = null;
     }
@@ -139,7 +140,7 @@ export var LoginPage = (function () {
                 alert.present();
             }
             else {
-                _this.navCtrl.push(TabsPage, { data: data.json() });
+                _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
             }
         }, function (error) {
             console.log(error);
@@ -248,7 +249,6 @@ export var LoginPage = (function () {
             console.log(error.message());
             console.log('Cancel!!!!!');
         });
-        //this.disableSubmit = false;
     };
     LoginPage.decorators = [
         { type: Component, args: [{
@@ -264,6 +264,7 @@ export var LoginPage = (function () {
         { type: Http, },
         { type: Events, },
         { type: LoadingController, },
+        { type: App, },
     ];
     return LoginPage;
 }());

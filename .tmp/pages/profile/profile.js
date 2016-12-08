@@ -58,14 +58,22 @@ export var ProfilePage = (function () {
             alert.present();
         }
         else {
-            this.http.put('https://lisahoroscope.herokuapp.com/api/updateUser/' + this.data.email + '/' + this.date, null, { headers: headers })
+            this.http.post('http://localhost:3000/auth/updateUser/' + this.date, this.data)
                 .subscribe(function (response) {
-                console.log(response.text());
-                var alert = _this.alertCtrl.create({
-                    title: "Already update profile",
-                    buttons: ["Ok"]
-                });
-                alert.present();
+                if (response.json().success == true) {
+                    var alert = _this.alertCtrl.create({
+                        title: response.json().message,
+                        buttons: ["Ok"]
+                    });
+                    alert.present();
+                }
+                else if (response.json().success == false) {
+                    var alert = _this.alertCtrl.create({
+                        title: response.json().message,
+                        buttons: ["Ok"]
+                    });
+                    alert.present();
+                }
                 _this.disableSubmit = false;
             }, function (error) {
                 console.log(error.text());

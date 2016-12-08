@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Facebook } from 'ionic-native';
-import { NavController, AlertController, Events, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, Events, LoadingController,App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
@@ -22,9 +22,8 @@ export class LoginPage {
   forgetEmail: any;
   disableSubmit: boolean = false;
   _loginsub: (dataObj: any) => void;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController,public app: App) {
     this.data = null;
-
   }
   loginHandler(dataObj) {
     this.data = dataObj[0];
@@ -144,7 +143,8 @@ export class LoginPage {
           });
           alert.present();
         } else {
-          this.navCtrl.push(TabsPage, { data: data.json() });
+          this.app.getRootNav().setRoot(TabsPage,{data:data.json()});
+          //this.navCtrl.push(TabsPage, { data: data.json() });
         }
       }, error => {
         console.log(error);
@@ -253,6 +253,5 @@ export class LoginPage {
       console.log(error.message());
       console.log('Cancel!!!!!');
     });
-    //this.disableSubmit = false;
   }
 }
