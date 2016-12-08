@@ -62,7 +62,7 @@ export class SignupPage {
       this.disableSubmit = false ;
     }
     else{
-      this.http.post("https://lisahoroscope.herokuapp.com/sendEmail",data)
+      this.http.post("http://localhost:3000/api/signup",data)
         .subscribe(data =>{
           var alert = this.alertCtrl.create({
             title: "Sign up successful",

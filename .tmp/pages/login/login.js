@@ -61,7 +61,7 @@ export var LoginPage = (function () {
                     text: 'Save',
                     handler: function (data) {
                         console.log('Saved clicked');
-                        _this.forgetEmail = data.Email;
+                        _this.forgetEmail = data.Email.toLowerCase();
                         _this.requestToresetPass();
                     }
                 }
@@ -91,14 +91,24 @@ export var LoginPage = (function () {
             var data = {
                 email: this.forgetEmail
             };
-            this.http.post("https://lisahoroscope.herokuapp.com/forgetPassword", data)
+            this.http.post("http://localhost:3000/api/forgotPassword", data)
                 .subscribe(function (data) {
-                var alert = _this.alertCtrl.create({
-                    title: "Reset password proceed",
-                    subTitle: "Please check your email address to continue",
-                    buttons: ["close"]
-                });
-                alert.present();
+                if (data.json().success == false) {
+                    var alert = _this.alertCtrl.create({
+                        title: "Error",
+                        subTitle: data.json().message,
+                        buttons: ["close"]
+                    });
+                    alert.present();
+                }
+                else {
+                    var alert = _this.alertCtrl.create({
+                        title: "Reset password proceed",
+                        subTitle: data.json().message,
+                        buttons: ["close"]
+                    });
+                    alert.present();
+                }
             }, function (error) {
                 var alert = _this.alertCtrl.create({
                     title: "Server down!",
@@ -116,13 +126,21 @@ export var LoginPage = (function () {
         });
         loader.present();
         console.log('GO to profile');
-        this.http.get('https://lisahoroscope.herokuapp.com/api/userinfo/' + this.data.email)
-            .map(function (res) { return res.json(); })
+        this.http.post('http://localhost:3000/auth/userinfo', this.data)
             .subscribe(function (data) {
             console.log('getting info');
-            console.log(data.birthdate);
-            _this.birthdate = data.birthdate;
-            _this.navCtrl.push(TabsPage, { data: _this.data, date: _this.birthdate });
+            console.log(data.json());
+            if (data.json().success == false) {
+                var alert = _this.alertCtrl.create({
+                    title: "Token expired",
+                    subTitle: _this.data.message,
+                    buttons: ['close']
+                });
+                alert.present();
+            }
+            else {
+                _this.navCtrl.push(TabsPage, { data: data.json() });
+            }
         }, function (error) {
             console.log(error);
         });
@@ -161,7 +179,7 @@ export var LoginPage = (function () {
         }
         else {
             console.log("Logging in with email");
-            this.http.post("https://lisahoroscope.herokuapp.com/loginWithApp", data)
+            this.http.post("http://localhost:3000/api/login", data)
                 .subscribe(function (data) {
                 _this.data = data.json();
                 if (_this.data.error === true) {
@@ -171,7 +189,6 @@ export var LoginPage = (function () {
                         buttons: ['close']
                     });
                     alert.present();
-                    console.log('Login fail because wrong email');
                     _this.disableSubmit = false;
                 }
                 else {
@@ -200,22 +217,21 @@ export var LoginPage = (function () {
             console.log("Starting login with FBBBBB!");
             facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"], function (result) {
                 var id = result["id"];
-                var token = result["token"];
                 var email = result["email"];
                 var name = result["name"];
                 var picture = result["picture"];
                 var dataObj = {
                     id: id,
-                    token: token,
                     email: email,
                     name: name,
                     picture: picture
                 };
-                http.post("https://lisahoroscope.herokuapp.com/api/users", dataObj)
+                http.post("http://localhost:3000/api/loginfb", dataObj)
                     .subscribe(function (data) {
-                    events.publish('logined', dataObj); //trigger the event to start
+                    events.publish('logined', data.json()); //trigger the event to start
                     console.log("Successful");
                 }, function (error) {
+                    console.log(error);
                     console.log("Failure");
                 });
             }, function (error) {

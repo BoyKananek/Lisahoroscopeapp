@@ -14,13 +14,13 @@ export var ProfilePage = (function () {
         this.http = http;
         this.disableSubmit = false;
         this.data = params.get('data');
-        this.date = params.get('date');
+        this.date = this.data.birthday;
         //check image which is exist or not
-        if (this.data.type == 'email') {
+        if (this.data.type == "email") {
             this.image = 'assets/img/profile.jpg';
         }
         else {
-            this.image = this.data.picture.data.url;
+            this.image = this.data.picture;
         }
     }
     ProfilePage.prototype.logoutHandler = function () {
@@ -90,11 +90,23 @@ export var ProfilePage = (function () {
                     handler: function () {
                         if (_this.data.type === "email") {
                             console.log('Logout with email');
+                            _this.http.post('http://localhost:3000/api/logout', _this.data)
+                                .subscribe(function (data) {
+                                console.log('Remove session!!');
+                            }, function (error) {
+                                console.log(error);
+                            });
                             _this.app.getRootNav().setRoot(LoginPage);
                         }
                         else {
                             //facebook logout
                             console.log('Logout with facebook');
+                            _this.http.post('http://localhost:3000/api/logout', _this.data)
+                                .subscribe(function (data) {
+                                console.log('Remove session!!');
+                            }, function (error) {
+                                console.log(error);
+                            });
                             _this.app.getRootNav().setRoot(LoginPage);
                             facebookConnectPlugin.logout(function (result) {
                                 console.log('Facebook logout successful');

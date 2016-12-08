@@ -70,7 +70,7 @@ export class LoginPage {
           text: 'Save',
           handler: data => {
             console.log('Saved clicked');
-            this.forgetEmail = data.Email;
+            this.forgetEmail = data.Email.toLowerCase();
             this.requestToresetPass();
           }
         }
@@ -99,14 +99,23 @@ export class LoginPage {
       var data = {
         email: this.forgetEmail
       };
-      this.http.post("https://lisahoroscope.herokuapp.com/forgetPassword", data)
+      this.http.post("http://localhost:3000/api/forgotPassword", data)
         .subscribe(data => {
-          var alert = this.alertCtrl.create({
-            title: "Reset password proceed",
-            subTitle: "Please check your email address to continue",
-            buttons: ["close"]
-          });
-          alert.present();
+          if (data.json().success == false) {
+            var alert = this.alertCtrl.create({
+              title: "Error",
+              subTitle: data.json().message,
+              buttons: ["close"]
+            });
+            alert.present();
+          } else {
+            var alert = this.alertCtrl.create({
+              title: "Reset password proceed",
+              subTitle: data.json().message,
+              buttons: ["close"]
+            });
+            alert.present();
+          }
         }, error => {
           var alert = this.alertCtrl.create({
             title: "Server down!",
@@ -123,14 +132,20 @@ export class LoginPage {
     });
     loader.present();
     console.log('GO to profile');
-    this.http.get('https://lisahoroscope.herokuapp.com/api/userinfo/' + this.data.email)
-      .map(res => res.json())
+    this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
         console.log('getting info');
-        console.log(data.birthdate);
-        this.birthdate = data.birthdate;
-        this.navCtrl.push(TabsPage, { data: this.data, date: this.birthdate });
-
+        console.log(data.json());
+        if (data.json().success == false) {
+          var alert = this.alertCtrl.create({
+            title: "Token expired",
+            subTitle: this.data.message,
+            buttons: ['close']
+          });
+          alert.present();
+        } else {
+          this.navCtrl.push(TabsPage, { data: data.json() });
+        }
       }, error => {
         console.log(error);
       })
@@ -167,7 +182,7 @@ export class LoginPage {
       this.disableSubmit = false;
     } else {
       console.log("Logging in with email");
-      this.http.post("https://lisahoroscope.herokuapp.com/loginWithApp", data)
+      this.http.post("http://localhost:3000/api/login", data)
         .subscribe(data => {
           this.data = data.json();
           if (this.data.error === true) {
@@ -177,7 +192,6 @@ export class LoginPage {
               buttons: ['close']
             });
             alert.present();
-            console.log('Login fail because wrong email');
             this.disableSubmit = false;
           }
           else {
@@ -207,22 +221,21 @@ export class LoginPage {
       facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"],
         function (result) { // Access api successful
           var id = result["id"];
-          var token = result["token"];
           var email = result["email"];
           var name = result["name"];
           var picture = result["picture"];
           var dataObj: any = {
             id: id,
-            token: token,
             email: email,
             name: name,
             picture: picture
           };
-          http.post("https://lisahoroscope.herokuapp.com/api/users", dataObj)
+          http.post("http://localhost:3000/api/loginfb", dataObj)
             .subscribe(data => {
-              events.publish('logined', dataObj);//trigger the event to start
+              events.publish('logined', data.json());//trigger the event to start
               console.log("Successful");
             }, error => {
+              console.log(error);
               console.log("Failure");
             });
 

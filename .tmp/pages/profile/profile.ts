@@ -20,12 +20,12 @@ export class ProfilePage {
   _logoutsub: (dataObj: any) => void;
   constructor(public navCtrl: NavController, params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http) {
     this.data = params.get('data');
-    this.date = params.get('date');
+    this.date = this.data.birthday;
     //check image which is exist or not
-    if (this.data.type == 'email') {
+    if (this.data.type == "email") {
       this.image = 'assets/img/profile.jpg';
     } else {
-      this.image = this.data.picture.data.url;
+      this.image = this.data.picture;
     }
   }
   logoutHandler() {
@@ -95,10 +95,22 @@ export class ProfilePage {
           handler: () => {
             if (this.data.type === "email") {
               console.log('Logout with email');
+              this.http.post('http://localhost:3000/api/logout', this.data)
+                .subscribe(data => {
+                  console.log('Remove session!!');
+                }, error => {
+                  console.log(error);
+                })
               this.app.getRootNav().setRoot(LoginPage);
             } else {
               //facebook logout
               console.log('Logout with facebook');
+              this.http.post('http://localhost:3000/api/logout', this.data)
+                .subscribe(data => {
+                  console.log('Remove session!!');
+                }, error => {
+                  console.log(error);
+                })
               this.app.getRootNav().setRoot(LoginPage);
               facebookConnectPlugin.logout(function (result) {
                 console.log('Facebook logout successful');
