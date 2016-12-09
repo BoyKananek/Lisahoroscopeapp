@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, App } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 export var HomePage = (function () {
-    function HomePage(navCtrl, app) {
+    function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.app = app;
         console.log("HomePage");
     }
     HomePage.decorators = [
@@ -15,7 +14,6 @@ export var HomePage = (function () {
     /** @nocollapse */
     HomePage.ctorParameters = [
         { type: NavController, },
-        { type: App, },
     ];
     return HomePage;
 }());

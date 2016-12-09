@@ -129,17 +129,17 @@ export var LoginPage = (function () {
         console.log('GO to profile');
         this.http.post('http://localhost:3000/auth/userinfo', this.data)
             .subscribe(function (data) {
-            console.log('getting info');
             console.log(data.json());
             if (data.json().success == false) {
                 var alert = _this.alertCtrl.create({
-                    title: "Token expired",
+                    title: "Login Fail",
                     subTitle: _this.data.message,
                     buttons: ['close']
                 });
                 alert.present();
             }
             else {
+                console.log('GOTO NEXT PAGE');
                 _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
             }
         }, function (error) {
@@ -157,7 +157,7 @@ export var LoginPage = (function () {
         var _this = this;
         this.disableSubmit = true;
         var data = {
-            email: this.email,
+            email: this.email.toLowerCase(),
             password: this.password
         };
         if (!data.email || !data.password) {

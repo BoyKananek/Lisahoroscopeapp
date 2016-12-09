@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController,App } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { NavController,App } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  constructor(public navCtrl: NavController,private app: App) {
+  constructor(public navCtrl: NavController) {
     console.log("HomePage");
   }
 

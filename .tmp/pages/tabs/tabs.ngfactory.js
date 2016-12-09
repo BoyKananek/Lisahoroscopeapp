@@ -92,6 +92,7 @@ var _View_TabsPage0 = (function (_super) {
     _View_TabsPage0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-tabs', null);
+        this.renderer.setElementAttribute(this._el_0, 'preloadTabs', 'false');
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = import13.viewFactory_Tabs0(this.viewUtils, this.injector(0), this._appEl_0);
         this._Tabs_0_4 = new import13.Wrapper_Tabs(this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import15.ViewController, null), this.parentInjector.get(import16.App), this.parentInjector.get(import17.Config), new import18.ElementRef(this._el_0), this.parentInjector.get(import19.Platform), this.renderer, this.parentInjector.get(import20.DeepLinker));

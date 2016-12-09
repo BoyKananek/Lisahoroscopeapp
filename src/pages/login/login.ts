@@ -133,16 +133,16 @@ export class LoginPage {
     console.log('GO to profile');
     this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
-        console.log('getting info');
         console.log(data.json());
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
-            title: "Token expired",
+            title: "Login Fail",
             subTitle: this.data.message,
             buttons: ['close']
           });
           alert.present();
         } else {
+          console.log('GOTO NEXT PAGE');
           this.app.getRootNav().setRoot(TabsPage,{data:data.json()});
           //this.navCtrl.push(TabsPage, { data: data.json() });
         }
@@ -161,7 +161,7 @@ export class LoginPage {
   loginEmail() {
     this.disableSubmit = true;
     var data = {
-      email: this.email,
+      email: this.email.toLowerCase(),
       password: this.password
     };
     if (!data.email || !data.password) {

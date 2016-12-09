@@ -21,7 +21,9 @@ export class TabsPage {
   constructor(public navCtrl: NavController, params: NavParams, public alertCtrl: AlertController) {
     this.data = params.get('data');
     this.date = params.get('date');
+    console.log('tabpage ');
   }
+  
   share() {
     var alert = this.alertCtrl.create({
       title: "Share on social",
