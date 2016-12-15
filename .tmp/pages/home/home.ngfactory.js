@@ -15,33 +15,40 @@ import * as import4 from '@angular/core/src/linker/view_utils';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import12 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import13 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import14 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import15 from '../../node_modules/ionic-angular/components/slides/slides.ngfactory';
-import * as import16 from 'ionic-angular/config/config';
-import * as import17 from '@angular/core/src/linker/element_ref';
-import * as import18 from 'ionic-angular/navigation/view-controller';
-import * as import19 from 'ionic-angular/components/app/app';
-import * as import20 from 'ionic-angular/components/toolbar/toolbar';
-import * as import21 from 'ionic-angular/util/keyboard';
-import * as import22 from '@angular/core/src/zone/ng_zone';
-import * as import23 from 'ionic-angular/components/tabs/tabs';
-import * as import24 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import25 from 'ionic-angular/components/navbar/navbar';
-import * as import26 from 'ionic-angular/components/slides/slides';
-import * as import27 from 'ionic-angular/components/content/content';
+import * as import9 from 'ionic-angular/navigation/nav-params';
+import * as import10 from 'ionic-angular/components/app/app';
+import * as import11 from 'ionic-angular/components/alert/alert';
+import * as import12 from 'ionic-angular/util/events';
+import * as import13 from '@angular/http/src/http';
+import * as import14 from '@angular/core/src/metadata/view';
+import * as import15 from '@angular/core/src/linker/component_factory';
+import * as import16 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import17 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import18 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import19 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import20 from 'ionic-angular/config/config';
+import * as import21 from '@angular/core/src/linker/element_ref';
+import * as import22 from 'ionic-angular/navigation/view-controller';
+import * as import23 from 'ionic-angular/components/toolbar/toolbar';
+import * as import24 from 'ionic-angular/util/keyboard';
+import * as import25 from '@angular/core/src/zone/ng_zone';
+import * as import26 from 'ionic-angular/components/tabs/tabs';
+import * as import27 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import28 from 'ionic-angular/components/navbar/navbar';
+import * as import29 from 'ionic-angular/components/content/content';
 export var Wrapper_HomePage = (function () {
-    function Wrapper_HomePage(p0) {
+    function Wrapper_HomePage(p0, p1, p2, p3, p4, p5) {
         this.changed = false;
-        this.context = new import0.HomePage(p0);
+        this.context = new import0.HomePage(p0, p1, p2, p3, p4, p5);
     }
     Wrapper_HomePage.prototype.detectChangesInternal = function (view, el, throwOnChange) {
         var changed = this.changed;
         this.changed = false;
+        if (!throwOnChange) {
+            if ((view.numberOfChecks === 0)) {
+                this.context.ngOnInit();
+            }
+        }
         return changed;
     };
     return Wrapper_HomePage;
@@ -56,7 +63,7 @@ var _View_HomePage_Host0 = (function (_super) {
         this._el_0 = this.selectOrCreateHostElement('page-home', rootSelector, null);
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = viewFactory_HomePage0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._HomePage_0_4 = new Wrapper_HomePage(this.parentInjector.get(import8.NavController));
+        this._HomePage_0_4 = new Wrapper_HomePage(this.parentInjector.get(import8.NavController), this.parentInjector.get(import9.NavParams), this.parentInjector.get(import10.App), this.parentInjector.get(import11.AlertController), this.parentInjector.get(import12.Events), this.parentInjector.get(import13.Http));
         this._appEl_0.initComponent(this._HomePage_0_4.context, [], compView_0);
         compView_0.create(this._HomePage_0_4.context, this.projectableNodes, null);
         this.init([].concat([this._el_0]), [this._el_0], [], []);
@@ -77,11 +84,11 @@ var _View_HomePage_Host0 = (function (_super) {
 }(import1.AppView));
 function viewFactory_HomePage_Host0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_HomePage_Host === null)) {
-        (renderType_HomePage_Host = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, [], {}));
+        (renderType_HomePage_Host = viewUtils.createRenderComponentType('', 0, import14.ViewEncapsulation.None, [], {}));
     }
     return new _View_HomePage_Host0(viewUtils, parentInjector, declarationEl);
 }
-export var HomePageNgFactory = new import10.ComponentFactory('page-home', viewFactory_HomePage_Host0, import0.HomePage);
+export var HomePageNgFactory = new import15.ComponentFactory('page-home', viewFactory_HomePage_Host0, import0.HomePage);
 var styles_HomePage = [];
 var renderType_HomePage = null;
 var _View_HomePage0 = (function (_super) {
@@ -92,20 +99,20 @@ var _View_HomePage0 = (function (_super) {
     _View_HomePage0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-header', null);
-        this._Header_0_3 = new import11.Wrapper_Header(this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import18.ViewController, null));
+        this._Header_0_3 = new import16.Wrapper_Header(this.parentInjector.get(import20.Config), new import21.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import22.ViewController, null));
         this._text_1 = this.renderer.createText(this._el_0, '\n  ', null);
         this._el_2 = this.renderer.createElement(this._el_0, 'ion-navbar', null);
         this.renderer.setElementAttribute(this._el_2, 'class', 'toolbar');
         this.renderer.setElementAttribute(this._el_2, 'hideBackButton', '');
         this._appEl_2 = new import3.AppElement(2, 0, this, this._el_2);
-        var compView_2 = import12.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
-        this._Navbar_2_4 = new import12.Wrapper_Navbar(this.parentInjector.get(import19.App), this.parentInjector.get(import18.ViewController, null), this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_2), this.renderer);
+        var compView_2 = import17.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
+        this._Navbar_2_4 = new import17.Wrapper_Navbar(this.parentInjector.get(import10.App), this.parentInjector.get(import22.ViewController, null), this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import20.Config), new import21.ElementRef(this._el_2), this.renderer);
         this._appEl_2.initComponent(this._Navbar_2_4.context, [], compView_2);
         this._text_3 = this.renderer.createText(null, '\n    ', null);
         this._el_4 = this.renderer.createElement(null, 'ion-title', null);
         this._appEl_4 = new import3.AppElement(4, 2, this, this._el_4);
-        var compView_4 = import13.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
-        this._ToolbarTitle_4_4 = new import13.Wrapper_ToolbarTitle(this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import20.Toolbar, null), this._Navbar_2_4.context);
+        var compView_4 = import18.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
+        this._ToolbarTitle_4_4 = new import18.Wrapper_ToolbarTitle(this.parentInjector.get(import20.Config), new import21.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import23.Toolbar, null), this._Navbar_2_4.context);
         this._appEl_4.initComponent(this._ToolbarTitle_4_4.context, [], compView_4);
         this._text_5 = this.renderer.createText(null, 'Home', null);
         compView_4.create(this._ToolbarTitle_4_4.context, [[].concat([this._text_5])], null);
@@ -125,85 +132,16 @@ var _View_HomePage0 = (function (_super) {
         this._el_9 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
         this.renderer.setElementAttribute(this._el_9, 'padding', '');
         this._appEl_9 = new import3.AppElement(9, null, this, this._el_9);
-        var compView_9 = import14.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
-        this._Content_9_4 = new import14.Wrapper_Content(this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import19.App), this.parentInjector.get(import21.Keyboard), this.parentInjector.get(import22.NgZone), this.parentInjector.get(import18.ViewController, null), this.parentInjector.get(import23.Tabs, null));
+        var compView_9 = import19.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
+        this._Content_9_4 = new import19.Wrapper_Content(this.parentInjector.get(import20.Config), new import21.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import10.App), this.parentInjector.get(import24.Keyboard), this.parentInjector.get(import25.NgZone), this.parentInjector.get(import22.ViewController, null), this.parentInjector.get(import26.Tabs, null));
         this._appEl_9.initComponent(this._Content_9_4.context, [], compView_9);
-        this._text_10 = this.renderer.createText(null, '\n  ', null);
-        this._el_11 = this.renderer.createElement(null, 'ion-slides', null);
-        this.renderer.setElementAttribute(this._el_11, 'pager', '');
-        this._appEl_11 = new import3.AppElement(11, 9, this, this._el_11);
-        var compView_11 = import15.viewFactory_Slides0(this.viewUtils, this.injector(11), this._appEl_11);
-        this._Slides_11_4 = new import15.Wrapper_Slides(this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_11), this.renderer);
-        this._appEl_11.initComponent(this._Slides_11_4.context, [], compView_11);
-        this._text_12 = this.renderer.createText(null, '\n\n  ', null);
-        this._el_13 = this.renderer.createElement(null, 'ion-slide', null);
-        this.renderer.setElementAttribute(this._el_13, 'style', 'background-color: green');
-        this._appEl_13 = new import3.AppElement(13, 11, this, this._el_13);
-        var compView_13 = import15.viewFactory_Slide0(this.viewUtils, this.injector(13), this._appEl_13);
-        this._Slide_13_4 = new import15.Wrapper_Slide(new import17.ElementRef(this._el_13), this._Slides_11_4.context);
-        this._appEl_13.initComponent(this._Slide_13_4.context, [], compView_13);
-        this._text_14 = this.renderer.createText(null, '\n    ', null);
-        this._el_15 = this.renderer.createElement(null, 'h2', null);
-        this._text_16 = this.renderer.createText(this._el_15, 'Slide 1', null);
-        this._text_17 = this.renderer.createText(null, '\n  ', null);
-        compView_13.create(this._Slide_13_4.context, [[].concat([
-                this._text_14,
-                this._el_15,
-                this._text_17
-            ])], null);
-        this._text_18 = this.renderer.createText(null, '\n\n  ', null);
-        this._el_19 = this.renderer.createElement(null, 'ion-slide', null);
-        this.renderer.setElementAttribute(this._el_19, 'style', 'background-color: blue');
-        this._appEl_19 = new import3.AppElement(19, 11, this, this._el_19);
-        var compView_19 = import15.viewFactory_Slide0(this.viewUtils, this.injector(19), this._appEl_19);
-        this._Slide_19_4 = new import15.Wrapper_Slide(new import17.ElementRef(this._el_19), this._Slides_11_4.context);
-        this._appEl_19.initComponent(this._Slide_19_4.context, [], compView_19);
-        this._text_20 = this.renderer.createText(null, '\n    ', null);
-        this._el_21 = this.renderer.createElement(null, 'h2', null);
-        this._text_22 = this.renderer.createText(this._el_21, 'Slide 2', null);
-        this._text_23 = this.renderer.createText(null, '\n  ', null);
-        compView_19.create(this._Slide_19_4.context, [[].concat([
-                this._text_20,
-                this._el_21,
-                this._text_23
-            ])], null);
-        this._text_24 = this.renderer.createText(null, '\n\n  ', null);
-        this._el_25 = this.renderer.createElement(null, 'ion-slide', null);
-        this.renderer.setElementAttribute(this._el_25, 'style', 'background-color: red');
-        this._appEl_25 = new import3.AppElement(25, 11, this, this._el_25);
-        var compView_25 = import15.viewFactory_Slide0(this.viewUtils, this.injector(25), this._appEl_25);
-        this._Slide_25_4 = new import15.Wrapper_Slide(new import17.ElementRef(this._el_25), this._Slides_11_4.context);
-        this._appEl_25.initComponent(this._Slide_25_4.context, [], compView_25);
-        this._text_26 = this.renderer.createText(null, '\n    ', null);
-        this._el_27 = this.renderer.createElement(null, 'h2', null);
-        this._text_28 = this.renderer.createText(this._el_27, 'Slide 3', null);
-        this._text_29 = this.renderer.createText(null, '\n  ', null);
-        compView_25.create(this._Slide_25_4.context, [[].concat([
-                this._text_26,
-                this._el_27,
-                this._text_29
-            ])], null);
-        this._text_30 = this.renderer.createText(null, '\n\n', null);
-        compView_11.create(this._Slides_11_4.context, [[].concat([
-                this._text_12,
-                this._el_13,
-                this._text_18,
-                this._el_19,
-                this._text_24,
-                this._el_25,
-                this._text_30
-            ])], null);
-        this._text_31 = this.renderer.createText(null, '\n', null);
+        this._text_10 = this.renderer.createText(null, '\n  \n', null);
         compView_9.create(this._Content_9_4.context, [
             [],
-            [].concat([
-                this._text_10,
-                this._el_11,
-                this._text_31
-            ]),
+            [].concat([this._text_10]),
             []
         ], null);
-        this._text_32 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._text_11 = this.renderer.createText(parentRenderNode, '\n', null);
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
         this._expr_3 = import7.UNINITIALIZED;
@@ -219,54 +157,21 @@ var _View_HomePage0 = (function (_super) {
             this._text_8,
             this._el_9,
             this._text_10,
-            this._el_11,
-            this._text_12,
-            this._el_13,
-            this._text_14,
-            this._el_15,
-            this._text_16,
-            this._text_17,
-            this._text_18,
-            this._el_19,
-            this._text_20,
-            this._el_21,
-            this._text_22,
-            this._text_23,
-            this._text_24,
-            this._el_25,
-            this._text_26,
-            this._el_27,
-            this._text_28,
-            this._text_29,
-            this._text_30,
-            this._text_31,
-            this._text_32
+            this._text_11
         ], [], []);
         return null;
     };
     _View_HomePage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import24.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) {
+        if (((token === import27.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) {
             return this._ToolbarTitle_4_4.context;
         }
-        if (((token === import25.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) {
+        if (((token === import28.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) {
             return this._Navbar_2_4.context;
         }
-        if (((token === import20.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
+        if (((token === import23.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
             return this._Header_0_3.context;
         }
-        if (((token === import26.Slide) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
-            return this._Slide_13_4.context;
-        }
-        if (((token === import26.Slide) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 23)))) {
-            return this._Slide_19_4.context;
-        }
-        if (((token === import26.Slide) && ((25 <= requestNodeIndex) && (requestNodeIndex <= 29)))) {
-            return this._Slide_25_4.context;
-        }
-        if (((token === import26.Slides) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
-            return this._Slides_11_4.context;
-        }
-        if (((token === import27.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 31)))) {
+        if (((token === import29.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 10)))) {
             return this._Content_9_4.context;
         }
         return notFoundResult;
@@ -281,20 +186,6 @@ var _View_HomePage0 = (function (_super) {
         }
         if (this._Content_9_4.detectChangesInternal(this, this._el_9, throwOnChange)) {
             this._appEl_9.componentView.markAsCheckOnce();
-        }
-        var currVal_4 = '';
-        this._Slides_11_4.check_pager(currVal_4, throwOnChange, false);
-        if (this._Slides_11_4.detectChangesInternal(this, this._el_11, throwOnChange)) {
-            this._appEl_11.componentView.markAsCheckOnce();
-        }
-        if (this._Slide_13_4.detectChangesInternal(this, this._el_13, throwOnChange)) {
-            this._appEl_13.componentView.markAsCheckOnce();
-        }
-        if (this._Slide_19_4.detectChangesInternal(this, this._el_19, throwOnChange)) {
-            this._appEl_19.componentView.markAsCheckOnce();
-        }
-        if (this._Slide_25_4.detectChangesInternal(this, this._el_25, throwOnChange)) {
-            this._appEl_25.componentView.markAsCheckOnce();
         }
         this.detectContentChildrenChanges(throwOnChange);
         var currVal_1 = this._Navbar_2_4.context._hidden;
@@ -320,16 +211,13 @@ var _View_HomePage0 = (function (_super) {
         }
     };
     _View_HomePage0.prototype.destroyInternal = function () {
-        this._Slide_13_4.context.ngOnDestroy();
-        this._Slide_19_4.context.ngOnDestroy();
-        this._Slide_25_4.context.ngOnDestroy();
         this._Content_9_4.context.ngOnDestroy();
     };
     return _View_HomePage0;
 }(import1.AppView));
 export function viewFactory_HomePage0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_HomePage === null)) {
-        (renderType_HomePage = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, styles_HomePage, {}));
+        (renderType_HomePage = viewUtils.createRenderComponentType('', 0, import14.ViewEncapsulation.None, styles_HomePage, {}));
     }
     return new _View_HomePage0(viewUtils, parentInjector, declarationEl);
 }

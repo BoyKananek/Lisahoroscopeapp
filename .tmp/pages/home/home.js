@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, App, AlertController, Events } from 'ionic-angular';
+import { Http } from '@angular/http';
 export var HomePage = (function () {
-    function HomePage(navCtrl) {
+    function HomePage(navCtrl, params, app, alertCtrl, events, http) {
         this.navCtrl = navCtrl;
-        console.log("HomePage");
+        this.app = app;
+        this.alertCtrl = alertCtrl;
+        this.events = events;
+        this.http = http;
+        this.data = params.get('data');
+        console.log(this.data);
     }
+    HomePage.prototype.ngOnInit = function () {
+        console.log("Initailize Home Page");
+    };
     HomePage.decorators = [
         { type: Component, args: [{
                     selector: 'page-home',
@@ -14,6 +23,11 @@ export var HomePage = (function () {
     /** @nocollapse */
     HomePage.ctorParameters = [
         { type: NavController, },
+        { type: NavParams, },
+        { type: App, },
+        { type: AlertController, },
+        { type: Events, },
+        { type: Http, },
     ];
     return HomePage;
 }());
