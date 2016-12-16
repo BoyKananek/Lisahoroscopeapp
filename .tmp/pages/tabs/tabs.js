@@ -13,12 +13,17 @@ export var TabsPage = (function () {
         this.alertCtrl = alertCtrl;
         this.http = http;
         this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
         this.tab1Root = HomePage;
         this.tab2Root = BrowsePage;
         this.tab3Root = ContactPage;
         this.tab4Root = ProfilePage;
         this.tabIndex = 0;
         this.data = params.get('data');
+        storage.get('data').then(function (val) {
+            console.log("HELLO");
+            console.log(val.token);
+        });
         var tabIndex = params.get('tabIndex');
         if (tabIndex) {
             this.tabIndex = tabIndex;

@@ -20,8 +20,12 @@ export class TabsPage {
   tab3Root: any = ContactPage;
   tab4Root: any = ProfilePage;
   public tabIndex: Number = 0;
-  constructor(public navCtrl: NavController, params: NavParams, public alertCtrl: AlertController, public http: Http, public loadingCtrl: LoadingController,storage: Storage) {
+  constructor(public navCtrl: NavController, params: NavParams, public alertCtrl: AlertController, public http: Http, public loadingCtrl: LoadingController, public storage: Storage) {
     this.data = params.get('data');
+    storage.get('data').then((val) => {
+      console.log("HELLO");
+      console.log( val.token);
+    })
     let tabIndex = params.get('tabIndex');
     if (tabIndex) {
       this.tabIndex = tabIndex;
@@ -31,12 +35,12 @@ export class TabsPage {
         .subscribe(
         response => {
           this.result = response.json();
-          storage.set('title',this.result.title);
-          storage.set('work',this.result.work);
-          storage.set('finance',this.result.finance);
-          storage.set('love',this.result.love);
-          storage.set('healthy',this.result.healthy);
-          storage.set('luck',this.result.luck);
+          storage.set('title', this.result.title);
+          storage.set('work', this.result.work);
+          storage.set('finance', this.result.finance);
+          storage.set('love', this.result.love);
+          storage.set('healthy', this.result.healthy);
+          storage.set('luck', this.result.luck);
         },
         error => {
           console.log(error.text());

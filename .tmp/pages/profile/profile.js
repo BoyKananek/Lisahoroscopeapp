@@ -78,7 +78,7 @@ export var ProfilePage = (function () {
                         _this.storage.set('love', response.json().love);
                         _this.storage.set('healthy', response.json().healthy);
                         _this.storage.set('luck', response.json().luck);
-                        console.log(response.json() + " YEAH");
+                        console.log(response.json());
                         var alert = _this.alertCtrl.create({
                             title: response.json().message,
                             buttons: ["Ok"]

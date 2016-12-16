@@ -81,7 +81,7 @@ export class ProfilePage {
                 this.storage.set('love', response.json().love);
                 this.storage.set('healthy', response.json().healthy);
                 this.storage.set('luck', response.json().luck);
-                console.log(response.json()+" YEAH");
+                console.log(response.json());
                 var alert = this.alertCtrl.create({
                   title: response.json().message,
                   buttons: ["Ok"]

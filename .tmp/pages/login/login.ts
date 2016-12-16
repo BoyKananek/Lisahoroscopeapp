@@ -6,6 +6,7 @@ import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
+import { Storage } from '@ionic/storage';
 
 declare const facebookConnectPlugin: any;
 
@@ -22,7 +23,7 @@ export class LoginPage {
   forgetEmail: any;
   disableSubmit: boolean = false;
   _loginsub: (dataObj: any) => void;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App, public storage: Storage) {
     this.data = null;
   }
   loginHandler(dataObj) {
@@ -138,6 +139,7 @@ export class LoginPage {
           alert.present();
         } else {
           console.log('GOTO NEXT PAGE');
+          this.storage.set('data',data.json());
           this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
           //this.navCtrl.push(TabsPage, { data: data.json() });
         }
