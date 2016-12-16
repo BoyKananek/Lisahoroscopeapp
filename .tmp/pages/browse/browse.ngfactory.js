@@ -96,6 +96,7 @@ var _View_BrowsePage0 = (function (_super) {
         this._text_1 = this.renderer.createText(this._el_0, '\n  ', null);
         this._el_2 = this.renderer.createElement(this._el_0, 'ion-navbar', null);
         this.renderer.setElementAttribute(this._el_2, 'class', 'toolbar');
+        this.renderer.setElementAttribute(this._el_2, 'hideBackButton', '');
         this._appEl_2 = new import3.AppElement(2, 0, this, this._el_2);
         var compView_2 = import12.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
         this._Navbar_2_4 = new import12.Wrapper_Navbar(this.parentInjector.get(import19.App), this.parentInjector.get(import18.ViewController, null), this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_2), this.renderer);
@@ -244,9 +245,9 @@ var _View_BrowsePage0 = (function (_super) {
             []
         ], null);
         this._text_64 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
+        this._expr_3 = import7.UNINITIALIZED;
         this.init([], [
             this._el_0,
             this._text_1,
@@ -381,6 +382,8 @@ var _View_BrowsePage0 = (function (_super) {
     };
     _View_BrowsePage0.prototype.detectChangesInternal = function (throwOnChange) {
         this._Header_0_3.detectChangesInternal(this, this._el_0, throwOnChange);
+        var currVal_0 = '';
+        this._Navbar_2_4.check_hideBackButton(currVal_0, throwOnChange, false);
         this._Navbar_2_4.detectChangesInternal(this, this._el_2, throwOnChange);
         if (this._ToolbarTitle_4_4.detectChangesInternal(this, this._el_4, throwOnChange)) {
             this._appEl_4.componentView.markAsCheckOnce();
@@ -405,20 +408,20 @@ var _View_BrowsePage0 = (function (_super) {
         this._Col_57_3.detectChangesInternal(this, this._el_57, throwOnChange);
         this._Col_60_3.detectChangesInternal(this, this._el_60, throwOnChange);
         this.detectContentChildrenChanges(throwOnChange);
-        var currVal_0 = this._Navbar_2_4.context._hidden;
-        if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
-            this.renderer.setElementProperty(this._el_2, 'hidden', currVal_0);
-            this._expr_0 = currVal_0;
-        }
-        var currVal_1 = this._Navbar_2_4.context._sbPadding;
+        var currVal_1 = this._Navbar_2_4.context._hidden;
         if (import4.checkBinding(throwOnChange, this._expr_1, currVal_1)) {
-            this.renderer.setElementClass(this._el_2, 'statusbar-padding', currVal_1);
+            this.renderer.setElementProperty(this._el_2, 'hidden', currVal_1);
             this._expr_1 = currVal_1;
         }
-        var currVal_2 = this._Content_12_4.context._sbPadding;
+        var currVal_2 = this._Navbar_2_4.context._sbPadding;
         if (import4.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
-            this.renderer.setElementClass(this._el_12, 'statusbar-padding', currVal_2);
+            this.renderer.setElementClass(this._el_2, 'statusbar-padding', currVal_2);
             this._expr_2 = currVal_2;
+        }
+        var currVal_3 = this._Content_12_4.context._sbPadding;
+        if (import4.checkBinding(throwOnChange, this._expr_3, currVal_3)) {
+            this.renderer.setElementClass(this._el_12, 'statusbar-padding', currVal_3);
+            this._expr_3 = currVal_3;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {

@@ -29,6 +29,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp834231"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp834231"
         }
     },
     "dependent_plugins": {}

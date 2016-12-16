@@ -32,4 +32,5 @@
         <variable name="APP_ID" value="1333155163379937" />
         <variable name="APP_NAME" value="LisaguruHoroscopeApp" />
     </plugin>
+    <plugin name="cordova-sqlite-storage" spec="~2.0.0" />
 </widget>

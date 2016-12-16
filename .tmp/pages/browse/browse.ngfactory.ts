@@ -169,9 +169,9 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
   _text_62:any;
   _text_63:any;
   _text_64:any;
-  /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
+  /*private*/ _expr_3:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_BrowsePage0,renderType_BrowsePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -182,6 +182,7 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
     this._text_1 = this.renderer.createText(this._el_0,'\n  ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-navbar',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','toolbar');
+    this.renderer.setElementAttribute(this._el_2,'hideBackButton','');
     this._appEl_2 = new import3.AppElement(2,0,this,this._el_2);
     var compView_2:any = import12.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
     this._Navbar_2_4 = new import12.Wrapper_Navbar(this.parentInjector.get(import19.App),this.parentInjector.get(import18.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_2),this.renderer);
@@ -335,9 +336,9 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
     ]
     ,(null as any));
     this._text_64 = this.renderer.createText(parentRenderNode,'\n',(null as any));
-    this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
+    this._expr_3 = import7.UNINITIALIZED;
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -433,6 +434,8 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this._Header_0_3.detectChangesInternal(this,this._el_0,throwOnChange);
+    const currVal_0:any = '';
+    this._Navbar_2_4.check_hideBackButton(currVal_0,throwOnChange,false);
     this._Navbar_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     if (this._ToolbarTitle_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
     if (this._Content_12_4.detectChangesInternal(this,this._el_12,throwOnChange)) { this._appEl_12.componentView.markAsCheckOnce(); }
@@ -453,20 +456,20 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
     this._Col_57_3.detectChangesInternal(this,this._el_57,throwOnChange);
     this._Col_60_3.detectChangesInternal(this,this._el_60,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
-    const currVal_0:any = this._Navbar_2_4.context._hidden;
-    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setElementProperty(this._el_2,'hidden',currVal_0);
-      this._expr_0 = currVal_0;
-    }
-    const currVal_1:any = this._Navbar_2_4.context._sbPadding;
+    const currVal_1:any = this._Navbar_2_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_1);
+      this.renderer.setElementProperty(this._el_2,'hidden',currVal_1);
       this._expr_1 = currVal_1;
     }
-    const currVal_2:any = this._Content_12_4.context._sbPadding;
+    const currVal_2:any = this._Navbar_2_4.context._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setElementClass(this._el_12,'statusbar-padding',currVal_2);
+      this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_2);
       this._expr_2 = currVal_2;
+    }
+    const currVal_3:any = this._Content_12_4.context._sbPadding;
+    if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
+      this.renderer.setElementClass(this._el_12,'statusbar-padding',currVal_3);
+      this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }

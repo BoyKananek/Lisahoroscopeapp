@@ -121,11 +121,6 @@ export var LoginPage = (function () {
     };
     LoginPage.prototype.gotoProfile = function () {
         var _this = this;
-        var loader = this.loadingCtrl.create({
-            content: "Logging in ....",
-            duration: 500
-        });
-        loader.present();
         console.log('GO to profile');
         this.http.post('http://localhost:3000/auth/userinfo', this.data)
             .subscribe(function (data) {
@@ -140,11 +135,16 @@ export var LoginPage = (function () {
             }
             else {
                 console.log('GOTO NEXT PAGE');
-                _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+                _this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
             }
         }, function (error) {
             console.log(error);
         });
+        var loader = this.loadingCtrl.create({
+            content: "Logging in ....",
+            duration: 500
+        });
+        loader.present();
     };
     LoginPage.prototype.gotoSignUp = function () {
         this.navCtrl.push(SignupPage);

@@ -57,5 +57,13 @@
             "APP_ID": "1333155163379937",
             "APP_NAME": "LisaguruHoroscopeApp"
         }
+    },
+    "cordova-sqlite-storage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-sqlite-storage@2.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -27,6 +26,8 @@
 		ECED712D04514CE2B84B757A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A18FC84FC34047BDB572FB5E /* CDVViewController+SplashScreen.m */; };
 		F4AB25369A9E403591BEC0F2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D6593D01A4DF3A431E91E /* FBSDKCoreKit.framework */; };
 		FACB0A3B950D4A74A816864F /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 561A0587CF164F7788717CC5 /* FacebookConnectPlugin.m */; };
+		C3A5B99723AD4AB3A3639D38 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB53363FF254E8FA4C2CC5E /* SQLitePlugin.m */; };
+		8EEE613C015F4C8FB1BCD49E /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 4C67F0C4C191406C98922FD7 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=2 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_RTREE -DSQLITE_LOCKING_STYLE=1 -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000 -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,10 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Lisahoroscopeapp/config.xml; sourceTree = "<group>"; };
+		DEB53363FF254E8FA4C2CC5E /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4C67F0C4C191406C98922FD7 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3402567A5E9C4D608149B388 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		08A6B3DEAE344FE790095475 /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,10 @@
 				D4C661C464F044AEB9244262 /* IonicKeyboard.h */,
 				561A0587CF164F7788717CC5 /* FacebookConnectPlugin.m */,
 				17D745CCC62C49ECAC65ED86 /* FacebookConnectPlugin.h */,
+				DEB53363FF254E8FA4C2CC5E /* SQLitePlugin.m */,
+				4C67F0C4C191406C98922FD7 /* sqlite3.c */,
+				3402567A5E9C4D608149B388 /* SQLitePlugin.h */,
+				08A6B3DEAE344FE790095475 /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = Lisahoroscopeapp/Plugins;
@@ -344,6 +353,8 @@
 				51CAB9CA97634C9CA14E32A9 /* CDVStatusBar.m in Sources */,
 				AD657DB38E894BEE92856471 /* IonicKeyboard.m in Sources */,
 				FACB0A3B950D4A74A816864F /* FacebookConnectPlugin.m in Sources */,
+				C3A5B99723AD4AB3A3639D38 /* SQLitePlugin.m in Sources */,
+				8EEE613C015F4C8FB1BCD49E /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

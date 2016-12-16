@@ -1,6 +1,6 @@
-<ion-tabs>
-  <ion-tab tabIcon="calendar" tabTitle="TODAY" [root]="tab1Root" [rootParams]="{data: data,date: date}"></ion-tab>
+<ion-tabs [selectedIndex]='tabIndex'>
+  <ion-tab tabIcon="calendar" tabTitle="TODAY" [root]="tab1Root" [rootParams]="{data: data}"></ion-tab>
   <ion-tab tabIcon="apps" tabTitle="BROWSE" [root]="tab2Root"></ion-tab>
   <ion-tab tabIcon="share-alt" tabTitle="SHARE" (ionSelect)="share()"></ion-tab>
-  <ion-tab tabIcon="contact" tabTitle="PROFILE" [root]="tab4Root" [rootParams]="{data: data,date: date}"></ion-tab>
+  <ion-tab tabIcon="contact" tabTitle="PROFILE" [root]="tab4Root" [rootParams]="{data: data}"></ion-tab>
 </ion-tabs>

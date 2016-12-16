@@ -49,52 +49,53 @@ import * as import41 from 'ionic-angular/components/popover/popover';
 import * as import42 from 'ionic-angular/components/tap-click/tap-click';
 import * as import43 from 'ionic-angular/components/toast/toast';
 import * as import44 from 'ionic-angular/transitions/transition-controller';
-import * as import45 from '@angular/core/src/di/injector';
-import * as import46 from '../node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory';
-import * as import47 from '../node_modules/ionic-angular/components/alert/alert-component.ngfactory';
-import * as import48 from '../node_modules/ionic-angular/components/app/app-root.ngfactory';
-import * as import49 from '../node_modules/ionic-angular/components/loading/loading-component.ngfactory';
-import * as import50 from '../node_modules/ionic-angular/components/modal/modal-component.ngfactory';
-import * as import51 from '../node_modules/ionic-angular/components/picker/picker-component.ngfactory';
-import * as import52 from '../node_modules/ionic-angular/components/popover/popover-component.ngfactory';
-import * as import53 from '../node_modules/ionic-angular/components/toast/toast-component.ngfactory';
-import * as import54 from './app.component.ngfactory';
-import * as import55 from '../pages/browse/browse.ngfactory';
-import * as import56 from '../pages/contact/contact.ngfactory';
-import * as import57 from '../pages/profile/profile.ngfactory';
-import * as import58 from '../pages/home/home.ngfactory';
-import * as import59 from '../pages/tabs/tabs.ngfactory';
-import * as import60 from '../pages/login/login.ngfactory';
-import * as import61 from '../pages/signup/signup.ngfactory';
-import * as import62 from '@angular/core/src/application_tokens';
-import * as import63 from '@angular/platform-browser/src/dom/events/dom_events';
-import * as import64 from '@angular/platform-browser/src/dom/events/key_events';
-import * as import65 from '@angular/platform-browser/src/dom/events/hammer_gestures';
-import * as import66 from '@angular/core/src/zone/ng_zone';
-import * as import67 from '@angular/platform-browser/src/dom/debug/ng_probe';
-import * as import68 from './app.component';
-import * as import69 from '@angular/common/src/location/platform_location';
-import * as import70 from '@angular/common/src/location/location_strategy';
-import * as import71 from 'ionic-angular/navigation/url-serializer';
-import * as import72 from 'ionic-angular/navigation/deep-linker';
-import * as import73 from 'ionic-angular/platform/query-params';
-import * as import74 from 'ionic-angular/platform/platform-registry';
-import * as import75 from 'ionic-angular/platform/platform';
-import * as import76 from 'ionic-angular/config/config';
-import * as import77 from 'ionic-angular/config/mode-registry';
-import * as import78 from 'ionic-angular/transitions/transition-registry';
-import * as import79 from '@angular/core/src/console';
-import * as import80 from '@angular/core/src/i18n/tokens';
-import * as import81 from '@angular/core/src/error_handler';
-import * as import82 from '@angular/platform-browser/src/dom/dom_tokens';
-import * as import83 from '@angular/platform-browser/src/dom/animation_driver';
-import * as import84 from '@angular/core/src/render/api';
-import * as import85 from '@angular/core/src/security';
-import * as import86 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import87 from '@angular/core/src/change_detection/differs/keyvalue_differs';
-import * as import88 from '@angular/http/src/interfaces';
-import * as import89 from '@angular/http/src/http';
-import * as import90 from 'ionic-angular/components/app/app-root';
+import * as import45 from '@ionic/storage/es2015/storage';
+import * as import46 from '@angular/core/src/di/injector';
+import * as import47 from '../node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory';
+import * as import48 from '../node_modules/ionic-angular/components/alert/alert-component.ngfactory';
+import * as import49 from '../node_modules/ionic-angular/components/app/app-root.ngfactory';
+import * as import50 from '../node_modules/ionic-angular/components/loading/loading-component.ngfactory';
+import * as import51 from '../node_modules/ionic-angular/components/modal/modal-component.ngfactory';
+import * as import52 from '../node_modules/ionic-angular/components/picker/picker-component.ngfactory';
+import * as import53 from '../node_modules/ionic-angular/components/popover/popover-component.ngfactory';
+import * as import54 from '../node_modules/ionic-angular/components/toast/toast-component.ngfactory';
+import * as import55 from './app.component.ngfactory';
+import * as import56 from '../pages/browse/browse.ngfactory';
+import * as import57 from '../pages/contact/contact.ngfactory';
+import * as import58 from '../pages/profile/profile.ngfactory';
+import * as import59 from '../pages/home/home.ngfactory';
+import * as import60 from '../pages/tabs/tabs.ngfactory';
+import * as import61 from '../pages/login/login.ngfactory';
+import * as import62 from '../pages/signup/signup.ngfactory';
+import * as import63 from '@angular/core/src/application_tokens';
+import * as import64 from '@angular/platform-browser/src/dom/events/dom_events';
+import * as import65 from '@angular/platform-browser/src/dom/events/key_events';
+import * as import66 from '@angular/platform-browser/src/dom/events/hammer_gestures';
+import * as import67 from '@angular/core/src/zone/ng_zone';
+import * as import68 from '@angular/platform-browser/src/dom/debug/ng_probe';
+import * as import69 from './app.component';
+import * as import70 from '@angular/common/src/location/platform_location';
+import * as import71 from '@angular/common/src/location/location_strategy';
+import * as import72 from 'ionic-angular/navigation/url-serializer';
+import * as import73 from 'ionic-angular/navigation/deep-linker';
+import * as import74 from 'ionic-angular/platform/query-params';
+import * as import75 from 'ionic-angular/platform/platform-registry';
+import * as import76 from 'ionic-angular/platform/platform';
+import * as import77 from 'ionic-angular/config/config';
+import * as import78 from 'ionic-angular/config/mode-registry';
+import * as import79 from 'ionic-angular/transitions/transition-registry';
+import * as import80 from '@angular/core/src/console';
+import * as import81 from '@angular/core/src/i18n/tokens';
+import * as import82 from '@angular/core/src/error_handler';
+import * as import83 from '@angular/platform-browser/src/dom/dom_tokens';
+import * as import84 from '@angular/platform-browser/src/dom/animation_driver';
+import * as import85 from '@angular/core/src/render/api';
+import * as import86 from '@angular/core/src/security';
+import * as import87 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import88 from '@angular/core/src/change_detection/differs/keyvalue_differs';
+import * as import89 from '@angular/http/src/interfaces';
+import * as import90 from '@angular/http/src/http';
+import * as import91 from 'ionic-angular/components/app/app-root';
 class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   _CommonModule_0:import2.CommonModule;
   _ApplicationModule_1:import3.ApplicationModule;
@@ -170,28 +171,29 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   __TransitionController_71:import44.TransitionController;
   __UrlSerializer_72:any;
   __DeepLinker_73:any;
-  constructor(parent:import45.Injector) {
+  __Storage_74:import45.Storage;
+  constructor(parent:import46.Injector) {
     super(parent,[
-      import46.ActionSheetCmpNgFactory,
-      import47.AlertCmpNgFactory,
-      import48.IonicAppNgFactory,
-      import49.LoadingCmpNgFactory,
-      import50.ModalCmpNgFactory,
-      import51.PickerCmpNgFactory,
-      import52.PopoverCmpNgFactory,
-      import53.ToastCmpNgFactory,
-      import54.MyAppNgFactory,
-      import54.MyAppNgFactory,
-      import55.BrowsePageNgFactory,
-      import56.ContactPageNgFactory,
-      import57.ProfilePageNgFactory,
-      import58.HomePageNgFactory,
-      import59.TabsPageNgFactory,
-      import60.LoginPageNgFactory,
-      import61.SignupPageNgFactory,
-      import48.IonicAppNgFactory
+      import47.ActionSheetCmpNgFactory,
+      import48.AlertCmpNgFactory,
+      import49.IonicAppNgFactory,
+      import50.LoadingCmpNgFactory,
+      import51.ModalCmpNgFactory,
+      import52.PickerCmpNgFactory,
+      import53.PopoverCmpNgFactory,
+      import54.ToastCmpNgFactory,
+      import55.MyAppNgFactory,
+      import55.MyAppNgFactory,
+      import56.BrowsePageNgFactory,
+      import57.ContactPageNgFactory,
+      import58.ProfilePageNgFactory,
+      import59.HomePageNgFactory,
+      import60.TabsPageNgFactory,
+      import61.LoginPageNgFactory,
+      import62.SignupPageNgFactory,
+      import49.IonicAppNgFactory
     ]
-    ,[import48.IonicAppNgFactory]);
+    ,[import49.IonicAppNgFactory]);
   }
   get _LOCALE_ID_9():any {
     if ((this.__LOCALE_ID_9 == (null as any))) { (this.__LOCALE_ID_9 = 'en-US'); }
@@ -210,7 +212,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__Compiler_28;
   }
   get _APP_ID_29():any {
-    if ((this.__APP_ID_29 == (null as any))) { (this.__APP_ID_29 = import62._appIdRandomProviderFactory()); }
+    if ((this.__APP_ID_29 == (null as any))) { (this.__APP_ID_29 = import63._appIdRandomProviderFactory()); }
     return this.__APP_ID_29;
   }
   get _DOCUMENT_30():any {
@@ -223,15 +225,15 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   }
   get _EVENT_MANAGER_PLUGINS_32():any[] {
     if ((this.__EVENT_MANAGER_PLUGINS_32 == (null as any))) { (this.__EVENT_MANAGER_PLUGINS_32 = [
-      new import63.DomEventsPlugin(),
-      new import64.KeyEventsPlugin(),
-      new import65.HammerGesturesPlugin(this._HAMMER_GESTURE_CONFIG_31)
+      new import64.DomEventsPlugin(),
+      new import65.KeyEventsPlugin(),
+      new import66.HammerGesturesPlugin(this._HAMMER_GESTURE_CONFIG_31)
     ]
     ); }
     return this.__EVENT_MANAGER_PLUGINS_32;
   }
   get _EventManager_33():import17.EventManager {
-    if ((this.__EventManager_33 == (null as any))) { (this.__EventManager_33 = new import17.EventManager(this._EVENT_MANAGER_PLUGINS_32,this.parent.get(import66.NgZone))); }
+    if ((this.__EventManager_33 == (null as any))) { (this.__EventManager_33 = new import17.EventManager(this._EVENT_MANAGER_PLUGINS_32,this.parent.get(import67.NgZone))); }
     return this.__EventManager_33;
   }
   get _DomSharedStylesHost_34():import18.DomSharedStylesHost {
@@ -247,7 +249,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__DomRootRenderer_36;
   }
   get _RootRenderer_37():any {
-    if ((this.__RootRenderer_37 == (null as any))) { (this.__RootRenderer_37 = import67._createConditionalRootRenderer(this._DomRootRenderer_36,this.parent.get(import67.NgProbeToken,(null as any)))); }
+    if ((this.__RootRenderer_37 == (null as any))) { (this.__RootRenderer_37 = import68._createConditionalRootRenderer(this._DomRootRenderer_36,this.parent.get(import68.NgProbeToken,(null as any)))); }
     return this.__RootRenderer_37;
   }
   get _DomSanitizer_38():import20.DomSanitizerImpl {
@@ -311,7 +313,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__FormBuilder_52;
   }
   get _AppRootToken_53():any {
-    if ((this.__AppRootToken_53 == (null as any))) { (this.__AppRootToken_53 = import68.MyApp); }
+    if ((this.__AppRootToken_53 == (null as any))) { (this.__AppRootToken_53 = import69.MyApp); }
     return this.__AppRootToken_53;
   }
   get _DeepLinkConfigToken_54():any {
@@ -343,7 +345,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__GestureController_60;
   }
   get _Keyboard_61():import35.Keyboard {
-    if ((this.__Keyboard_61 == (null as any))) { (this.__Keyboard_61 = new import35.Keyboard(this._Config_21,this._Form_58,this.parent.get(import66.NgZone))); }
+    if ((this.__Keyboard_61 == (null as any))) { (this.__Keyboard_61 = new import35.Keyboard(this._Config_21,this._Form_58,this.parent.get(import67.NgZone))); }
     return this.__Keyboard_61;
   }
   get _LoadingController_62():import36.LoadingController {
@@ -351,7 +353,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__LoadingController_62;
   }
   get _LocationStrategy_63():any {
-    if ((this.__LocationStrategy_63 == (null as any))) { (this.__LocationStrategy_63 = import8.provideLocationStrategy(this.parent.get(import69.PlatformLocation),this.parent.get(import70.APP_BASE_HREF,(null as any)),this._Config_21)); }
+    if ((this.__LocationStrategy_63 == (null as any))) { (this.__LocationStrategy_63 = import8.provideLocationStrategy(this.parent.get(import70.PlatformLocation),this.parent.get(import71.APP_BASE_HREF,(null as any)),this._Config_21)); }
     return this.__LocationStrategy_63;
   }
   get _Location_64():import37.Location {
@@ -375,7 +377,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__PopoverController_68;
   }
   get _TapClick_69():import42.TapClick {
-    if ((this.__TapClick_69 == (null as any))) { (this.__TapClick_69 = new import42.TapClick(this._Config_21,this._App_22,this.parent.get(import66.NgZone))); }
+    if ((this.__TapClick_69 == (null as any))) { (this.__TapClick_69 = new import42.TapClick(this._Config_21,this._App_22,this.parent.get(import67.NgZone))); }
     return this.__TapClick_69;
   }
   get _ToastController_70():import43.ToastController {
@@ -387,12 +389,16 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__TransitionController_71;
   }
   get _UrlSerializer_72():any {
-    if ((this.__UrlSerializer_72 == (null as any))) { (this.__UrlSerializer_72 = import71.setupUrlSerializer(this._DeepLinkConfigToken_54)); }
+    if ((this.__UrlSerializer_72 == (null as any))) { (this.__UrlSerializer_72 = import72.setupUrlSerializer(this._DeepLinkConfigToken_54)); }
     return this.__UrlSerializer_72;
   }
   get _DeepLinker_73():any {
-    if ((this.__DeepLinker_73 == (null as any))) { (this.__DeepLinker_73 = import72.setupDeepLinker(this._App_22,this._UrlSerializer_72,this._Location_64)); }
+    if ((this.__DeepLinker_73 == (null as any))) { (this.__DeepLinker_73 = import73.setupDeepLinker(this._App_22,this._UrlSerializer_72,this._Location_64)); }
     return this.__DeepLinker_73;
+  }
+  get _Storage_74():import45.Storage {
+    if ((this.__Storage_74 == (null as any))) { (this.__Storage_74 = new import45.Storage()); }
+    return this.__Storage_74;
   }
   createInternal():import1.AppModule {
     this._CommonModule_0 = new import2.CommonModule();
@@ -407,25 +413,25 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     this._ErrorHandler_11 = new import10.IonicErrorHandler();
     this._ConfigToken_12 = (null as any);
     this._UrlToken_13 = import8.provideLocationHref();
-    this._QueryParams_14 = import73.setupQueryParams(this._UrlToken_13);
-    this._PlatformConfigToken_15 = import74.providePlatformConfigs();
+    this._QueryParams_14 = import74.setupQueryParams(this._UrlToken_13);
+    this._PlatformConfigToken_15 = import75.providePlatformConfigs();
     this._UserAgentToken_16 = import8.provideUserAgent();
     this._NavigatorPlatformToken_17 = import8.provideNavigatorPlatform();
     this._DocumentDirToken_18 = import8.provideDocumentDirection();
     this._DocLangToken_19 = import8.provideDocumentLang();
-    this._Platform_20 = import75.setupPlatform(this._PlatformConfigToken_15,this._QueryParams_14,this._UserAgentToken_16,this._NavigatorPlatformToken_17,this._DocumentDirToken_18,this._DocLangToken_19,this.parent.get(import66.NgZone));
-    this._Config_21 = import76.setupConfig(this._ConfigToken_12,this._QueryParams_14,this._Platform_20);
+    this._Platform_20 = import76.setupPlatform(this._PlatformConfigToken_15,this._QueryParams_14,this._UserAgentToken_16,this._NavigatorPlatformToken_17,this._DocumentDirToken_18,this._DocLangToken_19,this.parent.get(import67.NgZone));
+    this._Config_21 = import77.setupConfig(this._ConfigToken_12,this._QueryParams_14,this._Platform_20);
     this._App_22 = new import11.App(this._Config_21,this._Platform_20);
     this._APP_INITIALIZER_23 = [
-      import77.registerModeConfigs(this._Config_21),
-      import78.registerTransitions(this._Config_21),
+      import78.registerModeConfigs(this._Config_21),
+      import79.registerTransitions(this._Config_21),
       import31.setupProvideEvents(this._Platform_20),
-      import42.setupTapClick(this._Config_21,this._App_22,this.parent.get(import66.NgZone))
+      import42.setupTapClick(this._Config_21,this._App_22,this.parent.get(import67.NgZone))
     ]
     ;
     this._ApplicationInitStatus_24 = new import12.ApplicationInitStatus(this._APP_INITIALIZER_23);
-    this._Testability_25 = new import13.Testability(this.parent.get(import66.NgZone));
-    this._ApplicationRef__26 = new import14.ApplicationRef_(this.parent.get(import66.NgZone),this.parent.get(import79.Console),this,this._ErrorHandler_11,this,this._ApplicationInitStatus_24,this.parent.get(import13.TestabilityRegistry,(null as any)),this._Testability_25);
+    this._Testability_25 = new import13.Testability(this.parent.get(import67.NgZone));
+    this._ApplicationRef__26 = new import14.ApplicationRef_(this.parent.get(import67.NgZone),this.parent.get(import80.Console),this,this._ErrorHandler_11,this,this._ApplicationInitStatus_24,this.parent.get(import13.TestabilityRegistry,(null as any)),this._Testability_25);
     return this._AppModule_8;
   }
   getInternal(token:any,notFoundResult:any):any {
@@ -438,19 +444,19 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import7.ReactiveFormsModule)) { return this._ReactiveFormsModule_6; }
     if ((token === import8.IonicModule)) { return this._IonicModule_7; }
     if ((token === import1.AppModule)) { return this._AppModule_8; }
-    if ((token === import80.LOCALE_ID)) { return this._LOCALE_ID_9; }
+    if ((token === import81.LOCALE_ID)) { return this._LOCALE_ID_9; }
     if ((token === import9.NgLocalization)) { return this._NgLocalization_10; }
-    if ((token === import81.ErrorHandler)) { return this._ErrorHandler_11; }
-    if ((token === import76.ConfigToken)) { return this._ConfigToken_12; }
-    if ((token === import73.UrlToken)) { return this._UrlToken_13; }
-    if ((token === import73.QueryParams)) { return this._QueryParams_14; }
-    if ((token === import74.PlatformConfigToken)) { return this._PlatformConfigToken_15; }
-    if ((token === import75.UserAgentToken)) { return this._UserAgentToken_16; }
-    if ((token === import75.NavigatorPlatformToken)) { return this._NavigatorPlatformToken_17; }
-    if ((token === import75.DocumentDirToken)) { return this._DocumentDirToken_18; }
-    if ((token === import75.DocLangToken)) { return this._DocLangToken_19; }
-    if ((token === import75.Platform)) { return this._Platform_20; }
-    if ((token === import76.Config)) { return this._Config_21; }
+    if ((token === import82.ErrorHandler)) { return this._ErrorHandler_11; }
+    if ((token === import77.ConfigToken)) { return this._ConfigToken_12; }
+    if ((token === import74.UrlToken)) { return this._UrlToken_13; }
+    if ((token === import74.QueryParams)) { return this._QueryParams_14; }
+    if ((token === import75.PlatformConfigToken)) { return this._PlatformConfigToken_15; }
+    if ((token === import76.UserAgentToken)) { return this._UserAgentToken_16; }
+    if ((token === import76.NavigatorPlatformToken)) { return this._NavigatorPlatformToken_17; }
+    if ((token === import76.DocumentDirToken)) { return this._DocumentDirToken_18; }
+    if ((token === import76.DocLangToken)) { return this._DocLangToken_19; }
+    if ((token === import76.Platform)) { return this._Platform_20; }
+    if ((token === import77.Config)) { return this._Config_21; }
     if ((token === import11.App)) { return this._App_22; }
     if ((token === import12.APP_INITIALIZER)) { return this._APP_INITIALIZER_23; }
     if ((token === import12.ApplicationInitStatus)) { return this._ApplicationInitStatus_24; }
@@ -458,32 +464,32 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import14.ApplicationRef_)) { return this._ApplicationRef__26; }
     if ((token === import14.ApplicationRef)) { return this._ApplicationRef_27; }
     if ((token === import15.Compiler)) { return this._Compiler_28; }
-    if ((token === import62.APP_ID)) { return this._APP_ID_29; }
-    if ((token === import82.DOCUMENT)) { return this._DOCUMENT_30; }
-    if ((token === import65.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_31; }
+    if ((token === import63.APP_ID)) { return this._APP_ID_29; }
+    if ((token === import83.DOCUMENT)) { return this._DOCUMENT_30; }
+    if ((token === import66.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_31; }
     if ((token === import17.EVENT_MANAGER_PLUGINS)) { return this._EVENT_MANAGER_PLUGINS_32; }
     if ((token === import17.EventManager)) { return this._EventManager_33; }
     if ((token === import18.DomSharedStylesHost)) { return this._DomSharedStylesHost_34; }
-    if ((token === import83.AnimationDriver)) { return this._AnimationDriver_35; }
+    if ((token === import84.AnimationDriver)) { return this._AnimationDriver_35; }
     if ((token === import19.DomRootRenderer)) { return this._DomRootRenderer_36; }
-    if ((token === import84.RootRenderer)) { return this._RootRenderer_37; }
+    if ((token === import85.RootRenderer)) { return this._RootRenderer_37; }
     if ((token === import20.DomSanitizer)) { return this._DomSanitizer_38; }
-    if ((token === import85.Sanitizer)) { return this._Sanitizer_39; }
+    if ((token === import86.Sanitizer)) { return this._Sanitizer_39; }
     if ((token === import21.ViewUtils)) { return this._ViewUtils_40; }
-    if ((token === import86.IterableDiffers)) { return this._IterableDiffers_41; }
-    if ((token === import87.KeyValueDiffers)) { return this._KeyValueDiffers_42; }
+    if ((token === import87.IterableDiffers)) { return this._IterableDiffers_41; }
+    if ((token === import88.KeyValueDiffers)) { return this._KeyValueDiffers_42; }
     if ((token === import18.SharedStylesHost)) { return this._SharedStylesHost_43; }
     if ((token === import22.Title)) { return this._Title_44; }
     if ((token === import23.BrowserXhr)) { return this._BrowserXhr_45; }
     if ((token === import24.ResponseOptions)) { return this._ResponseOptions_46; }
-    if ((token === import88.XSRFStrategy)) { return this._XSRFStrategy_47; }
+    if ((token === import89.XSRFStrategy)) { return this._XSRFStrategy_47; }
     if ((token === import25.XHRBackend)) { return this._XHRBackend_48; }
     if ((token === import26.RequestOptions)) { return this._RequestOptions_49; }
-    if ((token === import89.Http)) { return this._Http_50; }
+    if ((token === import90.Http)) { return this._Http_50; }
     if ((token === import27.RadioControlRegistry)) { return this._RadioControlRegistry_51; }
     if ((token === import28.FormBuilder)) { return this._FormBuilder_52; }
-    if ((token === import90.AppRootToken)) { return this._AppRootToken_53; }
-    if ((token === import71.DeepLinkConfigToken)) { return this._DeepLinkConfigToken_54; }
+    if ((token === import91.AppRootToken)) { return this._AppRootToken_53; }
+    if ((token === import72.DeepLinkConfigToken)) { return this._DeepLinkConfigToken_54; }
     if ((token === import29.ActionSheetController)) { return this._ActionSheetController_55; }
     if ((token === import30.AlertController)) { return this._AlertController_56; }
     if ((token === import31.Events)) { return this._Events_57; }
@@ -492,7 +498,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import34.GestureController)) { return this._GestureController_60; }
     if ((token === import35.Keyboard)) { return this._Keyboard_61; }
     if ((token === import36.LoadingController)) { return this._LoadingController_62; }
-    if ((token === import70.LocationStrategy)) { return this._LocationStrategy_63; }
+    if ((token === import71.LocationStrategy)) { return this._LocationStrategy_63; }
     if ((token === import37.Location)) { return this._Location_64; }
     if ((token === import38.MenuController)) { return this._MenuController_65; }
     if ((token === import39.ModalController)) { return this._ModalController_66; }
@@ -501,8 +507,9 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import42.TapClick)) { return this._TapClick_69; }
     if ((token === import43.ToastController)) { return this._ToastController_70; }
     if ((token === import44.TransitionController)) { return this._TransitionController_71; }
-    if ((token === import71.UrlSerializer)) { return this._UrlSerializer_72; }
-    if ((token === import72.DeepLinker)) { return this._DeepLinker_73; }
+    if ((token === import72.UrlSerializer)) { return this._UrlSerializer_72; }
+    if ((token === import73.DeepLinker)) { return this._DeepLinker_73; }
+    if ((token === import45.Storage)) { return this._Storage_74; }
     return notFoundResult;
   }
   destroyInternal():void {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Facebook } from 'ionic-native';
-import { NavController, AlertController, Events, LoadingController,App } from 'ionic-angular';
+import { NavController, AlertController, Events, LoadingController, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
@@ -22,7 +22,7 @@ export class LoginPage {
   forgetEmail: any;
   disableSubmit: boolean = false;
   _loginsub: (dataObj: any) => void;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController,public app: App) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
     this.data = null;
   }
   loginHandler(dataObj) {
@@ -125,11 +125,6 @@ export class LoginPage {
     }
   }
   gotoProfile() {
-    let loader = this.loadingCtrl.create({
-      content: "Logging in ....",
-      duration: 500
-    });
-    loader.present();
     console.log('GO to profile');
     this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
@@ -143,13 +138,17 @@ export class LoginPage {
           alert.present();
         } else {
           console.log('GOTO NEXT PAGE');
-          this.app.getRootNav().setRoot(TabsPage,{data:data.json()});
+          this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
           //this.navCtrl.push(TabsPage, { data: data.json() });
         }
       }, error => {
         console.log(error);
       })
-
+    let loader = this.loadingCtrl.create({
+      content: "Logging in ....",
+      duration: 500
+    });
+    loader.present();
   }
   gotoSignUp() {
     this.navCtrl.push(SignupPage);

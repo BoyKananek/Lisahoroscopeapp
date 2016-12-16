@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams, App, AlertController, Events } from 'ionic-angular';
+import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -9,12 +10,28 @@ import { Http } from '@angular/http';
 })
 export class HomePage {
   data: any;
-  constructor(public navCtrl: NavController, params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events,public http: Http) {
+  result: any;
+  imgsign: any;
+  constructor(public navCtrl: NavController, params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController,public storage: Storage) {
     this.data = params.get('data');
-    console.log(this.data);
+
   }
-  ngOnInit(){
-    console.log("Initailize Home Page");
+  ionViewDidEnter() {
+    this.storage.get('title').then((val)=>{
+      console.log(val);
+    })
+    console.log(this.result);
+    if (this.data.birthday) {
+      this.imgsign = "assets/img/" + this.data.sign + ".jpg";
+    } else {
+      var alert = this.alertCtrl.create({
+        title: "No data",
+        subTitle: "Please enter your birthday in your profile",
+        buttons: ["close"]
+      });
+      alert.present();
+      this.navCtrl.parent.select(3);
+    }
   }
 
 }
