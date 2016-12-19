@@ -6,16 +6,14 @@ import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import { Storage } from '@ionic/storage';
 export var LoginPage = (function () {
-    function LoginPage(navCtrl, alertCtrl, http, events, loadingCtrl, app, storage) {
+    function LoginPage(navCtrl, alertCtrl, http, events, loadingCtrl, app) {
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
         this.http = http;
         this.events = events;
         this.loadingCtrl = loadingCtrl;
         this.app = app;
-        this.storage = storage;
         this.disableSubmit = false;
         this.data = null;
     }
@@ -126,7 +124,7 @@ export var LoginPage = (function () {
         console.log('GO to profile');
         this.http.post('http://localhost:3000/auth/userinfo', this.data)
             .subscribe(function (data) {
-            console.log(data.json());
+            //console.log(data.json());
             if (data.json().success == false) {
                 var alert = _this.alertCtrl.create({
                     title: "Login Fail",
@@ -137,15 +135,16 @@ export var LoginPage = (function () {
             }
             else {
                 console.log('GOTO NEXT PAGE');
-                _this.storage.set('data', data.json());
-                _this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
+                console.log(data.json());
+                _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
             }
         }, function (error) {
             console.log(error);
         });
         var loader = this.loadingCtrl.create({
             content: "Logging in ....",
-            duration: 500
+            duration: 500,
+            dismissOnPageChange: true
         });
         loader.present();
     };
@@ -268,7 +267,6 @@ export var LoginPage = (function () {
         { type: Events, },
         { type: LoadingController, },
         { type: App, },
-        { type: Storage, },
     ];
     return LoginPage;
 }());

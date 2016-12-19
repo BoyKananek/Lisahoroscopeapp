@@ -6,7 +6,7 @@ import { SignupPage } from '../signup/signup';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
-import { Storage } from '@ionic/storage';
+
 
 declare const facebookConnectPlugin: any;
 
@@ -23,7 +23,7 @@ export class LoginPage {
   forgetEmail: any;
   disableSubmit: boolean = false;
   _loginsub: (dataObj: any) => void;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App, public storage: Storage) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
     this.data = null;
   }
   loginHandler(dataObj) {
@@ -129,7 +129,7 @@ export class LoginPage {
     console.log('GO to profile');
     this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
-        console.log(data.json());
+        //console.log(data.json());
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
             title: "Login Fail",
@@ -139,16 +139,19 @@ export class LoginPage {
           alert.present();
         } else {
           console.log('GOTO NEXT PAGE');
-          this.storage.set('data',data.json());
-          this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
-          //this.navCtrl.push(TabsPage, { data: data.json() });
+          console.log(data.json());
+          this.app.getRootNav().setRoot(TabsPage, { data: data.json()});
+          
+          //this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
+          //this.navCtrl.push(TabsPage, { tabIndex: 1});
         }
       }, error => {
         console.log(error);
       })
     let loader = this.loadingCtrl.create({
       content: "Logging in ....",
-      duration: 500
+      duration: 500,
+      dismissOnPageChange: true
     });
     loader.present();
   }

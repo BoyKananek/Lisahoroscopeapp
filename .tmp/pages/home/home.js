@@ -1,35 +1,63 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { Storage } from '@ionic/storage';
 export var HomePage = (function () {
-    function HomePage(navCtrl, params, app, alertCtrl, events, http, loadingCtrl, storage) {
+    function HomePage(navCtrl, params, app, alertCtrl, events, http, loadingCtrl) {
         this.navCtrl = navCtrl;
+        this.params = params;
         this.app = app;
         this.alertCtrl = alertCtrl;
         this.events = events;
         this.http = http;
         this.loadingCtrl = loadingCtrl;
-        this.storage = storage;
+        this.isDataAvailable = false;
         this.data = params.get('data');
     }
     HomePage.prototype.ionViewDidEnter = function () {
-        this.storage.get('title').then(function (val) {
-            console.log(val);
+        var _this = this;
+        this.http.post('http://localhost:3000/auth/userinfo', this.data)
+            .subscribe(function (data) {
+            if (data.json().success == false) {
+                console.log('Pull user data error');
+            }
+            else {
+                _this.data = data.json();
+                if (_this.data.birthday) {
+                    _this.imgsign = "assets/img/" + _this.data.sign + ".jpg";
+                    //pull result
+                    var loader = _this.loadingCtrl.create({
+                        content: "Loading ...",
+                        duration: 3500,
+                        dismissOnPageChange: true
+                    });
+                    loader.present();
+                    _this.http.post('http://localhost:3000/auth/horoscope/' + _this.data.sign, _this.data)
+                        .subscribe(function (response) {
+                        _this.result = response.json();
+                        _this.isDataAvailable = true;
+                        console.log(_this.result);
+                    }, function (error) {
+                        console.log(error.text());
+                        var alert = _this.alertCtrl.create({
+                            title: "Something went wrong",
+                            buttons: ["Ok"]
+                        });
+                        alert.present();
+                    });
+                }
+                else {
+                    var alert = _this.alertCtrl.create({
+                        title: "No data",
+                        subTitle: "Please enter your birthday in your profile",
+                        buttons: ["close"]
+                    });
+                    alert.present();
+                    _this.navCtrl.parent.select(3);
+                }
+            }
+        }, function (error) {
+            console.log(error);
         });
-        console.log(this.result);
-        if (this.data.birthday) {
-            this.imgsign = "assets/img/" + this.data.sign + ".jpg";
-        }
-        else {
-            var alert = this.alertCtrl.create({
-                title: "No data",
-                subTitle: "Please enter your birthday in your profile",
-                buttons: ["close"]
-            });
-            alert.present();
-            this.navCtrl.parent.select(3);
-        }
     };
     HomePage.decorators = [
         { type: Component, args: [{
@@ -46,7 +74,6 @@ export var HomePage = (function () {
         { type: Events, },
         { type: Http, },
         { type: LoadingController, },
-        { type: Storage, },
     ];
     return HomePage;
 }());

@@ -5,15 +5,13 @@ import { Facebook } from 'ionic-native';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import { Storage } from '@ionic/storage';
 export var ProfilePage = (function () {
-    function ProfilePage(navCtrl, params, app, alertCtrl, events, http, storage, loadingCtrl) {
+    function ProfilePage(navCtrl, params, app, alertCtrl, events, http, loadingCtrl) {
         this.navCtrl = navCtrl;
         this.app = app;
         this.alertCtrl = alertCtrl;
         this.events = events;
         this.http = http;
-        this.storage = storage;
         this.loadingCtrl = loadingCtrl;
         this.disableSubmit = false;
         this.data = params.get('data');
@@ -26,6 +24,8 @@ export var ProfilePage = (function () {
             this.image = this.data.picture;
         }
     }
+    ProfilePage.prototype.ionViewDidEnter = function () {
+    };
     ProfilePage.prototype.logoutHandler = function () {
         facebookConnectPlugin.getLoginStatus(function onLoginStatus(status) {
             console.log(status);
@@ -61,36 +61,34 @@ export var ProfilePage = (function () {
             alert.present();
         }
         else {
+            //update user data 
             this.http.post('http://localhost:3000/auth/updateUser/' + this.date, this.data)
                 .subscribe(function (response) {
                 var loader = _this.loadingCtrl.create({
                     content: "Loading ...",
-                    duration: 2000
+                    duration: 500,
+                    dismissOnPageChange: true
                 });
                 loader.present();
+                console.log("Update user :" + response.json());
                 if (response.json().success == true) {
-                    _this.http.post('http://localhost:3000/auth/horoscope/' + _this.data.sign, _this.data)
-                        .subscribe(function (response) {
-                        _this.storage.clear();
-                        _this.storage.set('title', response.json().title);
-                        _this.storage.set('work', response.json().work);
-                        _this.storage.set('finance', response.json().finance);
-                        _this.storage.set('love', response.json().love);
-                        _this.storage.set('healthy', response.json().healthy);
-                        _this.storage.set('luck', response.json().luck);
-                        console.log(response.json());
+                    _this.http.post('http://localhost:3000/auth/userinfo', _this.data)
+                        .subscribe(function (data) {
+                        if (data.json().success == false) {
+                            console.log('Pull user data error');
+                        }
+                        else {
+                            console.log("New user data");
+                            console.log(data.json());
+                            _this.data = data.json();
+                        }
                         var alert = _this.alertCtrl.create({
-                            title: response.json().message,
+                            title: "Update User successful",
                             buttons: ["Ok"]
                         });
                         alert.present();
                     }, function (error) {
-                        console.log(error.text());
-                        var alert = _this.alertCtrl.create({
-                            title: "Something went wrong",
-                            buttons: ["Ok"]
-                        });
-                        alert.present();
+                        console.log(error);
                     });
                 }
                 else if (response.json().success == false) {
@@ -99,7 +97,6 @@ export var ProfilePage = (function () {
                         buttons: ["Ok"]
                     });
                     alert.present();
-                    _this.storage.clear();
                     _this.app.getRootNav().setRoot(LoginPage);
                 }
                 _this.disableSubmit = false;
@@ -132,7 +129,6 @@ export var ProfilePage = (function () {
                             }, function (error) {
                                 console.log(error);
                             });
-                            _this.storage.clear();
                             _this.app.getRootNav().setRoot(LoginPage);
                         }
                         else {
@@ -144,7 +140,6 @@ export var ProfilePage = (function () {
                             }, function (error) {
                                 console.log(error);
                             });
-                            _this.storage.clear();
                             _this.app.getRootNav().setRoot(LoginPage);
                             facebookConnectPlugin.logout(function (result) {
                                 console.log('Facebook logout successful');
@@ -183,7 +178,6 @@ export var ProfilePage = (function () {
         { type: AlertController, },
         { type: Events, },
         { type: Http, },
-        { type: Storage, },
         { type: LoadingController, },
     ];
     return ProfilePage;

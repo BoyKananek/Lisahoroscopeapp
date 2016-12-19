@@ -5,12 +5,84 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-row>
-    <ion-col>
-      <img src={{imgsign}} style="border-radius:50%;">
-    </ion-col>
-    <ion-col>
-      
-    </ion-col>
-</ion-row>
+  <div *ngIf="isDataAvailable" class="homePage">
+    <ion-row>
+      <ion-col width-50>
+        <div class="image">
+          <img src={{imgsign}} style="border-radius:50%;">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="title">
+          <br><br>
+          <h4>{{result.title}}</h4>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2><strong> Work </strong></h2>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25>
+        <ion-icon name="create" style="font-size: 9.0rem;"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="work">
+          <p> {{result.work}} </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2><strong> Finance </strong></h2>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25>
+        <ion-icon name="logo-usd" style="font-size: 9.0rem;"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="finance">
+          <p> {{result.finance}} </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2><strong> Love </strong></h2>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25>
+        <ion-icon name="heart" style="font-size: 9.0rem;"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="love">
+          <p> {{result.love}} </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2><strong> Healthy </strong></h2>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25>
+        <ion-icon name="ios-medkit" style="font-size: 9.0rem;"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="healthy">
+          <p> {{result.healthy}} </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2><strong> Luck </strong></h2>
+    </ion-row>
+    <ion-row>
+      <ion-col width-25>
+        <ion-icon name="card" style="font-size: 9.0rem;"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <div class="luck">
+          <p> {{result.luck}} </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
