@@ -64,7 +64,7 @@ export class ProfilePage {
       alert.present();
     } else {
       //update user data 
-      this.http.post('http://localhost:3000/auth/updateUser/' + this.date, this.data)
+      this.http.post('https://lisahoroscope.herokuapp.com/auth/updateUser/' + this.date, this.data)
         .subscribe(
         response => {
           let loader = this.loadingCtrl.create({
@@ -75,7 +75,7 @@ export class ProfilePage {
           loader.present();
           console.log("Update user :" + response.json());
           if (response.json().success == true) {
-            this.http.post('http://localhost:3000/auth/userinfo', this.data)
+            this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
               .subscribe(data => {
                 if (data.json().success == false) {
                   console.log('Pull user data error');
@@ -128,7 +128,7 @@ export class ProfilePage {
           handler: () => {
             if (this.data.type === "email") {
               console.log('Logout with email');
-              this.http.post('http://localhost:3000/api/logout', this.data)
+              this.http.post('https://lisahoroscope.herokuapp.com/api/logout', this.data)
                 .subscribe(data => {
                   console.log('Remove session!!');
                 }, error => {
@@ -139,7 +139,7 @@ export class ProfilePage {
             } else {
               //facebook logout
               console.log('Logout with facebook');
-              this.http.post('http://localhost:3000/api/logout', this.data)
+              this.http.post('https://lisahoroscope.herokuapp.com/api/logout', this.data)
                 .subscribe(data => {
                   console.log('Remove session!!');
                 }, error => {

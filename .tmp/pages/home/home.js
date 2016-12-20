@@ -16,7 +16,7 @@ export var HomePage = (function () {
     }
     HomePage.prototype.ionViewDidEnter = function () {
         var _this = this;
-        this.http.post('http://localhost:3000/auth/userinfo', this.data)
+        this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
             .subscribe(function (data) {
             if (data.json().success == false) {
                 console.log('Pull user data error');
@@ -38,7 +38,7 @@ export var HomePage = (function () {
                         dismissOnPageChange: true
                     });
                     loader.present();
-                    _this.http.post('http://localhost:3000/auth/horoscope/' + _this.data.sign, _this.data)
+                    _this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + _this.data.sign, _this.data)
                         .subscribe(function (response) {
                         if (response.json().success == false) {
                             var alert = _this.alertCtrl.create({

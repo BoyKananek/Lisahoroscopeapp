@@ -98,7 +98,7 @@ export class LoginPage {
       var data = {
         email: this.forgetEmail
       };
-      this.http.post("http://localhost:3000/api/forgotPassword", data)
+      this.http.post("https://lisahoroscope.herokuapp.com/api/forgotPassword", data)
         .subscribe(data => {
           if (data.json().success == false) {
             var alert = this.alertCtrl.create({
@@ -126,7 +126,7 @@ export class LoginPage {
   }
   gotoProfile() {
     console.log('GO to profile');
-    this.http.post('http://localhost:3000/auth/userinfo', this.data)
+    this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
@@ -182,7 +182,7 @@ export class LoginPage {
       this.disableSubmit = false;
     } else {
       console.log("Logging in with email");
-      this.http.post("http://localhost:3000/api/login", data)
+      this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
         .subscribe(data => {
           this.data = data.json();
           if (this.data.error === true) {
@@ -231,7 +231,7 @@ export class LoginPage {
             name: name,
             picture: picture
           };
-          http.post("http://localhost:3000/api/loginfb", dataObj)
+          http.post("https://lisahoroscope.herokuapp.com/api/loginfb", dataObj)
             .subscribe(data => {
               events.publish('logined', data.json());//trigger the event to start
               console.log("Successful");

@@ -18,7 +18,7 @@ export class HomePage {
     this.data = params.get('data');
   }
   ionViewDidEnter() {
-    this.http.post('http://localhost:3000/auth/userinfo', this.data)
+    this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -39,7 +39,7 @@ export class HomePage {
               dismissOnPageChange: true
             });
             loader.present();
-            this.http.post('http://localhost:3000/auth/horoscope/' + this.data.sign, this.data)
+            this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.data.sign, this.data)
               .subscribe(
               response => {
                 if (response.json().success == false) {
