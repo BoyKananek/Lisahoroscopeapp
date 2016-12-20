@@ -103,6 +103,13 @@ export var TabsPage = (function () {
                                         buttons: ['OK']
                                     });
                                     confirm.present();
+                                }).catch(function () {
+                                    var confirm = _this.alertCtrl.create({
+                                        title: 'Share failed',
+                                        subTitle: 'Please try again',
+                                        buttons: ['OK']
+                                    });
+                                    confirm.present();
                                 });
                             }
                         },
@@ -114,6 +121,13 @@ export var TabsPage = (function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Shared',
                                         subTitle: 'Already shared on Twitter',
+                                        buttons: ['OK']
+                                    });
+                                    confirm.present();
+                                }).catch(function () {
+                                    var confirm = _this.alertCtrl.create({
+                                        title: 'Share failed',
+                                        subTitle: 'Please try again',
                                         buttons: ['OK']
                                     });
                                     confirm.present();

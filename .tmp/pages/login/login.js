@@ -200,7 +200,7 @@ export var LoginPage = (function () {
             }, function (error) {
                 var alert = _this.alertCtrl.create({
                     title: "Login fail",
-                    subTitle: "Please check your networks",
+                    subTitle: "Please try again later",
                     buttons: ["close"]
                 });
                 alert.present();
@@ -212,6 +212,7 @@ export var LoginPage = (function () {
         //this.disableSubmit = true;
         var http = this.http;
         var events = this.events;
+        var alert = this.alertCtrl;
         facebookConnectPlugin.login(['public_profile', 'email'], function (response) {
             console.log("Starting login with FBBBBB!");
             facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"], function (result) {
@@ -230,7 +231,12 @@ export var LoginPage = (function () {
                     events.publish('logined', data.json()); //trigger the event to start
                     console.log("Successful");
                 }, function (error) {
-                    console.log(error);
+                    var errorAlert = alert.create({
+                        title: "Login fail",
+                        subTitle: "Please try again later",
+                        buttons: ["close"]
+                    });
+                    errorAlert.present();
                     console.log("Failure");
                 });
             }, function (error) {

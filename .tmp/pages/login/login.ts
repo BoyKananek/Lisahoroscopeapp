@@ -136,8 +136,8 @@ export class LoginPage {
           });
           alert.present();
         } else {
-          this.app.getRootNav().setRoot(TabsPage, { data: data.json()});
-          
+          this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+
           //this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });
           //this.navCtrl.push(TabsPage, { tabIndex: 1});
         }
@@ -204,7 +204,7 @@ export class LoginPage {
         }, error => {
           var alert = this.alertCtrl.create({
             title: "Login fail",
-            subTitle: "Please check your networks",
+            subTitle: "Please try again later",
             buttons: ["close"]
           });
           alert.present();
@@ -216,6 +216,7 @@ export class LoginPage {
     //this.disableSubmit = true;
     var http = this.http;
     var events = this.events;
+    var alert = this.alertCtrl;
     facebookConnectPlugin.login(['public_profile', 'email'], function (response) {
       console.log("Starting login with FBBBBB!")
       facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"],
@@ -235,7 +236,12 @@ export class LoginPage {
               events.publish('logined', data.json());//trigger the event to start
               console.log("Successful");
             }, error => {
-              console.log(error);
+              var errorAlert = alert.create({
+                title: "Login fail",
+                subTitle: "Please try again later",
+                buttons: ["close"]
+              });
+              errorAlert.present();
               console.log("Failure");
             });
 

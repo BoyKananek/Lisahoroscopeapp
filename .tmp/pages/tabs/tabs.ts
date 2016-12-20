@@ -108,6 +108,13 @@ export class TabsPage {
                     buttons: ['OK']
                   });
                   confirm.present();
+                }).catch(()=>{
+                  let confirm = this.alertCtrl.create({
+                    title: 'Share failed',
+                    subTitle: 'Please try again',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
                 });
               }
             },
@@ -119,6 +126,13 @@ export class TabsPage {
                   let confirm = this.alertCtrl.create({
                     title: 'Shared',
                     subTitle: 'Already shared on Twitter',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
+                }).catch(()=>{
+                  let confirm = this.alertCtrl.create({
+                    title: 'Share failed',
+                    subTitle: 'Please try again',
                     buttons: ['OK']
                   });
                   confirm.present();

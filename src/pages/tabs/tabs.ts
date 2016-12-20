@@ -108,6 +108,13 @@ export class TabsPage {
                     buttons: ['OK']
                   });
                   confirm.present();
+                }).catch(()=>{
+                  let confirm = this.alertCtrl.create({
+                    title: 'Share failed',
+                    subTitle: 'Please try again',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
                 });
               }
             },
@@ -122,17 +129,10 @@ export class TabsPage {
                     buttons: ['OK']
                   });
                   confirm.present();
-                });
-              }
-            },
-            {
-              text: "Instagram",
-              handler: () => {
-                console.log('Share on Instagram');
-                SocialSharing.shareViaInstagram("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
+                }).catch(()=>{
                   let confirm = this.alertCtrl.create({
-                    title: 'Shared',
-                    subTitle: 'Already shared on Instagram',
+                    title: 'Share failed',
+                    subTitle: 'Please try again',
                     buttons: ['OK']
                   });
                   confirm.present();
