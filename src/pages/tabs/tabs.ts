@@ -101,18 +101,47 @@ export class TabsPage {
               text: 'Facebook',
               handler: () => {
                 console.log('Share on facebook');
-                SocialSharing.shareViaFacebook("My horoscope result",'https://lisaguru.com/horoscope/horoscopeapp/'+data,'https://lisaguru.com/horoscope/horoscopeapp/'+data);
+                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
+                  let confirm = this.alertCtrl.create({
+                    title: 'Shared',
+                    subTitle: 'Already share on Facebook',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
+                });
               }
             },
             {
               text: "Twitter",
               handler: () => {
                 console.log('Share on Twitter');
-                SocialSharing.shareViaTwitter("My horoscope result",'https://lisaguru.com/horoscope/horoscopeapp/'+data,'https://lisaguru.com/horoscope/horoscopeapp/'+data);
+                SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
+                  let confirm = this.alertCtrl.create({
+                    title: 'Shared',
+                    subTitle: 'Already shared on Twitter',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
+                });
+              }
+            },
+            {
+              text: "Instagram",
+              handler: () => {
+                console.log('Share on Instagram');
+                SocialSharing.shareViaInstagram("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
+                  let confirm = this.alertCtrl.create({
+                    title: 'Shared',
+                    subTitle: 'Already shared on Instagram',
+                    buttons: ['OK']
+                  });
+                  confirm.present();
+                });
               }
             },
             {
               text: "Cancel",
+              role: "cancel",
               handler: () => {
                 console.log("Cancel");
               }

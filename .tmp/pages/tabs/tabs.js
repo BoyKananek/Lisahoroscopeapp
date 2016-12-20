@@ -96,24 +96,40 @@ export var TabsPage = (function () {
                             text: 'Facebook',
                             handler: function () {
                                 console.log('Share on facebook');
-                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data);
+                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(function () {
+                                    var confirm = _this.alertCtrl.create({
+                                        title: 'Shared',
+                                        subTitle: 'Already share on Facebook',
+                                        buttons: ['OK']
+                                    });
+                                    confirm.present();
+                                });
                             }
                         },
                         {
                             text: "Twitter",
                             handler: function () {
                                 console.log('Share on Twitter');
-                                SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data);
+                                SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(function () {
+                                    var confirm = _this.alertCtrl.create({
+                                        title: 'Shared',
+                                        subTitle: 'Already shared on Twitter',
+                                        buttons: ['OK']
+                                    });
+                                    confirm.present();
+                                });
                             }
                         },
                         {
                             text: "Cancel",
+                            role: "cancel",
                             handler: function () {
                                 console.log("Cancel");
                             }
                         }
                     ]
                 });
+                actionSheet.present();
             }
         });
         alert.present();
