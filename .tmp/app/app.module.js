@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { BrowsePage } from '../pages/browse/browse';
-import { ContactPage } from '../pages/contact/contact';
+import { HoroscopePage } from '../pages/horoscope/horoscope';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SignupPage } from '../pages/signup/signup';
@@ -16,7 +16,7 @@ export var AppModule = (function () {
                     declarations: [
                         MyApp,
                         BrowsePage,
-                        ContactPage,
+                        HoroscopePage,
                         ProfilePage,
                         HomePage,
                         TabsPage,
@@ -30,7 +30,7 @@ export var AppModule = (function () {
                     entryComponents: [
                         MyApp,
                         BrowsePage,
-                        ContactPage,
+                        HoroscopePage,
                         ProfilePage,
                         HomePage,
                         TabsPage,

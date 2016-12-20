@@ -60,7 +60,7 @@ import * as import52 from '../node_modules/ionic-angular/components/popover/popo
 import * as import53 from '../node_modules/ionic-angular/components/toast/toast-component.ngfactory';
 import * as import54 from './app.component.ngfactory';
 import * as import55 from '../pages/browse/browse.ngfactory';
-import * as import56 from '../pages/contact/contact.ngfactory';
+import * as import56 from '../pages/horoscope/horoscope.ngfactory';
 import * as import57 from '../pages/profile/profile.ngfactory';
 import * as import58 from '../pages/home/home.ngfactory';
 import * as import59 from '../pages/tabs/tabs.ngfactory';
@@ -183,7 +183,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       import54.MyAppNgFactory,
       import54.MyAppNgFactory,
       import55.BrowsePageNgFactory,
-      import56.ContactPageNgFactory,
+      import56.HoroscopePageNgFactory,
       import57.ProfilePageNgFactory,
       import58.HomePageNgFactory,
       import59.TabsPageNgFactory,

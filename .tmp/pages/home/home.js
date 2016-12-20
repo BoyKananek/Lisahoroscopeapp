@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { LoginPage } from '../login/login';
 export var HomePage = (function () {
     function HomePage(navCtrl, params, app, alertCtrl, events, http, loadingCtrl) {
         this.navCtrl = navCtrl;
@@ -19,6 +20,12 @@ export var HomePage = (function () {
             .subscribe(function (data) {
             if (data.json().success == false) {
                 console.log('Pull user data error');
+                var alert = _this.alertCtrl.create({
+                    title: data.json().message,
+                    buttons: ["Ok"]
+                });
+                alert.present();
+                _this.app.getRootNav().setRoot(LoginPage);
             }
             else {
                 _this.data = data.json();
@@ -27,12 +34,20 @@ export var HomePage = (function () {
                     //pull result
                     var loader = _this.loadingCtrl.create({
                         content: "Loading ...",
-                        duration: 3500,
+                        duration: 4000,
                         dismissOnPageChange: true
                     });
                     loader.present();
                     _this.http.post('http://localhost:3000/auth/horoscope/' + _this.data.sign, _this.data)
                         .subscribe(function (response) {
+                        if (response.json().success == false) {
+                            var alert = _this.alertCtrl.create({
+                                title: response.json().message,
+                                buttons: ["Ok"]
+                            });
+                            alert.present();
+                            _this.app.getRootNav().setRoot(LoginPage);
+                        }
                         _this.result = response.json();
                         _this.isDataAvailable = true;
                         console.log(_this.result);

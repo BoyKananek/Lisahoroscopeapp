@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -17,11 +18,16 @@ export class HomePage {
     this.data = params.get('data');
   }
   ionViewDidEnter() {
-
     this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
+          var alert = this.alertCtrl.create({
+            title: data.json().message,
+            buttons: ["Ok"]
+          });
+          alert.present();
+          this.app.getRootNav().setRoot(LoginPage);
         } else {
           this.data = data.json();
           if (this.data.birthday) {
@@ -29,13 +35,21 @@ export class HomePage {
             //pull result
             let loader = this.loadingCtrl.create({
               content: "Loading ...",
-              duration: 3500,
+              duration: 4000,
               dismissOnPageChange: true
             });
             loader.present();
             this.http.post('http://localhost:3000/auth/horoscope/' + this.data.sign, this.data)
               .subscribe(
               response => {
+                if (response.json().success == false) {
+                  var alert = this.alertCtrl.create({
+                    title: response.json().message,
+                    buttons: ["Ok"]
+                  });
+                  alert.present();
+                  this.app.getRootNav().setRoot(LoginPage);
+                }
                 this.result = response.json();
                 this.isDataAvailable = true;
                 console.log(this.result);

@@ -4,7 +4,7 @@
  */
  /* tslint:disable */
 
-import * as import0 from './home';
+import * as import0 from './horoscope';
 import * as import1 from '@angular/core/src/linker/view';
 import * as import2 from '@angular/core/src/render/api';
 import * as import3 from '@angular/core/src/linker/element';
@@ -15,40 +15,39 @@ import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
 import * as import9 from 'ionic-angular/navigation/nav-params';
 import * as import10 from 'ionic-angular/components/app/app';
-import * as import11 from 'ionic-angular/components/alert/alert';
-import * as import12 from 'ionic-angular/util/events';
-import * as import13 from '@angular/http/src/http';
-import * as import14 from 'ionic-angular/components/loading/loading';
-import * as import15 from '@angular/core/src/metadata/view';
-import * as import16 from '@angular/core/src/linker/component_factory';
-import * as import17 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import18 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import19 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import20 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import21 from '../../node_modules/@angular/common/src/directives/ng_if.ngfactory';
-import * as import22 from 'ionic-angular/config/config';
-import * as import23 from '@angular/core/src/linker/element_ref';
-import * as import24 from 'ionic-angular/navigation/view-controller';
-import * as import25 from 'ionic-angular/components/toolbar/toolbar';
-import * as import26 from 'ionic-angular/util/keyboard';
-import * as import27 from '@angular/core/src/zone/ng_zone';
-import * as import28 from 'ionic-angular/components/tabs/tabs';
-import * as import29 from '@angular/core/src/linker/template_ref';
-import * as import30 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import31 from 'ionic-angular/components/navbar/navbar';
-import * as import32 from '@angular/common/src/directives/ng_if';
-import * as import33 from 'ionic-angular/components/content/content';
-import * as import34 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
-import * as import35 from '../../node_modules/ionic-angular/components/icon/icon.ngfactory';
-import * as import36 from 'ionic-angular/components/grid/grid';
-import * as import37 from 'ionic-angular/components/icon/icon';
-import * as import38 from '@angular/core/src/security';
-export class Wrapper_HomePage {
-  context:import0.HomePage;
+import * as import11 from '@angular/http/src/http';
+import * as import12 from 'ionic-angular/components/loading/loading';
+import * as import13 from 'ionic-angular/components/alert/alert';
+import * as import14 from '@angular/core/src/metadata/view';
+import * as import15 from '@angular/core/src/linker/component_factory';
+import * as import16 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import17 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import18 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import19 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import20 from '../../node_modules/@angular/common/src/directives/ng_if.ngfactory';
+import * as import21 from 'ionic-angular/config/config';
+import * as import22 from '@angular/core/src/linker/element_ref';
+import * as import23 from 'ionic-angular/navigation/view-controller';
+import * as import24 from 'ionic-angular/components/toolbar/toolbar';
+import * as import25 from 'ionic-angular/util/keyboard';
+import * as import26 from '@angular/core/src/zone/ng_zone';
+import * as import27 from 'ionic-angular/components/tabs/tabs';
+import * as import28 from '@angular/core/src/linker/template_ref';
+import * as import29 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import30 from 'ionic-angular/components/navbar/navbar';
+import * as import31 from '@angular/common/src/directives/ng_if';
+import * as import32 from 'ionic-angular/components/content/content';
+import * as import33 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
+import * as import34 from '../../node_modules/ionic-angular/components/icon/icon.ngfactory';
+import * as import35 from 'ionic-angular/components/grid/grid';
+import * as import36 from 'ionic-angular/components/icon/icon';
+import * as import37 from '@angular/core/src/security';
+export class Wrapper_HoroscopePage {
+  context:import0.HoroscopePage;
   changed:boolean;
-  constructor(p0:any,p1:any,p2:any,p3:any,p4:any,p5:any,p6:any) {
+  constructor(p0:any,p1:any,p2:any,p3:any,p4:any,p5:any) {
     this.changed = false;
-    this.context = new import0.HomePage(p0,p1,p2,p3,p4,p5,p6);
+    this.context = new import0.HoroscopePage(p0,p1,p2,p3,p4,p5);
   }
   detectChangesInternal(view:import1.AppView<any>,el:any,throwOnChange:boolean):boolean {
     var changed:any = this.changed;
@@ -56,90 +55,89 @@ export class Wrapper_HomePage {
     return changed;
   }
 }
-var renderType_HomePage_Host:import2.RenderComponentType = (null as any);
-class _View_HomePage_Host0 extends import1.AppView<any> {
+var renderType_HoroscopePage_Host:import2.RenderComponentType = (null as any);
+class _View_HoroscopePage_Host0 extends import1.AppView<any> {
   _el_0:any;
   /*private*/ _appEl_0:import3.AppElement;
-  _HomePage_0_4:Wrapper_HomePage;
+  _HoroscopePage_0_4:Wrapper_HoroscopePage;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
-    super(_View_HomePage_Host0,renderType_HomePage_Host,import6.ViewType.HOST,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_HoroscopePage_Host0,renderType_HoroscopePage_Host,import6.ViewType.HOST,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import3.AppElement {
-    this._el_0 = this.selectOrCreateHostElement('page-home',rootSelector,(null as any));
+    this._el_0 = this.selectOrCreateHostElement('page-horoscope',rootSelector,(null as any));
     this._appEl_0 = new import3.AppElement(0,(null as any),this,this._el_0);
-    var compView_0:any = viewFactory_HomePage0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._HomePage_0_4 = new Wrapper_HomePage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.NavParams),this.parentInjector.get(import10.App),this.parentInjector.get(import11.AlertController),this.parentInjector.get(import12.Events),this.parentInjector.get(import13.Http),this.parentInjector.get(import14.LoadingController));
-    this._appEl_0.initComponent(this._HomePage_0_4.context,([] as any[]),compView_0);
-    compView_0.create(this._HomePage_0_4.context,this.projectableNodes,(null as any));
+    var compView_0:any = viewFactory_HoroscopePage0(this.viewUtils,this.injector(0),this._appEl_0);
+    this._HoroscopePage_0_4 = new Wrapper_HoroscopePage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.NavParams),this.parentInjector.get(import10.App),this.parentInjector.get(import11.Http),this.parentInjector.get(import12.LoadingController),this.parentInjector.get(import13.AlertController));
+    this._appEl_0.initComponent(this._HoroscopePage_0_4.context,([] as any[]),compView_0);
+    compView_0.create(this._HoroscopePage_0_4.context,this.projectableNodes,(null as any));
     this.init(([] as any[]).concat([this._el_0]),[this._el_0],([] as any[]),([] as any[]));
     return this._appEl_0;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import0.HomePage) && (0 === requestNodeIndex))) { return this._HomePage_0_4.context; }
+    if (((token === import0.HoroscopePage) && (0 === requestNodeIndex))) { return this._HoroscopePage_0_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    this._HomePage_0_4.detectChangesInternal(this,this._el_0,throwOnChange);
+    this._HoroscopePage_0_4.detectChangesInternal(this,this._el_0,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
 }
-function viewFactory_HomePage_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
-  if ((renderType_HomePage_Host === (null as any))) { (renderType_HomePage_Host = viewUtils.createRenderComponentType('',0,import15.ViewEncapsulation.None,([] as any[]),{})); }
-  return new _View_HomePage_Host0(viewUtils,parentInjector,declarationEl);
+function viewFactory_HoroscopePage_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
+  if ((renderType_HoroscopePage_Host === (null as any))) { (renderType_HoroscopePage_Host = viewUtils.createRenderComponentType('',0,import14.ViewEncapsulation.None,([] as any[]),{})); }
+  return new _View_HoroscopePage_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const HomePageNgFactory:import16.ComponentFactory<import0.HomePage> = new import16.ComponentFactory<import0.HomePage>('page-home',viewFactory_HomePage_Host0,import0.HomePage);
-const styles_HomePage:any[] = ([] as any[]);
-var renderType_HomePage:import2.RenderComponentType = (null as any);
-class _View_HomePage0 extends import1.AppView<import0.HomePage> {
+export const HoroscopePageNgFactory:import15.ComponentFactory<import0.HoroscopePage> = new import15.ComponentFactory<import0.HoroscopePage>('page-horoscope',viewFactory_HoroscopePage_Host0,import0.HoroscopePage);
+const styles_HoroscopePage:any[] = ([] as any[]);
+var renderType_HoroscopePage:import2.RenderComponentType = (null as any);
+class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
   _el_0:any;
-  _Header_0_3:import17.Wrapper_Header;
+  _Header_0_3:import16.Wrapper_Header;
   _text_1:any;
   _el_2:any;
   /*private*/ _appEl_2:import3.AppElement;
-  _Navbar_2_4:import18.Wrapper_Navbar;
+  _Navbar_2_4:import17.Wrapper_Navbar;
   _text_3:any;
   _el_4:any;
   /*private*/ _appEl_4:import3.AppElement;
-  _ToolbarTitle_4_4:import19.Wrapper_ToolbarTitle;
+  _ToolbarTitle_4_4:import18.Wrapper_ToolbarTitle;
   _text_5:any;
   _text_6:any;
   _text_7:any;
   _text_8:any;
   _el_9:any;
   /*private*/ _appEl_9:import3.AppElement;
-  _Content_9_4:import20.Wrapper_Content;
+  _Content_9_4:import19.Wrapper_Content;
   _text_10:any;
   _anchor_11:any;
   /*private*/ _appEl_11:import3.AppElement;
   _TemplateRef_11_5:any;
-  _NgIf_11_6:import21.Wrapper_NgIf;
+  _NgIf_11_6:import20.Wrapper_NgIf;
   _text_12:any;
+  /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
-  /*private*/ _expr_3:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
-    super(_View_HomePage0,renderType_HomePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_HoroscopePage0,renderType_HoroscopePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import3.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-header',(null as any));
-    this._Header_0_3 = new import17.Wrapper_Header(this.parentInjector.get(import22.Config),new import23.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import24.ViewController,(null as any)));
+    this._Header_0_3 = new import16.Wrapper_Header(this.parentInjector.get(import21.Config),new import22.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import23.ViewController,(null as any)));
     this._text_1 = this.renderer.createText(this._el_0,'\n  ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-navbar',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','toolbar');
-    this.renderer.setElementAttribute(this._el_2,'hideBackButton','');
     this._appEl_2 = new import3.AppElement(2,0,this,this._el_2);
-    var compView_2:any = import18.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
-    this._Navbar_2_4 = new import18.Wrapper_Navbar(this.parentInjector.get(import10.App),this.parentInjector.get(import24.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import22.Config),new import23.ElementRef(this._el_2),this.renderer);
+    var compView_2:any = import17.viewFactory_Navbar0(this.viewUtils,this.injector(2),this._appEl_2);
+    this._Navbar_2_4 = new import17.Wrapper_Navbar(this.parentInjector.get(import10.App),this.parentInjector.get(import23.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import21.Config),new import22.ElementRef(this._el_2),this.renderer);
     this._appEl_2.initComponent(this._Navbar_2_4.context,([] as any[]),compView_2);
     this._text_3 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-title',(null as any));
     this._appEl_4 = new import3.AppElement(4,2,this,this._el_4);
-    var compView_4:any = import19.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ToolbarTitle_4_4 = new import19.Wrapper_ToolbarTitle(this.parentInjector.get(import22.Config),new import23.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import25.Toolbar,(null as any)),this._Navbar_2_4.context);
+    var compView_4:any = import18.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
+    this._ToolbarTitle_4_4 = new import18.Wrapper_ToolbarTitle(this.parentInjector.get(import21.Config),new import22.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import24.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'Home',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'Horoscope',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
     this._text_6 = this.renderer.createText((null as any),'\n  ',(null as any));
     compView_2.create(this._Navbar_2_4.context,[
@@ -159,14 +157,14 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     this._el_9 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
     this.renderer.setElementAttribute(this._el_9,'padding','');
     this._appEl_9 = new import3.AppElement(9,(null as any),this,this._el_9);
-    var compView_9:any = import20.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._Content_9_4 = new import20.Wrapper_Content(this.parentInjector.get(import22.Config),new import23.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import10.App),this.parentInjector.get(import26.Keyboard),this.parentInjector.get(import27.NgZone),this.parentInjector.get(import24.ViewController,(null as any)),this.parentInjector.get(import28.Tabs,(null as any)));
+    var compView_9:any = import19.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
+    this._Content_9_4 = new import19.Wrapper_Content(this.parentInjector.get(import21.Config),new import22.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import10.App),this.parentInjector.get(import25.Keyboard),this.parentInjector.get(import26.NgZone),this.parentInjector.get(import23.ViewController,(null as any)),this.parentInjector.get(import27.Tabs,(null as any)));
     this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
     this._text_10 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._anchor_11 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_11 = new import3.AppElement(11,9,this,this._anchor_11);
-    this._TemplateRef_11_5 = new import29.TemplateRef_(this._appEl_11,viewFactory_HomePage1);
-    this._NgIf_11_6 = new import21.Wrapper_NgIf(this._appEl_11.vcRef,this._TemplateRef_11_5);
+    this._TemplateRef_11_5 = new import28.TemplateRef_(this._appEl_11,viewFactory_HoroscopePage1);
+    this._NgIf_11_6 = new import20.Wrapper_NgIf(this._appEl_11.vcRef,this._TemplateRef_11_5);
     this._text_12 = this.renderer.createText((null as any),'\n',(null as any));
     compView_9.create(this._Content_9_4.context,[
       ([] as any[]),
@@ -179,9 +177,9 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
       ([] as any[])
     ]
     ,(null as any));
+    this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
-    this._expr_3 = import7.UNINITIALIZED;
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -201,39 +199,37 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import30.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
-    if (((token === import31.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
-    if (((token === import25.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
-    if (((token === import29.TemplateRef) && (11 === requestNodeIndex))) { return this._TemplateRef_11_5; }
-    if (((token === import32.NgIf) && (11 === requestNodeIndex))) { return this._NgIf_11_6.context; }
-    if (((token === import33.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 12)))) { return this._Content_9_4.context; }
+    if (((token === import29.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) { return this._ToolbarTitle_4_4.context; }
+    if (((token === import30.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._Navbar_2_4.context; }
+    if (((token === import24.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Header_0_3.context; }
+    if (((token === import28.TemplateRef) && (11 === requestNodeIndex))) { return this._TemplateRef_11_5; }
+    if (((token === import31.NgIf) && (11 === requestNodeIndex))) { return this._NgIf_11_6.context; }
+    if (((token === import32.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 12)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this._Header_0_3.detectChangesInternal(this,this._el_0,throwOnChange);
-    const currVal_0:any = '';
-    this._Navbar_2_4.check_hideBackButton(currVal_0,throwOnChange,false);
     this._Navbar_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     if (this._ToolbarTitle_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
     if (this._Content_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
-    const currVal_4:any = this.context.isDataAvailable;
-    this._NgIf_11_6.check_ngIf(currVal_4,throwOnChange,false);
+    const currVal_3:any = this.context.isDataAvailable;
+    this._NgIf_11_6.check_ngIf(currVal_3,throwOnChange,false);
     this._NgIf_11_6.detectChangesInternal(this,this._anchor_11,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
-    const currVal_1:any = this._Navbar_2_4.context._hidden;
+    const currVal_0:any = this._Navbar_2_4.context._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setElementProperty(this._el_2,'hidden',currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    const currVal_1:any = this._Navbar_2_4.context._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this.renderer.setElementProperty(this._el_2,'hidden',currVal_1);
+      this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_1);
       this._expr_1 = currVal_1;
     }
-    const currVal_2:any = this._Navbar_2_4.context._sbPadding;
+    const currVal_2:any = this._Content_9_4.context._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_2);
+      this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_2);
       this._expr_2 = currVal_2;
-    }
-    const currVal_3:any = this._Content_9_4.context._sbPadding;
-    if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_3);
-      this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }
@@ -242,18 +238,18 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     this._Content_9_4.context.ngOnDestroy();
   }
 }
-export function viewFactory_HomePage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.HomePage> {
-  if ((renderType_HomePage === (null as any))) { (renderType_HomePage = viewUtils.createRenderComponentType('',0,import15.ViewEncapsulation.None,styles_HomePage,{})); }
-  return new _View_HomePage0(viewUtils,parentInjector,declarationEl);
+export function viewFactory_HoroscopePage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.HoroscopePage> {
+  if ((renderType_HoroscopePage === (null as any))) { (renderType_HoroscopePage = viewUtils.createRenderComponentType('',0,import14.ViewEncapsulation.None,styles_HoroscopePage,{})); }
+  return new _View_HoroscopePage0(viewUtils,parentInjector,declarationEl);
 }
-class _View_HomePage1 extends import1.AppView<any> {
+class _View_HoroscopePage1 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
   _el_2:any;
-  _Row_2_3:import34.Wrapper_Row;
+  _Row_2_3:import33.Wrapper_Row;
   _text_3:any;
   _el_4:any;
-  _Col_4_3:import34.Wrapper_Col;
+  _Col_4_3:import33.Wrapper_Col;
   _text_5:any;
   _el_6:any;
   _text_7:any;
@@ -262,7 +258,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_10:any;
   _text_11:any;
   _el_12:any;
-  _Col_12_3:import34.Wrapper_Col;
+  _Col_12_3:import33.Wrapper_Col;
   _text_13:any;
   _el_14:any;
   _text_15:any;
@@ -278,7 +274,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _el_25:any;
   _text_26:any;
   _el_27:any;
-  _Row_27_3:import34.Wrapper_Row;
+  _Row_27_3:import33.Wrapper_Row;
   _text_28:any;
   _el_29:any;
   _el_30:any;
@@ -286,17 +282,17 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_32:any;
   _text_33:any;
   _el_34:any;
-  _Row_34_3:import34.Wrapper_Row;
+  _Row_34_3:import33.Wrapper_Row;
   _text_35:any;
   _el_36:any;
-  _Col_36_3:import34.Wrapper_Col;
+  _Col_36_3:import33.Wrapper_Col;
   _text_37:any;
   _el_38:any;
-  _Icon_38_3:import35.Wrapper_Icon;
+  _Icon_38_3:import34.Wrapper_Icon;
   _text_39:any;
   _text_40:any;
   _el_41:any;
-  _Col_41_3:import34.Wrapper_Col;
+  _Col_41_3:import33.Wrapper_Col;
   _text_42:any;
   _el_43:any;
   _text_44:any;
@@ -307,7 +303,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_49:any;
   _text_50:any;
   _el_51:any;
-  _Row_51_3:import34.Wrapper_Row;
+  _Row_51_3:import33.Wrapper_Row;
   _text_52:any;
   _el_53:any;
   _el_54:any;
@@ -315,17 +311,17 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_56:any;
   _text_57:any;
   _el_58:any;
-  _Row_58_3:import34.Wrapper_Row;
+  _Row_58_3:import33.Wrapper_Row;
   _text_59:any;
   _el_60:any;
-  _Col_60_3:import34.Wrapper_Col;
+  _Col_60_3:import33.Wrapper_Col;
   _text_61:any;
   _el_62:any;
-  _Icon_62_3:import35.Wrapper_Icon;
+  _Icon_62_3:import34.Wrapper_Icon;
   _text_63:any;
   _text_64:any;
   _el_65:any;
-  _Col_65_3:import34.Wrapper_Col;
+  _Col_65_3:import33.Wrapper_Col;
   _text_66:any;
   _el_67:any;
   _text_68:any;
@@ -336,7 +332,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_73:any;
   _text_74:any;
   _el_75:any;
-  _Row_75_3:import34.Wrapper_Row;
+  _Row_75_3:import33.Wrapper_Row;
   _text_76:any;
   _el_77:any;
   _el_78:any;
@@ -344,17 +340,17 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_80:any;
   _text_81:any;
   _el_82:any;
-  _Row_82_3:import34.Wrapper_Row;
+  _Row_82_3:import33.Wrapper_Row;
   _text_83:any;
   _el_84:any;
-  _Col_84_3:import34.Wrapper_Col;
+  _Col_84_3:import33.Wrapper_Col;
   _text_85:any;
   _el_86:any;
-  _Icon_86_3:import35.Wrapper_Icon;
+  _Icon_86_3:import34.Wrapper_Icon;
   _text_87:any;
   _text_88:any;
   _el_89:any;
-  _Col_89_3:import34.Wrapper_Col;
+  _Col_89_3:import33.Wrapper_Col;
   _text_90:any;
   _el_91:any;
   _text_92:any;
@@ -365,7 +361,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_97:any;
   _text_98:any;
   _el_99:any;
-  _Row_99_3:import34.Wrapper_Row;
+  _Row_99_3:import33.Wrapper_Row;
   _text_100:any;
   _el_101:any;
   _el_102:any;
@@ -373,17 +369,17 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_104:any;
   _text_105:any;
   _el_106:any;
-  _Row_106_3:import34.Wrapper_Row;
+  _Row_106_3:import33.Wrapper_Row;
   _text_107:any;
   _el_108:any;
-  _Col_108_3:import34.Wrapper_Col;
+  _Col_108_3:import33.Wrapper_Col;
   _text_109:any;
   _el_110:any;
-  _Icon_110_3:import35.Wrapper_Icon;
+  _Icon_110_3:import34.Wrapper_Icon;
   _text_111:any;
   _text_112:any;
   _el_113:any;
-  _Col_113_3:import34.Wrapper_Col;
+  _Col_113_3:import33.Wrapper_Col;
   _text_114:any;
   _el_115:any;
   _text_116:any;
@@ -394,7 +390,7 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_121:any;
   _text_122:any;
   _el_123:any;
-  _Row_123_3:import34.Wrapper_Row;
+  _Row_123_3:import33.Wrapper_Row;
   _text_124:any;
   _el_125:any;
   _el_126:any;
@@ -402,17 +398,17 @@ class _View_HomePage1 extends import1.AppView<any> {
   _text_128:any;
   _text_129:any;
   _el_130:any;
-  _Row_130_3:import34.Wrapper_Row;
+  _Row_130_3:import33.Wrapper_Row;
   _text_131:any;
   _el_132:any;
-  _Col_132_3:import34.Wrapper_Col;
+  _Col_132_3:import33.Wrapper_Col;
   _text_133:any;
   _el_134:any;
-  _Icon_134_3:import35.Wrapper_Icon;
+  _Icon_134_3:import34.Wrapper_Icon;
   _text_135:any;
   _text_136:any;
   _el_137:any;
-  _Col_137_3:import34.Wrapper_Col;
+  _Col_137_3:import33.Wrapper_Col;
   _text_138:any;
   _el_139:any;
   _text_140:any;
@@ -435,18 +431,18 @@ class _View_HomePage1 extends import1.AppView<any> {
   /*private*/ _expr_15:any;
   /*private*/ _expr_16:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
-    super(_View_HomePage1,renderType_HomePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+    super(_View_HoroscopePage1,renderType_HoroscopePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import3.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
     this.renderer.setElementAttribute(this._el_0,'class','homePage');
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_2_3 = new import34.Wrapper_Row();
+    this._Row_2_3 = new import33.Wrapper_Row();
     this._text_3 = this.renderer.createText(this._el_2,'\n      ',(null as any));
     this._el_4 = this.renderer.createElement(this._el_2,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_4,'width-50','');
-    this._Col_4_3 = new import34.Wrapper_Col();
+    this._Col_4_3 = new import33.Wrapper_Col();
     this._text_5 = this.renderer.createText(this._el_4,'\n        ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_4,'div',(null as any));
     this.renderer.setElementAttribute(this._el_6,'class','image');
@@ -457,7 +453,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_10 = this.renderer.createText(this._el_4,'\n      ',(null as any));
     this._text_11 = this.renderer.createText(this._el_2,'\n      ',(null as any));
     this._el_12 = this.renderer.createElement(this._el_2,'ion-col',(null as any));
-    this._Col_12_3 = new import34.Wrapper_Col();
+    this._Col_12_3 = new import33.Wrapper_Col();
     this._text_13 = this.renderer.createText(this._el_12,'\n        ',(null as any));
     this._el_14 = this.renderer.createElement(this._el_12,'div',(null as any));
     this.renderer.setElementAttribute(this._el_14,'class','title');
@@ -474,7 +470,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._el_25 = this.renderer.createElement(this._el_0,'br',(null as any));
     this._text_26 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_27 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_27_3 = new import34.Wrapper_Row();
+    this._Row_27_3 = new import33.Wrapper_Row();
     this._text_28 = this.renderer.createText(this._el_27,'\n      ',(null as any));
     this._el_29 = this.renderer.createElement(this._el_27,'h2',(null as any));
     this._el_30 = this.renderer.createElement(this._el_29,'strong',(null as any));
@@ -482,21 +478,21 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_32 = this.renderer.createText(this._el_27,'\n    ',(null as any));
     this._text_33 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_34 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_34_3 = new import34.Wrapper_Row();
+    this._Row_34_3 = new import33.Wrapper_Row();
     this._text_35 = this.renderer.createText(this._el_34,'\n      ',(null as any));
     this._el_36 = this.renderer.createElement(this._el_34,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_36,'width-25','');
-    this._Col_36_3 = new import34.Wrapper_Col();
+    this._Col_36_3 = new import33.Wrapper_Col();
     this._text_37 = this.renderer.createText(this._el_36,'\n        ',(null as any));
     this._el_38 = this.renderer.createElement(this._el_36,'ion-icon',(null as any));
     this.renderer.setElementAttribute(this._el_38,'name','create');
     this.renderer.setElementAttribute(this._el_38,'role','img');
     this.renderer.setElementAttribute(this._el_38,'style','font-size: 9.0rem;');
-    this._Icon_38_3 = new import35.Wrapper_Icon(this.parent.parentInjector.get(import22.Config),new import23.ElementRef(this._el_38),this.renderer);
+    this._Icon_38_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config),new import22.ElementRef(this._el_38),this.renderer);
     this._text_39 = this.renderer.createText(this._el_36,'\n      ',(null as any));
     this._text_40 = this.renderer.createText(this._el_34,'\n      ',(null as any));
     this._el_41 = this.renderer.createElement(this._el_34,'ion-col',(null as any));
-    this._Col_41_3 = new import34.Wrapper_Col();
+    this._Col_41_3 = new import33.Wrapper_Col();
     this._text_42 = this.renderer.createText(this._el_41,'\n        ',(null as any));
     this._el_43 = this.renderer.createElement(this._el_41,'div',(null as any));
     this.renderer.setElementAttribute(this._el_43,'class','work');
@@ -508,7 +504,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_49 = this.renderer.createText(this._el_34,'\n    ',(null as any));
     this._text_50 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_51 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_51_3 = new import34.Wrapper_Row();
+    this._Row_51_3 = new import33.Wrapper_Row();
     this._text_52 = this.renderer.createText(this._el_51,'\n      ',(null as any));
     this._el_53 = this.renderer.createElement(this._el_51,'h2',(null as any));
     this._el_54 = this.renderer.createElement(this._el_53,'strong',(null as any));
@@ -516,21 +512,21 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_56 = this.renderer.createText(this._el_51,'\n    ',(null as any));
     this._text_57 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_58 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_58_3 = new import34.Wrapper_Row();
+    this._Row_58_3 = new import33.Wrapper_Row();
     this._text_59 = this.renderer.createText(this._el_58,'\n      ',(null as any));
     this._el_60 = this.renderer.createElement(this._el_58,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_60,'width-25','');
-    this._Col_60_3 = new import34.Wrapper_Col();
+    this._Col_60_3 = new import33.Wrapper_Col();
     this._text_61 = this.renderer.createText(this._el_60,'\n        ',(null as any));
     this._el_62 = this.renderer.createElement(this._el_60,'ion-icon',(null as any));
     this.renderer.setElementAttribute(this._el_62,'name','logo-usd');
     this.renderer.setElementAttribute(this._el_62,'role','img');
     this.renderer.setElementAttribute(this._el_62,'style','font-size: 9.0rem;');
-    this._Icon_62_3 = new import35.Wrapper_Icon(this.parent.parentInjector.get(import22.Config),new import23.ElementRef(this._el_62),this.renderer);
+    this._Icon_62_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config),new import22.ElementRef(this._el_62),this.renderer);
     this._text_63 = this.renderer.createText(this._el_60,'\n      ',(null as any));
     this._text_64 = this.renderer.createText(this._el_58,'\n      ',(null as any));
     this._el_65 = this.renderer.createElement(this._el_58,'ion-col',(null as any));
-    this._Col_65_3 = new import34.Wrapper_Col();
+    this._Col_65_3 = new import33.Wrapper_Col();
     this._text_66 = this.renderer.createText(this._el_65,'\n        ',(null as any));
     this._el_67 = this.renderer.createElement(this._el_65,'div',(null as any));
     this.renderer.setElementAttribute(this._el_67,'class','finance');
@@ -542,7 +538,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_73 = this.renderer.createText(this._el_58,'\n    ',(null as any));
     this._text_74 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_75 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_75_3 = new import34.Wrapper_Row();
+    this._Row_75_3 = new import33.Wrapper_Row();
     this._text_76 = this.renderer.createText(this._el_75,'\n      ',(null as any));
     this._el_77 = this.renderer.createElement(this._el_75,'h2',(null as any));
     this._el_78 = this.renderer.createElement(this._el_77,'strong',(null as any));
@@ -550,21 +546,21 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_80 = this.renderer.createText(this._el_75,'\n    ',(null as any));
     this._text_81 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_82 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_82_3 = new import34.Wrapper_Row();
+    this._Row_82_3 = new import33.Wrapper_Row();
     this._text_83 = this.renderer.createText(this._el_82,'\n      ',(null as any));
     this._el_84 = this.renderer.createElement(this._el_82,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_84,'width-25','');
-    this._Col_84_3 = new import34.Wrapper_Col();
+    this._Col_84_3 = new import33.Wrapper_Col();
     this._text_85 = this.renderer.createText(this._el_84,'\n        ',(null as any));
     this._el_86 = this.renderer.createElement(this._el_84,'ion-icon',(null as any));
     this.renderer.setElementAttribute(this._el_86,'name','heart');
     this.renderer.setElementAttribute(this._el_86,'role','img');
     this.renderer.setElementAttribute(this._el_86,'style','font-size: 9.0rem;');
-    this._Icon_86_3 = new import35.Wrapper_Icon(this.parent.parentInjector.get(import22.Config),new import23.ElementRef(this._el_86),this.renderer);
+    this._Icon_86_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config),new import22.ElementRef(this._el_86),this.renderer);
     this._text_87 = this.renderer.createText(this._el_84,'\n      ',(null as any));
     this._text_88 = this.renderer.createText(this._el_82,'\n      ',(null as any));
     this._el_89 = this.renderer.createElement(this._el_82,'ion-col',(null as any));
-    this._Col_89_3 = new import34.Wrapper_Col();
+    this._Col_89_3 = new import33.Wrapper_Col();
     this._text_90 = this.renderer.createText(this._el_89,'\n        ',(null as any));
     this._el_91 = this.renderer.createElement(this._el_89,'div',(null as any));
     this.renderer.setElementAttribute(this._el_91,'class','love');
@@ -576,7 +572,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_97 = this.renderer.createText(this._el_82,'\n    ',(null as any));
     this._text_98 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_99 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_99_3 = new import34.Wrapper_Row();
+    this._Row_99_3 = new import33.Wrapper_Row();
     this._text_100 = this.renderer.createText(this._el_99,'\n      ',(null as any));
     this._el_101 = this.renderer.createElement(this._el_99,'h2',(null as any));
     this._el_102 = this.renderer.createElement(this._el_101,'strong',(null as any));
@@ -584,21 +580,21 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_104 = this.renderer.createText(this._el_99,'\n    ',(null as any));
     this._text_105 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_106 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_106_3 = new import34.Wrapper_Row();
+    this._Row_106_3 = new import33.Wrapper_Row();
     this._text_107 = this.renderer.createText(this._el_106,'\n      ',(null as any));
     this._el_108 = this.renderer.createElement(this._el_106,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_108,'width-25','');
-    this._Col_108_3 = new import34.Wrapper_Col();
+    this._Col_108_3 = new import33.Wrapper_Col();
     this._text_109 = this.renderer.createText(this._el_108,'\n        ',(null as any));
     this._el_110 = this.renderer.createElement(this._el_108,'ion-icon',(null as any));
     this.renderer.setElementAttribute(this._el_110,'name','ios-medkit');
     this.renderer.setElementAttribute(this._el_110,'role','img');
     this.renderer.setElementAttribute(this._el_110,'style','font-size: 9.0rem;');
-    this._Icon_110_3 = new import35.Wrapper_Icon(this.parent.parentInjector.get(import22.Config),new import23.ElementRef(this._el_110),this.renderer);
+    this._Icon_110_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config),new import22.ElementRef(this._el_110),this.renderer);
     this._text_111 = this.renderer.createText(this._el_108,'\n      ',(null as any));
     this._text_112 = this.renderer.createText(this._el_106,'\n      ',(null as any));
     this._el_113 = this.renderer.createElement(this._el_106,'ion-col',(null as any));
-    this._Col_113_3 = new import34.Wrapper_Col();
+    this._Col_113_3 = new import33.Wrapper_Col();
     this._text_114 = this.renderer.createText(this._el_113,'\n        ',(null as any));
     this._el_115 = this.renderer.createElement(this._el_113,'div',(null as any));
     this.renderer.setElementAttribute(this._el_115,'class','healthy');
@@ -610,7 +606,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_121 = this.renderer.createText(this._el_106,'\n    ',(null as any));
     this._text_122 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_123 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_123_3 = new import34.Wrapper_Row();
+    this._Row_123_3 = new import33.Wrapper_Row();
     this._text_124 = this.renderer.createText(this._el_123,'\n      ',(null as any));
     this._el_125 = this.renderer.createElement(this._el_123,'h2',(null as any));
     this._el_126 = this.renderer.createElement(this._el_125,'strong',(null as any));
@@ -618,21 +614,21 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_128 = this.renderer.createText(this._el_123,'\n    ',(null as any));
     this._text_129 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_130 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_130_3 = new import34.Wrapper_Row();
+    this._Row_130_3 = new import33.Wrapper_Row();
     this._text_131 = this.renderer.createText(this._el_130,'\n      ',(null as any));
     this._el_132 = this.renderer.createElement(this._el_130,'ion-col',(null as any));
     this.renderer.setElementAttribute(this._el_132,'width-25','');
-    this._Col_132_3 = new import34.Wrapper_Col();
+    this._Col_132_3 = new import33.Wrapper_Col();
     this._text_133 = this.renderer.createText(this._el_132,'\n        ',(null as any));
     this._el_134 = this.renderer.createElement(this._el_132,'ion-icon',(null as any));
     this.renderer.setElementAttribute(this._el_134,'name','card');
     this.renderer.setElementAttribute(this._el_134,'role','img');
     this.renderer.setElementAttribute(this._el_134,'style','font-size: 9.0rem;');
-    this._Icon_134_3 = new import35.Wrapper_Icon(this.parent.parentInjector.get(import22.Config),new import23.ElementRef(this._el_134),this.renderer);
+    this._Icon_134_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config),new import22.ElementRef(this._el_134),this.renderer);
     this._text_135 = this.renderer.createText(this._el_132,'\n      ',(null as any));
     this._text_136 = this.renderer.createText(this._el_130,'\n      ',(null as any));
     this._el_137 = this.renderer.createElement(this._el_130,'ion-col',(null as any));
-    this._Col_137_3 = new import34.Wrapper_Col();
+    this._Col_137_3 = new import33.Wrapper_Col();
     this._text_138 = this.renderer.createText(this._el_137,'\n        ',(null as any));
     this._el_139 = this.renderer.createElement(this._el_137,'div',(null as any));
     this.renderer.setElementAttribute(this._el_139,'class','luck');
@@ -808,34 +804,34 @@ class _View_HomePage1 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import36.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Col_4_3.context; }
-    if (((token === import36.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Col_12_3.context; }
-    if (((token === import36.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 23)))) { return this._Row_2_3.context; }
-    if (((token === import36.Row) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Row_27_3.context; }
-    if (((token === import37.Icon) && (38 === requestNodeIndex))) { return this._Icon_38_3.context; }
-    if (((token === import36.Col) && ((36 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Col_36_3.context; }
-    if (((token === import36.Col) && ((41 <= requestNodeIndex) && (requestNodeIndex <= 48)))) { return this._Col_41_3.context; }
-    if (((token === import36.Row) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 49)))) { return this._Row_34_3.context; }
-    if (((token === import36.Row) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 56)))) { return this._Row_51_3.context; }
-    if (((token === import37.Icon) && (62 === requestNodeIndex))) { return this._Icon_62_3.context; }
-    if (((token === import36.Col) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 63)))) { return this._Col_60_3.context; }
-    if (((token === import36.Col) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 72)))) { return this._Col_65_3.context; }
-    if (((token === import36.Row) && ((58 <= requestNodeIndex) && (requestNodeIndex <= 73)))) { return this._Row_58_3.context; }
-    if (((token === import36.Row) && ((75 <= requestNodeIndex) && (requestNodeIndex <= 80)))) { return this._Row_75_3.context; }
-    if (((token === import37.Icon) && (86 === requestNodeIndex))) { return this._Icon_86_3.context; }
-    if (((token === import36.Col) && ((84 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._Col_84_3.context; }
-    if (((token === import36.Col) && ((89 <= requestNodeIndex) && (requestNodeIndex <= 96)))) { return this._Col_89_3.context; }
-    if (((token === import36.Row) && ((82 <= requestNodeIndex) && (requestNodeIndex <= 97)))) { return this._Row_82_3.context; }
-    if (((token === import36.Row) && ((99 <= requestNodeIndex) && (requestNodeIndex <= 104)))) { return this._Row_99_3.context; }
-    if (((token === import37.Icon) && (110 === requestNodeIndex))) { return this._Icon_110_3.context; }
-    if (((token === import36.Col) && ((108 <= requestNodeIndex) && (requestNodeIndex <= 111)))) { return this._Col_108_3.context; }
-    if (((token === import36.Col) && ((113 <= requestNodeIndex) && (requestNodeIndex <= 120)))) { return this._Col_113_3.context; }
-    if (((token === import36.Row) && ((106 <= requestNodeIndex) && (requestNodeIndex <= 121)))) { return this._Row_106_3.context; }
-    if (((token === import36.Row) && ((123 <= requestNodeIndex) && (requestNodeIndex <= 128)))) { return this._Row_123_3.context; }
-    if (((token === import37.Icon) && (134 === requestNodeIndex))) { return this._Icon_134_3.context; }
-    if (((token === import36.Col) && ((132 <= requestNodeIndex) && (requestNodeIndex <= 135)))) { return this._Col_132_3.context; }
-    if (((token === import36.Col) && ((137 <= requestNodeIndex) && (requestNodeIndex <= 144)))) { return this._Col_137_3.context; }
-    if (((token === import36.Row) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 145)))) { return this._Row_130_3.context; }
+    if (((token === import35.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Col_4_3.context; }
+    if (((token === import35.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Col_12_3.context; }
+    if (((token === import35.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 23)))) { return this._Row_2_3.context; }
+    if (((token === import35.Row) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Row_27_3.context; }
+    if (((token === import36.Icon) && (38 === requestNodeIndex))) { return this._Icon_38_3.context; }
+    if (((token === import35.Col) && ((36 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Col_36_3.context; }
+    if (((token === import35.Col) && ((41 <= requestNodeIndex) && (requestNodeIndex <= 48)))) { return this._Col_41_3.context; }
+    if (((token === import35.Row) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 49)))) { return this._Row_34_3.context; }
+    if (((token === import35.Row) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 56)))) { return this._Row_51_3.context; }
+    if (((token === import36.Icon) && (62 === requestNodeIndex))) { return this._Icon_62_3.context; }
+    if (((token === import35.Col) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 63)))) { return this._Col_60_3.context; }
+    if (((token === import35.Col) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 72)))) { return this._Col_65_3.context; }
+    if (((token === import35.Row) && ((58 <= requestNodeIndex) && (requestNodeIndex <= 73)))) { return this._Row_58_3.context; }
+    if (((token === import35.Row) && ((75 <= requestNodeIndex) && (requestNodeIndex <= 80)))) { return this._Row_75_3.context; }
+    if (((token === import36.Icon) && (86 === requestNodeIndex))) { return this._Icon_86_3.context; }
+    if (((token === import35.Col) && ((84 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._Col_84_3.context; }
+    if (((token === import35.Col) && ((89 <= requestNodeIndex) && (requestNodeIndex <= 96)))) { return this._Col_89_3.context; }
+    if (((token === import35.Row) && ((82 <= requestNodeIndex) && (requestNodeIndex <= 97)))) { return this._Row_82_3.context; }
+    if (((token === import35.Row) && ((99 <= requestNodeIndex) && (requestNodeIndex <= 104)))) { return this._Row_99_3.context; }
+    if (((token === import36.Icon) && (110 === requestNodeIndex))) { return this._Icon_110_3.context; }
+    if (((token === import35.Col) && ((108 <= requestNodeIndex) && (requestNodeIndex <= 111)))) { return this._Col_108_3.context; }
+    if (((token === import35.Col) && ((113 <= requestNodeIndex) && (requestNodeIndex <= 120)))) { return this._Col_113_3.context; }
+    if (((token === import35.Row) && ((106 <= requestNodeIndex) && (requestNodeIndex <= 121)))) { return this._Row_106_3.context; }
+    if (((token === import35.Row) && ((123 <= requestNodeIndex) && (requestNodeIndex <= 128)))) { return this._Row_123_3.context; }
+    if (((token === import36.Icon) && (134 === requestNodeIndex))) { return this._Icon_134_3.context; }
+    if (((token === import35.Col) && ((132 <= requestNodeIndex) && (requestNodeIndex <= 135)))) { return this._Col_132_3.context; }
+    if (((token === import35.Col) && ((137 <= requestNodeIndex) && (requestNodeIndex <= 144)))) { return this._Col_137_3.context; }
+    if (((token === import35.Row) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 145)))) { return this._Row_130_3.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -880,7 +876,7 @@ class _View_HomePage1 extends import1.AppView<any> {
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = import4.interpolate(1,'',this.parent.context.imgsign,'');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setElementProperty(this._el_8,'src',this.viewUtils.sanitizer.sanitize(import38.SecurityContext.URL,currVal_0));
+      this.renderer.setElementProperty(this._el_8,'src',this.viewUtils.sanitizer.sanitize(import37.SecurityContext.URL,currVal_0));
       this._expr_0 = currVal_0;
     }
     const currVal_1:any = import4.interpolate(1,'',this.parent.context.result.title,'');
@@ -948,6 +944,6 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._Icon_134_3.context.ngOnDestroy();
   }
 }
-function viewFactory_HomePage1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
-  return new _View_HomePage1(viewUtils,parentInjector,declarationEl);
+function viewFactory_HoroscopePage1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
+  return new _View_HoroscopePage1(viewUtils,parentInjector,declarationEl);
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { BrowsePage } from '../browse/browse';
-import { ContactPage } from '../contact/contact';
 import { ProfilePage } from '../profile/profile';
 import { Http } from '@angular/http';
 export var TabsPage = (function () {
@@ -13,7 +12,6 @@ export var TabsPage = (function () {
         this.loadingCtrl = loadingCtrl;
         this.tab1Root = HomePage;
         this.tab2Root = BrowsePage;
-        this.tab3Root = ContactPage;
         this.tab4Root = ProfilePage;
         this.tabIndex = 0;
         this.data = params.get('data');
