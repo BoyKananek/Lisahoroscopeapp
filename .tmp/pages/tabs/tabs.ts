@@ -101,7 +101,7 @@ export class TabsPage {
               text: 'Facebook',
               handler: () => {
                 console.log('Share on facebook');
-                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
+                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(() => {
                   let confirm = this.alertCtrl.create({
                     title: 'Shared',
                     subTitle: 'Already share on Facebook',

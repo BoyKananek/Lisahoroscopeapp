@@ -96,7 +96,7 @@ export var TabsPage = (function () {
                             text: 'Facebook',
                             handler: function () {
                                 console.log('Share on facebook');
-                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(function () {
+                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Shared',
                                         subTitle: 'Already share on Facebook',
