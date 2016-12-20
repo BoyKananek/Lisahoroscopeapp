@@ -49,7 +49,6 @@ export var HoroscopePage = (function () {
                     }
                     _this.result = response.json();
                     _this.isDataAvailable = true;
-                    console.log(_this.result);
                 }, function (error) {
                     console.log(error.text());
                     var alert = _this.alertCtrl.create({

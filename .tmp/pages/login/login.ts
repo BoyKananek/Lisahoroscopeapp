@@ -28,7 +28,6 @@ export class LoginPage {
   }
   loginHandler(dataObj) {
     this.data = dataObj[0];
-    console.log(this.data);
     console.log("Login with facebook Successful");
     this.gotoProfile();
     this.data = null;
@@ -129,7 +128,6 @@ export class LoginPage {
     console.log('GO to profile');
     this.http.post('http://localhost:3000/auth/userinfo', this.data)
       .subscribe(data => {
-        //console.log(data.json());
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
             title: "Login Fail",
@@ -138,8 +136,6 @@ export class LoginPage {
           });
           alert.present();
         } else {
-          console.log('GOTO NEXT PAGE');
-          console.log(data.json());
           this.app.getRootNav().setRoot(TabsPage, { data: data.json()});
           
           //this.app.getRootNav().setRoot(TabsPage, { data: data.json(), tabIndex: 1 });

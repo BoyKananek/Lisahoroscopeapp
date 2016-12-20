@@ -52,7 +52,7 @@ export class HomePage {
                 }
                 this.result = response.json();
                 this.isDataAvailable = true;
-                console.log(this.result);
+           
               },
               error => {
                 console.log(error.text());

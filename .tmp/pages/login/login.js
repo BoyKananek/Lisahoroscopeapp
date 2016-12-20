@@ -19,7 +19,6 @@ export var LoginPage = (function () {
     }
     LoginPage.prototype.loginHandler = function (dataObj) {
         this.data = dataObj[0];
-        console.log(this.data);
         console.log("Login with facebook Successful");
         this.gotoProfile();
         this.data = null;
@@ -124,7 +123,6 @@ export var LoginPage = (function () {
         console.log('GO to profile');
         this.http.post('http://localhost:3000/auth/userinfo', this.data)
             .subscribe(function (data) {
-            //console.log(data.json());
             if (data.json().success == false) {
                 var alert = _this.alertCtrl.create({
                     title: "Login Fail",
@@ -134,8 +132,6 @@ export var LoginPage = (function () {
                 alert.present();
             }
             else {
-                console.log('GOTO NEXT PAGE');
-                console.log(data.json());
                 _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
             }
         }, function (error) {

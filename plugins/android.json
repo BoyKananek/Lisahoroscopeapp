@@ -32,6 +32,9 @@
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp834231"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         }
     },
     "dependent_plugins": {}

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -26,6 +25,10 @@
 		ECED712D04514CE2B84B757A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A18FC84FC34047BDB572FB5E /* CDVViewController+SplashScreen.m */; };
 		F4AB25369A9E403591BEC0F2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D6593D01A4DF3A431E91E /* FBSDKCoreKit.framework */; };
 		FACB0A3B950D4A74A816864F /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 561A0587CF164F7788717CC5 /* FacebookConnectPlugin.m */; };
+		E100C6FE36844FF494DE1613 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 974676CB8F084F739B86FFE3 /* NSString+URLEncoding.m */; };
+		677FF5FC65BE47D68DACEBA0 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C489D23004FAE8292BE5A /* SocialSharing.m */; };
+		3E9396F910C240DB94A0C12F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DB8F84CA4043B48B7CC3AA /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8EC078BEF84C46D494F13C68 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72187E1E67D04DD88D48CFB5 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,12 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Lisahoroscopeapp/config.xml; sourceTree = "<group>"; };
+		974676CB8F084F739B86FFE3 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; name = "NSString+URLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+URLEncoding.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D9C489D23004FAE8292BE5A /* SocialSharing.m */ = {isa = PBXFileReference; name = "SocialSharing.m"; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FFB06154159B4758B67E367F /* NSString+URLEncoding.h */ = {isa = PBXFileReference; name = "NSString+URLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+URLEncoding.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FE6BC60A43B241A3AE480841 /* SocialSharing.h */ = {isa = PBXFileReference; name = "SocialSharing.h"; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		30DB8F84CA4043B48B7CC3AA /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		72187E1E67D04DD88D48CFB5 /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,8 @@
 				F4AB25369A9E403591BEC0F2 /* FBSDKCoreKit.framework in Frameworks */,
 				3B33531938F34E8493DA4AF1 /* FBSDKLoginKit.framework in Frameworks */,
 				85B55BE715D344C88DFF015F /* FBSDKShareKit.framework in Frameworks */,
+				3E9396F910C240DB94A0C12F /* Social.framework in Frameworks */,
+				8EC078BEF84C46D494F13C68 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +185,8 @@
 				713D6593D01A4DF3A431E91E /* FBSDKCoreKit.framework */,
 				C185CA1AC5F44D239EF5E325 /* FBSDKLoginKit.framework */,
 				B2CED72E486F4AB2857F43FC /* FBSDKShareKit.framework */,
+				30DB8F84CA4043B48B7CC3AA /* Social.framework */,
+				72187E1E67D04DD88D48CFB5 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +230,10 @@
 				4C67F0C4C191406C98922FD7 /* sqlite3.c */,
 				3402567A5E9C4D608149B388 /* SQLitePlugin.h */,
 				08A6B3DEAE344FE790095475 /* sqlite3.h */,
+				974676CB8F084F739B86FFE3 /* NSString+URLEncoding.m */,
+				9D9C489D23004FAE8292BE5A /* SocialSharing.m */,
+				FFB06154159B4758B67E367F /* NSString+URLEncoding.h */,
+				FE6BC60A43B241A3AE480841 /* SocialSharing.h */,
 			);
 			name = Plugins;
 			path = Lisahoroscopeapp/Plugins;
@@ -259,7 +276,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 810;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 8XHLV7RJWN;
@@ -350,6 +367,8 @@
 				FACB0A3B950D4A74A816864F /* FacebookConnectPlugin.m in Sources */,
 				C3A5B99723AD4AB3A3639D38 /* SQLitePlugin.m in Sources */,
 				8EEE613C015F4C8FB1BCD49E /* sqlite3.c in Sources */,
+				E100C6FE36844FF494DE1613 /* NSString+URLEncoding.m in Sources */,
+				677FF5FC65BE47D68DACEBA0 /* SocialSharing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,6 +67,10 @@
                         {
                             "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -132,6 +136,9 @@
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp834231"
         },
         "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         }
     },
@@ -201,6 +208,14 @@
             "clobbers": [
                 "SQLitePlugin"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -211,6 +226,7 @@
         "cordova-plugin-whitelist": "1.3.0",
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-facebook4": "1.7.4",
-        "cordova-sqlite-storage": "2.0.0"
+        "cordova-sqlite-storage": "2.0.0",
+        "cordova-plugin-x-socialsharing": "5.1.3"
     }
 }
