@@ -24,15 +24,15 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Keyboard">
-        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
-        <param name="onload" value="true" />
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
     </feature>
     <feature name="SQLitePlugin">
         <param name="android-package" value="io.sqlc.SQLitePlugin" />
     </feature>
-    <feature name="SocialSharing">
-        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    <feature name="Keyboard">
+        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
     </feature>
     <name>Lisahoroscopeapp</name>
     <description>An awesome Ionic/Cordova app.</description>
@@ -45,7 +45,14 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="resources/android/icon/ic_launcher-ldpi.png" />
+    <icon density="mdpi" src="resources/android/icon/ic_launcher-mdpi.png" />
+    <icon density="hdpi" src="resources/android/icon/ic_launcher-hdpi.png" />
+    <icon density="xhdpi" src="resources/android/icon/ic_launcher-xhdpi.png" />
+    <icon density="xxhdpi" src="resources/android/icon/ic_launcher-xxhdpi.png" />
+    <icon density="xxxhdpi" src="resources/android/icon/ic_launcher-xxxhdpi.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="webviewbounce" value="false" />

@@ -55,7 +55,7 @@
         "is_top_level": true,
         "variables": {
             "APP_ID": "1333155163379937",
-            "APP_NAME": "LisaguruHoroscopeApp"
+            "APP_NAME": "Lisa Horoscope"
         }
     },
     "cordova-sqlite-storage": {

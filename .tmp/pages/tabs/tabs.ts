@@ -98,7 +98,7 @@ export class TabsPage {
           title: 'Sharing',
           buttons: [
             {
-              text: 'Facebook',
+              text: 'Share via Facebook',
               handler: () => {
                 console.log('Share on facebook');
                 SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(() => {
@@ -119,7 +119,7 @@ export class TabsPage {
               }
             },
             {
-              text: "Twitter",
+              text: "Share via Twitter",
               handler: () => {
                 console.log('Share on Twitter');
                 SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
