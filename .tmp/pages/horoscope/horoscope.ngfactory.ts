@@ -117,6 +117,7 @@ class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
+  /*private*/ _expr_3:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_HoroscopePage0,renderType_HoroscopePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -137,7 +138,7 @@ class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
     var compView_4:any = import18.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
     this._ToolbarTitle_4_4 = new import18.Wrapper_ToolbarTitle(this.parentInjector.get(import21.Config),new import22.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import24.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'Horoscope',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
     this._text_6 = this.renderer.createText((null as any),'\n  ',(null as any));
     compView_2.create(this._Navbar_2_4.context,[
@@ -180,6 +181,7 @@ class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
+    this._expr_3 = import7.UNINITIALIZED;
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -212,8 +214,8 @@ class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
     this._Navbar_2_4.detectChangesInternal(this,this._el_2,throwOnChange);
     if (this._ToolbarTitle_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
     if (this._Content_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
-    const currVal_3:any = this.context.isDataAvailable;
-    this._NgIf_11_6.check_ngIf(currVal_3,throwOnChange,false);
+    const currVal_4:any = this.context.isDataAvailable;
+    this._NgIf_11_6.check_ngIf(currVal_4,throwOnChange,false);
     this._NgIf_11_6.detectChangesInternal(this,this._anchor_11,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = this._Navbar_2_4.context._hidden;
@@ -226,10 +228,15 @@ class _View_HoroscopePage0 extends import1.AppView<import0.HoroscopePage> {
       this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_1);
       this._expr_1 = currVal_1;
     }
-    const currVal_2:any = this._Content_9_4.context._sbPadding;
+    const currVal_2:any = import4.interpolate(1,'',this.context.sign.toUpperCase(),'');
     if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_2);
+      this.renderer.setText(this._text_5,currVal_2);
       this._expr_2 = currVal_2;
+    }
+    const currVal_3:any = this._Content_9_4.context._sbPadding;
+    if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
+      this.renderer.setElementClass(this._el_9,'statusbar-padding',currVal_3);
+      this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_2_4.context.ngAfterViewInit(); } }

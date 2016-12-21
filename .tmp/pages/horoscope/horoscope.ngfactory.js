@@ -116,7 +116,7 @@ var _View_HoroscopePage0 = (function (_super) {
         var compView_4 = import18.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
         this._ToolbarTitle_4_4 = new import18.Wrapper_ToolbarTitle(this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import24.Toolbar, null), this._Navbar_2_4.context);
         this._appEl_4.initComponent(this._ToolbarTitle_4_4.context, [], compView_4);
-        this._text_5 = this.renderer.createText(null, 'Horoscope', null);
+        this._text_5 = this.renderer.createText(null, '', null);
         compView_4.create(this._ToolbarTitle_4_4.context, [[].concat([this._text_5])], null);
         this._text_6 = this.renderer.createText(null, '\n  ', null);
         compView_2.create(this._Navbar_2_4.context, [
@@ -155,6 +155,7 @@ var _View_HoroscopePage0 = (function (_super) {
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
+        this._expr_3 = import7.UNINITIALIZED;
         this.init([], [
             this._el_0,
             this._text_1,
@@ -202,8 +203,8 @@ var _View_HoroscopePage0 = (function (_super) {
         if (this._Content_9_4.detectChangesInternal(this, this._el_9, throwOnChange)) {
             this._appEl_9.componentView.markAsCheckOnce();
         }
-        var currVal_3 = this.context.isDataAvailable;
-        this._NgIf_11_6.check_ngIf(currVal_3, throwOnChange, false);
+        var currVal_4 = this.context.isDataAvailable;
+        this._NgIf_11_6.check_ngIf(currVal_4, throwOnChange, false);
         this._NgIf_11_6.detectChangesInternal(this, this._anchor_11, throwOnChange);
         this.detectContentChildrenChanges(throwOnChange);
         var currVal_0 = this._Navbar_2_4.context._hidden;
@@ -216,10 +217,15 @@ var _View_HoroscopePage0 = (function (_super) {
             this.renderer.setElementClass(this._el_2, 'statusbar-padding', currVal_1);
             this._expr_1 = currVal_1;
         }
-        var currVal_2 = this._Content_9_4.context._sbPadding;
+        var currVal_2 = import4.interpolate(1, '', this.context.sign.toUpperCase(), '');
         if (import4.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
-            this.renderer.setElementClass(this._el_9, 'statusbar-padding', currVal_2);
+            this.renderer.setText(this._text_5, currVal_2);
             this._expr_2 = currVal_2;
+        }
+        var currVal_3 = this._Content_9_4.context._sbPadding;
+        if (import4.checkBinding(throwOnChange, this._expr_3, currVal_3)) {
+            this.renderer.setElementClass(this._el_9, 'statusbar-padding', currVal_3);
+            this._expr_3 = currVal_3;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {
