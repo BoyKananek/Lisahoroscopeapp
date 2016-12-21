@@ -45,7 +45,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <icon src="resources/android/icon/ic_launcher-xhdpi.png" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/ic_launcher-ldpi.png" />
     <icon density="mdpi" src="resources/android/icon/ic_launcher-mdpi.png" />
@@ -61,4 +61,6 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 </widget>
