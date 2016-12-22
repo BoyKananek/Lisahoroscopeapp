@@ -184,6 +184,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     this._Refresher_11_3 = new import21.Wrapper_Refresher(this._Content_9_4.context,this.parentInjector.get(import29.NgZone),this.parentInjector.get(import31.GestureController));
     this._text_12 = this.renderer.createText(this._el_11,'\n    ',(null as any));
     this._el_13 = this.renderer.createElement(this._el_11,'ion-refresher-content',(null as any));
+    this.renderer.setElementAttribute(this._el_13,'pullMin','100');
     this.renderer.setElementAttribute(this._el_13,'pullingIcon','arrow-dropdown');
     this.renderer.setElementAttribute(this._el_13,'pullingText','Pull to refresh');
     this.renderer.setElementAttribute(this._el_13,'refreshingSpinner','circles');
