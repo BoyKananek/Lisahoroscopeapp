@@ -53,6 +53,11 @@
     <icon density="xhdpi" src="resources/android/icon/ic_launcher-xhdpi.png" />
     <icon density="xxhdpi" src="resources/android/icon/ic_launcher-xxhdpi.png" />
     <icon density="xxxhdpi" src="resources/android/icon/ic_launcher-xxxhdpi.png" />
+    <splash density="port-mdpi" src="resources/android/splash/background-mdpi.png" />
+    <splash density="port-hdpi" src="resources/android/splash/background-hdpi.png" />
+    <splash density="port-xhdpi" src="resources/android/splash/background-xhdpi.png" />
+    <splash density="port-xxhdpi" src="resources/android/splash/background-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="resources/android/splash/background-xxxhdpi.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="webviewbounce" value="false" />

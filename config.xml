@@ -19,6 +19,11 @@
     <icon src="resources/android/icon/ic_launcher-xhdpi.png" density="xhdpi"/>
     <icon src="resources/android/icon/ic_launcher-xxhdpi.png" density="xxhdpi"/>
     <icon src="resources/android/icon/ic_launcher-xxxhdpi.png" density="xxxhdpi"/>
+    <splash density="port-mdpi" src="resources/android/splash/background-mdpi.png" />
+    <splash density="port-hdpi" src="resources/android/splash/background-hdpi.png" />
+    <splash density="port-xhdpi" src="resources/android/splash/background-xhdpi.png" />
+    <splash density="port-xxhdpi" src="resources/android/splash/background-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="resources/android/splash/background-xxxhdpi.png" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
@@ -41,6 +46,14 @@
     <icon src="resources/ios/icon/Icon-App-29x29@1x.png" width="29" height="29"/>
     <icon src="resources/ios/icon/Icon-App-29x29@2x.png" width="58" height="58"/>
     <icon src="resources/ios/icon/Icon-App-29x29@3x.png" width="87" height="87"/>
+    <splash height="1136" src="resources/ios/splash/Default-568h@2x.png" width="640" />
+    <splash height="1334" src="resources/ios/splash/Default-667h@2x.png" width="750" />
+    <splash height="2208" src="resources/ios/splash/Default-Portrait-736h@3x.png" width="1242" />
+    <splash height="1242" src="resources/ios/splash/Default-Landscape-736h@3x.png" width="2208" />
+    <splash height="1536" src="resources/ios/splash/Default-Landscape@2x.png" width="2048" />
+    <splash height="2048" src="resources/ios/splash/Default-Portrait@2x.png" width="1536" />
+    <splash height="1024" src="resources/ios/splash/Default-Portrait.png" width="768" />
+    <splash height="960" src="resources/ios/splash/Default@2x.png" width="640" />
   </platform>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
