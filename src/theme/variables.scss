@@ -11,7 +11,32 @@
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 $text-color:        #000;
+$pink-color: #f33782;
+$gray-color: #808080;
 $background-color:  #fff;
+$border-color: #e2e2e2;
+$icon-color: #bfbfbf;
+$input-data-color: #1d2129;
+$input-label-color: #7f7f7f;
+$input-placeover-color: #bfbfbf;
+
+// Button colors
+$primary-btn-bg-color: #f85394;
+$primary-btn-color: #fff;
+$logout-btn-color: #d9101d;
+$logout-btn-bg-color: #f2f2f2;
+$logout-btn-hover-bg-color: #e0e0e0;
+
+// Header colors
+$header-bg-color: #f7f7f7;
+$toolbar-title-color: #333;
+$header-border-color: #e2e2e2;
+
+// Typography
+$font-size-small: 1.2rem;
+$font-size-regular: 1.4rem;
+$font-size-medium: 1.7rem;
+$font-size-large: 2rem;
 
 
 // Named Color Variables
@@ -23,9 +48,9 @@ $background-color:  #fff;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
+  primary:    #f33782,
   secondary:  #32db64,
-  danger:     #f53d3d,
+  danger:     #d9101d,
   light:      #f4f4f4,
   dark:       #222,
 );
@@ -69,3 +94,14 @@ $colors: (
 
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
+
+
+// Font Awesome
+// --------------------------------------------------
+@import "./font-awesome/font-awesome";
+//@font-face { font-family: 'FontAwesome'; src: url('../assets/fonts/fontawesome-webfont.eot?v=#{$fa-version}');
+//src: url('../assets/fonts/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+//url('../assets/fonts/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+//url('../assets/fonts/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+//url('../assets/fonts/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+//url('../assets/fonts/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg'); font-weight: normal; font-style: normal; }

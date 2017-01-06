@@ -3,6 +3,7 @@ import { NavController, NavParams, App, AlertController, Events, LoadingControll
 import { LoginPage } from '../login/login';
 import { Facebook } from 'ionic-native';
 import { Http, Headers } from '@angular/http';
+
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
 declare const facebookConnectPlugin: any;
@@ -15,6 +16,12 @@ declare const facebookConnectPlugin: any;
 export class ProfilePage {
   data: any;
   date: any;
+
+  day: any;
+  month: any;
+  year: any;
+
+  //profile image
   image: any;
   disableSubmit: boolean = false;
   _logoutsub: (dataObj: any) => void;
@@ -23,13 +30,42 @@ export class ProfilePage {
     this.date = this.data.birthday;
     //check image which is exist or not
     if (this.data.type == "email") {
-      this.image = 'assets/img/profile.jpg';
+      this.image = 'assets/img/profile.png';
     } else {
       this.image = this.data.picture;
     }
   }
   ionViewDidEnter() {
-
+    var temp = this.date.split('-');
+    console.log(temp[1]);
+    if (temp[1] === '01' || temp[1] === 'Jan') {
+      this.month = 'Jan';
+    } else if (temp[1] === '02'|| temp[1] === 'Feb') {
+      this.month = 'Feb';
+    } else if (temp[1] === '03'|| temp[1] === 'Mar') {
+      this.month = 'Mar';
+    } else if (temp[1] === '04'|| temp[1] === 'Apr') {
+      this.month = 'Apr';
+    } else if (temp[1] === '05'|| temp[1] === 'May') {
+      this.month = 'May';
+    } else if (temp[1] === '06'|| temp[1] === 'Jun') {
+      this.month = 'Jun';
+    } else if (temp[1] === '07'|| temp[1] === 'Jul') {
+      this.month = 'Jul';
+    } else if (temp[1] === '08'|| temp[1] === 'Aug') {
+      this.month = 'Aug';
+    } else if (temp[1] === '09'|| temp[1] === 'Sep') {
+      this.month = 'Sep';
+    } else if (temp[1] === '10'|| temp[1] === 'Oct') {
+      this.month = 'Oct';
+    } else if (temp[1] === '11'|| temp[1] === 'Nov') {
+      this.month = 'Nov';
+    } else if (temp[1] === '12' || temp[1] === 'Dec') {
+      this.month = 'Dec';
+    }
+    this.year = temp[0];
+    this.day = temp[2];
+    
   }
   logoutHandler() {
     facebookConnectPlugin.getLoginStatus(function onLoginStatus(status) {
@@ -51,6 +87,37 @@ export class ProfilePage {
       console.log("clear events");
     }
   }
+  dateChanged(date) {
+    var temp = this.date.split('-');
+    console.log(temp[1]);
+    if (temp[1] === '01' || temp[1] === 'Jan') {
+      this.month = 'Jan';
+    } else if (temp[1] === '02'|| temp[1] === 'Feb') {
+      this.month = 'Feb';
+    } else if (temp[1] === '03'|| temp[1] === 'Mar') {
+      this.month = 'Mar';
+    } else if (temp[1] === '04'|| temp[1] === 'Apr') {
+      this.month = 'Apr';
+    } else if (temp[1] === '05'|| temp[1] === 'May') {
+      this.month = 'May';
+    } else if (temp[1] === '06'|| temp[1] === 'Jun') {
+      this.month = 'Jun';
+    } else if (temp[1] === '07'|| temp[1] === 'Jul') {
+      this.month = 'Jul';
+    } else if (temp[1] === '08'|| temp[1] === 'Aug') {
+      this.month = 'Aug';
+    } else if (temp[1] === '09'|| temp[1] === 'Sep') {
+      this.month = 'Sep';
+    } else if (temp[1] === '10'|| temp[1] === 'Oct') {
+      this.month = 'Oct';
+    } else if (temp[1] === '11'|| temp[1] === 'Nov') {
+      this.month = 'Nov';
+    } else if (temp[1] === '12' || temp[1] === 'Dec') {
+      this.month = 'Dec';
+    }
+    this.year = temp[0];
+    this.day = temp[2];
+  };
   submit() {
     this.disableSubmit = true;
     let headers = new Headers();
@@ -63,7 +130,8 @@ export class ProfilePage {
       });
       alert.present();
     } else {
-      //update user data 
+      //update user data
+      
       this.http.post('https://lisahoroscope.herokuapp.com/auth/updateUser/' + this.date, this.data)
         .subscribe(
         response => {
@@ -73,7 +141,7 @@ export class ProfilePage {
             dismissOnPageChange: true
           });
           loader.present();
-          console.log("Update user :" + response.json());
+
           if (response.json().success == true) {
             this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
               .subscribe(data => {
@@ -81,12 +149,13 @@ export class ProfilePage {
                   console.log('Pull user data error');
                 } else {
                   console.log("New user data");
-                  console.log(data.json());
+
                   this.data = data.json();
 
                 }
                 var alert = this.alertCtrl.create({
-                  title: "Update User successful",
+                  title: "Update user",
+                  subTitle: "Completed",
                   buttons: ["Ok"]
                 });
                 alert.present();
@@ -134,7 +203,7 @@ export class ProfilePage {
                 }, error => {
                   console.log(error);
                 })
-              
+
               this.app.getRootNav().setRoot(LoginPage);
             } else {
               //facebook logout
@@ -145,7 +214,7 @@ export class ProfilePage {
                 }, error => {
                   console.log(error);
                 })
-              
+
               this.app.getRootNav().setRoot(LoginPage);
               facebookConnectPlugin.logout(function (result) {
                 console.log('Facebook logout successful');

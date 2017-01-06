@@ -3,6 +3,8 @@ import { Facebook } from 'ionic-native';
 import { NavController, AlertController, Events, LoadingController, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
+import { PrivacyPolicyPage } from '../privacy-policy/privacy-policy';
+import { TermsOfServicesPage } from '../terms-of-services/terms-of-services';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
@@ -16,6 +18,9 @@ declare const facebookConnectPlugin: any;
   providers: [Facebook]
 })
 export class LoginPage {
+  PrivacyPolicyPage = PrivacyPolicyPage;
+  TermsOfServicesPage = TermsOfServicesPage;
+
   email: any;
   password: any;
   data: any;
@@ -245,7 +250,7 @@ export class LoginPage {
               console.log("Failure");
             });
 
-        }, function (error) { // Access API Failure 
+        }, function (error) { // Access API Failure
           console.log("Error Login with facebook");
           console.log(error.message());
           var alert = this.alertCtrl.create({

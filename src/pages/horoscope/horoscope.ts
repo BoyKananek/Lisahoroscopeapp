@@ -31,7 +31,7 @@ export class HoroscopePage {
         } else {
           //update data session;
           this.data = data.json();
-          this.imgsign = "assets/img/" + this.sign + ".jpg";
+          this.imgsign = "assets/img/" + this.sign + ".png";
           let loader = this.loadingCtrl.create({
             content: "Loading ...",
             duration: 4000,

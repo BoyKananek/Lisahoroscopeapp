@@ -1,3 +1,55 @@
-page-about {
+page-browse {
 
+}
+
+// Logo
+.wrapper-title-app-logo {
+  height: 100%;
+  margin: 0 auto;
+  .title-app-logo {
+    height: 100%;
+    width: auto;
+    max-height: 36px;
+    max-width: 36px;
+    float: right;
+  }
+
+}
+
+.wrapper-title-logo {
+  .title-logo {
+    height: 100%;
+    max-height: 36px;
+    float: left;
+  }
+}
+
+// Star Dark Backgroud
+.star-dark-bg {
+  background-color: #1b1f30;
+  background: url(../assets/img/BG.jpg) center no-repeat;
+  background-size: cover;
+}
+
+// Zodiac Icons
+.img-round {
+  @include border-radius(50%);
+}
+
+.zodiac-label { font-size: smaller; }
+.zodiac-icon {
+  @include transition(all 0.3s ease 0s);
+  &:hover, &:active, &:focus {
+    background-color: #333;
+    @include opacity(0.5);
+  }
+}
+
+.browse-icon-wrapper {
+  .scroll-content {
+    padding: 10px 16px;
+    .form-container {
+      padding: 10px 16px;
+    }
+  }
 }

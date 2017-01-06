@@ -8,32 +8,32 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "io.ionic.starter"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "io.ionic.starter"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
         "cordova-plugin-facebook4": {
             "APP_ID": "1333155163379937",
-            "APP_NAME": "LisaguruHoroscopeApp",
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp834231"
+            "APP_NAME": "Lisa Horoscope",
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
-        "cordova-plugin-x-socialsharing": {
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         }
     },

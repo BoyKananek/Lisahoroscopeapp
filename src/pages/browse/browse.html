@@ -1,32 +1,200 @@
 <ion-header>
   <ion-navbar hideBackButton>
-    <ion-title>
-      <h5 style="color:#fa8cb4;font-weight: bold">HOROSCOPE</h5>
+    <ion-title class="browse-title">
+      <div class="row flexcontainer">
+        <div class="col col-10"></div>
+        <div class="col col-30 wrapper-title-app-logo"><img src="assets/img/Horoscope_Logo.png" class="title-app-logo"></div><!-- APP Icon -->
+        <div class="col col-50 wrapper-title-logo"><img src="assets/img/LisaGuru_Horoscope_Pink.png" class="title-logo"></div><!-- Logo -->
+        <div class="col col-10"></div>
+      </div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <br>
-<ion-row>
-  <ion-col><img src="assets/img/aries.jpg" style="border-radius:50%;" (click)="gotoAries();"></ion-col>
-  <ion-col><img src="assets/img/taurus.jpg" style="border-radius:50%;" (click)="gotoTaurus();"></ion-col>
-  <ion-col><img src="assets/img/gemini.jpg" style="border-radius:50%;" (click)="gotoGemini();"></ion-col>
-</ion-row>
-<ion-row>
-  <ion-col><img src="assets/img/cancer.jpg" style="border-radius:50%;" (click)="gotoCancer();"></ion-col>
-  <ion-col><img src="assets/img/leo.jpg" style="border-radius:50%;" (click)="gotoLeo();"></ion-col>
-  <ion-col><img src="assets/img/virgo.jpg" style="border-radius:50%;" (click)="gotoVirgo();"></ion-col>
-</ion-row>
-<ion-row>
-  <ion-col><img src="assets/img/libra.jpg" style="border-radius:50%;" (click)="gotoLibra();"></ion-col>
-  <ion-col><img src="assets/img/scorpio.jpg" style="border-radius:50%;" (click)="gotoScorpio();"></ion-col>
-  <ion-col><img src="assets/img/sagittarius.jpg" style="border-radius:50%;" (click)="gotoSagittarius();"></ion-col>
-</ion-row>
-<ion-row>
-  <ion-col><img src="assets/img/capricorn.jpg" style="border-radius:50%;" (click)="gotoCapricorn();"></ion-col>
-  <ion-col><img src="assets/img/aquarius.jpg" style="border-radius:50%;" (click)="gotoAquarius();"></ion-col>
-  <ion-col><img src="assets/img/pisces.jpg" style="border-radius:50%;" (click)="gotoPisces();"></ion-col>
-</ion-row>
+<ion-content class="star-dark-bg browse-icon-wrapper">
+  <div class="form-container">
+    <ion-row>
 
+      <!-- Aries -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/aries_icon.png" class="zodiac-icon img-round" (click)="gotoAries();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">aries</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Taurus -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/taurus_icon.png" class="zodiac-icon img-round" (click)="gotoTaurus();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Taurus</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Gemini -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/gemini_icon.png" class="zodiac-icon img-round" (click)="gotoGemini();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Gemini</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <!-- Cancer -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/cancer_icon.png" class="zodiac-icon img-round" (click)="gotoCancer();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Cancer</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Leo -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/leo_icon.png" class="zodiac-icon img-round" (click)="gotoLeo();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Leo</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Virgo -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/virgo_icon.png" class="zodiac-icon img-round" (click)="gotoVirgo();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Virgo</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <!-- Libra -->
+      <ion-col class="col-33">
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/libra_icon.png" class="zodiac-icon img-round" (click)="gotoLibra();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Libra</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Scorpio -->
+      <ion-col class="col-33">
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/scorpio_icon.png" class="zodiac-icon img-round" (click)="gotoScorpio();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Scorpio</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Sagittarius -->
+      <ion-col class="col-33">
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/sagittarius_icon.png" class="zodiac-icon img-round" (click)="gotoSagittarius();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Sagittarius</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <!-- Capricorn -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/capricorn_icon.png" class="zodiac-icon img-round" (click)="gotoCapricorn();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Capricorn</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Aquarius -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/aquarius_icon.png" class="zodiac-icon img-round" (click)="gotoAquarius();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Aquarius</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <!-- Pisces -->
+      <ion-col>
+        <ion-row>
+          <ion-col class="no-padding">
+            <img src="assets/img/pisces_icon.png" class="zodiac-icon img-round" (click)="gotoPisces();">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col  class="no-padding t-center">
+              <span class="zodiac-label white-color f-bold t-uppercase">Pisces</span>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </div>
 </ion-content>

@@ -15,3 +15,260 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+/*--------------------------------------------------------------
+## Import External Files
+--------------------------------------------------------------*/
+
+// Layouts
+@import "../theme/layout";
+
+// Mixin
+@import "../theme/mixin";
+
+// Helpers
+@import "../theme/helper";
+
+// Font Awesome
+@import "../theme/font-awesome/font-awesome";
+
+// Media Queries
+@import "../theme/media_queries";
+
+
+
+/*!--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Header
+# Tab Bar
+# Date Picker
+# Forms
+# Buttons
+# Icons
+# Font Awesome
+# Typography
+# List Items
+
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.toolbar-background-ios {
+  background-color: $header-bg-color;
+  border-bottom: 1px solid $header-border-color;
+}
+
+.toolbar-ios {
+  min-height: 60px;
+}
+
+.toolbar-title {
+  color: $toolbar-title-color;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+## Tab Bar
+--------------------------------------------------------------*/
+.tabs-ios {
+  .tabbar {
+    background-color: $header-bg-color;
+    border-top: 1px solid $header-border-color;
+    height: 60px;
+  }
+  .tab-button-icon {
+    margin: 0;
+  }
+  .tab-button {
+    color: #808080;
+    &[aria-selected=true] {
+      color: $pink-color;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+## Date Picker
+--------------------------------------------------------------*/
+.picker-ios {
+  .picker-toolbar {
+    border-bottom: 1px solid $header-border-color;
+    height: 60px;
+    padding: 5px 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+
+.card-ios {
+  border: 1px solid $border-color;
+  @include box-shadow(none);
+  @include border-radius(5px);
+}
+
+.card-content-ios {
+  font-size: 1.7rem;
+  padding: 0px 16px 0px 16px;
+}
+
+.field-with-icon {
+  &.birthdate {
+    padding: 0px 10px 0px 10px;
+  }
+  .icon {
+    width: 10%;
+    float: left;
+    color: $icon-color;
+    padding-top: 3px;
+  }
+  .item-block {
+    width: 90%;
+    float: left;
+    height: 50px;
+  }
+}
+
+.input-label {
+  color: $input-label-color;
+}
+
+.input-data {
+  color: $input-data-color;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: none !important;
+    background-image: none;
+    color: $input-data-color;
+}
+
+input:-webkit-autofill {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+  }
+}
+
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.primary-btn {
+  color: $primary-btn-color;
+  background: $primary-btn-bg-color;
+  font-weight: 600;
+  height: 3.6em;
+  margin: 0.8rem 0.2rem;
+}
+
+.logout-btn {
+  color: $logout-btn-color;
+  background: $logout-btn-bg-color;
+  font-weight: 600;
+  height: 3.6em;
+  @include transition(all 0.3s ease 0s);
+  &:hover, &:focus {
+    background-color: $logout-btn-hover-bg-color;
+  }
+}
+
+.pink-text-btn {
+  color: $pink-color;
+  font-weight: bold;
+  height: 1.6em;
+}
+
+.pink-text-link {
+  color: $pink-color;
+  background: transparent;
+  font-size: small;
+}
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+// Icon Size
+.icon {
+  &.small {
+    font-size: 24px;
+  }
+  &.medium {
+    font-size: 30px;
+  }
+  &.pink-color {
+    color: $pink-color;
+  }
+}
+
+/*--------------------------------------------------------------
+## Font Awesome
+--------------------------------------------------------------*/
+.fa-2 {
+    font-size: 2em;
+}
+
+.fa-3 {
+    font-size: 3em;
+}
+
+.fa-4 {
+    font-size: 4em;
+}
+
+i {
+  &.white-color {
+    color: #fff;
+  }
+}
+
+/*--------------------------------------------------------------
+## Typography
+--------------------------------------------------------------*/
+.content-ios {
+  hr {
+    height: 1px;
+  }
+}
+.light-gray-color { color: $icon-color; }
+
+.gray-color { color: $gray-color; }
+
+.white-color { color: #fff; }
+
+hr {
+  height: 1px;
+  background-color: $header-border-color;
+}
+
+/*--------------------------------------------------------------
+## List Items
+--------------------------------------------------------------*/
+
+ul {
+  &.no-list-type {
+    list-style-type: none;
+    padding: 10px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+ul {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+ol {
+  padding: 20px;
+  li {
+    margin-bottom: 10px;
+  }
+}

@@ -4,36 +4,55 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
+    <h5 class="light-gray-color" text-center>Please fill up details below</h5>
+    <ion-card>
+        <ion-card-content class="field-with-icon">
+            <div class="row">
+              <div class="col border-bottom">
+                <ion-icon name="ios-person-outline" class="medium"></ion-icon>
+                <ion-item>
+                    <ion-input placeholder="Name" type="text" [(ngModel)]="name"></ion-input>
+                </ion-item>
+              </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content class="field-with-icon">
+          <div class="row">
+            <div class="col border-bottom">
+              <ion-icon name="ios-mail-outline" class="medium"></ion-icon>
+              <ion-item>
+                  <ion-input placeholder="Email Address" type="email" [(ngModel)]="email"></ion-input>
+              </ion-item>
+            </div>
+          </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content class="field-with-icon">
+            <div class="row">
+              <div class="col">
+                <ion-icon name="ios-unlock-outline" class="medium"></ion-icon>
+                <ion-item>
+                    <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+              </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="mg-bt-20">
+        <ion-card-content class="field-with-icon">
+            <div class="row">
+              <div class="col">
+                <ion-icon name="ios-unlock-outline" class="medium"></ion-icon>
+                <ion-item>
+                    <ion-input placeholder="Re-password" type="password" [(ngModel)]="repassword"></ion-input>
+                </ion-item>
+              </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
     <br>
-    <h2 style="color:#9b9b9b;text-align: center;font-weight: bold;">Please fill up details below</h2>
-    <ion-card>
-        <ion-card-content>
-            <ion-item>
-                <ion-input placeholder="Name" type="text" [(ngModel)]="name"></ion-input>
-            </ion-item>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
-            <ion-item>
-                <ion-input placeholder="Email Address" type="email" [(ngModel)]="email"></ion-input>
-            </ion-item>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
-            <ion-item>
-                <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
-            </ion-item>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
-            <ion-item>
-                <ion-input placeholder="Re-password" type="password" [(ngModel)]="repassword"></ion-input>
-            </ion-item>
-        </ion-card-content>
-    </ion-card>
-    <br>
-    <button ion-button block style="color:#ffffff;background-color:#f85394;font-weight: bold;" [disabled]="disableSubmit" (click)="signUpEmail()">Sign up</button>
+    <button ion-button block class="primary-btn" [disabled]="disableSubmit" (click)="signUpEmail()">Sign up</button>
 </ion-content>

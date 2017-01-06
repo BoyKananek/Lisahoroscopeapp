@@ -1,0 +1,74 @@
+/*On the flex container*/
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexcontainer-row {
+  flex-direction: row;
+}
+
+.flex-vertical-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// Typography
+//--------------------------------------------//
+.f-normal {
+    font-weight: normal;
+}
+
+.f-bold {
+    font-weight: bold;
+}
+
+.f-italic {
+    font-style: italic;
+}
+
+.t-strike {
+    text-decoration: line-through;
+}
+
+.t-overline {
+    text-decoration: overline;
+}
+
+.t-underline {
+    text-decoration: underline;
+}
+
+.t-uppercase {
+  text-transform: uppercase;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.text-jumbo {
+    font-size: 90px;
+    margin: 35px 20px 0;
+}
+
+.font-size-small { font-size: $font-size-small; }
+.font-size-regular { font-size: $font-size-regular; }
+.font-size-medium { font-size: $font-size-medium; }
+.font-size-large { font-size: $font-size-large; }

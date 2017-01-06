@@ -1,3 +1,62 @@
 page-login {
-    
+
+  // Facebook Icon
+  .fb-main-wrapper {
+    .fb-icon-wrapper {
+      background-color: #2e4575;
+      width: 18%;
+      @include border-radius(5px 0 0 5px);
+      @extend .flex-align-center;
+      .fa-facebook {
+        color: #fff;
+        padding: 12px;
+      }
+    }
+    .fb-login-text-wrapper {
+      width: 82%;
+      background-color: #38578c;
+      @include border-radius(0 5px 5px 0);
+      @extend .flex-align-center;
+      .fb-login-text {
+        color: #fff;
+        font-weight: 600;
+        font-size: medium;
+      }
+    }
+  }
+
+}
+
+
+// Logo
+.login-app-icon {
+  width: auto;
+  max-height: 100px;
+  float: right;
+}
+
+.login-logo {
+  width: auto;
+  margin-top: 15%;
+  max-height: 100px;
+}
+
+.border-bottom { border-bottom: 1px solid $header-border-color; }
+
+.align-bottom { position: absolute; bottom: 0; }
+.pd-lr-16 { padding-left: 16px; padding-right: 16px; }
+.flex-start { align-self: flex-start; }
+.flex-end { align-self: flex-end; }
+
+.form-wrapper{
+  height: 60vh;
+  min-height: 100px;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  width: 100%;
 }

@@ -1,39 +1,88 @@
 
 <ion-content padding>
-    <ion-grid>
-        <ion-row>
-            <ion-col><div><br></div></ion-col>
-        </ion-row>
-    </ion-grid>
-    <img src="assets/img/logo.png" style="display:block;margin: auto;">
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <div>
-                    <br>
+    <ion-row>
+      <ion-col class="">
+        <div class="row flexcontainer">
+          <div class="col col-15"></div>
+          <div class="col col-30"><img src="assets/img/Horoscope_Logo.png" class="login-app-icon"></div><!-- APP Icon -->
+          <div class="col col-40"><img src="assets/img/LisaGuru_Horoscope_Pink.png" class="login-logo"></div><!-- Logo -->
+          <div class="col col-15"></div>
+        </div>
+
+        <div class="clearfix"></div>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="form-wrapper">
+          <div class="form-container pd-16">
+          <ion-card>
+            <div class="fb-main-wrapper flexcontainer" (click)="loginFB();">
+              <div class="fb-icon-wrapper">
+                <ion-icon class="fa fa-facebook fa-2"></ion-icon>
+              </div>
+              <div class="fb-login-text-wrapper">
+                <span class="fb-login-text">Login with Facebook</span>
+              </div>
+            </div>
+          </ion-card>
+
+
+          <h3 class="light-gray-color" text-center> OR </h3>
+
+          <ion-card class="mg-bt-20">
+              <ion-card-content class="field-with-icon">
+                  <div class="row">
+                    <div class="col border-bottom">
+                      <ion-icon name="ios-mail-outline" class="medium"></ion-icon>
+                      <ion-item>
+                          <ion-input placeholder="Email Address" type="email" [(ngModel)]="email"></ion-input>
+                      </ion-item>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <ion-icon name="ios-unlock-outline" class="medium"></ion-icon>
+                      <ion-item>
+                          <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+                      </ion-item>
+                    </div>
+                  </div>
+              </ion-card-content>
+          </ion-card>
+          <button ion-button block [disabled]="disableSubmit" class="primary-btn" (click)="loginEmail();">Login</button>
+          <div class="flex-align-center">
+            <button ion-button clear [disabled]="disableSubmit" class="pink-text-btn" (click)="forgotPassword();">Forgot Password?</button>
+          </div>
+        </div>
+       </div>
+
+       <div class="clearfix"></div>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="">
+            <div class="row">
+              <div class="col no-padding">
+                <div class="flex-align-center">
+                    <span class="gray-color font-size-regular f-bold">Don't have a account?</span>
+                    <button ion-button clear [disabled]="disableSubmit" class="pink-text-btn" style="padding-left:10px;" (click)="gotoSignUp();"> Sign up </button>
                 </div>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-    <img src="assets/img/facebook.png" style="display:block;margin: auto;" (click)="loginFB();">
-    <h3 style="text-align: center; color:#c8c8c8"> OR </h3>
-    <ion-card>
-        <ion-card-content>
-            <ion-item>
-                <ion-input placeholder="Email Address" type="email" [(ngModel)]="email"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
-            </ion-item>
-            </ion-card-content>
-    </ion-card>
-    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;" (click)="loginEmail();">Login</button>
-    <button ion-button clear [disabled]="disableSubmit" style="color:#fa8cb4;font-weight: bold;left:50%;-webkit-transform:translateX(-50%);transform: translateX(-50%);" (click)="forgotPassword();">Forgot Password?</button>
-    <br>
-    <br>
-        <ion-row>
-            <p style="color:#9b9b9b;font-weight: bold;">Don't have a account?</p><button ion-button clear [disabled]="disableSubmit" style="font-weight:bold;font-size:13px;color:#fa8cb4;" (click)="gotoSignUp();"> Sign up </button>
-        </ion-row>
-    <hr>
-    <p style="color:#c8c8c8;font-size:12px;">By using HOROSCOPE APP,you agree to our Terms of Services and Privacy Policy </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col no-padding">
+                <hr>
+                <p class="t-center gray-color font-size-small">By using LISA Horoscope APP, you agree to our <button [navPush]="TermsOfServicesPage" class="pink-text-link t-underline">Terms of Services</button>and<button [navPush]="PrivacyPolicyPage" class="pink-text-link t-underline">Privacy Policy</button></p>
+              </div>
+            </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
 </ion-content>

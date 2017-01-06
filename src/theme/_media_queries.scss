@@ -1,0 +1,73 @@
+/*! =Media Queries
+-------------------------------------------------------------- */
+/* Variables */
+$iphone5-width: 320px;
+$iphone7-width: 375px;
+$iphone7plus-width: 414px;
+$iPad-height: 768px;
+$iPad-width: 1024px;
+
+/* 320px (iPhone 5) - 375px (iPhone 7) Only */
+@media only screen and (min-width: #{$iphone5-width}) and (max-width: #{$iphone7-width - 1px}) {
+
+// Profile Page
+.birthdate {
+  .birthday-selector {
+    max-width: 78%;
+  }
+}
+
+.profile-img {
+  max-width: 180px !important;
+  max-height: 180px !important;
+}
+
+// Browse Page
+ion-title {
+  &.browse-title {
+    padding: 0 50px 1px;
+  }
+}
+
+.zodiac-icon {
+  height: 14.5vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.browse-icon-wrapper {
+  .scroll-content {
+    padding: 10px 16px;
+    .form-container {
+      padding: 10px 16px;
+    }
+  }
+}
+
+}
+
+/* 375px (iPhone 7) - 414px (iPhone 7 plus) Only */
+@media only screen and (min-width: #{$iphone7-width}) and (max-width: #{$iphone7plus-width}) {
+
+// Browse Page
+.browse-icon-wrapper {
+  .scroll-content {
+    padding: 10px 16px;
+    .form-container {
+      padding: 10px 16px;
+    }
+  }
+}
+
+}
+
+
+/* 768px++ (iPad) Only */
+@media only screen and (min-width: #{$iPad-height}) {
+
+// Login Page
+.login-logo {
+  margin-top: 0 !important;
+}
+
+}
