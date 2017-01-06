@@ -45,9 +45,7 @@ import * as import37 from '@angular/common/src/directives/ng_if';
 import * as import38 from 'ionic-angular/components/content/content';
 import * as import39 from '@angular/core/src/security';
 import * as import40 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
-import * as import41 from '../../node_modules/ionic-angular/components/icon/icon.ngfactory';
-import * as import42 from 'ionic-angular/components/grid/grid';
-import * as import43 from 'ionic-angular/components/icon/icon';
+import * as import41 from 'ionic-angular/components/grid/grid';
 export class Wrapper_HomePage {
   context:import0.HomePage;
   changed:boolean;
@@ -129,6 +127,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
   _TemplateRef_17_5:any;
   _NgIf_17_6:import23.Wrapper_NgIf;
   _text_18:any;
+  _text_19:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
@@ -156,7 +155,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     var compView_4:any = import19.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
     this._ToolbarTitle_4_4 = new import19.Wrapper_ToolbarTitle(this.parentInjector.get(import24.Config),new import25.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import27.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'Home',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'Today',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
     this._text_6 = this.renderer.createText((null as any),'\n  ',(null as any));
     compView_2.create(this._Navbar_2_4.context,[
@@ -174,7 +173,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     this._text_7 = this.renderer.createText(this._el_0,'\n',(null as any));
     this._text_8 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
     this._el_9 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
-    this.renderer.setElementAttribute(this._el_9,'padding','');
+    this.renderer.setElementAttribute(this._el_9,'class','star-dark-bg');
     this._appEl_9 = new import3.AppElement(9,(null as any),this,this._el_9);
     var compView_9:any = import20.viewFactory_Content0(this.viewUtils,this.injector(9),this._appEl_9);
     this._Content_9_4 = new import20.Wrapper_Content(this.parentInjector.get(import24.Config),new import25.ElementRef(this._el_9),this.renderer,this.parentInjector.get(import10.App),this.parentInjector.get(import28.Keyboard),this.parentInjector.get(import29.NgZone),this.parentInjector.get(import26.ViewController,(null as any)),this.parentInjector.get(import30.Tabs,(null as any)));
@@ -214,6 +213,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
       ([] as any[]).concat([this._el_11])
     ]
     ,(null as any));
+    this._text_19 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
     this._expr_3 = import7.UNINITIALIZED;
@@ -241,7 +241,8 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
       this._text_15,
       this._text_16,
       this._anchor_17,
-      this._text_18
+      this._text_18,
+      this._text_19
     ]
     ,[disposable_0],[subscription_0]);
     return (null as any);
@@ -346,173 +347,148 @@ class _View_HomePage1 extends import1.AppView<any> {
   _el_14:any;
   _text_15:any;
   _el_16:any;
-  _el_17:any;
+  _text_17:any;
   _text_18:any;
-  _el_19:any;
+  _text_19:any;
   _text_20:any;
   _text_21:any;
-  _text_22:any;
+  _el_22:any;
+  _Row_22_3:import40.Wrapper_Row;
   _text_23:any;
-  _text_24:any;
-  _el_25:any;
-  _text_26:any;
-  _el_27:any;
-  _Row_27_3:import40.Wrapper_Row;
-  _text_28:any;
-  _el_29:any;
+  _el_24:any;
+  _Col_24_3:import40.Wrapper_Col;
+  _text_25:any;
+  _el_26:any;
+  _text_27:any;
+  _el_28:any;
+  _text_29:any;
   _el_30:any;
-  _text_31:any;
+  _el_31:any;
   _text_32:any;
   _text_33:any;
-  _el_34:any;
-  _Row_34_3:import40.Wrapper_Row;
-  _text_35:any;
-  _el_36:any;
-  _Col_36_3:import40.Wrapper_Col;
-  _text_37:any;
-  _el_38:any;
-  _Icon_38_3:import41.Wrapper_Icon;
-  _text_39:any;
+  _text_34:any;
+  _el_35:any;
+  _text_36:any;
+  _el_37:any;
+  _text_38:any;
+  _el_39:any;
   _text_40:any;
-  _el_41:any;
-  _Col_41_3:import40.Wrapper_Col;
+  _text_41:any;
   _text_42:any;
-  _el_43:any;
+  _text_43:any;
   _text_44:any;
-  _el_45:any;
-  _text_46:any;
+  _text_45:any;
+  _el_46:any;
+  _Row_46_3:import40.Wrapper_Row;
   _text_47:any;
-  _text_48:any;
+  _el_48:any;
+  _Col_48_3:import40.Wrapper_Col;
   _text_49:any;
-  _text_50:any;
-  _el_51:any;
-  _Row_51_3:import40.Wrapper_Row;
-  _text_52:any;
-  _el_53:any;
+  _el_50:any;
+  _text_51:any;
+  _el_52:any;
+  _text_53:any;
   _el_54:any;
-  _text_55:any;
+  _el_55:any;
   _text_56:any;
   _text_57:any;
-  _el_58:any;
-  _Row_58_3:import40.Wrapper_Row;
-  _text_59:any;
-  _el_60:any;
-  _Col_60_3:import40.Wrapper_Col;
-  _text_61:any;
-  _el_62:any;
-  _Icon_62_3:import41.Wrapper_Icon;
-  _text_63:any;
+  _text_58:any;
+  _el_59:any;
+  _text_60:any;
+  _el_61:any;
+  _text_62:any;
+  _el_63:any;
   _text_64:any;
-  _el_65:any;
-  _Col_65_3:import40.Wrapper_Col;
+  _text_65:any;
   _text_66:any;
-  _el_67:any;
+  _text_67:any;
   _text_68:any;
-  _el_69:any;
-  _text_70:any;
+  _text_69:any;
+  _el_70:any;
+  _Row_70_3:import40.Wrapper_Row;
   _text_71:any;
-  _text_72:any;
+  _el_72:any;
+  _Col_72_3:import40.Wrapper_Col;
   _text_73:any;
-  _text_74:any;
-  _el_75:any;
-  _Row_75_3:import40.Wrapper_Row;
-  _text_76:any;
-  _el_77:any;
+  _el_74:any;
+  _text_75:any;
+  _el_76:any;
+  _text_77:any;
   _el_78:any;
-  _text_79:any;
+  _el_79:any;
   _text_80:any;
   _text_81:any;
-  _el_82:any;
-  _Row_82_3:import40.Wrapper_Row;
-  _text_83:any;
-  _el_84:any;
-  _Col_84_3:import40.Wrapper_Col;
-  _text_85:any;
-  _el_86:any;
-  _Icon_86_3:import41.Wrapper_Icon;
-  _text_87:any;
+  _text_82:any;
+  _el_83:any;
+  _text_84:any;
+  _el_85:any;
+  _text_86:any;
+  _el_87:any;
   _text_88:any;
-  _el_89:any;
-  _Col_89_3:import40.Wrapper_Col;
+  _text_89:any;
   _text_90:any;
-  _el_91:any;
+  _text_91:any;
   _text_92:any;
-  _el_93:any;
-  _text_94:any;
+  _text_93:any;
+  _el_94:any;
+  _Row_94_3:import40.Wrapper_Row;
   _text_95:any;
-  _text_96:any;
+  _el_96:any;
+  _Col_96_3:import40.Wrapper_Col;
   _text_97:any;
-  _text_98:any;
-  _el_99:any;
-  _Row_99_3:import40.Wrapper_Row;
-  _text_100:any;
-  _el_101:any;
+  _el_98:any;
+  _text_99:any;
+  _el_100:any;
+  _text_101:any;
   _el_102:any;
-  _text_103:any;
+  _el_103:any;
   _text_104:any;
   _text_105:any;
-  _el_106:any;
-  _Row_106_3:import40.Wrapper_Row;
-  _text_107:any;
-  _el_108:any;
-  _Col_108_3:import40.Wrapper_Col;
-  _text_109:any;
-  _el_110:any;
-  _Icon_110_3:import41.Wrapper_Icon;
-  _text_111:any;
+  _text_106:any;
+  _el_107:any;
+  _text_108:any;
+  _el_109:any;
+  _text_110:any;
+  _el_111:any;
   _text_112:any;
-  _el_113:any;
-  _Col_113_3:import40.Wrapper_Col;
+  _text_113:any;
   _text_114:any;
-  _el_115:any;
+  _text_115:any;
   _text_116:any;
-  _el_117:any;
-  _text_118:any;
+  _text_117:any;
+  _el_118:any;
+  _Row_118_3:import40.Wrapper_Row;
   _text_119:any;
-  _text_120:any;
+  _el_120:any;
+  _Col_120_3:import40.Wrapper_Col;
   _text_121:any;
-  _text_122:any;
-  _el_123:any;
-  _Row_123_3:import40.Wrapper_Row;
-  _text_124:any;
-  _el_125:any;
+  _el_122:any;
+  _text_123:any;
+  _el_124:any;
+  _text_125:any;
   _el_126:any;
-  _text_127:any;
+  _el_127:any;
   _text_128:any;
   _text_129:any;
-  _el_130:any;
-  _Row_130_3:import40.Wrapper_Row;
-  _text_131:any;
-  _el_132:any;
-  _Col_132_3:import40.Wrapper_Col;
-  _text_133:any;
-  _el_134:any;
-  _Icon_134_3:import41.Wrapper_Icon;
-  _text_135:any;
+  _text_130:any;
+  _el_131:any;
+  _text_132:any;
+  _el_133:any;
+  _text_134:any;
+  _el_135:any;
   _text_136:any;
-  _el_137:any;
-  _Col_137_3:import40.Wrapper_Col;
+  _text_137:any;
   _text_138:any;
-  _el_139:any;
+  _text_139:any;
   _text_140:any;
-  _el_141:any;
-  _text_142:any;
-  _text_143:any;
-  _text_144:any;
-  _text_145:any;
-  _text_146:any;
+  _text_141:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
+  /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
   /*private*/ _expr_4:any;
+  /*private*/ _expr_5:any;
   /*private*/ _expr_6:any;
-  /*private*/ _expr_7:any;
-  /*private*/ _expr_9:any;
-  /*private*/ _expr_10:any;
-  /*private*/ _expr_12:any;
-  /*private*/ _expr_13:any;
-  /*private*/ _expr_15:any;
-  /*private*/ _expr_16:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_HomePage1,renderType_HomePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -521,219 +497,210 @@ class _View_HomePage1 extends import1.AppView<any> {
     this.renderer.setElementAttribute(this._el_0,'class','homePage');
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','header-wrapper');
     this._Row_2_3 = new import40.Wrapper_Row();
     this._text_3 = this.renderer.createText(this._el_2,'\n      ',(null as any));
     this._el_4 = this.renderer.createElement(this._el_2,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_4,'width-50','');
+    this.renderer.setElementAttribute(this._el_4,'class','col-40');
     this._Col_4_3 = new import40.Wrapper_Col();
     this._text_5 = this.renderer.createText(this._el_4,'\n        ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_4,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_6,'class','image');
+    this.renderer.setElementAttribute(this._el_6,'class','zodiac-single');
     this._text_7 = this.renderer.createText(this._el_6,'\n          ',(null as any));
     this._el_8 = this.renderer.createElement(this._el_6,'img',(null as any));
-    this.renderer.setElementAttribute(this._el_8,'style','border-radius:50%;');
     this._text_9 = this.renderer.createText(this._el_6,'\n        ',(null as any));
     this._text_10 = this.renderer.createText(this._el_4,'\n      ',(null as any));
     this._text_11 = this.renderer.createText(this._el_2,'\n      ',(null as any));
     this._el_12 = this.renderer.createElement(this._el_2,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_12,'class','col-60 flex-vertical-center');
     this._Col_12_3 = new import40.Wrapper_Col();
     this._text_13 = this.renderer.createText(this._el_12,'\n        ',(null as any));
     this._el_14 = this.renderer.createElement(this._el_12,'div',(null as any));
     this.renderer.setElementAttribute(this._el_14,'class','title');
     this._text_15 = this.renderer.createText(this._el_14,'\n          ',(null as any));
-    this._el_16 = this.renderer.createElement(this._el_14,'br',(null as any));
-    this._el_17 = this.renderer.createElement(this._el_14,'br',(null as any));
-    this._text_18 = this.renderer.createText(this._el_14,'\n          ',(null as any));
-    this._el_19 = this.renderer.createElement(this._el_14,'h4',(null as any));
-    this._text_20 = this.renderer.createText(this._el_19,'',(null as any));
-    this._text_21 = this.renderer.createText(this._el_14,'\n        ',(null as any));
-    this._text_22 = this.renderer.createText(this._el_12,'\n      ',(null as any));
-    this._text_23 = this.renderer.createText(this._el_2,'\n    ',(null as any));
-    this._text_24 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_25 = this.renderer.createElement(this._el_0,'br',(null as any));
-    this._text_26 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_27 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_27_3 = new import40.Wrapper_Row();
-    this._text_28 = this.renderer.createText(this._el_27,'\n      ',(null as any));
-    this._el_29 = this.renderer.createElement(this._el_27,'h2',(null as any));
-    this._el_30 = this.renderer.createElement(this._el_29,'strong',(null as any));
-    this._text_31 = this.renderer.createText(this._el_30,' Work ',(null as any));
-    this._text_32 = this.renderer.createText(this._el_27,'\n    ',(null as any));
-    this._text_33 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_34 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_34_3 = new import40.Wrapper_Row();
-    this._text_35 = this.renderer.createText(this._el_34,'\n      ',(null as any));
-    this._el_36 = this.renderer.createElement(this._el_34,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_36,'width-25','');
-    this._Col_36_3 = new import40.Wrapper_Col();
-    this._text_37 = this.renderer.createText(this._el_36,'\n        ',(null as any));
-    this._el_38 = this.renderer.createElement(this._el_36,'ion-icon',(null as any));
-    this.renderer.setElementAttribute(this._el_38,'name','create');
-    this.renderer.setElementAttribute(this._el_38,'role','img');
-    this.renderer.setElementAttribute(this._el_38,'style','font-size: 9.0rem;');
-    this._Icon_38_3 = new import41.Wrapper_Icon(this.parent.parentInjector.get(import24.Config),new import25.ElementRef(this._el_38),this.renderer);
-    this._text_39 = this.renderer.createText(this._el_36,'\n      ',(null as any));
-    this._text_40 = this.renderer.createText(this._el_34,'\n      ',(null as any));
-    this._el_41 = this.renderer.createElement(this._el_34,'ion-col',(null as any));
-    this._Col_41_3 = new import40.Wrapper_Col();
-    this._text_42 = this.renderer.createText(this._el_41,'\n        ',(null as any));
-    this._el_43 = this.renderer.createElement(this._el_41,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_43,'class','work');
-    this._text_44 = this.renderer.createText(this._el_43,'\n          ',(null as any));
-    this._el_45 = this.renderer.createElement(this._el_43,'p',(null as any));
-    this._text_46 = this.renderer.createText(this._el_45,'',(null as any));
-    this._text_47 = this.renderer.createText(this._el_43,'\n        ',(null as any));
-    this._text_48 = this.renderer.createText(this._el_41,'\n      ',(null as any));
-    this._text_49 = this.renderer.createText(this._el_34,'\n    ',(null as any));
-    this._text_50 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_51 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_51_3 = new import40.Wrapper_Row();
-    this._text_52 = this.renderer.createText(this._el_51,'\n      ',(null as any));
-    this._el_53 = this.renderer.createElement(this._el_51,'h2',(null as any));
-    this._el_54 = this.renderer.createElement(this._el_53,'strong',(null as any));
-    this._text_55 = this.renderer.createText(this._el_54,' Finance ',(null as any));
-    this._text_56 = this.renderer.createText(this._el_51,'\n    ',(null as any));
-    this._text_57 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_58 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_58_3 = new import40.Wrapper_Row();
-    this._text_59 = this.renderer.createText(this._el_58,'\n      ',(null as any));
-    this._el_60 = this.renderer.createElement(this._el_58,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_60,'width-25','');
-    this._Col_60_3 = new import40.Wrapper_Col();
-    this._text_61 = this.renderer.createText(this._el_60,'\n        ',(null as any));
-    this._el_62 = this.renderer.createElement(this._el_60,'ion-icon',(null as any));
-    this.renderer.setElementAttribute(this._el_62,'name','logo-usd');
-    this.renderer.setElementAttribute(this._el_62,'role','img');
-    this.renderer.setElementAttribute(this._el_62,'style','font-size: 9.0rem;');
-    this._Icon_62_3 = new import41.Wrapper_Icon(this.parent.parentInjector.get(import24.Config),new import25.ElementRef(this._el_62),this.renderer);
-    this._text_63 = this.renderer.createText(this._el_60,'\n      ',(null as any));
-    this._text_64 = this.renderer.createText(this._el_58,'\n      ',(null as any));
-    this._el_65 = this.renderer.createElement(this._el_58,'ion-col',(null as any));
-    this._Col_65_3 = new import40.Wrapper_Col();
-    this._text_66 = this.renderer.createText(this._el_65,'\n        ',(null as any));
-    this._el_67 = this.renderer.createElement(this._el_65,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_67,'class','finance');
-    this._text_68 = this.renderer.createText(this._el_67,'\n          ',(null as any));
-    this._el_69 = this.renderer.createElement(this._el_67,'p',(null as any));
-    this._text_70 = this.renderer.createText(this._el_69,'',(null as any));
-    this._text_71 = this.renderer.createText(this._el_67,'\n        ',(null as any));
-    this._text_72 = this.renderer.createText(this._el_65,'\n      ',(null as any));
-    this._text_73 = this.renderer.createText(this._el_58,'\n    ',(null as any));
-    this._text_74 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_75 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_75_3 = new import40.Wrapper_Row();
-    this._text_76 = this.renderer.createText(this._el_75,'\n      ',(null as any));
-    this._el_77 = this.renderer.createElement(this._el_75,'h2',(null as any));
-    this._el_78 = this.renderer.createElement(this._el_77,'strong',(null as any));
-    this._text_79 = this.renderer.createText(this._el_78,' Love ',(null as any));
-    this._text_80 = this.renderer.createText(this._el_75,'\n    ',(null as any));
-    this._text_81 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_82 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_82_3 = new import40.Wrapper_Row();
-    this._text_83 = this.renderer.createText(this._el_82,'\n      ',(null as any));
-    this._el_84 = this.renderer.createElement(this._el_82,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_84,'width-25','');
-    this._Col_84_3 = new import40.Wrapper_Col();
-    this._text_85 = this.renderer.createText(this._el_84,'\n        ',(null as any));
-    this._el_86 = this.renderer.createElement(this._el_84,'ion-icon',(null as any));
-    this.renderer.setElementAttribute(this._el_86,'name','heart');
-    this.renderer.setElementAttribute(this._el_86,'role','img');
-    this.renderer.setElementAttribute(this._el_86,'style','font-size: 9.0rem;');
-    this._Icon_86_3 = new import41.Wrapper_Icon(this.parent.parentInjector.get(import24.Config),new import25.ElementRef(this._el_86),this.renderer);
-    this._text_87 = this.renderer.createText(this._el_84,'\n      ',(null as any));
-    this._text_88 = this.renderer.createText(this._el_82,'\n      ',(null as any));
-    this._el_89 = this.renderer.createElement(this._el_82,'ion-col',(null as any));
-    this._Col_89_3 = new import40.Wrapper_Col();
-    this._text_90 = this.renderer.createText(this._el_89,'\n        ',(null as any));
-    this._el_91 = this.renderer.createElement(this._el_89,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_91,'class','love');
-    this._text_92 = this.renderer.createText(this._el_91,'\n          ',(null as any));
-    this._el_93 = this.renderer.createElement(this._el_91,'p',(null as any));
-    this._text_94 = this.renderer.createText(this._el_93,'',(null as any));
-    this._text_95 = this.renderer.createText(this._el_91,'\n        ',(null as any));
-    this._text_96 = this.renderer.createText(this._el_89,'\n      ',(null as any));
-    this._text_97 = this.renderer.createText(this._el_82,'\n    ',(null as any));
-    this._text_98 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_99 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_99_3 = new import40.Wrapper_Row();
-    this._text_100 = this.renderer.createText(this._el_99,'\n      ',(null as any));
-    this._el_101 = this.renderer.createElement(this._el_99,'h2',(null as any));
-    this._el_102 = this.renderer.createElement(this._el_101,'strong',(null as any));
-    this._text_103 = this.renderer.createText(this._el_102,' Healthy ',(null as any));
-    this._text_104 = this.renderer.createText(this._el_99,'\n    ',(null as any));
-    this._text_105 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_106 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_106_3 = new import40.Wrapper_Row();
-    this._text_107 = this.renderer.createText(this._el_106,'\n      ',(null as any));
-    this._el_108 = this.renderer.createElement(this._el_106,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_108,'width-25','');
-    this._Col_108_3 = new import40.Wrapper_Col();
-    this._text_109 = this.renderer.createText(this._el_108,'\n        ',(null as any));
-    this._el_110 = this.renderer.createElement(this._el_108,'ion-icon',(null as any));
-    this.renderer.setElementAttribute(this._el_110,'name','ios-medkit');
-    this.renderer.setElementAttribute(this._el_110,'role','img');
-    this.renderer.setElementAttribute(this._el_110,'style','font-size: 9.0rem;');
-    this._Icon_110_3 = new import41.Wrapper_Icon(this.parent.parentInjector.get(import24.Config),new import25.ElementRef(this._el_110),this.renderer);
-    this._text_111 = this.renderer.createText(this._el_108,'\n      ',(null as any));
-    this._text_112 = this.renderer.createText(this._el_106,'\n      ',(null as any));
-    this._el_113 = this.renderer.createElement(this._el_106,'ion-col',(null as any));
-    this._Col_113_3 = new import40.Wrapper_Col();
-    this._text_114 = this.renderer.createText(this._el_113,'\n        ',(null as any));
-    this._el_115 = this.renderer.createElement(this._el_113,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_115,'class','healthy');
-    this._text_116 = this.renderer.createText(this._el_115,'\n          ',(null as any));
-    this._el_117 = this.renderer.createElement(this._el_115,'p',(null as any));
-    this._text_118 = this.renderer.createText(this._el_117,'',(null as any));
-    this._text_119 = this.renderer.createText(this._el_115,'\n        ',(null as any));
-    this._text_120 = this.renderer.createText(this._el_113,'\n      ',(null as any));
-    this._text_121 = this.renderer.createText(this._el_106,'\n    ',(null as any));
-    this._text_122 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_123 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_123_3 = new import40.Wrapper_Row();
-    this._text_124 = this.renderer.createText(this._el_123,'\n      ',(null as any));
-    this._el_125 = this.renderer.createElement(this._el_123,'h2',(null as any));
-    this._el_126 = this.renderer.createElement(this._el_125,'strong',(null as any));
-    this._text_127 = this.renderer.createText(this._el_126,' Luck ',(null as any));
-    this._text_128 = this.renderer.createText(this._el_123,'\n    ',(null as any));
-    this._text_129 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_130 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
-    this._Row_130_3 = new import40.Wrapper_Row();
-    this._text_131 = this.renderer.createText(this._el_130,'\n      ',(null as any));
-    this._el_132 = this.renderer.createElement(this._el_130,'ion-col',(null as any));
-    this.renderer.setElementAttribute(this._el_132,'width-25','');
-    this._Col_132_3 = new import40.Wrapper_Col();
-    this._text_133 = this.renderer.createText(this._el_132,'\n        ',(null as any));
-    this._el_134 = this.renderer.createElement(this._el_132,'ion-icon',(null as any));
-    this.renderer.setElementAttribute(this._el_134,'name','card');
-    this.renderer.setElementAttribute(this._el_134,'role','img');
-    this.renderer.setElementAttribute(this._el_134,'style','font-size: 9.0rem;');
-    this._Icon_134_3 = new import41.Wrapper_Icon(this.parent.parentInjector.get(import24.Config),new import25.ElementRef(this._el_134),this.renderer);
-    this._text_135 = this.renderer.createText(this._el_132,'\n      ',(null as any));
-    this._text_136 = this.renderer.createText(this._el_130,'\n      ',(null as any));
-    this._el_137 = this.renderer.createElement(this._el_130,'ion-col',(null as any));
-    this._Col_137_3 = new import40.Wrapper_Col();
-    this._text_138 = this.renderer.createText(this._el_137,'\n        ',(null as any));
-    this._el_139 = this.renderer.createElement(this._el_137,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_139,'class','luck');
-    this._text_140 = this.renderer.createText(this._el_139,'\n          ',(null as any));
-    this._el_141 = this.renderer.createElement(this._el_139,'p',(null as any));
-    this._text_142 = this.renderer.createText(this._el_141,'',(null as any));
-    this._text_143 = this.renderer.createText(this._el_139,'\n        ',(null as any));
-    this._text_144 = this.renderer.createText(this._el_137,'\n      ',(null as any));
-    this._text_145 = this.renderer.createText(this._el_130,'\n    ',(null as any));
-    this._text_146 = this.renderer.createText(this._el_0,'\n  ',(null as any));
+    this._el_16 = this.renderer.createElement(this._el_14,'h4',(null as any));
+    this._text_17 = this.renderer.createText(this._el_16,'',(null as any));
+    this._text_18 = this.renderer.createText(this._el_14,'\n        ',(null as any));
+    this._text_19 = this.renderer.createText(this._el_12,'\n      ',(null as any));
+    this._text_20 = this.renderer.createText(this._el_2,'\n    ',(null as any));
+    this._text_21 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_22 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_22,'class','content-section');
+    this._Row_22_3 = new import40.Wrapper_Row();
+    this._text_23 = this.renderer.createText(this._el_22,'\n      ',(null as any));
+    this._el_24 = this.renderer.createElement(this._el_22,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_24,'padding','');
+    this._Col_24_3 = new import40.Wrapper_Col();
+    this._text_25 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_26 = this.renderer.createElement(this._el_24,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_26,'class','title-wrapper');
+    this._text_27 = this.renderer.createText(this._el_26,'\n          ',(null as any));
+    this._el_28 = this.renderer.createElement(this._el_26,'i',(null as any));
+    this.renderer.setElementAttribute(this._el_28,'aria-hidden','true');
+    this.renderer.setElementAttribute(this._el_28,'class','fa fa-2 fa-briefcase white-color');
+    this._text_29 = this.renderer.createText(this._el_26,'\n          ',(null as any));
+    this._el_30 = this.renderer.createElement(this._el_26,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_30,'class','pink-title t-uppercase');
+    this._el_31 = this.renderer.createElement(this._el_30,'strong',(null as any));
+    this._text_32 = this.renderer.createText(this._el_31,' Work ',(null as any));
+    this._text_33 = this.renderer.createText(this._el_26,'\n        ',(null as any));
+    this._text_34 = this.renderer.createText(this._el_24,'\n        ',(null as any));
+    this._el_35 = this.renderer.createElement(this._el_24,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_35,'class','content-wrapper');
+    this._text_36 = this.renderer.createText(this._el_35,'\n          ',(null as any));
+    this._el_37 = this.renderer.createElement(this._el_35,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_37,'class','work');
+    this._text_38 = this.renderer.createText(this._el_37,'\n            ',(null as any));
+    this._el_39 = this.renderer.createElement(this._el_37,'p',(null as any));
+    this._text_40 = this.renderer.createText(this._el_39,'',(null as any));
+    this._text_41 = this.renderer.createText(this._el_37,'\n          ',(null as any));
+    this._text_42 = this.renderer.createText(this._el_35,'\n        ',(null as any));
+    this._text_43 = this.renderer.createText(this._el_24,'\n      ',(null as any));
+    this._text_44 = this.renderer.createText(this._el_22,'\n    ',(null as any));
+    this._text_45 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_46 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_46,'class','content-section');
+    this._Row_46_3 = new import40.Wrapper_Row();
+    this._text_47 = this.renderer.createText(this._el_46,'\n      ',(null as any));
+    this._el_48 = this.renderer.createElement(this._el_46,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_48,'padding','');
+    this._Col_48_3 = new import40.Wrapper_Col();
+    this._text_49 = this.renderer.createText(this._el_48,'\n        ',(null as any));
+    this._el_50 = this.renderer.createElement(this._el_48,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_50,'class','title-wrapper');
+    this._text_51 = this.renderer.createText(this._el_50,'\n          ',(null as any));
+    this._el_52 = this.renderer.createElement(this._el_50,'i',(null as any));
+    this.renderer.setElementAttribute(this._el_52,'aria-hidden','true');
+    this.renderer.setElementAttribute(this._el_52,'class','fa fa-2 fa-money white-color');
+    this._text_53 = this.renderer.createText(this._el_50,'\n          ',(null as any));
+    this._el_54 = this.renderer.createElement(this._el_50,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_54,'class','pink-title t-uppercase');
+    this._el_55 = this.renderer.createElement(this._el_54,'strong',(null as any));
+    this._text_56 = this.renderer.createText(this._el_55,' Finance ',(null as any));
+    this._text_57 = this.renderer.createText(this._el_50,'\n        ',(null as any));
+    this._text_58 = this.renderer.createText(this._el_48,'\n        ',(null as any));
+    this._el_59 = this.renderer.createElement(this._el_48,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_59,'class','content-wrapper');
+    this._text_60 = this.renderer.createText(this._el_59,'\n          ',(null as any));
+    this._el_61 = this.renderer.createElement(this._el_59,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_61,'class','finance');
+    this._text_62 = this.renderer.createText(this._el_61,'\n            ',(null as any));
+    this._el_63 = this.renderer.createElement(this._el_61,'p',(null as any));
+    this._text_64 = this.renderer.createText(this._el_63,'',(null as any));
+    this._text_65 = this.renderer.createText(this._el_61,'\n          ',(null as any));
+    this._text_66 = this.renderer.createText(this._el_59,'\n        ',(null as any));
+    this._text_67 = this.renderer.createText(this._el_48,'\n      ',(null as any));
+    this._text_68 = this.renderer.createText(this._el_46,'\n    ',(null as any));
+    this._text_69 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_70 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_70,'class','content-section');
+    this._Row_70_3 = new import40.Wrapper_Row();
+    this._text_71 = this.renderer.createText(this._el_70,'\n      ',(null as any));
+    this._el_72 = this.renderer.createElement(this._el_70,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_72,'padding','');
+    this._Col_72_3 = new import40.Wrapper_Col();
+    this._text_73 = this.renderer.createText(this._el_72,'\n        ',(null as any));
+    this._el_74 = this.renderer.createElement(this._el_72,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_74,'class','title-wrapper');
+    this._text_75 = this.renderer.createText(this._el_74,'\n          ',(null as any));
+    this._el_76 = this.renderer.createElement(this._el_74,'i',(null as any));
+    this.renderer.setElementAttribute(this._el_76,'aria-hidden','true');
+    this.renderer.setElementAttribute(this._el_76,'class','fa fa-2 fa-heart white-color');
+    this._text_77 = this.renderer.createText(this._el_74,'\n          ',(null as any));
+    this._el_78 = this.renderer.createElement(this._el_74,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_78,'class','pink-title t-uppercase');
+    this._el_79 = this.renderer.createElement(this._el_78,'strong',(null as any));
+    this._text_80 = this.renderer.createText(this._el_79,' Love ',(null as any));
+    this._text_81 = this.renderer.createText(this._el_74,'\n        ',(null as any));
+    this._text_82 = this.renderer.createText(this._el_72,'\n        ',(null as any));
+    this._el_83 = this.renderer.createElement(this._el_72,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_83,'class','content-wrapper');
+    this._text_84 = this.renderer.createText(this._el_83,'\n          ',(null as any));
+    this._el_85 = this.renderer.createElement(this._el_83,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_85,'class','love');
+    this._text_86 = this.renderer.createText(this._el_85,'\n            ',(null as any));
+    this._el_87 = this.renderer.createElement(this._el_85,'p',(null as any));
+    this._text_88 = this.renderer.createText(this._el_87,'',(null as any));
+    this._text_89 = this.renderer.createText(this._el_85,'\n          ',(null as any));
+    this._text_90 = this.renderer.createText(this._el_83,'\n        ',(null as any));
+    this._text_91 = this.renderer.createText(this._el_72,'\n      ',(null as any));
+    this._text_92 = this.renderer.createText(this._el_70,'\n    ',(null as any));
+    this._text_93 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_94 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_94,'class','content-section');
+    this._Row_94_3 = new import40.Wrapper_Row();
+    this._text_95 = this.renderer.createText(this._el_94,'\n      ',(null as any));
+    this._el_96 = this.renderer.createElement(this._el_94,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_96,'padding','');
+    this._Col_96_3 = new import40.Wrapper_Col();
+    this._text_97 = this.renderer.createText(this._el_96,'\n        ',(null as any));
+    this._el_98 = this.renderer.createElement(this._el_96,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_98,'class','title-wrapper');
+    this._text_99 = this.renderer.createText(this._el_98,'\n          ',(null as any));
+    this._el_100 = this.renderer.createElement(this._el_98,'i',(null as any));
+    this.renderer.setElementAttribute(this._el_100,'aria-hidden','true');
+    this.renderer.setElementAttribute(this._el_100,'class','fa fa-2 fa-heartbeat white-color');
+    this._text_101 = this.renderer.createText(this._el_98,'\n          ',(null as any));
+    this._el_102 = this.renderer.createElement(this._el_98,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_102,'class','pink-title t-uppercase');
+    this._el_103 = this.renderer.createElement(this._el_102,'strong',(null as any));
+    this._text_104 = this.renderer.createText(this._el_103,' Healthy ',(null as any));
+    this._text_105 = this.renderer.createText(this._el_98,'\n        ',(null as any));
+    this._text_106 = this.renderer.createText(this._el_96,'\n        ',(null as any));
+    this._el_107 = this.renderer.createElement(this._el_96,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_107,'class','content-wrapper');
+    this._text_108 = this.renderer.createText(this._el_107,'\n          ',(null as any));
+    this._el_109 = this.renderer.createElement(this._el_107,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_109,'class','healthy');
+    this._text_110 = this.renderer.createText(this._el_109,'\n            ',(null as any));
+    this._el_111 = this.renderer.createElement(this._el_109,'p',(null as any));
+    this._text_112 = this.renderer.createText(this._el_111,'',(null as any));
+    this._text_113 = this.renderer.createText(this._el_109,'\n          ',(null as any));
+    this._text_114 = this.renderer.createText(this._el_107,'\n        ',(null as any));
+    this._text_115 = this.renderer.createText(this._el_96,'\n      ',(null as any));
+    this._text_116 = this.renderer.createText(this._el_94,'\n    ',(null as any));
+    this._text_117 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_118 = this.renderer.createElement(this._el_0,'ion-row',(null as any));
+    this.renderer.setElementAttribute(this._el_118,'class','content-section');
+    this._Row_118_3 = new import40.Wrapper_Row();
+    this._text_119 = this.renderer.createText(this._el_118,'\n      ',(null as any));
+    this._el_120 = this.renderer.createElement(this._el_118,'ion-col',(null as any));
+    this.renderer.setElementAttribute(this._el_120,'padding','');
+    this._Col_120_3 = new import40.Wrapper_Col();
+    this._text_121 = this.renderer.createText(this._el_120,'\n        ',(null as any));
+    this._el_122 = this.renderer.createElement(this._el_120,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_122,'class','title-wrapper');
+    this._text_123 = this.renderer.createText(this._el_122,'\n          ',(null as any));
+    this._el_124 = this.renderer.createElement(this._el_122,'i',(null as any));
+    this.renderer.setElementAttribute(this._el_124,'aria-hidden','true');
+    this.renderer.setElementAttribute(this._el_124,'class','fa fa-2 fa-diamond white-color');
+    this._text_125 = this.renderer.createText(this._el_122,'\n          ',(null as any));
+    this._el_126 = this.renderer.createElement(this._el_122,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_126,'class','pink-title t-uppercase');
+    this._el_127 = this.renderer.createElement(this._el_126,'strong',(null as any));
+    this._text_128 = this.renderer.createText(this._el_127,' Luck ',(null as any));
+    this._text_129 = this.renderer.createText(this._el_122,'\n        ',(null as any));
+    this._text_130 = this.renderer.createText(this._el_120,'\n        ',(null as any));
+    this._el_131 = this.renderer.createElement(this._el_120,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_131,'class','content-wrapper');
+    this._text_132 = this.renderer.createText(this._el_131,'\n          ',(null as any));
+    this._el_133 = this.renderer.createElement(this._el_131,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_133,'class','luck');
+    this._text_134 = this.renderer.createText(this._el_133,'\n            ',(null as any));
+    this._el_135 = this.renderer.createElement(this._el_133,'p',(null as any));
+    this._text_136 = this.renderer.createText(this._el_135,'',(null as any));
+    this._text_137 = this.renderer.createText(this._el_133,'\n          ',(null as any));
+    this._text_138 = this.renderer.createText(this._el_131,'\n        ',(null as any));
+    this._text_139 = this.renderer.createText(this._el_120,'\n      ',(null as any));
+    this._text_140 = this.renderer.createText(this._el_118,'\n    ',(null as any));
+    this._text_141 = this.renderer.createText(this._el_0,'\n\n  ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
+    this._expr_2 = import7.UNINITIALIZED;
     this._expr_3 = import7.UNINITIALIZED;
     this._expr_4 = import7.UNINITIALIZED;
+    this._expr_5 = import7.UNINITIALIZED;
     this._expr_6 = import7.UNINITIALIZED;
-    this._expr_7 = import7.UNINITIALIZED;
-    this._expr_9 = import7.UNINITIALIZED;
-    this._expr_10 = import7.UNINITIALIZED;
-    this._expr_12 = import7.UNINITIALIZED;
-    this._expr_13 = import7.UNINITIALIZED;
-    this._expr_15 = import7.UNINITIALIZED;
-    this._expr_16 = import7.UNINITIALIZED;
     this.init(([] as any[]).concat([this._el_0]),[
       this._el_0,
       this._text_1,
@@ -752,210 +719,165 @@ class _View_HomePage1 extends import1.AppView<any> {
       this._el_14,
       this._text_15,
       this._el_16,
-      this._el_17,
+      this._text_17,
       this._text_18,
-      this._el_19,
+      this._text_19,
       this._text_20,
       this._text_21,
-      this._text_22,
+      this._el_22,
       this._text_23,
-      this._text_24,
-      this._el_25,
-      this._text_26,
-      this._el_27,
-      this._text_28,
-      this._el_29,
+      this._el_24,
+      this._text_25,
+      this._el_26,
+      this._text_27,
+      this._el_28,
+      this._text_29,
       this._el_30,
-      this._text_31,
+      this._el_31,
       this._text_32,
       this._text_33,
-      this._el_34,
-      this._text_35,
-      this._el_36,
-      this._text_37,
-      this._el_38,
-      this._text_39,
+      this._text_34,
+      this._el_35,
+      this._text_36,
+      this._el_37,
+      this._text_38,
+      this._el_39,
       this._text_40,
-      this._el_41,
+      this._text_41,
       this._text_42,
-      this._el_43,
+      this._text_43,
       this._text_44,
-      this._el_45,
-      this._text_46,
+      this._text_45,
+      this._el_46,
       this._text_47,
-      this._text_48,
+      this._el_48,
       this._text_49,
-      this._text_50,
-      this._el_51,
-      this._text_52,
-      this._el_53,
+      this._el_50,
+      this._text_51,
+      this._el_52,
+      this._text_53,
       this._el_54,
-      this._text_55,
+      this._el_55,
       this._text_56,
       this._text_57,
-      this._el_58,
-      this._text_59,
-      this._el_60,
-      this._text_61,
-      this._el_62,
-      this._text_63,
+      this._text_58,
+      this._el_59,
+      this._text_60,
+      this._el_61,
+      this._text_62,
+      this._el_63,
       this._text_64,
-      this._el_65,
+      this._text_65,
       this._text_66,
-      this._el_67,
+      this._text_67,
       this._text_68,
-      this._el_69,
-      this._text_70,
+      this._text_69,
+      this._el_70,
       this._text_71,
-      this._text_72,
+      this._el_72,
       this._text_73,
-      this._text_74,
-      this._el_75,
-      this._text_76,
-      this._el_77,
+      this._el_74,
+      this._text_75,
+      this._el_76,
+      this._text_77,
       this._el_78,
-      this._text_79,
+      this._el_79,
       this._text_80,
       this._text_81,
-      this._el_82,
-      this._text_83,
-      this._el_84,
-      this._text_85,
-      this._el_86,
-      this._text_87,
+      this._text_82,
+      this._el_83,
+      this._text_84,
+      this._el_85,
+      this._text_86,
+      this._el_87,
       this._text_88,
-      this._el_89,
+      this._text_89,
       this._text_90,
-      this._el_91,
+      this._text_91,
       this._text_92,
-      this._el_93,
-      this._text_94,
+      this._text_93,
+      this._el_94,
       this._text_95,
-      this._text_96,
+      this._el_96,
       this._text_97,
-      this._text_98,
-      this._el_99,
-      this._text_100,
-      this._el_101,
+      this._el_98,
+      this._text_99,
+      this._el_100,
+      this._text_101,
       this._el_102,
-      this._text_103,
+      this._el_103,
       this._text_104,
       this._text_105,
-      this._el_106,
-      this._text_107,
-      this._el_108,
-      this._text_109,
-      this._el_110,
-      this._text_111,
+      this._text_106,
+      this._el_107,
+      this._text_108,
+      this._el_109,
+      this._text_110,
+      this._el_111,
       this._text_112,
-      this._el_113,
+      this._text_113,
       this._text_114,
-      this._el_115,
+      this._text_115,
       this._text_116,
-      this._el_117,
-      this._text_118,
+      this._text_117,
+      this._el_118,
       this._text_119,
-      this._text_120,
+      this._el_120,
       this._text_121,
-      this._text_122,
-      this._el_123,
-      this._text_124,
-      this._el_125,
+      this._el_122,
+      this._text_123,
+      this._el_124,
+      this._text_125,
       this._el_126,
-      this._text_127,
+      this._el_127,
       this._text_128,
       this._text_129,
-      this._el_130,
-      this._text_131,
-      this._el_132,
-      this._text_133,
-      this._el_134,
-      this._text_135,
+      this._text_130,
+      this._el_131,
+      this._text_132,
+      this._el_133,
+      this._text_134,
+      this._el_135,
       this._text_136,
-      this._el_137,
+      this._text_137,
       this._text_138,
-      this._el_139,
+      this._text_139,
       this._text_140,
-      this._el_141,
-      this._text_142,
-      this._text_143,
-      this._text_144,
-      this._text_145,
-      this._text_146
+      this._text_141
     ]
     ,([] as any[]),([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import42.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Col_4_3.context; }
-    if (((token === import42.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Col_12_3.context; }
-    if (((token === import42.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 23)))) { return this._Row_2_3.context; }
-    if (((token === import42.Row) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._Row_27_3.context; }
-    if (((token === import43.Icon) && (38 === requestNodeIndex))) { return this._Icon_38_3.context; }
-    if (((token === import42.Col) && ((36 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Col_36_3.context; }
-    if (((token === import42.Col) && ((41 <= requestNodeIndex) && (requestNodeIndex <= 48)))) { return this._Col_41_3.context; }
-    if (((token === import42.Row) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 49)))) { return this._Row_34_3.context; }
-    if (((token === import42.Row) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 56)))) { return this._Row_51_3.context; }
-    if (((token === import43.Icon) && (62 === requestNodeIndex))) { return this._Icon_62_3.context; }
-    if (((token === import42.Col) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 63)))) { return this._Col_60_3.context; }
-    if (((token === import42.Col) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 72)))) { return this._Col_65_3.context; }
-    if (((token === import42.Row) && ((58 <= requestNodeIndex) && (requestNodeIndex <= 73)))) { return this._Row_58_3.context; }
-    if (((token === import42.Row) && ((75 <= requestNodeIndex) && (requestNodeIndex <= 80)))) { return this._Row_75_3.context; }
-    if (((token === import43.Icon) && (86 === requestNodeIndex))) { return this._Icon_86_3.context; }
-    if (((token === import42.Col) && ((84 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._Col_84_3.context; }
-    if (((token === import42.Col) && ((89 <= requestNodeIndex) && (requestNodeIndex <= 96)))) { return this._Col_89_3.context; }
-    if (((token === import42.Row) && ((82 <= requestNodeIndex) && (requestNodeIndex <= 97)))) { return this._Row_82_3.context; }
-    if (((token === import42.Row) && ((99 <= requestNodeIndex) && (requestNodeIndex <= 104)))) { return this._Row_99_3.context; }
-    if (((token === import43.Icon) && (110 === requestNodeIndex))) { return this._Icon_110_3.context; }
-    if (((token === import42.Col) && ((108 <= requestNodeIndex) && (requestNodeIndex <= 111)))) { return this._Col_108_3.context; }
-    if (((token === import42.Col) && ((113 <= requestNodeIndex) && (requestNodeIndex <= 120)))) { return this._Col_113_3.context; }
-    if (((token === import42.Row) && ((106 <= requestNodeIndex) && (requestNodeIndex <= 121)))) { return this._Row_106_3.context; }
-    if (((token === import42.Row) && ((123 <= requestNodeIndex) && (requestNodeIndex <= 128)))) { return this._Row_123_3.context; }
-    if (((token === import43.Icon) && (134 === requestNodeIndex))) { return this._Icon_134_3.context; }
-    if (((token === import42.Col) && ((132 <= requestNodeIndex) && (requestNodeIndex <= 135)))) { return this._Col_132_3.context; }
-    if (((token === import42.Col) && ((137 <= requestNodeIndex) && (requestNodeIndex <= 144)))) { return this._Col_137_3.context; }
-    if (((token === import42.Row) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 145)))) { return this._Row_130_3.context; }
+    if (((token === import41.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Col_4_3.context; }
+    if (((token === import41.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Col_12_3.context; }
+    if (((token === import41.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Row_2_3.context; }
+    if (((token === import41.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 43)))) { return this._Col_24_3.context; }
+    if (((token === import41.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 44)))) { return this._Row_22_3.context; }
+    if (((token === import41.Col) && ((48 <= requestNodeIndex) && (requestNodeIndex <= 67)))) { return this._Col_48_3.context; }
+    if (((token === import41.Row) && ((46 <= requestNodeIndex) && (requestNodeIndex <= 68)))) { return this._Row_46_3.context; }
+    if (((token === import41.Col) && ((72 <= requestNodeIndex) && (requestNodeIndex <= 91)))) { return this._Col_72_3.context; }
+    if (((token === import41.Row) && ((70 <= requestNodeIndex) && (requestNodeIndex <= 92)))) { return this._Row_70_3.context; }
+    if (((token === import41.Col) && ((96 <= requestNodeIndex) && (requestNodeIndex <= 115)))) { return this._Col_96_3.context; }
+    if (((token === import41.Row) && ((94 <= requestNodeIndex) && (requestNodeIndex <= 116)))) { return this._Row_94_3.context; }
+    if (((token === import41.Col) && ((120 <= requestNodeIndex) && (requestNodeIndex <= 139)))) { return this._Col_120_3.context; }
+    if (((token === import41.Row) && ((118 <= requestNodeIndex) && (requestNodeIndex <= 140)))) { return this._Row_118_3.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this._Row_2_3.detectChangesInternal(this,this._el_2,throwOnChange);
     this._Col_4_3.detectChangesInternal(this,this._el_4,throwOnChange);
     this._Col_12_3.detectChangesInternal(this,this._el_12,throwOnChange);
-    this._Row_27_3.detectChangesInternal(this,this._el_27,throwOnChange);
-    this._Row_34_3.detectChangesInternal(this,this._el_34,throwOnChange);
-    this._Col_36_3.detectChangesInternal(this,this._el_36,throwOnChange);
-    const currVal_2:any = 'create';
-    this._Icon_38_3.check_name(currVal_2,throwOnChange,false);
-    this._Icon_38_3.detectChangesInternal(this,this._el_38,throwOnChange);
-    this._Col_41_3.detectChangesInternal(this,this._el_41,throwOnChange);
-    this._Row_51_3.detectChangesInternal(this,this._el_51,throwOnChange);
-    this._Row_58_3.detectChangesInternal(this,this._el_58,throwOnChange);
-    this._Col_60_3.detectChangesInternal(this,this._el_60,throwOnChange);
-    const currVal_5:any = 'logo-usd';
-    this._Icon_62_3.check_name(currVal_5,throwOnChange,false);
-    this._Icon_62_3.detectChangesInternal(this,this._el_62,throwOnChange);
-    this._Col_65_3.detectChangesInternal(this,this._el_65,throwOnChange);
-    this._Row_75_3.detectChangesInternal(this,this._el_75,throwOnChange);
-    this._Row_82_3.detectChangesInternal(this,this._el_82,throwOnChange);
-    this._Col_84_3.detectChangesInternal(this,this._el_84,throwOnChange);
-    const currVal_8:any = 'heart';
-    this._Icon_86_3.check_name(currVal_8,throwOnChange,false);
-    this._Icon_86_3.detectChangesInternal(this,this._el_86,throwOnChange);
-    this._Col_89_3.detectChangesInternal(this,this._el_89,throwOnChange);
-    this._Row_99_3.detectChangesInternal(this,this._el_99,throwOnChange);
-    this._Row_106_3.detectChangesInternal(this,this._el_106,throwOnChange);
-    this._Col_108_3.detectChangesInternal(this,this._el_108,throwOnChange);
-    const currVal_11:any = 'ios-medkit';
-    this._Icon_110_3.check_name(currVal_11,throwOnChange,false);
-    this._Icon_110_3.detectChangesInternal(this,this._el_110,throwOnChange);
-    this._Col_113_3.detectChangesInternal(this,this._el_113,throwOnChange);
-    this._Row_123_3.detectChangesInternal(this,this._el_123,throwOnChange);
-    this._Row_130_3.detectChangesInternal(this,this._el_130,throwOnChange);
-    this._Col_132_3.detectChangesInternal(this,this._el_132,throwOnChange);
-    const currVal_14:any = 'card';
-    this._Icon_134_3.check_name(currVal_14,throwOnChange,false);
-    this._Icon_134_3.detectChangesInternal(this,this._el_134,throwOnChange);
-    this._Col_137_3.detectChangesInternal(this,this._el_137,throwOnChange);
+    this._Row_22_3.detectChangesInternal(this,this._el_22,throwOnChange);
+    this._Col_24_3.detectChangesInternal(this,this._el_24,throwOnChange);
+    this._Row_46_3.detectChangesInternal(this,this._el_46,throwOnChange);
+    this._Col_48_3.detectChangesInternal(this,this._el_48,throwOnChange);
+    this._Row_70_3.detectChangesInternal(this,this._el_70,throwOnChange);
+    this._Col_72_3.detectChangesInternal(this,this._el_72,throwOnChange);
+    this._Row_94_3.detectChangesInternal(this,this._el_94,throwOnChange);
+    this._Col_96_3.detectChangesInternal(this,this._el_96,throwOnChange);
+    this._Row_118_3.detectChangesInternal(this,this._el_118,throwOnChange);
+    this._Col_120_3.detectChangesInternal(this,this._el_120,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = import4.interpolate(1,'',this.parent.context.imgsign,'');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
@@ -964,67 +886,35 @@ class _View_HomePage1 extends import1.AppView<any> {
     }
     const currVal_1:any = import4.interpolate(1,'',this.parent.context.result.title,'');
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this.renderer.setText(this._text_20,currVal_1);
+      this.renderer.setText(this._text_17,currVal_1);
       this._expr_1 = currVal_1;
     }
-    const currVal_3:any = this._Icon_38_3.context._hidden;
+    const currVal_2:any = import4.interpolate(1,' ',this.parent.context.result.work,' ');
+    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this.renderer.setText(this._text_40,currVal_2);
+      this._expr_2 = currVal_2;
+    }
+    const currVal_3:any = import4.interpolate(1,' ',this.parent.context.result.finance,' ');
     if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementClass(this._el_38,'hide',currVal_3);
+      this.renderer.setText(this._text_64,currVal_3);
       this._expr_3 = currVal_3;
     }
-    const currVal_4:any = import4.interpolate(1,' ',this.parent.context.result.work,' ');
+    const currVal_4:any = import4.interpolate(1,' ',this.parent.context.result.love,' ');
     if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
-      this.renderer.setText(this._text_46,currVal_4);
+      this.renderer.setText(this._text_88,currVal_4);
       this._expr_4 = currVal_4;
     }
-    const currVal_6:any = this._Icon_62_3.context._hidden;
+    const currVal_5:any = import4.interpolate(1,' ',this.parent.context.result.healthy,' ');
+    if (import4.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
+      this.renderer.setText(this._text_112,currVal_5);
+      this._expr_5 = currVal_5;
+    }
+    const currVal_6:any = import4.interpolate(1,' ',this.parent.context.result.luck,' ');
     if (import4.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
-      this.renderer.setElementClass(this._el_62,'hide',currVal_6);
+      this.renderer.setText(this._text_136,currVal_6);
       this._expr_6 = currVal_6;
     }
-    const currVal_7:any = import4.interpolate(1,' ',this.parent.context.result.finance,' ');
-    if (import4.checkBinding(throwOnChange,this._expr_7,currVal_7)) {
-      this.renderer.setText(this._text_70,currVal_7);
-      this._expr_7 = currVal_7;
-    }
-    const currVal_9:any = this._Icon_86_3.context._hidden;
-    if (import4.checkBinding(throwOnChange,this._expr_9,currVal_9)) {
-      this.renderer.setElementClass(this._el_86,'hide',currVal_9);
-      this._expr_9 = currVal_9;
-    }
-    const currVal_10:any = import4.interpolate(1,' ',this.parent.context.result.love,' ');
-    if (import4.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
-      this.renderer.setText(this._text_94,currVal_10);
-      this._expr_10 = currVal_10;
-    }
-    const currVal_12:any = this._Icon_110_3.context._hidden;
-    if (import4.checkBinding(throwOnChange,this._expr_12,currVal_12)) {
-      this.renderer.setElementClass(this._el_110,'hide',currVal_12);
-      this._expr_12 = currVal_12;
-    }
-    const currVal_13:any = import4.interpolate(1,' ',this.parent.context.result.healthy,' ');
-    if (import4.checkBinding(throwOnChange,this._expr_13,currVal_13)) {
-      this.renderer.setText(this._text_118,currVal_13);
-      this._expr_13 = currVal_13;
-    }
-    const currVal_15:any = this._Icon_134_3.context._hidden;
-    if (import4.checkBinding(throwOnChange,this._expr_15,currVal_15)) {
-      this.renderer.setElementClass(this._el_134,'hide',currVal_15);
-      this._expr_15 = currVal_15;
-    }
-    const currVal_16:any = import4.interpolate(1,' ',this.parent.context.result.luck,' ');
-    if (import4.checkBinding(throwOnChange,this._expr_16,currVal_16)) {
-      this.renderer.setText(this._text_142,currVal_16);
-      this._expr_16 = currVal_16;
-    }
     this.detectViewChildrenChanges(throwOnChange);
-  }
-  destroyInternal():void {
-    this._Icon_38_3.context.ngOnDestroy();
-    this._Icon_62_3.context.ngOnDestroy();
-    this._Icon_86_3.context.ngOnDestroy();
-    this._Icon_110_3.context.ngOnDestroy();
-    this._Icon_134_3.context.ngOnDestroy();
   }
 }
 function viewFactory_HomePage1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {

@@ -4,86 +4,91 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="star-dark-bg">
   <div *ngIf="isDataAvailable" class="homePage">
-    <ion-row>
-      <ion-col width-50>
-        <div class="image">
-          <img src={{imgsign}} style="border-radius:50%;">
+    <ion-row class="header-wrapper">
+      <ion-col class="col-40">
+        <div class="zodiac-single">
+          <img src={{imgsign}}>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col class="col-60 flex-vertical-center">
         <div class="title">
-          <br><br>
           <h4>{{result.title}}</h4>
         </div>
       </ion-col>
     </ion-row>
-    <br>
-    <ion-row>
-      <h2><strong> Work </strong></h2>
-    </ion-row>
-    <ion-row>
-      <ion-col width-25>
-        <ion-icon name="create" style="font-size: 9.0rem;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <div class="work">
-          <p> {{result.work}} </p>
+
+
+    <ion-row class="content-section">
+      <ion-col padding>
+        <div class="title-wrapper">
+          <i class="fa fa-2 fa-briefcase white-color" aria-hidden="true"></i>
+          <span class="pink-title t-uppercase"><strong> Work </strong></span>
+        </div>
+        <div class="content-wrapper">
+          <div class="work">
+            <p> {{result.work}} </p>
+          </div>
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <h2><strong> Finance </strong></h2>
-    </ion-row>
-    <ion-row>
-      <ion-col width-25>
-        <ion-icon name="logo-usd" style="font-size: 9.0rem;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <div class="finance">
-          <p> {{result.finance}} </p>
+
+    <ion-row class="content-section">
+      <ion-col padding>
+        <div class="title-wrapper">
+          <i class="fa fa-2 fa-money white-color" aria-hidden="true"></i>
+          <span class="pink-title t-uppercase"><strong> Finance </strong></span>
+        </div>
+        <div class="content-wrapper">
+          <div class="finance">
+            <p> {{result.finance}} </p>
+          </div>
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <h2><strong> Love </strong></h2>
-    </ion-row>
-    <ion-row>
-      <ion-col width-25>
-        <ion-icon name="heart" style="font-size: 9.0rem;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <div class="love">
-          <p> {{result.love}} </p>
+
+    <ion-row class="content-section">
+      <ion-col padding>
+        <div class="title-wrapper">
+          <i class="fa fa-2 fa-heart white-color" aria-hidden="true"></i>
+          <span class="pink-title t-uppercase"><strong> Love </strong></span>
+        </div>
+        <div class="content-wrapper">
+          <div class="love">
+            <p> {{result.love}} </p>
+          </div>
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <h2><strong> Healthy </strong></h2>
-    </ion-row>
-    <ion-row>
-      <ion-col width-25>
-        <ion-icon name="ios-medkit" style="font-size: 9.0rem;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <div class="healthy">
-          <p> {{result.healthy}} </p>
+
+    <ion-row class="content-section">
+      <ion-col padding>
+        <div class="title-wrapper">
+          <i class="fa fa-2 fa-heartbeat white-color" aria-hidden="true"></i>
+          <span class="pink-title t-uppercase"><strong> Healthy </strong></span>
+        </div>
+        <div class="content-wrapper">
+          <div class="healthy">
+            <p> {{result.healthy}} </p>
+          </div>
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <h2><strong> Luck </strong></h2>
-    </ion-row>
-    <ion-row>
-      <ion-col width-25>
-        <ion-icon name="card" style="font-size: 9.0rem;"></ion-icon>
-      </ion-col>
-      <ion-col>
-        <div class="luck">
-          <p> {{result.luck}} </p>
+
+    <ion-row class="content-section">
+      <ion-col padding>
+        <div class="title-wrapper">
+          <i class="fa fa-2 fa-diamond white-color" aria-hidden="true"></i>
+          <span class="pink-title t-uppercase"><strong> Luck </strong></span>
+        </div>
+        <div class="content-wrapper">
+          <div class="luck">
+            <p> {{result.luck}} </p>
+          </div>
         </div>
       </ion-col>
     </ion-row>
+
   </div>
 </ion-content>

@@ -28,7 +28,7 @@ export var HomePage = (function () {
             else {
                 _this.data = data.json();
                 if (_this.data.birthday) {
-                    _this.imgsign = "assets/img/" + _this.data.sign + ".jpg";
+                    _this.imgsign = "assets/img/" + _this.data.sign + ".png";
                     //pull result
                     var loader = _this.loadingCtrl.create({
                         content: "Loading ...",
@@ -87,7 +87,7 @@ export var HomePage = (function () {
             else {
                 _this.data = data.json();
                 if (_this.data.birthday) {
-                    _this.imgsign = "assets/img/" + _this.data.sign + ".jpg";
+                    _this.imgsign = "assets/img/" + _this.data.sign + ".png";
                     //pull result
                     var loader = _this.loadingCtrl.create({
                         content: "Loading ...",
@@ -148,7 +148,7 @@ export var HomePage = (function () {
             } else {
               this.data = data.json();
               if (this.data.birthday) {
-                this.imgsign = "assets/img/" + this.data.sign + ".jpg";
+                this.imgsign = "assets/img/" + this.data.sign + ".png";
                 //pull result
                 let loader = this.loadingCtrl.create({
                   content: "Loading ...",
@@ -169,7 +169,7 @@ export var HomePage = (function () {
                     }
                     this.result = response.json();
                     this.isDataAvailable = true;
-               
+    
                   },
                   error => {
                     console.log(error.text());

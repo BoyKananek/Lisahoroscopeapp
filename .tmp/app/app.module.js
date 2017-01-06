@@ -8,6 +8,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
+import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
+import { TermsOfServicesPage } from '../pages/terms-of-services/terms-of-services';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -22,6 +24,8 @@ export var AppModule = (function () {
                         TabsPage,
                         LoginPage,
                         SignupPage,
+                        PrivacyPolicyPage,
+                        TermsOfServicesPage,
                     ],
                     imports: [
                         IonicModule.forRoot(MyApp)
@@ -36,6 +40,8 @@ export var AppModule = (function () {
                         TabsPage,
                         LoginPage,
                         SignupPage,
+                        PrivacyPolicyPage,
+                        TermsOfServicesPage,
                     ],
                     providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
                 },] },

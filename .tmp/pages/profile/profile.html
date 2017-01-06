@@ -5,27 +5,55 @@
 </ion-header>
 
 <ion-content padding>
-    <br>
-    <img src="{{image}}" id="profile_image" style="display:block;margin: auto;border-radius:50%;box-shadow:0 0 5px gray;border:2px solid #fff;height:200px;width:200px;">
+    <div class="profile-img-wrapper">
+        <img src="{{image}}" id="profile_image" class="profile-img">
+    </div>
     <ion-card>
-        <ion-card-content>
-            <p> Email : {{data.email}} </p>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
-            <p> Name : {{data.name}} </p>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
+        <ion-card-content class="field-with-icon">
+            <ion-icon name="ios-mail-outline" class="medium"></ion-icon>
             <ion-item>
-                <ion-label> Birthday: </ion-label>
-                <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="date"></ion-datetime>
+                <label class="item item-input">
+                <span class="input-label">Email : </span>
+                <span class="input-data">{{data.email}}</span>
+              </label>
             </ion-item>
         </ion-card-content>
     </ion-card>
-    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;"  (click)="submit()">Save</button>
-    <button ion-button block [disabled]="disableSubmit" style="color:#ffffff;background-color:#f85394;font-weight: bold;"  (click)="logout();"> Logout </button>
+    <ion-card>
+        <ion-card-content class="field-with-icon">
+            <ion-icon name="ios-person-outline" class="medium"></ion-icon>
+            <ion-item>
+                <label class="item item-input">
+                  <span class="input-label">Name : </span>
+                  <span class="input-data">{{data.name}}</span>
+              </label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content class="field-with-icon birthdate">
+            <div class="row">
+              <div class="col col-10">
+                <ion-icon name="ios-calendar-outline" class="medium"></ion-icon>
+              </div>
+              <div class="col col-80 birthday-selector" (click)="datePicker.open()">
+                <ion-item>
+                  <label class="item item-input">
+                    <span class="input-label">Birthday : </span>
+                    <span class="input-data"> {{day}} {{month}} {{year}} </span>
+                  </label>
+                </ion-item>
+              </div>
+              <div class="col col-10" (click)="datePicker.open()">
+                <ion-icon name="md-create" class="medium pink-color"></ion-icon>
+                <ion-item no-lines hidden="true">
+                    <ion-datetime #datePicker text-center (ionChange)="dateChanged($event)" displayFormat="DD MMM, YYYY" [(ngModel)]="date"></ion-datetime>
+                </ion-item>
+              </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button block [disabled]="disableSubmit" class="primary-btn" (click)="submit()">Save</button>
+    <button ion-button block [disabled]="disableSubmit" class="logout-btn" (click)="logout();">Logout</button>
 
 </ion-content>

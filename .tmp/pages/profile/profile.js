@@ -18,13 +18,53 @@ export var ProfilePage = (function () {
         this.date = this.data.birthday;
         //check image which is exist or not
         if (this.data.type == "email") {
-            this.image = 'assets/img/profile.jpg';
+            this.image = 'assets/img/profile.png';
         }
         else {
             this.image = this.data.picture;
         }
     }
     ProfilePage.prototype.ionViewDidEnter = function () {
+        var temp = this.date.split('-');
+        console.log(temp[1]);
+        if (temp[1] === '01' || temp[1] === 'Jan') {
+            this.month = 'Jan';
+        }
+        else if (temp[1] === '02' || temp[1] === 'Feb') {
+            this.month = 'Feb';
+        }
+        else if (temp[1] === '03' || temp[1] === 'Mar') {
+            this.month = 'Mar';
+        }
+        else if (temp[1] === '04' || temp[1] === 'Apr') {
+            this.month = 'Apr';
+        }
+        else if (temp[1] === '05' || temp[1] === 'May') {
+            this.month = 'May';
+        }
+        else if (temp[1] === '06' || temp[1] === 'Jun') {
+            this.month = 'Jun';
+        }
+        else if (temp[1] === '07' || temp[1] === 'Jul') {
+            this.month = 'Jul';
+        }
+        else if (temp[1] === '08' || temp[1] === 'Aug') {
+            this.month = 'Aug';
+        }
+        else if (temp[1] === '09' || temp[1] === 'Sep') {
+            this.month = 'Sep';
+        }
+        else if (temp[1] === '10' || temp[1] === 'Oct') {
+            this.month = 'Oct';
+        }
+        else if (temp[1] === '11' || temp[1] === 'Nov') {
+            this.month = 'Nov';
+        }
+        else if (temp[1] === '12' || temp[1] === 'Dec') {
+            this.month = 'Dec';
+        }
+        this.year = temp[0];
+        this.day = temp[2];
     };
     ProfilePage.prototype.logoutHandler = function () {
         facebookConnectPlugin.getLoginStatus(function onLoginStatus(status) {
@@ -47,6 +87,49 @@ export var ProfilePage = (function () {
             console.log("clear events");
         }
     };
+    ProfilePage.prototype.dateChanged = function (date) {
+        var temp = this.date.split('-');
+        console.log(temp[1]);
+        if (temp[1] === '01' || temp[1] === 'Jan') {
+            this.month = 'Jan';
+        }
+        else if (temp[1] === '02' || temp[1] === 'Feb') {
+            this.month = 'Feb';
+        }
+        else if (temp[1] === '03' || temp[1] === 'Mar') {
+            this.month = 'Mar';
+        }
+        else if (temp[1] === '04' || temp[1] === 'Apr') {
+            this.month = 'Apr';
+        }
+        else if (temp[1] === '05' || temp[1] === 'May') {
+            this.month = 'May';
+        }
+        else if (temp[1] === '06' || temp[1] === 'Jun') {
+            this.month = 'Jun';
+        }
+        else if (temp[1] === '07' || temp[1] === 'Jul') {
+            this.month = 'Jul';
+        }
+        else if (temp[1] === '08' || temp[1] === 'Aug') {
+            this.month = 'Aug';
+        }
+        else if (temp[1] === '09' || temp[1] === 'Sep') {
+            this.month = 'Sep';
+        }
+        else if (temp[1] === '10' || temp[1] === 'Oct') {
+            this.month = 'Oct';
+        }
+        else if (temp[1] === '11' || temp[1] === 'Nov') {
+            this.month = 'Nov';
+        }
+        else if (temp[1] === '12' || temp[1] === 'Dec') {
+            this.month = 'Dec';
+        }
+        this.year = temp[0];
+        this.day = temp[2];
+    };
+    ;
     ProfilePage.prototype.submit = function () {
         var _this = this;
         this.disableSubmit = true;
@@ -61,7 +144,7 @@ export var ProfilePage = (function () {
             alert.present();
         }
         else {
-            //update user data 
+            //update user data
             this.http.post('https://lisahoroscope.herokuapp.com/auth/updateUser/' + this.date, this.data)
                 .subscribe(function (response) {
                 var loader = _this.loadingCtrl.create({
@@ -70,7 +153,6 @@ export var ProfilePage = (function () {
                     dismissOnPageChange: true
                 });
                 loader.present();
-                console.log("Update user :" + response.json());
                 if (response.json().success == true) {
                     _this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', _this.data)
                         .subscribe(function (data) {
@@ -79,11 +161,11 @@ export var ProfilePage = (function () {
                         }
                         else {
                             console.log("New user data");
-                            console.log(data.json());
                             _this.data = data.json();
                         }
                         var alert = _this.alertCtrl.create({
-                            title: "Update User successful",
+                            title: "Update user",
+                            subTitle: "Completed",
                             buttons: ["Ok"]
                         });
                         alert.present();

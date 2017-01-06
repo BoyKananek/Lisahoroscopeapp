@@ -63,8 +63,8 @@ export var SignupPage = (function () {
             this.http.post("https://lisahoroscope.herokuapp.com/api/signup", data)
                 .subscribe(function (data) {
                 var alert = _this.alertCtrl.create({
-                    title: "Sign up successful",
-                    subTitle: "Please verify your email address",
+                    title: data.json().title,
+                    subTitle: data.json().message,
                     buttons: ["close"]
                 });
                 alert.present();

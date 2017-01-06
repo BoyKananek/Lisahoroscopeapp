@@ -10,6 +10,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'home.html',
 })
 export class HomePage {
+
   data: any;
   result: any;
   imgsign: any;
@@ -29,7 +30,7 @@ export class HomePage {
         } else {
           this.data = data.json();
           if (this.data.birthday) {
-            this.imgsign = "assets/img/" + this.data.sign + ".jpg";
+            this.imgsign = "assets/img/" + this.data.sign + ".png";
             //pull result
             let loader = this.loadingCtrl.create({
               content: "Loading ...",
@@ -50,7 +51,7 @@ export class HomePage {
                 }
                 this.result = response.json();
                 this.isDataAvailable = true;
-           
+
               },
               error => {
                 console.log(error.text());
@@ -90,7 +91,7 @@ export class HomePage {
         } else {
           this.data = data.json();
           if (this.data.birthday) {
-            this.imgsign = "assets/img/" + this.data.sign + ".jpg";
+            this.imgsign = "assets/img/" + this.data.sign + ".png";
             //pull result
             let loader = this.loadingCtrl.create({
               content: "Loading ...",
@@ -111,7 +112,7 @@ export class HomePage {
                 }
                 this.result = response.json();
                 this.isDataAvailable = true;
-           
+
               },
               error => {
                 console.log(error.text());
@@ -156,7 +157,7 @@ export class HomePage {
         } else {
           this.data = data.json();
           if (this.data.birthday) {
-            this.imgsign = "assets/img/" + this.data.sign + ".jpg";
+            this.imgsign = "assets/img/" + this.data.sign + ".png";
             //pull result
             let loader = this.loadingCtrl.create({
               content: "Loading ...",
@@ -177,7 +178,7 @@ export class HomePage {
                 }
                 this.result = response.json();
                 this.isDataAvailable = true;
-           
+
               },
               error => {
                 console.log(error.text());

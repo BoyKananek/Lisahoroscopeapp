@@ -30,7 +30,7 @@ export var HoroscopePage = (function () {
             else {
                 //update data session;
                 _this.data = data.json();
-                _this.imgsign = "assets/img/" + _this.sign + ".jpg";
+                _this.imgsign = "assets/img/" + _this.sign + ".png";
                 var loader = _this.loadingCtrl.create({
                     content: "Loading ...",
                     duration: 4000,

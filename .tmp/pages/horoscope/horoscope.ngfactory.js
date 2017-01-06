@@ -40,10 +40,8 @@ import * as import30 from 'ionic-angular/components/navbar/navbar';
 import * as import31 from '@angular/common/src/directives/ng_if';
 import * as import32 from 'ionic-angular/components/content/content';
 import * as import33 from '../../node_modules/ionic-angular/components/grid/grid.ngfactory';
-import * as import34 from '../../node_modules/ionic-angular/components/icon/icon.ngfactory';
-import * as import35 from 'ionic-angular/components/grid/grid';
-import * as import36 from 'ionic-angular/components/icon/icon';
-import * as import37 from '@angular/core/src/security';
+import * as import34 from 'ionic-angular/components/grid/grid';
+import * as import35 from '@angular/core/src/security';
 export var Wrapper_HoroscopePage = (function () {
     function Wrapper_HoroscopePage(p0, p1, p2, p3, p4, p5) {
         this.changed = false;
@@ -132,7 +130,7 @@ var _View_HoroscopePage0 = (function (_super) {
         this._text_7 = this.renderer.createText(this._el_0, '\n', null);
         this._text_8 = this.renderer.createText(parentRenderNode, '\n\n', null);
         this._el_9 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
-        this.renderer.setElementAttribute(this._el_9, 'padding', '');
+        this.renderer.setElementAttribute(this._el_9, 'class', 'star-dark-bg');
         this._appEl_9 = new import3.AppElement(9, null, this, this._el_9);
         var compView_9 = import19.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
         this._Content_9_4 = new import19.Wrapper_Content(this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import10.App), this.parentInjector.get(import25.Keyboard), this.parentInjector.get(import26.NgZone), this.parentInjector.get(import23.ViewController, null), this.parentInjector.get(import27.Tabs, null));
@@ -152,6 +150,7 @@ var _View_HoroscopePage0 = (function (_super) {
             ]),
             []
         ], null);
+        this._text_13 = this.renderer.createText(parentRenderNode, '\n', null);
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
@@ -169,7 +168,8 @@ var _View_HoroscopePage0 = (function (_super) {
             this._el_9,
             this._text_10,
             this._anchor_11,
-            this._text_12
+            this._text_12,
+            this._text_13
         ], [], []);
         return null;
     };
@@ -255,219 +255,210 @@ var _View_HoroscopePage1 = (function (_super) {
         this.renderer.setElementAttribute(this._el_0, 'class', 'homePage');
         this._text_1 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_2 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_2, 'class', 'header-wrapper');
         this._Row_2_3 = new import33.Wrapper_Row();
         this._text_3 = this.renderer.createText(this._el_2, '\n      ', null);
         this._el_4 = this.renderer.createElement(this._el_2, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_4, 'width-50', '');
+        this.renderer.setElementAttribute(this._el_4, 'class', 'col-40');
         this._Col_4_3 = new import33.Wrapper_Col();
         this._text_5 = this.renderer.createText(this._el_4, '\n        ', null);
         this._el_6 = this.renderer.createElement(this._el_4, 'div', null);
-        this.renderer.setElementAttribute(this._el_6, 'class', 'image');
+        this.renderer.setElementAttribute(this._el_6, 'class', 'zodiac-single');
         this._text_7 = this.renderer.createText(this._el_6, '\n          ', null);
         this._el_8 = this.renderer.createElement(this._el_6, 'img', null);
-        this.renderer.setElementAttribute(this._el_8, 'style', 'border-radius:50%;');
         this._text_9 = this.renderer.createText(this._el_6, '\n        ', null);
         this._text_10 = this.renderer.createText(this._el_4, '\n      ', null);
         this._text_11 = this.renderer.createText(this._el_2, '\n      ', null);
         this._el_12 = this.renderer.createElement(this._el_2, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_12, 'class', 'col-60 flex-vertical-center');
         this._Col_12_3 = new import33.Wrapper_Col();
         this._text_13 = this.renderer.createText(this._el_12, '\n        ', null);
         this._el_14 = this.renderer.createElement(this._el_12, 'div', null);
         this.renderer.setElementAttribute(this._el_14, 'class', 'title');
         this._text_15 = this.renderer.createText(this._el_14, '\n          ', null);
-        this._el_16 = this.renderer.createElement(this._el_14, 'br', null);
-        this._el_17 = this.renderer.createElement(this._el_14, 'br', null);
-        this._text_18 = this.renderer.createText(this._el_14, '\n          ', null);
-        this._el_19 = this.renderer.createElement(this._el_14, 'h4', null);
-        this._text_20 = this.renderer.createText(this._el_19, '', null);
-        this._text_21 = this.renderer.createText(this._el_14, '\n        ', null);
-        this._text_22 = this.renderer.createText(this._el_12, '\n      ', null);
-        this._text_23 = this.renderer.createText(this._el_2, '\n    ', null);
-        this._text_24 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_25 = this.renderer.createElement(this._el_0, 'br', null);
-        this._text_26 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_27 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_27_3 = new import33.Wrapper_Row();
-        this._text_28 = this.renderer.createText(this._el_27, '\n      ', null);
-        this._el_29 = this.renderer.createElement(this._el_27, 'h2', null);
-        this._el_30 = this.renderer.createElement(this._el_29, 'strong', null);
-        this._text_31 = this.renderer.createText(this._el_30, ' Work ', null);
-        this._text_32 = this.renderer.createText(this._el_27, '\n    ', null);
-        this._text_33 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_34 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_34_3 = new import33.Wrapper_Row();
-        this._text_35 = this.renderer.createText(this._el_34, '\n      ', null);
-        this._el_36 = this.renderer.createElement(this._el_34, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_36, 'width-25', '');
-        this._Col_36_3 = new import33.Wrapper_Col();
-        this._text_37 = this.renderer.createText(this._el_36, '\n        ', null);
-        this._el_38 = this.renderer.createElement(this._el_36, 'ion-icon', null);
-        this.renderer.setElementAttribute(this._el_38, 'name', 'create');
-        this.renderer.setElementAttribute(this._el_38, 'role', 'img');
-        this.renderer.setElementAttribute(this._el_38, 'style', 'font-size: 9.0rem;');
-        this._Icon_38_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config), new import22.ElementRef(this._el_38), this.renderer);
-        this._text_39 = this.renderer.createText(this._el_36, '\n      ', null);
-        this._text_40 = this.renderer.createText(this._el_34, '\n      ', null);
-        this._el_41 = this.renderer.createElement(this._el_34, 'ion-col', null);
-        this._Col_41_3 = new import33.Wrapper_Col();
-        this._text_42 = this.renderer.createText(this._el_41, '\n        ', null);
-        this._el_43 = this.renderer.createElement(this._el_41, 'div', null);
-        this.renderer.setElementAttribute(this._el_43, 'class', 'work');
-        this._text_44 = this.renderer.createText(this._el_43, '\n          ', null);
-        this._el_45 = this.renderer.createElement(this._el_43, 'p', null);
-        this._text_46 = this.renderer.createText(this._el_45, '', null);
-        this._text_47 = this.renderer.createText(this._el_43, '\n        ', null);
-        this._text_48 = this.renderer.createText(this._el_41, '\n      ', null);
-        this._text_49 = this.renderer.createText(this._el_34, '\n    ', null);
-        this._text_50 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_51 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_51_3 = new import33.Wrapper_Row();
-        this._text_52 = this.renderer.createText(this._el_51, '\n      ', null);
-        this._el_53 = this.renderer.createElement(this._el_51, 'h2', null);
-        this._el_54 = this.renderer.createElement(this._el_53, 'strong', null);
-        this._text_55 = this.renderer.createText(this._el_54, ' Finance ', null);
-        this._text_56 = this.renderer.createText(this._el_51, '\n    ', null);
-        this._text_57 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_58 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_58_3 = new import33.Wrapper_Row();
-        this._text_59 = this.renderer.createText(this._el_58, '\n      ', null);
-        this._el_60 = this.renderer.createElement(this._el_58, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_60, 'width-25', '');
-        this._Col_60_3 = new import33.Wrapper_Col();
-        this._text_61 = this.renderer.createText(this._el_60, '\n        ', null);
-        this._el_62 = this.renderer.createElement(this._el_60, 'ion-icon', null);
-        this.renderer.setElementAttribute(this._el_62, 'name', 'logo-usd');
-        this.renderer.setElementAttribute(this._el_62, 'role', 'img');
-        this.renderer.setElementAttribute(this._el_62, 'style', 'font-size: 9.0rem;');
-        this._Icon_62_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config), new import22.ElementRef(this._el_62), this.renderer);
-        this._text_63 = this.renderer.createText(this._el_60, '\n      ', null);
-        this._text_64 = this.renderer.createText(this._el_58, '\n      ', null);
-        this._el_65 = this.renderer.createElement(this._el_58, 'ion-col', null);
-        this._Col_65_3 = new import33.Wrapper_Col();
-        this._text_66 = this.renderer.createText(this._el_65, '\n        ', null);
-        this._el_67 = this.renderer.createElement(this._el_65, 'div', null);
-        this.renderer.setElementAttribute(this._el_67, 'class', 'finance');
-        this._text_68 = this.renderer.createText(this._el_67, '\n          ', null);
-        this._el_69 = this.renderer.createElement(this._el_67, 'p', null);
-        this._text_70 = this.renderer.createText(this._el_69, '', null);
-        this._text_71 = this.renderer.createText(this._el_67, '\n        ', null);
-        this._text_72 = this.renderer.createText(this._el_65, '\n      ', null);
-        this._text_73 = this.renderer.createText(this._el_58, '\n    ', null);
-        this._text_74 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_75 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_75_3 = new import33.Wrapper_Row();
-        this._text_76 = this.renderer.createText(this._el_75, '\n      ', null);
-        this._el_77 = this.renderer.createElement(this._el_75, 'h2', null);
-        this._el_78 = this.renderer.createElement(this._el_77, 'strong', null);
-        this._text_79 = this.renderer.createText(this._el_78, ' Love ', null);
-        this._text_80 = this.renderer.createText(this._el_75, '\n    ', null);
-        this._text_81 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_82 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_82_3 = new import33.Wrapper_Row();
-        this._text_83 = this.renderer.createText(this._el_82, '\n      ', null);
-        this._el_84 = this.renderer.createElement(this._el_82, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_84, 'width-25', '');
-        this._Col_84_3 = new import33.Wrapper_Col();
-        this._text_85 = this.renderer.createText(this._el_84, '\n        ', null);
-        this._el_86 = this.renderer.createElement(this._el_84, 'ion-icon', null);
-        this.renderer.setElementAttribute(this._el_86, 'name', 'heart');
-        this.renderer.setElementAttribute(this._el_86, 'role', 'img');
-        this.renderer.setElementAttribute(this._el_86, 'style', 'font-size: 9.0rem;');
-        this._Icon_86_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config), new import22.ElementRef(this._el_86), this.renderer);
-        this._text_87 = this.renderer.createText(this._el_84, '\n      ', null);
-        this._text_88 = this.renderer.createText(this._el_82, '\n      ', null);
-        this._el_89 = this.renderer.createElement(this._el_82, 'ion-col', null);
-        this._Col_89_3 = new import33.Wrapper_Col();
-        this._text_90 = this.renderer.createText(this._el_89, '\n        ', null);
-        this._el_91 = this.renderer.createElement(this._el_89, 'div', null);
-        this.renderer.setElementAttribute(this._el_91, 'class', 'love');
-        this._text_92 = this.renderer.createText(this._el_91, '\n          ', null);
-        this._el_93 = this.renderer.createElement(this._el_91, 'p', null);
-        this._text_94 = this.renderer.createText(this._el_93, '', null);
-        this._text_95 = this.renderer.createText(this._el_91, '\n        ', null);
-        this._text_96 = this.renderer.createText(this._el_89, '\n      ', null);
-        this._text_97 = this.renderer.createText(this._el_82, '\n    ', null);
-        this._text_98 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_99 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_99_3 = new import33.Wrapper_Row();
-        this._text_100 = this.renderer.createText(this._el_99, '\n      ', null);
-        this._el_101 = this.renderer.createElement(this._el_99, 'h2', null);
-        this._el_102 = this.renderer.createElement(this._el_101, 'strong', null);
-        this._text_103 = this.renderer.createText(this._el_102, ' Healthy ', null);
-        this._text_104 = this.renderer.createText(this._el_99, '\n    ', null);
-        this._text_105 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_106 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_106_3 = new import33.Wrapper_Row();
-        this._text_107 = this.renderer.createText(this._el_106, '\n      ', null);
-        this._el_108 = this.renderer.createElement(this._el_106, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_108, 'width-25', '');
-        this._Col_108_3 = new import33.Wrapper_Col();
-        this._text_109 = this.renderer.createText(this._el_108, '\n        ', null);
-        this._el_110 = this.renderer.createElement(this._el_108, 'ion-icon', null);
-        this.renderer.setElementAttribute(this._el_110, 'name', 'ios-medkit');
-        this.renderer.setElementAttribute(this._el_110, 'role', 'img');
-        this.renderer.setElementAttribute(this._el_110, 'style', 'font-size: 9.0rem;');
-        this._Icon_110_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config), new import22.ElementRef(this._el_110), this.renderer);
-        this._text_111 = this.renderer.createText(this._el_108, '\n      ', null);
-        this._text_112 = this.renderer.createText(this._el_106, '\n      ', null);
-        this._el_113 = this.renderer.createElement(this._el_106, 'ion-col', null);
-        this._Col_113_3 = new import33.Wrapper_Col();
-        this._text_114 = this.renderer.createText(this._el_113, '\n        ', null);
-        this._el_115 = this.renderer.createElement(this._el_113, 'div', null);
-        this.renderer.setElementAttribute(this._el_115, 'class', 'healthy');
-        this._text_116 = this.renderer.createText(this._el_115, '\n          ', null);
-        this._el_117 = this.renderer.createElement(this._el_115, 'p', null);
-        this._text_118 = this.renderer.createText(this._el_117, '', null);
-        this._text_119 = this.renderer.createText(this._el_115, '\n        ', null);
-        this._text_120 = this.renderer.createText(this._el_113, '\n      ', null);
-        this._text_121 = this.renderer.createText(this._el_106, '\n    ', null);
-        this._text_122 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_123 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_123_3 = new import33.Wrapper_Row();
-        this._text_124 = this.renderer.createText(this._el_123, '\n      ', null);
-        this._el_125 = this.renderer.createElement(this._el_123, 'h2', null);
-        this._el_126 = this.renderer.createElement(this._el_125, 'strong', null);
-        this._text_127 = this.renderer.createText(this._el_126, ' Luck ', null);
-        this._text_128 = this.renderer.createText(this._el_123, '\n    ', null);
-        this._text_129 = this.renderer.createText(this._el_0, '\n    ', null);
-        this._el_130 = this.renderer.createElement(this._el_0, 'ion-row', null);
-        this._Row_130_3 = new import33.Wrapper_Row();
-        this._text_131 = this.renderer.createText(this._el_130, '\n      ', null);
-        this._el_132 = this.renderer.createElement(this._el_130, 'ion-col', null);
-        this.renderer.setElementAttribute(this._el_132, 'width-25', '');
-        this._Col_132_3 = new import33.Wrapper_Col();
-        this._text_133 = this.renderer.createText(this._el_132, '\n        ', null);
-        this._el_134 = this.renderer.createElement(this._el_132, 'ion-icon', null);
-        this.renderer.setElementAttribute(this._el_134, 'name', 'card');
-        this.renderer.setElementAttribute(this._el_134, 'role', 'img');
-        this.renderer.setElementAttribute(this._el_134, 'style', 'font-size: 9.0rem;');
-        this._Icon_134_3 = new import34.Wrapper_Icon(this.parent.parentInjector.get(import21.Config), new import22.ElementRef(this._el_134), this.renderer);
-        this._text_135 = this.renderer.createText(this._el_132, '\n      ', null);
-        this._text_136 = this.renderer.createText(this._el_130, '\n      ', null);
-        this._el_137 = this.renderer.createElement(this._el_130, 'ion-col', null);
-        this._Col_137_3 = new import33.Wrapper_Col();
-        this._text_138 = this.renderer.createText(this._el_137, '\n        ', null);
-        this._el_139 = this.renderer.createElement(this._el_137, 'div', null);
-        this.renderer.setElementAttribute(this._el_139, 'class', 'luck');
-        this._text_140 = this.renderer.createText(this._el_139, '\n          ', null);
-        this._el_141 = this.renderer.createElement(this._el_139, 'p', null);
-        this._text_142 = this.renderer.createText(this._el_141, '', null);
-        this._text_143 = this.renderer.createText(this._el_139, '\n        ', null);
-        this._text_144 = this.renderer.createText(this._el_137, '\n      ', null);
-        this._text_145 = this.renderer.createText(this._el_130, '\n    ', null);
-        this._text_146 = this.renderer.createText(this._el_0, '\n  ', null);
+        this._el_16 = this.renderer.createElement(this._el_14, 'h4', null);
+        this._text_17 = this.renderer.createText(this._el_16, '', null);
+        this._text_18 = this.renderer.createText(this._el_14, '\n        ', null);
+        this._text_19 = this.renderer.createText(this._el_12, '\n      ', null);
+        this._text_20 = this.renderer.createText(this._el_2, '\n    ', null);
+        this._text_21 = this.renderer.createText(this._el_0, '\n\n\n    ', null);
+        this._el_22 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_22, 'class', 'content-section');
+        this._Row_22_3 = new import33.Wrapper_Row();
+        this._text_23 = this.renderer.createText(this._el_22, '\n      ', null);
+        this._el_24 = this.renderer.createElement(this._el_22, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_24, 'padding', '');
+        this._Col_24_3 = new import33.Wrapper_Col();
+        this._text_25 = this.renderer.createText(this._el_24, '\n        ', null);
+        this._el_26 = this.renderer.createElement(this._el_24, 'div', null);
+        this.renderer.setElementAttribute(this._el_26, 'class', 'title-wrapper');
+        this._text_27 = this.renderer.createText(this._el_26, '\n          ', null);
+        this._el_28 = this.renderer.createElement(this._el_26, 'i', null);
+        this.renderer.setElementAttribute(this._el_28, 'aria-hidden', 'true');
+        this.renderer.setElementAttribute(this._el_28, 'class', 'fa fa-2 fa-briefcase white-color');
+        this._text_29 = this.renderer.createText(this._el_26, '\n          ', null);
+        this._el_30 = this.renderer.createElement(this._el_26, 'span', null);
+        this.renderer.setElementAttribute(this._el_30, 'class', 'pink-title t-uppercase');
+        this._el_31 = this.renderer.createElement(this._el_30, 'strong', null);
+        this._text_32 = this.renderer.createText(this._el_31, ' Work ', null);
+        this._text_33 = this.renderer.createText(this._el_26, '\n        ', null);
+        this._text_34 = this.renderer.createText(this._el_24, '\n        ', null);
+        this._el_35 = this.renderer.createElement(this._el_24, 'div', null);
+        this.renderer.setElementAttribute(this._el_35, 'class', 'content-wrapper');
+        this._text_36 = this.renderer.createText(this._el_35, '\n          ', null);
+        this._el_37 = this.renderer.createElement(this._el_35, 'div', null);
+        this.renderer.setElementAttribute(this._el_37, 'class', 'work');
+        this._text_38 = this.renderer.createText(this._el_37, '\n            ', null);
+        this._el_39 = this.renderer.createElement(this._el_37, 'p', null);
+        this._text_40 = this.renderer.createText(this._el_39, '', null);
+        this._text_41 = this.renderer.createText(this._el_37, '\n          ', null);
+        this._text_42 = this.renderer.createText(this._el_35, '\n        ', null);
+        this._text_43 = this.renderer.createText(this._el_24, '\n      ', null);
+        this._text_44 = this.renderer.createText(this._el_22, '\n    ', null);
+        this._text_45 = this.renderer.createText(this._el_0, '\n\n    ', null);
+        this._el_46 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_46, 'class', 'content-section');
+        this._Row_46_3 = new import33.Wrapper_Row();
+        this._text_47 = this.renderer.createText(this._el_46, '\n      ', null);
+        this._el_48 = this.renderer.createElement(this._el_46, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_48, 'padding', '');
+        this._Col_48_3 = new import33.Wrapper_Col();
+        this._text_49 = this.renderer.createText(this._el_48, '\n        ', null);
+        this._el_50 = this.renderer.createElement(this._el_48, 'div', null);
+        this.renderer.setElementAttribute(this._el_50, 'class', 'title-wrapper');
+        this._text_51 = this.renderer.createText(this._el_50, '\n          ', null);
+        this._el_52 = this.renderer.createElement(this._el_50, 'i', null);
+        this.renderer.setElementAttribute(this._el_52, 'aria-hidden', 'true');
+        this.renderer.setElementAttribute(this._el_52, 'class', 'fa fa-2 fa-money white-color');
+        this._text_53 = this.renderer.createText(this._el_50, '\n          ', null);
+        this._el_54 = this.renderer.createElement(this._el_50, 'span', null);
+        this.renderer.setElementAttribute(this._el_54, 'class', 'pink-title t-uppercase');
+        this._el_55 = this.renderer.createElement(this._el_54, 'strong', null);
+        this._text_56 = this.renderer.createText(this._el_55, ' Finance ', null);
+        this._text_57 = this.renderer.createText(this._el_50, '\n        ', null);
+        this._text_58 = this.renderer.createText(this._el_48, '\n        ', null);
+        this._el_59 = this.renderer.createElement(this._el_48, 'div', null);
+        this.renderer.setElementAttribute(this._el_59, 'class', 'content-wrapper');
+        this._text_60 = this.renderer.createText(this._el_59, '\n          ', null);
+        this._el_61 = this.renderer.createElement(this._el_59, 'div', null);
+        this.renderer.setElementAttribute(this._el_61, 'class', 'finance');
+        this._text_62 = this.renderer.createText(this._el_61, '\n            ', null);
+        this._el_63 = this.renderer.createElement(this._el_61, 'p', null);
+        this._text_64 = this.renderer.createText(this._el_63, '', null);
+        this._text_65 = this.renderer.createText(this._el_61, '\n          ', null);
+        this._text_66 = this.renderer.createText(this._el_59, '\n        ', null);
+        this._text_67 = this.renderer.createText(this._el_48, '\n      ', null);
+        this._text_68 = this.renderer.createText(this._el_46, '\n    ', null);
+        this._text_69 = this.renderer.createText(this._el_0, '\n\n    ', null);
+        this._el_70 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_70, 'class', 'content-section');
+        this._Row_70_3 = new import33.Wrapper_Row();
+        this._text_71 = this.renderer.createText(this._el_70, '\n      ', null);
+        this._el_72 = this.renderer.createElement(this._el_70, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_72, 'padding', '');
+        this._Col_72_3 = new import33.Wrapper_Col();
+        this._text_73 = this.renderer.createText(this._el_72, '\n        ', null);
+        this._el_74 = this.renderer.createElement(this._el_72, 'div', null);
+        this.renderer.setElementAttribute(this._el_74, 'class', 'title-wrapper');
+        this._text_75 = this.renderer.createText(this._el_74, '\n          ', null);
+        this._el_76 = this.renderer.createElement(this._el_74, 'i', null);
+        this.renderer.setElementAttribute(this._el_76, 'aria-hidden', 'true');
+        this.renderer.setElementAttribute(this._el_76, 'class', 'fa fa-2 fa-heart white-color');
+        this._text_77 = this.renderer.createText(this._el_74, '\n          ', null);
+        this._el_78 = this.renderer.createElement(this._el_74, 'span', null);
+        this.renderer.setElementAttribute(this._el_78, 'class', 'pink-title t-uppercase');
+        this._el_79 = this.renderer.createElement(this._el_78, 'strong', null);
+        this._text_80 = this.renderer.createText(this._el_79, ' Love ', null);
+        this._text_81 = this.renderer.createText(this._el_74, '\n        ', null);
+        this._text_82 = this.renderer.createText(this._el_72, '\n        ', null);
+        this._el_83 = this.renderer.createElement(this._el_72, 'div', null);
+        this.renderer.setElementAttribute(this._el_83, 'class', 'content-wrapper');
+        this._text_84 = this.renderer.createText(this._el_83, '\n          ', null);
+        this._el_85 = this.renderer.createElement(this._el_83, 'div', null);
+        this.renderer.setElementAttribute(this._el_85, 'class', 'love');
+        this._text_86 = this.renderer.createText(this._el_85, '\n            ', null);
+        this._el_87 = this.renderer.createElement(this._el_85, 'p', null);
+        this._text_88 = this.renderer.createText(this._el_87, '', null);
+        this._text_89 = this.renderer.createText(this._el_85, '\n          ', null);
+        this._text_90 = this.renderer.createText(this._el_83, '\n        ', null);
+        this._text_91 = this.renderer.createText(this._el_72, '\n      ', null);
+        this._text_92 = this.renderer.createText(this._el_70, '\n    ', null);
+        this._text_93 = this.renderer.createText(this._el_0, '\n\n    ', null);
+        this._el_94 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_94, 'class', 'content-section');
+        this._Row_94_3 = new import33.Wrapper_Row();
+        this._text_95 = this.renderer.createText(this._el_94, '\n      ', null);
+        this._el_96 = this.renderer.createElement(this._el_94, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_96, 'padding', '');
+        this._Col_96_3 = new import33.Wrapper_Col();
+        this._text_97 = this.renderer.createText(this._el_96, '\n        ', null);
+        this._el_98 = this.renderer.createElement(this._el_96, 'div', null);
+        this.renderer.setElementAttribute(this._el_98, 'class', 'title-wrapper');
+        this._text_99 = this.renderer.createText(this._el_98, '\n          ', null);
+        this._el_100 = this.renderer.createElement(this._el_98, 'i', null);
+        this.renderer.setElementAttribute(this._el_100, 'aria-hidden', 'true');
+        this.renderer.setElementAttribute(this._el_100, 'class', 'fa fa-2 fa-heartbeat white-color');
+        this._text_101 = this.renderer.createText(this._el_98, '\n          ', null);
+        this._el_102 = this.renderer.createElement(this._el_98, 'span', null);
+        this.renderer.setElementAttribute(this._el_102, 'class', 'pink-title t-uppercase');
+        this._el_103 = this.renderer.createElement(this._el_102, 'strong', null);
+        this._text_104 = this.renderer.createText(this._el_103, ' Healthy ', null);
+        this._text_105 = this.renderer.createText(this._el_98, '\n        ', null);
+        this._text_106 = this.renderer.createText(this._el_96, '\n        ', null);
+        this._el_107 = this.renderer.createElement(this._el_96, 'div', null);
+        this.renderer.setElementAttribute(this._el_107, 'class', 'content-wrapper');
+        this._text_108 = this.renderer.createText(this._el_107, '\n          ', null);
+        this._el_109 = this.renderer.createElement(this._el_107, 'div', null);
+        this.renderer.setElementAttribute(this._el_109, 'class', 'healthy');
+        this._text_110 = this.renderer.createText(this._el_109, '\n            ', null);
+        this._el_111 = this.renderer.createElement(this._el_109, 'p', null);
+        this._text_112 = this.renderer.createText(this._el_111, '', null);
+        this._text_113 = this.renderer.createText(this._el_109, '\n          ', null);
+        this._text_114 = this.renderer.createText(this._el_107, '\n        ', null);
+        this._text_115 = this.renderer.createText(this._el_96, '\n      ', null);
+        this._text_116 = this.renderer.createText(this._el_94, '\n    ', null);
+        this._text_117 = this.renderer.createText(this._el_0, '\n\n    ', null);
+        this._el_118 = this.renderer.createElement(this._el_0, 'ion-row', null);
+        this.renderer.setElementAttribute(this._el_118, 'class', 'content-section');
+        this._Row_118_3 = new import33.Wrapper_Row();
+        this._text_119 = this.renderer.createText(this._el_118, '\n      ', null);
+        this._el_120 = this.renderer.createElement(this._el_118, 'ion-col', null);
+        this.renderer.setElementAttribute(this._el_120, 'padding', '');
+        this._Col_120_3 = new import33.Wrapper_Col();
+        this._text_121 = this.renderer.createText(this._el_120, '\n        ', null);
+        this._el_122 = this.renderer.createElement(this._el_120, 'div', null);
+        this.renderer.setElementAttribute(this._el_122, 'class', 'title-wrapper');
+        this._text_123 = this.renderer.createText(this._el_122, '\n          ', null);
+        this._el_124 = this.renderer.createElement(this._el_122, 'i', null);
+        this.renderer.setElementAttribute(this._el_124, 'aria-hidden', 'true');
+        this.renderer.setElementAttribute(this._el_124, 'class', 'fa fa-2 fa-diamond white-color');
+        this._text_125 = this.renderer.createText(this._el_122, '\n          ', null);
+        this._el_126 = this.renderer.createElement(this._el_122, 'span', null);
+        this.renderer.setElementAttribute(this._el_126, 'class', 'pink-title t-uppercase');
+        this._el_127 = this.renderer.createElement(this._el_126, 'strong', null);
+        this._text_128 = this.renderer.createText(this._el_127, ' Luck ', null);
+        this._text_129 = this.renderer.createText(this._el_122, '\n        ', null);
+        this._text_130 = this.renderer.createText(this._el_120, '\n        ', null);
+        this._el_131 = this.renderer.createElement(this._el_120, 'div', null);
+        this.renderer.setElementAttribute(this._el_131, 'class', 'content-wrapper');
+        this._text_132 = this.renderer.createText(this._el_131, '\n          ', null);
+        this._el_133 = this.renderer.createElement(this._el_131, 'div', null);
+        this.renderer.setElementAttribute(this._el_133, 'class', 'luck');
+        this._text_134 = this.renderer.createText(this._el_133, '\n            ', null);
+        this._el_135 = this.renderer.createElement(this._el_133, 'p', null);
+        this._text_136 = this.renderer.createText(this._el_135, '', null);
+        this._text_137 = this.renderer.createText(this._el_133, '\n          ', null);
+        this._text_138 = this.renderer.createText(this._el_131, '\n        ', null);
+        this._text_139 = this.renderer.createText(this._el_120, '\n      ', null);
+        this._text_140 = this.renderer.createText(this._el_118, '\n    ', null);
+        this._text_141 = this.renderer.createText(this._el_0, '\n\n  ', null);
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
+        this._expr_2 = import7.UNINITIALIZED;
         this._expr_3 = import7.UNINITIALIZED;
         this._expr_4 = import7.UNINITIALIZED;
+        this._expr_5 = import7.UNINITIALIZED;
         this._expr_6 = import7.UNINITIALIZED;
-        this._expr_7 = import7.UNINITIALIZED;
-        this._expr_9 = import7.UNINITIALIZED;
-        this._expr_10 = import7.UNINITIALIZED;
-        this._expr_12 = import7.UNINITIALIZED;
-        this._expr_13 = import7.UNINITIALIZED;
-        this._expr_15 = import7.UNINITIALIZED;
-        this._expr_16 = import7.UNINITIALIZED;
         this.init([].concat([this._el_0]), [
             this._el_0,
             this._text_1,
@@ -486,223 +477,173 @@ var _View_HoroscopePage1 = (function (_super) {
             this._el_14,
             this._text_15,
             this._el_16,
-            this._el_17,
+            this._text_17,
             this._text_18,
-            this._el_19,
+            this._text_19,
             this._text_20,
             this._text_21,
-            this._text_22,
+            this._el_22,
             this._text_23,
-            this._text_24,
-            this._el_25,
-            this._text_26,
-            this._el_27,
-            this._text_28,
-            this._el_29,
+            this._el_24,
+            this._text_25,
+            this._el_26,
+            this._text_27,
+            this._el_28,
+            this._text_29,
             this._el_30,
-            this._text_31,
+            this._el_31,
             this._text_32,
             this._text_33,
-            this._el_34,
-            this._text_35,
-            this._el_36,
-            this._text_37,
-            this._el_38,
-            this._text_39,
+            this._text_34,
+            this._el_35,
+            this._text_36,
+            this._el_37,
+            this._text_38,
+            this._el_39,
             this._text_40,
-            this._el_41,
+            this._text_41,
             this._text_42,
-            this._el_43,
+            this._text_43,
             this._text_44,
-            this._el_45,
-            this._text_46,
+            this._text_45,
+            this._el_46,
             this._text_47,
-            this._text_48,
+            this._el_48,
             this._text_49,
-            this._text_50,
-            this._el_51,
-            this._text_52,
-            this._el_53,
+            this._el_50,
+            this._text_51,
+            this._el_52,
+            this._text_53,
             this._el_54,
-            this._text_55,
+            this._el_55,
             this._text_56,
             this._text_57,
-            this._el_58,
-            this._text_59,
-            this._el_60,
-            this._text_61,
-            this._el_62,
-            this._text_63,
+            this._text_58,
+            this._el_59,
+            this._text_60,
+            this._el_61,
+            this._text_62,
+            this._el_63,
             this._text_64,
-            this._el_65,
+            this._text_65,
             this._text_66,
-            this._el_67,
+            this._text_67,
             this._text_68,
-            this._el_69,
-            this._text_70,
+            this._text_69,
+            this._el_70,
             this._text_71,
-            this._text_72,
+            this._el_72,
             this._text_73,
-            this._text_74,
-            this._el_75,
-            this._text_76,
-            this._el_77,
+            this._el_74,
+            this._text_75,
+            this._el_76,
+            this._text_77,
             this._el_78,
-            this._text_79,
+            this._el_79,
             this._text_80,
             this._text_81,
-            this._el_82,
-            this._text_83,
-            this._el_84,
-            this._text_85,
-            this._el_86,
-            this._text_87,
+            this._text_82,
+            this._el_83,
+            this._text_84,
+            this._el_85,
+            this._text_86,
+            this._el_87,
             this._text_88,
-            this._el_89,
+            this._text_89,
             this._text_90,
-            this._el_91,
+            this._text_91,
             this._text_92,
-            this._el_93,
-            this._text_94,
+            this._text_93,
+            this._el_94,
             this._text_95,
-            this._text_96,
+            this._el_96,
             this._text_97,
-            this._text_98,
-            this._el_99,
-            this._text_100,
-            this._el_101,
+            this._el_98,
+            this._text_99,
+            this._el_100,
+            this._text_101,
             this._el_102,
-            this._text_103,
+            this._el_103,
             this._text_104,
             this._text_105,
-            this._el_106,
-            this._text_107,
-            this._el_108,
-            this._text_109,
-            this._el_110,
-            this._text_111,
+            this._text_106,
+            this._el_107,
+            this._text_108,
+            this._el_109,
+            this._text_110,
+            this._el_111,
             this._text_112,
-            this._el_113,
+            this._text_113,
             this._text_114,
-            this._el_115,
+            this._text_115,
             this._text_116,
-            this._el_117,
-            this._text_118,
+            this._text_117,
+            this._el_118,
             this._text_119,
-            this._text_120,
+            this._el_120,
             this._text_121,
-            this._text_122,
-            this._el_123,
-            this._text_124,
-            this._el_125,
+            this._el_122,
+            this._text_123,
+            this._el_124,
+            this._text_125,
             this._el_126,
-            this._text_127,
+            this._el_127,
             this._text_128,
             this._text_129,
-            this._el_130,
-            this._text_131,
-            this._el_132,
-            this._text_133,
-            this._el_134,
-            this._text_135,
+            this._text_130,
+            this._el_131,
+            this._text_132,
+            this._el_133,
+            this._text_134,
+            this._el_135,
             this._text_136,
-            this._el_137,
+            this._text_137,
             this._text_138,
-            this._el_139,
+            this._text_139,
             this._text_140,
-            this._el_141,
-            this._text_142,
-            this._text_143,
-            this._text_144,
-            this._text_145,
-            this._text_146
+            this._text_141
         ], [], []);
         return null;
     };
     _View_HoroscopePage1.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import35.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) {
+        if (((token === import34.Col) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 10)))) {
             return this._Col_4_3.context;
         }
-        if (((token === import35.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 22)))) {
+        if (((token === import34.Col) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 19)))) {
             return this._Col_12_3.context;
         }
-        if (((token === import35.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 23)))) {
+        if (((token === import34.Row) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 20)))) {
             return this._Row_2_3.context;
         }
-        if (((token === import35.Row) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) {
-            return this._Row_27_3.context;
+        if (((token === import34.Col) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 43)))) {
+            return this._Col_24_3.context;
         }
-        if (((token === import36.Icon) && (38 === requestNodeIndex))) {
-            return this._Icon_38_3.context;
+        if (((token === import34.Row) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 44)))) {
+            return this._Row_22_3.context;
         }
-        if (((token === import35.Col) && ((36 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
-            return this._Col_36_3.context;
+        if (((token === import34.Col) && ((48 <= requestNodeIndex) && (requestNodeIndex <= 67)))) {
+            return this._Col_48_3.context;
         }
-        if (((token === import35.Col) && ((41 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
-            return this._Col_41_3.context;
+        if (((token === import34.Row) && ((46 <= requestNodeIndex) && (requestNodeIndex <= 68)))) {
+            return this._Row_46_3.context;
         }
-        if (((token === import35.Row) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 49)))) {
-            return this._Row_34_3.context;
+        if (((token === import34.Col) && ((72 <= requestNodeIndex) && (requestNodeIndex <= 91)))) {
+            return this._Col_72_3.context;
         }
-        if (((token === import35.Row) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 56)))) {
-            return this._Row_51_3.context;
+        if (((token === import34.Row) && ((70 <= requestNodeIndex) && (requestNodeIndex <= 92)))) {
+            return this._Row_70_3.context;
         }
-        if (((token === import36.Icon) && (62 === requestNodeIndex))) {
-            return this._Icon_62_3.context;
+        if (((token === import34.Col) && ((96 <= requestNodeIndex) && (requestNodeIndex <= 115)))) {
+            return this._Col_96_3.context;
         }
-        if (((token === import35.Col) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 63)))) {
-            return this._Col_60_3.context;
+        if (((token === import34.Row) && ((94 <= requestNodeIndex) && (requestNodeIndex <= 116)))) {
+            return this._Row_94_3.context;
         }
-        if (((token === import35.Col) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 72)))) {
-            return this._Col_65_3.context;
+        if (((token === import34.Col) && ((120 <= requestNodeIndex) && (requestNodeIndex <= 139)))) {
+            return this._Col_120_3.context;
         }
-        if (((token === import35.Row) && ((58 <= requestNodeIndex) && (requestNodeIndex <= 73)))) {
-            return this._Row_58_3.context;
-        }
-        if (((token === import35.Row) && ((75 <= requestNodeIndex) && (requestNodeIndex <= 80)))) {
-            return this._Row_75_3.context;
-        }
-        if (((token === import36.Icon) && (86 === requestNodeIndex))) {
-            return this._Icon_86_3.context;
-        }
-        if (((token === import35.Col) && ((84 <= requestNodeIndex) && (requestNodeIndex <= 87)))) {
-            return this._Col_84_3.context;
-        }
-        if (((token === import35.Col) && ((89 <= requestNodeIndex) && (requestNodeIndex <= 96)))) {
-            return this._Col_89_3.context;
-        }
-        if (((token === import35.Row) && ((82 <= requestNodeIndex) && (requestNodeIndex <= 97)))) {
-            return this._Row_82_3.context;
-        }
-        if (((token === import35.Row) && ((99 <= requestNodeIndex) && (requestNodeIndex <= 104)))) {
-            return this._Row_99_3.context;
-        }
-        if (((token === import36.Icon) && (110 === requestNodeIndex))) {
-            return this._Icon_110_3.context;
-        }
-        if (((token === import35.Col) && ((108 <= requestNodeIndex) && (requestNodeIndex <= 111)))) {
-            return this._Col_108_3.context;
-        }
-        if (((token === import35.Col) && ((113 <= requestNodeIndex) && (requestNodeIndex <= 120)))) {
-            return this._Col_113_3.context;
-        }
-        if (((token === import35.Row) && ((106 <= requestNodeIndex) && (requestNodeIndex <= 121)))) {
-            return this._Row_106_3.context;
-        }
-        if (((token === import35.Row) && ((123 <= requestNodeIndex) && (requestNodeIndex <= 128)))) {
-            return this._Row_123_3.context;
-        }
-        if (((token === import36.Icon) && (134 === requestNodeIndex))) {
-            return this._Icon_134_3.context;
-        }
-        if (((token === import35.Col) && ((132 <= requestNodeIndex) && (requestNodeIndex <= 135)))) {
-            return this._Col_132_3.context;
-        }
-        if (((token === import35.Col) && ((137 <= requestNodeIndex) && (requestNodeIndex <= 144)))) {
-            return this._Col_137_3.context;
-        }
-        if (((token === import35.Row) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 145)))) {
-            return this._Row_130_3.context;
+        if (((token === import34.Row) && ((118 <= requestNodeIndex) && (requestNodeIndex <= 140)))) {
+            return this._Row_118_3.context;
         }
         return notFoundResult;
     };
@@ -710,110 +651,53 @@ var _View_HoroscopePage1 = (function (_super) {
         this._Row_2_3.detectChangesInternal(this, this._el_2, throwOnChange);
         this._Col_4_3.detectChangesInternal(this, this._el_4, throwOnChange);
         this._Col_12_3.detectChangesInternal(this, this._el_12, throwOnChange);
-        this._Row_27_3.detectChangesInternal(this, this._el_27, throwOnChange);
-        this._Row_34_3.detectChangesInternal(this, this._el_34, throwOnChange);
-        this._Col_36_3.detectChangesInternal(this, this._el_36, throwOnChange);
-        var currVal_2 = 'create';
-        this._Icon_38_3.check_name(currVal_2, throwOnChange, false);
-        this._Icon_38_3.detectChangesInternal(this, this._el_38, throwOnChange);
-        this._Col_41_3.detectChangesInternal(this, this._el_41, throwOnChange);
-        this._Row_51_3.detectChangesInternal(this, this._el_51, throwOnChange);
-        this._Row_58_3.detectChangesInternal(this, this._el_58, throwOnChange);
-        this._Col_60_3.detectChangesInternal(this, this._el_60, throwOnChange);
-        var currVal_5 = 'logo-usd';
-        this._Icon_62_3.check_name(currVal_5, throwOnChange, false);
-        this._Icon_62_3.detectChangesInternal(this, this._el_62, throwOnChange);
-        this._Col_65_3.detectChangesInternal(this, this._el_65, throwOnChange);
-        this._Row_75_3.detectChangesInternal(this, this._el_75, throwOnChange);
-        this._Row_82_3.detectChangesInternal(this, this._el_82, throwOnChange);
-        this._Col_84_3.detectChangesInternal(this, this._el_84, throwOnChange);
-        var currVal_8 = 'heart';
-        this._Icon_86_3.check_name(currVal_8, throwOnChange, false);
-        this._Icon_86_3.detectChangesInternal(this, this._el_86, throwOnChange);
-        this._Col_89_3.detectChangesInternal(this, this._el_89, throwOnChange);
-        this._Row_99_3.detectChangesInternal(this, this._el_99, throwOnChange);
-        this._Row_106_3.detectChangesInternal(this, this._el_106, throwOnChange);
-        this._Col_108_3.detectChangesInternal(this, this._el_108, throwOnChange);
-        var currVal_11 = 'ios-medkit';
-        this._Icon_110_3.check_name(currVal_11, throwOnChange, false);
-        this._Icon_110_3.detectChangesInternal(this, this._el_110, throwOnChange);
-        this._Col_113_3.detectChangesInternal(this, this._el_113, throwOnChange);
-        this._Row_123_3.detectChangesInternal(this, this._el_123, throwOnChange);
-        this._Row_130_3.detectChangesInternal(this, this._el_130, throwOnChange);
-        this._Col_132_3.detectChangesInternal(this, this._el_132, throwOnChange);
-        var currVal_14 = 'card';
-        this._Icon_134_3.check_name(currVal_14, throwOnChange, false);
-        this._Icon_134_3.detectChangesInternal(this, this._el_134, throwOnChange);
-        this._Col_137_3.detectChangesInternal(this, this._el_137, throwOnChange);
+        this._Row_22_3.detectChangesInternal(this, this._el_22, throwOnChange);
+        this._Col_24_3.detectChangesInternal(this, this._el_24, throwOnChange);
+        this._Row_46_3.detectChangesInternal(this, this._el_46, throwOnChange);
+        this._Col_48_3.detectChangesInternal(this, this._el_48, throwOnChange);
+        this._Row_70_3.detectChangesInternal(this, this._el_70, throwOnChange);
+        this._Col_72_3.detectChangesInternal(this, this._el_72, throwOnChange);
+        this._Row_94_3.detectChangesInternal(this, this._el_94, throwOnChange);
+        this._Col_96_3.detectChangesInternal(this, this._el_96, throwOnChange);
+        this._Row_118_3.detectChangesInternal(this, this._el_118, throwOnChange);
+        this._Col_120_3.detectChangesInternal(this, this._el_120, throwOnChange);
         this.detectContentChildrenChanges(throwOnChange);
         var currVal_0 = import4.interpolate(1, '', this.parent.context.imgsign, '');
         if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
-            this.renderer.setElementProperty(this._el_8, 'src', this.viewUtils.sanitizer.sanitize(import37.SecurityContext.URL, currVal_0));
+            this.renderer.setElementProperty(this._el_8, 'src', this.viewUtils.sanitizer.sanitize(import35.SecurityContext.URL, currVal_0));
             this._expr_0 = currVal_0;
         }
         var currVal_1 = import4.interpolate(1, '', this.parent.context.result.title, '');
         if (import4.checkBinding(throwOnChange, this._expr_1, currVal_1)) {
-            this.renderer.setText(this._text_20, currVal_1);
+            this.renderer.setText(this._text_17, currVal_1);
             this._expr_1 = currVal_1;
         }
-        var currVal_3 = this._Icon_38_3.context._hidden;
+        var currVal_2 = import4.interpolate(1, ' ', this.parent.context.result.work, ' ');
+        if (import4.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
+            this.renderer.setText(this._text_40, currVal_2);
+            this._expr_2 = currVal_2;
+        }
+        var currVal_3 = import4.interpolate(1, ' ', this.parent.context.result.finance, ' ');
         if (import4.checkBinding(throwOnChange, this._expr_3, currVal_3)) {
-            this.renderer.setElementClass(this._el_38, 'hide', currVal_3);
+            this.renderer.setText(this._text_64, currVal_3);
             this._expr_3 = currVal_3;
         }
-        var currVal_4 = import4.interpolate(1, ' ', this.parent.context.result.work, ' ');
+        var currVal_4 = import4.interpolate(1, ' ', this.parent.context.result.love, ' ');
         if (import4.checkBinding(throwOnChange, this._expr_4, currVal_4)) {
-            this.renderer.setText(this._text_46, currVal_4);
+            this.renderer.setText(this._text_88, currVal_4);
             this._expr_4 = currVal_4;
         }
-        var currVal_6 = this._Icon_62_3.context._hidden;
+        var currVal_5 = import4.interpolate(1, ' ', this.parent.context.result.healthy, ' ');
+        if (import4.checkBinding(throwOnChange, this._expr_5, currVal_5)) {
+            this.renderer.setText(this._text_112, currVal_5);
+            this._expr_5 = currVal_5;
+        }
+        var currVal_6 = import4.interpolate(1, ' ', this.parent.context.result.luck, ' ');
         if (import4.checkBinding(throwOnChange, this._expr_6, currVal_6)) {
-            this.renderer.setElementClass(this._el_62, 'hide', currVal_6);
+            this.renderer.setText(this._text_136, currVal_6);
             this._expr_6 = currVal_6;
         }
-        var currVal_7 = import4.interpolate(1, ' ', this.parent.context.result.finance, ' ');
-        if (import4.checkBinding(throwOnChange, this._expr_7, currVal_7)) {
-            this.renderer.setText(this._text_70, currVal_7);
-            this._expr_7 = currVal_7;
-        }
-        var currVal_9 = this._Icon_86_3.context._hidden;
-        if (import4.checkBinding(throwOnChange, this._expr_9, currVal_9)) {
-            this.renderer.setElementClass(this._el_86, 'hide', currVal_9);
-            this._expr_9 = currVal_9;
-        }
-        var currVal_10 = import4.interpolate(1, ' ', this.parent.context.result.love, ' ');
-        if (import4.checkBinding(throwOnChange, this._expr_10, currVal_10)) {
-            this.renderer.setText(this._text_94, currVal_10);
-            this._expr_10 = currVal_10;
-        }
-        var currVal_12 = this._Icon_110_3.context._hidden;
-        if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
-            this.renderer.setElementClass(this._el_110, 'hide', currVal_12);
-            this._expr_12 = currVal_12;
-        }
-        var currVal_13 = import4.interpolate(1, ' ', this.parent.context.result.healthy, ' ');
-        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
-            this.renderer.setText(this._text_118, currVal_13);
-            this._expr_13 = currVal_13;
-        }
-        var currVal_15 = this._Icon_134_3.context._hidden;
-        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
-            this.renderer.setElementClass(this._el_134, 'hide', currVal_15);
-            this._expr_15 = currVal_15;
-        }
-        var currVal_16 = import4.interpolate(1, ' ', this.parent.context.result.luck, ' ');
-        if (import4.checkBinding(throwOnChange, this._expr_16, currVal_16)) {
-            this.renderer.setText(this._text_142, currVal_16);
-            this._expr_16 = currVal_16;
-        }
         this.detectViewChildrenChanges(throwOnChange);
-    };
-    _View_HoroscopePage1.prototype.destroyInternal = function () {
-        this._Icon_38_3.context.ngOnDestroy();
-        this._Icon_62_3.context.ngOnDestroy();
-        this._Icon_86_3.context.ngOnDestroy();
-        this._Icon_110_3.context.ngOnDestroy();
-        this._Icon_134_3.context.ngOnDestroy();
     };
     return _View_HoroscopePage1;
 }(import1.AppView));
