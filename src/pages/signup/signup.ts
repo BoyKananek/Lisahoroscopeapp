@@ -65,8 +65,8 @@ export class SignupPage {
       this.http.post("https://lisahoroscope.herokuapp.com/api/signup",data)
         .subscribe(data =>{
           var alert = this.alertCtrl.create({
-            title: "Sign up successful",
-            subTitle: "Please verify your email address",
+            title: data.json().title,
+            subTitle: data.json().message,
             buttons: ["close"]
           });
         alert.present();
