@@ -246,7 +246,7 @@ export class LoginPage {
   }
   resendEmail(email) {
     var data = {
-      email : email
+      email: email
     }
     this.http.post("https://lisahoroscope.herokuapp.com/api/resendEmail", data)
       .subscribe(data => {
@@ -257,6 +257,13 @@ export class LoginPage {
           buttons: ["close"]
         });
         alert.present();
+      }, error => {
+        var errorAlert = this.alertCtrl.create({
+          title: "Resend the email fail",
+          subTitle: "Please try again later",
+          buttons: ["close"]
+        });
+        errorAlert.present();
       });
   }
   loginFB() {
