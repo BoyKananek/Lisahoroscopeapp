@@ -185,13 +185,40 @@ export var LoginPage = (function () {
             this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
                 .subscribe(function (data) {
                 _this.data = data.json();
-                if (_this.data.error === true) {
+                if (_this.data.success === false) {
                     var alert = _this.alertCtrl.create({
                         title: "Login fail",
                         subTitle: _this.data.message,
                         buttons: ['close']
                     });
                     alert.present();
+                    _this.email = null;
+                    _this.password = null;
+                    _this.disableSubmit = false;
+                }
+                else if (_this.data.option == true) {
+                    var alert = _this.alertCtrl.create({
+                        title: "Login fail",
+                        subTitle: _this.data.message,
+                        buttons: [
+                            {
+                                text: 'Resend the email',
+                                handler: function (data) {
+                                    console.log('resend the email clicked');
+                                    _this.resendEmail(_this.data.email);
+                                }
+                            },
+                            {
+                                text: 'Cancel',
+                                handler: function (data) {
+                                    console.log('Cancel clicked');
+                                }
+                            }
+                        ]
+                    });
+                    alert.present();
+                    _this.email = null;
+                    _this.password = null;
                     _this.disableSubmit = false;
                 }
                 else {
@@ -211,6 +238,29 @@ export var LoginPage = (function () {
                 _this.disableSubmit = false;
             });
         }
+    };
+    LoginPage.prototype.resendEmail = function (email) {
+        var _this = this;
+        var data = {
+            email: email
+        };
+        this.http.post("https://lisahoroscope.herokuapp.com/api/resendEmail", data)
+            .subscribe(function (data) {
+            console.log('resend the email');
+            var alert = _this.alertCtrl.create({
+                title: data.json().title,
+                subTitle: data.json().message,
+                buttons: ["close"]
+            });
+            alert.present();
+        }, function (error) {
+            var errorAlert = _this.alertCtrl.create({
+                title: "Resend the email fail",
+                subTitle: "Please try again later",
+                buttons: ["close"]
+            });
+            errorAlert.present();
+        });
     };
     LoginPage.prototype.loginFB = function () {
         //this.disableSubmit = true;
