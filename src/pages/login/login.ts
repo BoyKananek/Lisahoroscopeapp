@@ -190,13 +190,40 @@ export class LoginPage {
       this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
         .subscribe(data => {
           this.data = data.json();
-          if (this.data.error === true) {
+          if (this.data.success === false) {
             var alert = this.alertCtrl.create({
               title: "Login fail",
               subTitle: this.data.message,
               buttons: ['close']
             });
             alert.present();
+            this.email = null;
+            this.password = null;
+            this.disableSubmit = false;
+          }
+          else if (this.data.option == true) {
+            var alert = this.alertCtrl.create({
+              title: "Login fail",
+              subTitle: this.data.message,
+              buttons: [
+                {
+                  text: 'Resend the email',
+                  handler: data => {
+                    console.log('resend the email clicked');
+                    this.resendEmail(this.data.email);
+                  }
+                },
+                {
+                  text: 'Cancel',
+                  handler: data => {
+                    console.log('Cancel clicked');
+                  }
+                }
+              ]
+            });
+            alert.present();
+            this.email = null;
+            this.password = null;
             this.disableSubmit = false;
           }
           else {
@@ -216,6 +243,21 @@ export class LoginPage {
           this.disableSubmit = false;
         });
     }
+  }
+  resendEmail(email) {
+    var data = {
+      email : email
+    }
+    this.http.post("https://lisahoroscope.herokuapp.com/api/resendEmail", data)
+      .subscribe(data => {
+        console.log('resend the email');
+        var alert = this.alertCtrl.create({
+          title: data.json().title,
+          subTitle: data.json().message,
+          buttons: ["close"]
+        });
+        alert.present();
+      });
   }
   loginFB() {
     //this.disableSubmit = true;
