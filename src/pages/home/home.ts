@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Facebook } from 'ionic-native';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 

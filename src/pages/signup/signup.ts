@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { NavController,AlertController,LoadingController } from 'ionic-angular';
-import { Facebook } from 'ionic-native';
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html'

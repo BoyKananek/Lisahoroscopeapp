@@ -123,8 +123,8 @@ export class LoginPage {
           }
         }, error => {
           var alert = this.alertCtrl.create({
-            title: "Server down!",
-            subTitle: "Please try again later.",
+            title: "Connection failed",
+            subTitle: "Apologies for the inconvenience. Please try again later.",
             buttons: ["Close"]
           });
           alert.present();

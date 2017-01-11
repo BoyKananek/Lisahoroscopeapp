@@ -107,16 +107,16 @@ export var LoginPage = (function () {
                 }
                 else {
                     var alert = _this.alertCtrl.create({
-                        title: "Reset password proceed",
-                        subTitle: data.json().message,
+                        title: "We just emailed you a link",
+                        subTitle: "Please check your email address to continue.",
                         buttons: ["Close"]
                     });
                     alert.present();
                 }
             }, function (error) {
                 var alert = _this.alertCtrl.create({
-                    title: "Server down!",
-                    subTitle: "Please try again later.",
+                    title: "Connection failed",
+                    subTitle: "Apologies for the inconvenience. Please try again later.",
                     buttons: ["Close"]
                 });
                 alert.present();
@@ -185,7 +185,7 @@ export var LoginPage = (function () {
             else if (!this.validateEmail(data.email)) {
                 var alert = this.alertCtrl.create({
                     title: "Login failed",
-                    subTitle: "Please enter your email in correct format",
+                    subTitle: "Please make sure that you type in your email address correctly.",
                     buttons: ["Close"]
                 });
                 alert.present();
@@ -298,8 +298,8 @@ export var LoginPage = (function () {
                     console.log("Successful");
                 }, function (error) {
                     var errorAlert = alert.create({
-                        title: "Login failed",
-                        subTitle: "Please try again later",
+                        title: "Connection failed",
+                        subTitle: "Apologies for the inconvenience. Please try again later.",
                         buttons: ["Close"]
                     });
                     errorAlert.present();
@@ -309,8 +309,8 @@ export var LoginPage = (function () {
                 console.log("Error Login with facebook");
                 console.log(error.message());
                 var alert = this.alertCtrl.create({
-                    title: "Login failed",
-                    subTitle: "Something went wrong",
+                    title: "Connection failed",
+                    subTitle: "Apologies for the inconvenience. Please try again later.",
                     buttons: ["Close"]
                 });
                 alert.present();

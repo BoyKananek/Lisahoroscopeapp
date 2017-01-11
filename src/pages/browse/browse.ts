@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Facebook } from 'ionic-native';
 import { NavController,NavParams } from 'ionic-angular';
 import { HoroscopePage } from '../horoscope/horoscope';
 
