@@ -166,11 +166,7 @@ export class LoginPage {
   }
   loginEmail() {
     this.disableSubmit = true;
-    var data = {
-      email: this.email.toLowerCase(),
-      password: this.password
-    };
-    if (!data.email || !data.password) {
+    if (this.email === undefined || this.password === undefined || this.email === null || this.password === null) {
       var alert = this.alertCtrl.create({
         title: "Login failed",
         subTitle: "Please enter your email and password",
@@ -178,71 +174,86 @@ export class LoginPage {
       });
       alert.present();
       this.disableSubmit = false;
-    } else if (!this.validateEmail(data.email)) {
-      var alert = this.alertCtrl.create({
-        title: "Login failed",
-        subTitle: "Please enter your email in correct format",
-        buttons: ["Close"]
-      });
-      alert.present();
-      this.disableSubmit = false;
-    } else {
-      console.log("Logging in with email");
-      this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
-        .subscribe(data => {
-          this.data = data.json();
-          if (this.data.success === false) {
-            var alert = this.alertCtrl.create({
-              title: "Login failed",
-              subTitle: this.data.message,
-              buttons: ['Close']
-            });
-            alert.present();
-            this.email = null;
-            this.password = null;
-            this.disableSubmit = false;
-          }
-          else if (this.data.option == true) {
-            var alert = this.alertCtrl.create({
-              title: "Login failed",
-              subTitle: this.data.message,
-              buttons: [
-                {
-                  text: 'Resend the email',
-                  handler: data => {
-                    console.log('resend the email clicked');
-                    this.resendEmail(this.data.email);
-                  }
-                },
-                {
-                  text: 'Cancel',
-                  handler: data => {
-                    console.log('Cancel clicked');
-                  }
-                }
-              ]
-            });
-            alert.present();
-            this.email = null;
-            this.password = null;
-            this.disableSubmit = false;
-          }
-          else {
-            console.log('Login Successful');
-            this.disableSubmit = false;
-            this.gotoProfile();
-            this.email = null;
-            this.password = null;
-          }
-        }, error => {
-          var alert = this.alertCtrl.create({
-            title: "Login failed",
-            subTitle: "Please try again later",
-            buttons: ["Close"]
-          });
-          alert.present();
-          this.disableSubmit = false;
+    }
+    else {
+      var data = {
+        email: this.email.toLowerCase(),
+        password: this.password
+      };
+      if (!this.email || !this.password) {
+        var alert = this.alertCtrl.create({
+          title: "Login failed",
+          subTitle: "Please enter your email and password",
+          buttons: ["Close"]
         });
+        alert.present();
+        this.disableSubmit = false;
+      } else if (!this.validateEmail(data.email)) {
+        var alert = this.alertCtrl.create({
+          title: "Login failed",
+          subTitle: "Please enter your email in correct format",
+          buttons: ["Close"]
+        });
+        alert.present();
+        this.disableSubmit = false;
+      } else {
+        console.log("Logging in with email");
+        this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
+          .subscribe(data => {
+            this.data = data.json();
+            if (this.data.success === false) {
+              var alert = this.alertCtrl.create({
+                title: "Login failed",
+                subTitle: this.data.message,
+                buttons: ['Close']
+              });
+              alert.present();
+              this.email = null;
+              this.password = null;
+              this.disableSubmit = false;
+            }
+            else if (this.data.option == true) {
+              var alert = this.alertCtrl.create({
+                title: "Login failed",
+                subTitle: this.data.message,
+                buttons: [
+                  {
+                    text: 'Resend the email',
+                    handler: data => {
+                      console.log('resend the email clicked');
+                      this.resendEmail(this.data.email);
+                    }
+                  },
+                  {
+                    text: 'Cancel',
+                    handler: data => {
+                      console.log('Cancel clicked');
+                    }
+                  }
+                ]
+              });
+              alert.present();
+              this.email = null;
+              this.password = null;
+              this.disableSubmit = false;
+            }
+            else {
+              console.log('Login Successful');
+              this.disableSubmit = false;
+              this.gotoProfile();
+              this.email = null;
+              this.password = null;
+            }
+          }, error => {
+            var alert = this.alertCtrl.create({
+              title: "Login failed",
+              subTitle: "Please try again later",
+              buttons: ["Close"]
+            });
+            alert.present();
+            this.disableSubmit = false;
+          });
+      }
     }
   }
   resendEmail(email) {

@@ -24,7 +24,7 @@ export class TabsPage {
   }
   share() {
     var alert = this.alertCtrl.create();
-    alert.setTitle('Choose horoscope Sign');
+    alert.setTitle('Choose horoscope sign');
 
     alert.addInput({
       type: 'radio',

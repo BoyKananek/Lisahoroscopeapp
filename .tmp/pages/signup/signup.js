@@ -26,7 +26,7 @@ export var SignupPage = (function () {
             var alert = this.alertCtrl.create({
                 title: "Sign up fail",
                 subTitle: "Please fill in the information above!",
-                buttons: ["close"]
+                buttons: ["Close"]
             });
             alert.present();
             this.disableSubmit = false;
@@ -35,7 +35,7 @@ export var SignupPage = (function () {
             var alert = this.alertCtrl.create({
                 title: "Sign up fail",
                 subTitle: "Please enter your email in email format",
-                buttons: ["close"]
+                buttons: ["Close"]
             });
             alert.present();
             this.disableSubmit = false;
@@ -44,16 +44,16 @@ export var SignupPage = (function () {
             var alert = this.alertCtrl.create({
                 title: "Sign up fail",
                 subTitle: "Password and Re password must be the same!",
-                buttons: ["close"]
+                buttons: ["Close"]
             });
             alert.present();
             this.disableSubmit = false;
         }
         else if (this.password.length < 8) {
             var alert = this.alertCtrl.create({
-                title: "Sign up fail",
-                subTitle: "Password length should equal to 8 character or more than",
-                buttons: ["close"]
+                title: "Sign up failed",
+                subTitle: "Password length must be at least 8 characters or more.",
+                buttons: ["Close"]
             });
             alert.present();
             console.log('Password is too short');
@@ -65,16 +65,16 @@ export var SignupPage = (function () {
                 var alert = _this.alertCtrl.create({
                     title: data.json().title,
                     subTitle: data.json().message,
-                    buttons: ["close"]
+                    buttons: ["Close"]
                 });
                 alert.present();
                 _this.disableSubmit = false;
                 _this.navCtrl.pop();
             }, function (error) {
                 var alert = _this.alertCtrl.create({
-                    title: "Sign up fail",
-                    subTitle: "The email are already existing",
-                    buttons: ["close"]
+                    title: "Sign up failed",
+                    subTitle: "This email is already taken",
+                    buttons: ["Close"]
                 });
                 alert.present();
                 _this.disableSubmit = false;

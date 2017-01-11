@@ -55,8 +55,8 @@ export class LoginPage {
 
   forgotPassword() {
     let prompt = this.alertCtrl.create({
-      title: 'Forget your password',
-      message: "Enter your email address",
+      title: 'Let’s find your account',
+      message: "Please enter your email address",
       inputs: [
         {
           name: 'Email',
@@ -71,9 +71,9 @@ export class LoginPage {
           }
         },
         {
-          text: 'Save',
+          text: 'Submit',
           handler: data => {
-            console.log('Saved clicked');
+            console.log('submit clicked');
             this.forgetEmail = data.Email.toLowerCase();
             this.requestToresetPass();
           }
@@ -85,17 +85,17 @@ export class LoginPage {
   requestToresetPass() {
     if (!this.forgetEmail) {
       var alert = this.alertCtrl.create({
-        title: "Sign up fail",
+        title: "Sign up failed",
         subTitle: "Please enter your email",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
     }
     else if (!this.validateEmail(this.forgetEmail)) {
       var alert = this.alertCtrl.create({
-        title: "Sign up fail",
+        title: "Sign up failed",
         subTitle: "Please enter your email in email format",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
     }
@@ -109,21 +109,22 @@ export class LoginPage {
             var alert = this.alertCtrl.create({
               title: "Error",
               subTitle: data.json().message,
-              buttons: ["close"]
+              buttons: ["Close"]
             });
             alert.present();
           } else {
             var alert = this.alertCtrl.create({
               title: "Reset password proceed",
               subTitle: data.json().message,
-              buttons: ["close"]
+              buttons: ["Close"]
             });
             alert.present();
           }
         }, error => {
           var alert = this.alertCtrl.create({
             title: "Server down!",
-            buttons: ["close"]
+            subTitle: "Please try again later.",
+            buttons: ["Close"]
           });
           alert.present();
         });
@@ -135,9 +136,9 @@ export class LoginPage {
       .subscribe(data => {
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
-            title: "Login Fail",
+            title: "Login Failed",
             subTitle: this.data.message,
-            buttons: ['close']
+            buttons: ['Close']
           });
           alert.present();
         } else {
@@ -165,83 +166,94 @@ export class LoginPage {
   }
   loginEmail() {
     this.disableSubmit = true;
-    var data = {
-      email: this.email.toLowerCase(),
-      password: this.password
-    };
-    if (!data.email || !data.password) {
+    if (this.email === undefined || this.password === undefined || this.email === null || this.password === null) {
       var alert = this.alertCtrl.create({
-        title: "Login fail",
+        title: "Login failed",
         subTitle: "Please enter your email and password",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
       this.disableSubmit = false;
-    } else if (!this.validateEmail(data.email)) {
-      var alert = this.alertCtrl.create({
-        title: "Login fail",
-        subTitle: "Please enter your email in correct format",
-        buttons: ["close"]
-      });
-      alert.present();
-      this.disableSubmit = false;
-    } else {
-      console.log("Logging in with email");
-      this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
-        .subscribe(data => {
-          this.data = data.json();
-          if (this.data.success === false) {
-            var alert = this.alertCtrl.create({
-              title: "Login fail",
-              subTitle: this.data.message,
-              buttons: ['close']
-            });
-            alert.present();
-            this.email = null;
-            this.password = null;
-            this.disableSubmit = false;
-          }
-          else if (this.data.option == true) {
-            var alert = this.alertCtrl.create({
-              title: "Login fail",
-              subTitle: this.data.message,
-              buttons: [
-                {
-                  text: 'Resend the email',
-                  handler: data => {
-                    console.log('resend the email clicked');
-                    this.resendEmail(this.data.email);
-                  }
-                },
-                {
-                  text: 'Cancel',
-                  handler: data => {
-                    console.log('Cancel clicked');
-                  }
-                }
-              ]
-            });
-            alert.present();
-            this.email = null;
-            this.password = null;
-            this.disableSubmit = false;
-          }
-          else {
-            console.log('Login Successful');
-            this.disableSubmit = false;
-            this.gotoProfile();
-            this.email = null;
-            this.password = null;
-          }
-        }, error => {
-          var alert = this.alertCtrl.create({
-            title: "Login fail",
-            subTitle: "Please try again later",
-            buttons: ["close"]
-          });
-          alert.present();
-          this.disableSubmit = false;
+    }
+    else {
+      var data = {
+        email: this.email.toLowerCase(),
+        password: this.password
+      };
+      if (!this.email || !this.password) {
+        var alert = this.alertCtrl.create({
+          title: "Login failed",
+          subTitle: "Please enter your email and password",
+          buttons: ["Close"]
         });
+        alert.present();
+        this.disableSubmit = false;
+      } else if (!this.validateEmail(data.email)) {
+        var alert = this.alertCtrl.create({
+          title: "Login failed",
+          subTitle: "Please enter your email in correct format",
+          buttons: ["Close"]
+        });
+        alert.present();
+        this.disableSubmit = false;
+      } else {
+        console.log("Logging in with email");
+        this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
+          .subscribe(data => {
+            this.data = data.json();
+            if (this.data.success === false) {
+              var alert = this.alertCtrl.create({
+                title: "Login failed",
+                subTitle: this.data.message,
+                buttons: ['Close']
+              });
+              alert.present();
+              this.email = null;
+              this.password = null;
+              this.disableSubmit = false;
+            }
+            else if (this.data.option == true) {
+              var alert = this.alertCtrl.create({
+                title: "Login failed",
+                subTitle: this.data.message,
+                buttons: [
+                  {
+                    text: 'Resend the email',
+                    handler: data => {
+                      console.log('resend the email clicked');
+                      this.resendEmail(this.data.email);
+                    }
+                  },
+                  {
+                    text: 'Cancel',
+                    handler: data => {
+                      console.log('Cancel clicked');
+                    }
+                  }
+                ]
+              });
+              alert.present();
+              this.email = null;
+              this.password = null;
+              this.disableSubmit = false;
+            }
+            else {
+              console.log('Login Successful');
+              this.disableSubmit = false;
+              this.gotoProfile();
+              this.email = null;
+              this.password = null;
+            }
+          }, error => {
+            var alert = this.alertCtrl.create({
+              title: "Login failed",
+              subTitle: "Please try again later",
+              buttons: ["Close"]
+            });
+            alert.present();
+            this.disableSubmit = false;
+          });
+      }
     }
   }
   resendEmail(email) {
@@ -254,14 +266,14 @@ export class LoginPage {
         var alert = this.alertCtrl.create({
           title: data.json().title,
           subTitle: data.json().message,
-          buttons: ["close"]
+          buttons: ["Close"]
         });
         alert.present();
       }, error => {
         var errorAlert = this.alertCtrl.create({
-          title: "Resend the email fail",
+          title: "Resend the email failed",
           subTitle: "Please try again later",
-          buttons: ["close"]
+          buttons: ["Close"]
         });
         errorAlert.present();
       });
@@ -291,9 +303,9 @@ export class LoginPage {
               console.log("Successful");
             }, error => {
               var errorAlert = alert.create({
-                title: "Login fail",
+                title: "Login failed",
                 subTitle: "Please try again later",
-                buttons: ["close"]
+                buttons: ["Close"]
               });
               errorAlert.present();
               console.log("Failure");
@@ -303,9 +315,9 @@ export class LoginPage {
           console.log("Error Login with facebook");
           console.log(error.message());
           var alert = this.alertCtrl.create({
-            title: "Login fail",
+            title: "Login failed",
             subTitle: "Something went wrong",
-            buttons: ["close"]
+            buttons: ["Close"]
           });
           alert.present();
         });

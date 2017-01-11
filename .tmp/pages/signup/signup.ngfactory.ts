@@ -256,12 +256,15 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
   _text_89:any;
   _el_90:any;
   _text_91:any;
-  _el_92:any;
-  /*private*/ _appEl_92:import3.AppElement;
-  _Button_92_4:import25.Wrapper_Button;
-  _text_93:any;
+  _text_92:any;
+  _el_93:any;
   _text_94:any;
-  _text_95:any;
+  _el_95:any;
+  /*private*/ _appEl_95:import3.AppElement;
+  _Button_95_4:import25.Wrapper_Button;
+  _text_96:any;
+  _text_97:any;
+  _text_98:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
@@ -588,19 +591,24 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     this._text_87 = this.renderer.createText(this._el_73,'\n        ',(null as any));
     this._text_88 = this.renderer.createText(this._el_71,'\n    ',(null as any));
     this._text_89 = this.renderer.createText((null as any),'\n    ',(null as any));
-    this._el_90 = this.renderer.createElement((null as any),'br',(null as any));
-    this._text_91 = this.renderer.createText((null as any),'\n    ',(null as any));
-    this._el_92 = this.renderer.createElement((null as any),'button',(null as any));
-    this.renderer.setElementAttribute(this._el_92,'block','');
-    this.renderer.setElementAttribute(this._el_92,'class','primary-btn');
-    this.renderer.setElementAttribute(this._el_92,'ion-button','');
-    this._appEl_92 = new import3.AppElement(92,9,this,this._el_92);
-    var compView_92:any = import25.viewFactory_Button0(this.viewUtils,this.injector(92),this._appEl_92);
-    this._Button_92_4 = new import25.Wrapper_Button((null as any),'',this.parentInjector.get(import26.Config),new import27.ElementRef(this._el_92),this.renderer);
-    this._appEl_92.initComponent(this._Button_92_4.context,([] as any[]),compView_92);
-    this._text_93 = this.renderer.createText((null as any),'Sign up',(null as any));
-    compView_92.create(this._Button_92_4.context,[([] as any[]).concat([this._text_93])],(null as any));
-    this._text_94 = this.renderer.createText((null as any),'\n',(null as any));
+    this._el_90 = this.renderer.createElement((null as any),'p',(null as any));
+    this.renderer.setElementAttribute(this._el_90,'style','font-size: smaller;color: #808080;');
+    this.renderer.setElementAttribute(this._el_90,'text-center','');
+    this._text_91 = this.renderer.createText(this._el_90,' Password length must be at least 8 characters or more. ',(null as any));
+    this._text_92 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_93 = this.renderer.createElement((null as any),'br',(null as any));
+    this._text_94 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_95 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_95,'block','');
+    this.renderer.setElementAttribute(this._el_95,'class','primary-btn');
+    this.renderer.setElementAttribute(this._el_95,'ion-button','');
+    this._appEl_95 = new import3.AppElement(95,9,this,this._el_95);
+    var compView_95:any = import25.viewFactory_Button0(this.viewUtils,this.injector(95),this._appEl_95);
+    this._Button_95_4 = new import25.Wrapper_Button((null as any),'',this.parentInjector.get(import26.Config),new import27.ElementRef(this._el_95),this.renderer);
+    this._appEl_95.initComponent(this._Button_95_4.context,([] as any[]),compView_95);
+    this._text_96 = this.renderer.createText((null as any),'Sign up',(null as any));
+    compView_95.create(this._Button_95_4.context,[([] as any[]).concat([this._text_96])],(null as any));
+    this._text_97 = this.renderer.createText((null as any),'\n',(null as any));
     compView_9.create(this._Content_9_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
@@ -616,15 +624,17 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
         this._el_71,
         this._text_89,
         this._el_90,
-        this._text_91,
-        this._el_92,
-        this._text_94
+        this._text_92,
+        this._el_93,
+        this._text_94,
+        this._el_95,
+        this._text_97
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_95 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_98 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
@@ -665,7 +675,7 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     this._expr_47 = import7.UNINITIALIZED;
     this._expr_48 = import7.UNINITIALIZED;
     this._expr_52 = import7.UNINITIALIZED;
-    var disposable_4:Function = this.renderer.listen(this._el_92,'click',this.eventHandler(this._handle_click_92_0.bind(this)));
+    var disposable_4:Function = this.renderer.listen(this._el_95,'click',this.eventHandler(this._handle_click_95_0.bind(this)));
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -759,10 +769,13 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
       this._text_89,
       this._el_90,
       this._text_91,
-      this._el_92,
-      this._text_93,
+      this._text_92,
+      this._el_93,
       this._text_94,
-      this._text_95
+      this._el_95,
+      this._text_96,
+      this._text_97,
+      this._text_98
     ]
     ,[
       disposable_0,
@@ -820,8 +833,8 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     if (((token === import44.ItemContent) && ((81 <= requestNodeIndex) && (requestNodeIndex <= 84)))) { return this._ItemContent_81_5.context; }
     if (((token === import45.CardContent) && ((73 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._CardContent_73_3.context; }
     if (((token === import45.Card) && ((71 <= requestNodeIndex) && (requestNodeIndex <= 88)))) { return this._Card_71_3.context; }
-    if (((token === import46.Button) && ((92 <= requestNodeIndex) && (requestNodeIndex <= 93)))) { return this._Button_92_4.context; }
-    if (((token === import47.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 94)))) { return this._Content_9_4.context; }
+    if (((token === import46.Button) && ((95 <= requestNodeIndex) && (requestNodeIndex <= 96)))) { return this._Button_95_4.context; }
+    if (((token === import47.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 97)))) { return this._Content_9_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -894,8 +907,8 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     this._TextInput_83_7.check_type(currVal_50,throwOnChange,false);
     this._TextInput_83_7.detectChangesInternal(this,this._el_83,throwOnChange);
     const currVal_53:any = '';
-    this._Button_92_4.check_block(currVal_53,throwOnChange,false);
-    if (this._Button_92_4.detectChangesInternal(this,this._el_92,throwOnChange)) { this._appEl_92.componentView.markAsCheckOnce(); }
+    this._Button_95_4.check_block(currVal_53,throwOnChange,false);
+    if (this._Button_95_4.detectChangesInternal(this,this._el_95,throwOnChange)) { this._appEl_95.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
       if (this._query_Button_24_1.dirty) {
@@ -946,7 +959,7 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
       if ((this.numberOfChecks === 0)) { this._Item_62_4.context.ngAfterContentInit(); }
       this._TextInput_83_7.context.ngAfterContentChecked();
       if ((this.numberOfChecks === 0)) { this._Item_81_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_92_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_95_4.context.ngAfterContentInit(); }
     }
     const currVal_0:any = this._Navbar_2_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
@@ -1105,7 +1118,7 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     }
     const currVal_52:any = this.context.disableSubmit;
     if (import4.checkBinding(throwOnChange,this._expr_52,currVal_52)) {
-      this.renderer.setElementProperty(this._el_92,'disabled',currVal_52);
+      this.renderer.setElementProperty(this._el_95,'disabled',currVal_52);
       this._expr_52 = currVal_52;
     }
     this.detectViewChildrenChanges(throwOnChange);
@@ -1146,7 +1159,7 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     const pd_0:any = ((<any>(this.context.repassword = $event)) !== false);
     return (true && pd_0);
   }
-  private _handle_click_92_0($event:any):boolean {
+  private _handle_click_95_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.signUpEmail()) !== false);
     return (true && pd_0);

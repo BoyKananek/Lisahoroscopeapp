@@ -376,7 +376,7 @@ var _View_LoginPage0 = (function (_super) {
         this._text_110 = this.renderer.createText(this._el_109, '\n                    ', null);
         this._el_111 = this.renderer.createElement(this._el_109, 'span', null);
         this.renderer.setElementAttribute(this._el_111, 'class', 'gray-color font-size-regular f-bold');
-        this._text_112 = this.renderer.createText(this._el_111, 'Don\'t have a account?', null);
+        this._text_112 = this.renderer.createText(this._el_111, 'Don\'t have an account?', null);
         this._text_113 = this.renderer.createText(this._el_109, '\n                    ', null);
         this._el_114 = this.renderer.createElement(this._el_109, 'button', null);
         this.renderer.setElementAttribute(this._el_114, 'class', 'pink-text-btn');
@@ -403,7 +403,7 @@ var _View_LoginPage0 = (function (_super) {
         this._text_125 = this.renderer.createText(this._el_122, '\n                ', null);
         this._el_126 = this.renderer.createElement(this._el_122, 'p', null);
         this.renderer.setElementAttribute(this._el_126, 'class', 't-center gray-color font-size-small');
-        this._text_127 = this.renderer.createText(this._el_126, 'By using LISA Horoscope APP, you agree to our ', null);
+        this._text_127 = this.renderer.createText(this._el_126, 'By using LISA Horoscope APP, you agree to our', null);
         this._el_128 = this.renderer.createElement(this._el_126, 'button', null);
         this.renderer.setElementAttribute(this._el_128, 'class', 'pink-text-link t-underline');
         this._NavPush_128_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController, null));

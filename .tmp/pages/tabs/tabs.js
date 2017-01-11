@@ -21,7 +21,7 @@ export var TabsPage = (function () {
     TabsPage.prototype.share = function () {
         var _this = this;
         var alert = this.alertCtrl.create();
-        alert.setTitle('Choose horoscope Sign');
+        alert.setTitle('Choose horoscope sign');
         alert.addInput({
             type: 'radio',
             label: 'Aries',
