@@ -30,6 +30,7 @@ export class LoginPage {
   _loginsub: (dataObj: any) => void;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
     this.data = null;
+    
   }
   loginHandler(dataObj) {
     this.data = dataObj[0];

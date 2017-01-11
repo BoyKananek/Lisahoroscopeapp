@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Facebook } from 'ionic-native';
 import { NavController,NavParams } from 'ionic-angular';
 import { HoroscopePage } from '../horoscope/horoscope';
 
@@ -11,6 +11,7 @@ export class BrowsePage {
   data : any;
   constructor(public navCtrl: NavController, public params: NavParams) {
     this.data = params.get('data');
+    
   }
   gotoAries() {
     this.navCtrl.push(HoroscopePage, { zodiac: 'aries',data: this.data });

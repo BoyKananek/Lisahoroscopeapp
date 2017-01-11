@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController, ActionSheetController } from 'ionic-angular';
-import { SocialSharing } from 'ionic-native';
+import { SocialSharing} from 'ionic-native';
+
 import { HomePage } from '../home/home';
 import { BrowsePage } from '../browse/browse';
 import { ProfilePage } from '../profile/profile';
@@ -20,7 +21,7 @@ export class TabsPage {
   public tabIndex: Number = 0;
   constructor(public navCtrl: NavController, params: NavParams, public alertCtrl: AlertController, public http: Http, public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController) {
     this.data = params.get('data');
-
+    
   }
   share() {
     var alert = this.alertCtrl.create();

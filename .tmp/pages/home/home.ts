@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Facebook } from 'ionic-native';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
@@ -16,6 +16,7 @@ export class HomePage {
   imgsign: any;
   isDataAvailable: boolean = false;
   constructor(public navCtrl: NavController, public params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController) {
+
     this.data = params.get('data');
     this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
       .subscribe(data => {

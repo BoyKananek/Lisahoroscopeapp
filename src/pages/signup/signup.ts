@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { NavController,AlertController,LoadingController } from 'ionic-angular';
-
+import { Facebook } from 'ionic-native';
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html'
@@ -13,7 +13,7 @@ export class SignupPage {
   repassword : any;
   disableSubmit :boolean = false;
   constructor(public navCtrl: NavController,private http: Http,public alertCtrl: AlertController,public loadingCtrl: LoadingController) {
-
+    
   }
   validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -29,7 +29,7 @@ export class SignupPage {
       };
     if (!this.name || !this.email || !this.password || !this.repassword) {
       var alert = this.alertCtrl.create({
-          title: "Sign up fail",
+          title: "Sign up failed",
           subTitle: "Please fill in the information above!",
           buttons: ["Close"]
         });
@@ -37,16 +37,16 @@ export class SignupPage {
         this.disableSubmit = false;
     }else if (!this.validateEmail(this.email)){
       var alert = this.alertCtrl.create({
-          title: "Sign up fail",
-          subTitle: "Please enter your email in email format",
+          title: "Sign up failed",
+          subTitle: "Please make sure that you type in your email address correctly.",
           buttons: ["Close"]
         });
         alert.present();
         this.disableSubmit = false;
     } else if (this.password != this.repassword){
       var alert = this.alertCtrl.create({
-          title: "Sign up fail",
-          subTitle: "Password and Re password must be the same!",
+          title: "Sign up failed",
+          subTitle: "Password does not match. Please try again.",
           buttons: ["Close"]
         });
         alert.present();

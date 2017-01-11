@@ -13,7 +13,9 @@ import { NavController } from 'ionic-angular';
 })
 export class TermsOfServicesPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+    
+  }
 
   ionViewDidLoad() {
     console.log('Hello TermsOfServicesPage Page');

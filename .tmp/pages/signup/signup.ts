@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { NavController,AlertController,LoadingController } from 'ionic-angular';
-
+import { Facebook } from 'ionic-native';
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html'
@@ -13,7 +13,7 @@ export class SignupPage {
   repassword : any;
   disableSubmit :boolean = false;
   constructor(public navCtrl: NavController,private http: Http,public alertCtrl: AlertController,public loadingCtrl: LoadingController) {
-
+    
   }
   validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
