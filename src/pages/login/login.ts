@@ -55,8 +55,8 @@ export class LoginPage {
 
   forgotPassword() {
     let prompt = this.alertCtrl.create({
-      title: 'Forget your password',
-      message: "Enter your email address",
+      title: 'Let’s find your account',
+      message: "Please enter your email address",
       inputs: [
         {
           name: 'Email',
@@ -71,9 +71,9 @@ export class LoginPage {
           }
         },
         {
-          text: 'Save',
+          text: 'Submit',
           handler: data => {
-            console.log('Saved clicked');
+            console.log('submit clicked');
             this.forgetEmail = data.Email.toLowerCase();
             this.requestToresetPass();
           }
@@ -171,17 +171,17 @@ export class LoginPage {
     };
     if (!data.email || !data.password) {
       var alert = this.alertCtrl.create({
-        title: "Login fail",
+        title: "Login failed",
         subTitle: "Please enter your email and password",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
       this.disableSubmit = false;
     } else if (!this.validateEmail(data.email)) {
       var alert = this.alertCtrl.create({
-        title: "Login fail",
+        title: "Login failed",
         subTitle: "Please enter your email in correct format",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
       this.disableSubmit = false;
@@ -192,9 +192,9 @@ export class LoginPage {
           this.data = data.json();
           if (this.data.success === false) {
             var alert = this.alertCtrl.create({
-              title: "Login fail",
+              title: "Login failed",
               subTitle: this.data.message,
-              buttons: ['close']
+              buttons: ['Close']
             });
             alert.present();
             this.email = null;
@@ -203,7 +203,7 @@ export class LoginPage {
           }
           else if (this.data.option == true) {
             var alert = this.alertCtrl.create({
-              title: "Login fail",
+              title: "Login failed",
               subTitle: this.data.message,
               buttons: [
                 {
