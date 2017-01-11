@@ -85,17 +85,17 @@ export class LoginPage {
   requestToresetPass() {
     if (!this.forgetEmail) {
       var alert = this.alertCtrl.create({
-        title: "Sign up fail",
+        title: "Sign up failed",
         subTitle: "Please enter your email",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
     }
     else if (!this.validateEmail(this.forgetEmail)) {
       var alert = this.alertCtrl.create({
-        title: "Sign up fail",
+        title: "Sign up failed",
         subTitle: "Please enter your email in email format",
-        buttons: ["close"]
+        buttons: ["Close"]
       });
       alert.present();
     }
@@ -109,21 +109,22 @@ export class LoginPage {
             var alert = this.alertCtrl.create({
               title: "Error",
               subTitle: data.json().message,
-              buttons: ["close"]
+              buttons: ["Close"]
             });
             alert.present();
           } else {
             var alert = this.alertCtrl.create({
               title: "Reset password proceed",
               subTitle: data.json().message,
-              buttons: ["close"]
+              buttons: ["Close"]
             });
             alert.present();
           }
         }, error => {
           var alert = this.alertCtrl.create({
             title: "Server down!",
-            buttons: ["close"]
+            subTitle: "Please try again later.",
+            buttons: ["Close"]
           });
           alert.present();
         });
@@ -135,9 +136,9 @@ export class LoginPage {
       .subscribe(data => {
         if (data.json().success == false) {
           var alert = this.alertCtrl.create({
-            title: "Login Fail",
+            title: "Login Failed",
             subTitle: this.data.message,
-            buttons: ['close']
+            buttons: ['Close']
           });
           alert.present();
         } else {
@@ -235,9 +236,9 @@ export class LoginPage {
           }
         }, error => {
           var alert = this.alertCtrl.create({
-            title: "Login fail",
+            title: "Login failed",
             subTitle: "Please try again later",
-            buttons: ["close"]
+            buttons: ["Close"]
           });
           alert.present();
           this.disableSubmit = false;
@@ -254,14 +255,14 @@ export class LoginPage {
         var alert = this.alertCtrl.create({
           title: data.json().title,
           subTitle: data.json().message,
-          buttons: ["close"]
+          buttons: ["Close"]
         });
         alert.present();
       }, error => {
         var errorAlert = this.alertCtrl.create({
-          title: "Resend the email fail",
+          title: "Resend the email failed",
           subTitle: "Please try again later",
-          buttons: ["close"]
+          buttons: ["Close"]
         });
         errorAlert.present();
       });
@@ -291,9 +292,9 @@ export class LoginPage {
               console.log("Successful");
             }, error => {
               var errorAlert = alert.create({
-                title: "Login fail",
+                title: "Login failed",
                 subTitle: "Please try again later",
-                buttons: ["close"]
+                buttons: ["Close"]
               });
               errorAlert.present();
               console.log("Failure");
@@ -303,9 +304,9 @@ export class LoginPage {
           console.log("Error Login with facebook");
           console.log(error.message());
           var alert = this.alertCtrl.create({
-            title: "Login fail",
+            title: "Login failed",
             subTitle: "Something went wrong",
-            buttons: ["close"]
+            buttons: ["Close"]
           });
           alert.present();
         });
