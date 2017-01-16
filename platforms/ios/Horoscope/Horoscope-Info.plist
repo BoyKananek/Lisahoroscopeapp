@@ -68,6 +68,10 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
+    <key>UIInterfaceOrientation</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
     <key>FacebookAppID</key>
     <string>1333155163379937</string>
     <key>FacebookDisplayName</key>
@@ -87,10 +91,6 @@
       <string>fb-messenger-api</string>
       <string>fbauth2</string>
       <string>fbshareextension</string>
-    </array>
-    <key>UIInterfaceOrientation</key>
-    <array>
-      <string>UIInterfaceOrientationPortrait</string>
     </array>
   </dict>
 </plist>

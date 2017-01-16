@@ -31,6 +31,9 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
+    <feature name="YoikScreenOrientation">
+        <param name="ios-package" value="YoikScreenOrientation" />
+    </feature>
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
@@ -48,9 +51,6 @@
     </feature>
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
-    </feature>
-    <feature name="YoikScreenOrientation">
-        <param name="ios-package" value="YoikScreenOrientation" />
     </feature>
     <name>Horoscope</name>
     <description>An awesome Ionic/Cordova app.</description>

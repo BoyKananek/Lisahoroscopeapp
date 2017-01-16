@@ -33,6 +33,22 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-screen-orientation.screenorientation",
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
+        "id": "cordova-plugin-screen-orientation.screenorientation.ios",
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.ios.js",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "merges": [
+            "cordova.plugins.screenorientation"
+        ]
+    },
+    {
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "pluginId": "cordova-plugin-splashscreen",
@@ -72,22 +88,6 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
-    },
-    {
-        "id": "cordova-plugin-screen-orientation.screenorientation",
-        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
-        "pluginId": "cordova-plugin-screen-orientation",
-        "clobbers": [
-            "cordova.plugins.screenorientation"
-        ]
-    },
-    {
-        "id": "cordova-plugin-screen-orientation.screenorientation.ios",
-        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.ios.js",
-        "pluginId": "cordova-plugin-screen-orientation",
-        "merges": [
-            "cordova.plugins.screenorientation"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -96,13 +96,13 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.4",
     "cordova-plugin-device": "1.1.3",
     "cordova-plugin-facebook4": "1.7.4",
+    "cordova-plugin-screen-orientation": "1.4.2",
     "cordova-plugin-splashscreen": "4.0.0",
     "cordova-plugin-statusbar": "2.2.0",
     "cordova-plugin-whitelist": "1.3.0",
     "cordova-plugin-x-socialsharing": "5.1.3",
     "cordova-sqlite-storage": "2.0.0",
-    "ionic-plugin-keyboard": "2.2.1",
-    "cordova-plugin-screen-orientation": "1.4.2"
+    "ionic-plugin-keyboard": "2.2.1"
 };
 // BOTTOM OF METADATA
 });

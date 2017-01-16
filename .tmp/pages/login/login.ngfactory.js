@@ -138,7 +138,6 @@ var _View_LoginPage0 = (function (_super) {
         this._appEl_1.initComponent(this._Content_1_4.context, [], compView_1);
         this._text_2 = this.renderer.createText(null, '\n    ', null);
         this._el_3 = this.renderer.createElement(null, 'div', null);
-        this.renderer.setElementAttribute(this._el_3, 'ion-fixed', '');
         this._text_4 = this.renderer.createText(this._el_3, '\n    ', null);
         this._el_5 = this.renderer.createElement(this._el_3, 'ion-row', null);
         this._Row_5_3 = new import18.Wrapper_Row();
@@ -424,9 +423,10 @@ var _View_LoginPage0 = (function (_super) {
         this._text_140 = this.renderer.createText(this._el_3, '\n    ', null);
         this._text_141 = this.renderer.createText(null, '\n', null);
         compView_1.create(this._Content_1_4.context, [
-            [].concat([this._el_3]),
+            [],
             [].concat([
                 this._text_2,
+                this._el_3,
                 this._text_141
             ]),
             []

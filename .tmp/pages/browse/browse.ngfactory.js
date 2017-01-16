@@ -159,7 +159,6 @@ var _View_BrowsePage0 = (function (_super) {
         this._text_23 = this.renderer.createText(null, '\n  ', null);
         this._el_24 = this.renderer.createElement(null, 'div', null);
         this.renderer.setElementAttribute(this._el_24, 'class', 'form-container');
-        this.renderer.setElementAttribute(this._el_24, 'ion-fixed', '');
         this._text_25 = this.renderer.createText(this._el_24, '\n    ', null);
         this._el_26 = this.renderer.createElement(this._el_24, 'ion-row', null);
         this._Row_26_3 = new import16.Wrapper_Row();
@@ -554,9 +553,10 @@ var _View_BrowsePage0 = (function (_super) {
         this._text_289 = this.renderer.createText(this._el_24, '\n  ', null);
         this._text_290 = this.renderer.createText(null, '\n', null);
         compView_22.create(this._Content_22_4.context, [
-            [].concat([this._el_24]),
+            [],
             [].concat([
                 this._text_23,
+                this._el_24,
                 this._text_290
             ]),
             []

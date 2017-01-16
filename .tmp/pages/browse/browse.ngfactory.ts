@@ -523,7 +523,6 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
     this._text_23 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_24 = this.renderer.createElement((null as any),'div',(null as any));
     this.renderer.setElementAttribute(this._el_24,'class','form-container');
-    this.renderer.setElementAttribute(this._el_24,'ion-fixed','');
     this._text_25 = this.renderer.createText(this._el_24,'\n    ',(null as any));
     this._el_26 = this.renderer.createElement(this._el_24,'ion-row',(null as any));
     this._Row_26_3 = new import16.Wrapper_Row();
@@ -918,9 +917,10 @@ class _View_BrowsePage0 extends import1.AppView<import0.BrowsePage> {
     this._text_289 = this.renderer.createText(this._el_24,'\n  ',(null as any));
     this._text_290 = this.renderer.createText((null as any),'\n',(null as any));
     compView_22.create(this._Content_22_4.context,[
-      ([] as any[]).concat([this._el_24]),
+      ([] as any[]),
       ([] as any[]).concat([
         this._text_23,
+        this._el_24,
         this._text_290
       ]
       ),

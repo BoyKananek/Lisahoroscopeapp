@@ -18,6 +18,9 @@
             "APP_NAME": "Lisa Horoscope",
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
@@ -34,9 +37,6 @@
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
-        },
-        "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
         }
     },

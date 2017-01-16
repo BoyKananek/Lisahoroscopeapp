@@ -328,7 +328,6 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._appEl_1.initComponent(this._Content_1_4.context,([] as any[]),compView_1);
     this._text_2 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_3 = this.renderer.createElement((null as any),'div',(null as any));
-    this.renderer.setElementAttribute(this._el_3,'ion-fixed','');
     this._text_4 = this.renderer.createText(this._el_3,'\n    ',(null as any));
     this._el_5 = this.renderer.createElement(this._el_3,'ion-row',(null as any));
     this._Row_5_3 = new import18.Wrapper_Row();
@@ -618,9 +617,10 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._text_140 = this.renderer.createText(this._el_3,'\n    ',(null as any));
     this._text_141 = this.renderer.createText((null as any),'\n',(null as any));
     compView_1.create(this._Content_1_4.context,[
-      ([] as any[]).concat([this._el_3]),
+      ([] as any[]),
       ([] as any[]).concat([
         this._text_2,
+        this._el_3,
         this._text_141
       ]
       ),
