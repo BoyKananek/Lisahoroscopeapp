@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
 import { TermsOfServicesPage } from '../pages/terms-of-services/terms-of-services';
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TermsOfServicesPage } from '../pages/terms-of-services/terms-of-service
     SignupPage,
     PrivacyPolicyPage,
     TermsOfServicesPage,
+    TutorialPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -39,6 +41,7 @@ import { TermsOfServicesPage } from '../pages/terms-of-services/terms-of-service
     SignupPage,
     PrivacyPolicyPage,
     TermsOfServicesPage,
+    TutorialPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

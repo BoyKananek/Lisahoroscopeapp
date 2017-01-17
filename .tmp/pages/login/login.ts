@@ -5,6 +5,7 @@ import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
 import { PrivacyPolicyPage } from '../privacy-policy/privacy-policy';
 import { TermsOfServicesPage } from '../terms-of-services/terms-of-services';
+import { TutorialPage } from '../tutorial/tutorial';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
@@ -30,13 +31,13 @@ export class LoginPage {
   _loginsub: (dataObj: any) => void;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
     this.data = null;
-    
+
   }
   loginHandler(dataObj) {
     this.data = dataObj[0];
     console.log("Login with facebook Successful");
     this.gotoProfile();
-    this.data = null;
+    //this.data = null;
   }
   ngOnInit() {
     //Wait for events login wiht Facebook
@@ -143,7 +144,13 @@ export class LoginPage {
           });
           alert.present();
         } else {
-          this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+          if(this.data.isNewUser === true){
+            this.navCtrl.push(TutorialPage,{data:data.json()});
+            this.data = null;
+          }else{
+            this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+            this.data = null;
+          }
         }
       }, error => {
         console.log(error);

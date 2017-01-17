@@ -5,6 +5,7 @@ import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
 import { PrivacyPolicyPage } from '../privacy-policy/privacy-policy';
 import { TermsOfServicesPage } from '../terms-of-services/terms-of-services';
+import { TutorialPage } from '../tutorial/tutorial';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -25,7 +26,7 @@ export var LoginPage = (function () {
         this.data = dataObj[0];
         console.log("Login with facebook Successful");
         this.gotoProfile();
-        this.data = null;
+        //this.data = null;
     };
     LoginPage.prototype.ngOnInit = function () {
         var _this = this;
@@ -137,7 +138,14 @@ export var LoginPage = (function () {
                 alert.present();
             }
             else {
-                _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+                if (_this.data.isNewUser === true) {
+                    _this.navCtrl.push(TutorialPage, { data: data.json() });
+                    _this.data = null;
+                }
+                else {
+                    _this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+                    _this.data = null;
+                }
             }
         }, function (error) {
             console.log(error);
