@@ -206,6 +206,9 @@ var _View_TutorialPage0 = (function (_super) {
             []
         ], null);
         this._expr_0 = import7.UNINITIALIZED;
+        this._map_0 = import4.pureProxy1(function (p0) {
+            return { pager: p0 };
+        });
         var disposable_0 = this.renderer.listen(this._el_9, 'click', this.eventHandler(this._handle_click_9_0.bind(this)));
         var disposable_1 = this.renderer.listen(this._el_18, 'click', this.eventHandler(this._handle_click_18_0.bind(this)));
         var disposable_2 = this.renderer.listen(this._el_27, 'click', this.eventHandler(this._handle_click_27_0.bind(this)));
@@ -280,32 +283,34 @@ var _View_TutorialPage0 = (function (_super) {
         if (this._Content_0_4.detectChangesInternal(this, this._el_0, throwOnChange)) {
             this._appEl_0.componentView.markAsCheckOnce();
         }
-        var currVal_1 = '';
-        this._Slides_2_4.check_pager(currVal_1, throwOnChange, false);
+        var currVal_1 = this._map_0(true);
+        this._Slides_2_4.check_options(currVal_1, throwOnChange, false);
+        var currVal_2 = '';
+        this._Slides_2_4.check_pager(currVal_2, throwOnChange, false);
         if (this._Slides_2_4.detectChangesInternal(this, this._el_2, throwOnChange)) {
             this._appEl_2.componentView.markAsCheckOnce();
         }
         if (this._Slide_4_4.detectChangesInternal(this, this._el_4, throwOnChange)) {
             this._appEl_4.componentView.markAsCheckOnce();
         }
-        var currVal_3 = '';
-        this._Button_9_4.check_clear(currVal_3, throwOnChange, false);
+        var currVal_4 = '';
+        this._Button_9_4.check_clear(currVal_4, throwOnChange, false);
         if (this._Button_9_4.detectChangesInternal(this, this._el_9, throwOnChange)) {
             this._appEl_9.componentView.markAsCheckOnce();
         }
         if (this._Slide_13_4.detectChangesInternal(this, this._el_13, throwOnChange)) {
             this._appEl_13.componentView.markAsCheckOnce();
         }
-        var currVal_5 = '';
-        this._Button_18_4.check_clear(currVal_5, throwOnChange, false);
+        var currVal_6 = '';
+        this._Button_18_4.check_clear(currVal_6, throwOnChange, false);
         if (this._Button_18_4.detectChangesInternal(this, this._el_18, throwOnChange)) {
             this._appEl_18.componentView.markAsCheckOnce();
         }
         if (this._Slide_22_4.detectChangesInternal(this, this._el_22, throwOnChange)) {
             this._appEl_22.componentView.markAsCheckOnce();
         }
-        var currVal_7 = '';
-        this._Button_27_4.check_clear(currVal_7, throwOnChange, false);
+        var currVal_8 = '';
+        this._Button_27_4.check_clear(currVal_8, throwOnChange, false);
         if (this._Button_27_4.detectChangesInternal(this, this._el_27, throwOnChange)) {
             this._appEl_27.componentView.markAsCheckOnce();
         }

@@ -37,7 +37,7 @@ export class LoginPage {
     this.data = dataObj[0];
     console.log("Login with facebook Successful");
     this.gotoProfile();
-    this.data = null;
+    //this.data = null;
   }
   ngOnInit() {
     //Wait for events login wiht Facebook
@@ -146,8 +146,10 @@ export class LoginPage {
         } else {
           if(this.data.isNewUser === true){
             this.navCtrl.push(TutorialPage,{data:data.json()});
+            this.data = null;
           }else{
             this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
+            this.data = null;
           }
         }
       }, error => {

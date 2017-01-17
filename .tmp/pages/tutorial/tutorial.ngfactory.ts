@@ -127,6 +127,7 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
   _text_30:any;
   _text_31:any;
   /*private*/ _expr_0:any;
+  _map_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_TutorialPage0,renderType_TutorialPage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -256,6 +257,9 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
     ]
     ,(null as any));
     this._expr_0 = import7.UNINITIALIZED;
+    this._map_0 = import4.pureProxy1((p0:any):{[key: string]:any} => {
+      return {pager: p0};
+    });
     var disposable_0:Function = this.renderer.listen(this._el_9,'click',this.eventHandler(this._handle_click_9_0.bind(this)));
     var disposable_1:Function = this.renderer.listen(this._el_18,'click',this.eventHandler(this._handle_click_18_0.bind(this)));
     var disposable_2:Function = this.renderer.listen(this._el_27,'click',this.eventHandler(this._handle_click_27_0.bind(this)));
@@ -314,20 +318,22 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
   }
   detectChangesInternal(throwOnChange:boolean):void {
     if (this._Content_0_4.detectChangesInternal(this,this._el_0,throwOnChange)) { this._appEl_0.componentView.markAsCheckOnce(); }
-    const currVal_1:any = '';
-    this._Slides_2_4.check_pager(currVal_1,throwOnChange,false);
+    const currVal_1:any = this._map_0(true);
+    this._Slides_2_4.check_options(currVal_1,throwOnChange,false);
+    const currVal_2:any = '';
+    this._Slides_2_4.check_pager(currVal_2,throwOnChange,false);
     if (this._Slides_2_4.detectChangesInternal(this,this._el_2,throwOnChange)) { this._appEl_2.componentView.markAsCheckOnce(); }
     if (this._Slide_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
-    const currVal_3:any = '';
-    this._Button_9_4.check_clear(currVal_3,throwOnChange,false);
+    const currVal_4:any = '';
+    this._Button_9_4.check_clear(currVal_4,throwOnChange,false);
     if (this._Button_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
     if (this._Slide_13_4.detectChangesInternal(this,this._el_13,throwOnChange)) { this._appEl_13.componentView.markAsCheckOnce(); }
-    const currVal_5:any = '';
-    this._Button_18_4.check_clear(currVal_5,throwOnChange,false);
+    const currVal_6:any = '';
+    this._Button_18_4.check_clear(currVal_6,throwOnChange,false);
     if (this._Button_18_4.detectChangesInternal(this,this._el_18,throwOnChange)) { this._appEl_18.componentView.markAsCheckOnce(); }
     if (this._Slide_22_4.detectChangesInternal(this,this._el_22,throwOnChange)) { this._appEl_22.componentView.markAsCheckOnce(); }
-    const currVal_7:any = '';
-    this._Button_27_4.check_clear(currVal_7,throwOnChange,false);
+    const currVal_8:any = '';
+    this._Button_27_4.check_clear(currVal_8,throwOnChange,false);
     if (this._Button_27_4.detectChangesInternal(this,this._el_27,throwOnChange)) { this._appEl_27.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
