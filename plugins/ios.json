@@ -45,6 +45,9 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "397348636938",
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
     },
     "dependent_plugins": {

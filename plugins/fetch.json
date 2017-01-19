@@ -107,5 +107,13 @@
         "variables": {
             "SENDER_ID": "397348636938"
         }
+    },
+    "cordova-plugin-google-analytics": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-google-analytics"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
