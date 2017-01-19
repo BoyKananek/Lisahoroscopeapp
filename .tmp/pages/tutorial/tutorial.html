@@ -1,17 +1,28 @@
 <ion-content padding>
     <ion-slides pager  [options]="{pager:true}">
-        <ion-slide style="background-color: green">
-                <h2>Slide 1</h2>
-                <button ion-button clear (click)="nextPage();"> Skip </button>
-        </ion-slide>
-
-        <ion-slide style="background-color: blue">
-            <h2>Slide 2</h2>
+        <ion-slide>
+            <img src="assets/img/update_profile.png" class="tour-img">
+            <h2>Update Profile</h2>
+            <p>
+              Enter your birthday in the <b>Profile</b> page so that we can keep you up-to-date with your horoscope via push notification and in <b>Today</b> page.
+            </p>
             <button ion-button clear (click)="nextPage();"> Skip </button>
         </ion-slide>
 
-        <ion-slide style="background-color: red">
-            <h2>Slide 3</h2>
+        <ion-slide>
+            <img src="assets/img/navigate.png" class="tour-img">
+            <h2>Browse</h2>
+            <p>
+              Go to the <b>Browse</b> tab to find your horoscope and click on the image icon to read the content.</p>
+            <button ion-button clear (click)="nextPage();"> Skip </button>
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/img/share.png" class="tour-img">
+            <h2>Share</h2>
+            <p>
+              Share your horoscope result to your friends or to your followers via Facebook or Twitter.
+            </p>
             <button ion-button clear (click)="nextPage();"> Continue </button>
         </ion-slide>
     </ion-slides>

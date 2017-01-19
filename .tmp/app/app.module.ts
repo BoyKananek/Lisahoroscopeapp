@@ -11,6 +11,26 @@ import { ProfilePage } from '../pages/profile/profile';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
 import { TermsOfServicesPage } from '../pages/terms-of-services/terms-of-services';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'e1187cb0',
+  },
+  'push': {
+    'sender_id': '397348636938',
+    'pluginConfig': {
+      'ios': {
+        'alert': true,
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
+  }
+}; 
 
 @NgModule({
   declarations: [
@@ -27,7 +47,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
     TutorialPage,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

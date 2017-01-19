@@ -14,25 +14,27 @@ import * as import3 from '@angular/core/src/linker/element';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/platform/platform';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from '../node_modules/ionic-angular/components/nav/nav.ngfactory';
-import * as import12 from 'ionic-angular/navigation/view-controller';
-import * as import13 from 'ionic-angular/navigation/nav-controller-base';
-import * as import14 from 'ionic-angular/components/app/app';
-import * as import15 from 'ionic-angular/config/config';
-import * as import16 from 'ionic-angular/util/keyboard';
-import * as import17 from '@angular/core/src/linker/element_ref';
-import * as import18 from '@angular/core/src/zone/ng_zone';
-import * as import19 from '@angular/core/src/linker/component_factory_resolver';
-import * as import20 from 'ionic-angular/gestures/gesture-controller';
-import * as import21 from 'ionic-angular/transitions/transition-controller';
-import * as import22 from 'ionic-angular/navigation/deep-linker';
-import * as import23 from 'ionic-angular/components/nav/nav';
+import * as import9 from '@ionic/cloud-angular/dist/es5/index';
+import * as import10 from 'ionic-angular/components/alert/alert';
+import * as import11 from '@angular/core/src/metadata/view';
+import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import13 from '../node_modules/ionic-angular/components/nav/nav.ngfactory';
+import * as import14 from 'ionic-angular/navigation/view-controller';
+import * as import15 from 'ionic-angular/navigation/nav-controller-base';
+import * as import16 from 'ionic-angular/components/app/app';
+import * as import17 from 'ionic-angular/config/config';
+import * as import18 from 'ionic-angular/util/keyboard';
+import * as import19 from '@angular/core/src/linker/element_ref';
+import * as import20 from '@angular/core/src/zone/ng_zone';
+import * as import21 from '@angular/core/src/linker/component_factory_resolver';
+import * as import22 from 'ionic-angular/gestures/gesture-controller';
+import * as import23 from 'ionic-angular/transitions/transition-controller';
+import * as import24 from 'ionic-angular/navigation/deep-linker';
+import * as import25 from 'ionic-angular/components/nav/nav';
 export var Wrapper_MyApp = (function () {
-    function Wrapper_MyApp(p0) {
+    function Wrapper_MyApp(p0, p1, p2) {
         this.changed = false;
-        this.context = new import0.MyApp(p0);
+        this.context = new import0.MyApp(p0, p1, p2);
     }
     Wrapper_MyApp.prototype.detectChangesInternal = function (view, el, throwOnChange) {
         var changed = this.changed;
@@ -51,7 +53,7 @@ var _View_MyApp_Host0 = (function (_super) {
         this._el_0 = this.selectOrCreateHostElement('ng-component', rootSelector, null);
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = viewFactory_MyApp0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._MyApp_0_4 = new Wrapper_MyApp(this.parentInjector.get(import8.Platform));
+        this._MyApp_0_4 = new Wrapper_MyApp(this.parentInjector.get(import8.Platform), this.parentInjector.get(import9.Push), this.parentInjector.get(import10.AlertController));
         this._appEl_0.initComponent(this._MyApp_0_4.context, [], compView_0);
         compView_0.create(this._MyApp_0_4.context, this.projectableNodes, null);
         this.init([].concat([this._el_0]), [this._el_0], [], []);
@@ -72,11 +74,11 @@ var _View_MyApp_Host0 = (function (_super) {
 }(import1.AppView));
 function viewFactory_MyApp_Host0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_MyApp_Host === null)) {
-        (renderType_MyApp_Host = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, [], {}));
+        (renderType_MyApp_Host = viewUtils.createRenderComponentType('', 0, import11.ViewEncapsulation.None, [], {}));
     }
     return new _View_MyApp_Host0(viewUtils, parentInjector, declarationEl);
 }
-export var MyAppNgFactory = new import10.ComponentFactory('ng-component', viewFactory_MyApp_Host0, import0.MyApp);
+export var MyAppNgFactory = new import12.ComponentFactory('ng-component', viewFactory_MyApp_Host0, import0.MyApp);
 var styles_MyApp = [];
 var renderType_MyApp = null;
 var _View_MyApp0 = (function (_super) {
@@ -88,15 +90,15 @@ var _View_MyApp0 = (function (_super) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-nav', null);
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
-        var compView_0 = import11.viewFactory_Nav0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._Nav_0_4 = new import11.Wrapper_Nav(this.parentInjector.get(import12.ViewController, null), this.parentInjector.get(import13.NavControllerBase, null), this.parentInjector.get(import14.App), this.parentInjector.get(import15.Config), this.parentInjector.get(import16.Keyboard), new import17.ElementRef(this._el_0), this.parentInjector.get(import18.NgZone), this.renderer, this.parentInjector.get(import19.ComponentFactoryResolver), this.parentInjector.get(import20.GestureController), this.parentInjector.get(import21.TransitionController), this.parentInjector.get(import22.DeepLinker, null));
+        var compView_0 = import13.viewFactory_Nav0(this.viewUtils, this.injector(0), this._appEl_0);
+        this._Nav_0_4 = new import13.Wrapper_Nav(this.parentInjector.get(import14.ViewController, null), this.parentInjector.get(import15.NavControllerBase, null), this.parentInjector.get(import16.App), this.parentInjector.get(import17.Config), this.parentInjector.get(import18.Keyboard), new import19.ElementRef(this._el_0), this.parentInjector.get(import20.NgZone), this.renderer, this.parentInjector.get(import21.ComponentFactoryResolver), this.parentInjector.get(import22.GestureController), this.parentInjector.get(import23.TransitionController), this.parentInjector.get(import24.DeepLinker, null));
         this._appEl_0.initComponent(this._Nav_0_4.context, [], compView_0);
         compView_0.create(this._Nav_0_4.context, [], null);
         this.init([], [this._el_0], [], []);
         return null;
     };
     _View_MyApp0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import23.Nav) && (0 === requestNodeIndex))) {
+        if (((token === import25.Nav) && (0 === requestNodeIndex))) {
             return this._Nav_0_4.context;
         }
         return notFoundResult;
@@ -117,7 +119,7 @@ var _View_MyApp0 = (function (_super) {
 }(import1.AppView));
 export function viewFactory_MyApp0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_MyApp === null)) {
-        (renderType_MyApp = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, styles_MyApp, {}));
+        (renderType_MyApp = viewUtils.createRenderComponentType('', 0, import11.ViewEncapsulation.None, styles_MyApp, {}));
     }
     return new _View_MyApp0(viewUtils, parentInjector, declarationEl);
 }

@@ -345,7 +345,6 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     this._appEl_9.initComponent(this._Content_9_4.context,([] as any[]),compView_9);
     this._text_10 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'div',(null as any));
-    this.renderer.setElementAttribute(this._el_11,'ion-fixed','');
     this._text_12 = this.renderer.createText(this._el_11,'\n    ',(null as any));
     this._el_13 = this.renderer.createElement(this._el_11,'h5',(null as any));
     this.renderer.setElementAttribute(this._el_13,'class','light-gray-color');
@@ -617,9 +616,10 @@ class _View_SignupPage0 extends import1.AppView<import0.SignupPage> {
     this._text_99 = this.renderer.createText(this._el_11,'\n    ',(null as any));
     this._text_100 = this.renderer.createText((null as any),'\n',(null as any));
     compView_9.create(this._Content_9_4.context,[
-      ([] as any[]).concat([this._el_11]),
+      ([] as any[]),
       ([] as any[]).concat([
         this._text_10,
+        this._el_11,
         this._text_100
       ]
       ),

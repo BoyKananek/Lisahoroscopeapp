@@ -10,7 +10,6 @@ import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map'
 
-
 declare const facebookConnectPlugin: any;
 
 @Component({
@@ -31,7 +30,6 @@ export class LoginPage {
   _loginsub: (dataObj: any) => void;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http, public events: Events, public loadingCtrl: LoadingController, public app: App) {
     this.data = null;
-
   }
   loginHandler(dataObj) {
     this.data = dataObj[0];
@@ -144,10 +142,10 @@ export class LoginPage {
           });
           alert.present();
         } else {
-          if(this.data.isNewUser === true){
-            this.navCtrl.push(TutorialPage,{data:data.json()});
+          if (this.data.isNewUser === true) {
+            this.navCtrl.push(TutorialPage, { data: data.json() });
             this.data = null;
-          }else{
+          } else {
             this.app.getRootNav().setRoot(TabsPage, { data: data.json() });
             this.data = null;
           }

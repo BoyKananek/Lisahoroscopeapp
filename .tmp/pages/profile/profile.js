@@ -164,8 +164,8 @@ export var ProfilePage = (function () {
                             _this.data = data.json();
                         }
                         var alert = _this.alertCtrl.create({
-                            title: "Update user",
-                            subTitle: "Completed",
+                            title: "Profile updated",
+                            subTitle: "Your profile has been successfully updated",
                             buttons: ["Ok"]
                         });
                         alert.present();

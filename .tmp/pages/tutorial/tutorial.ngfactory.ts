@@ -92,40 +92,65 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
   _text_5:any;
   _el_6:any;
   _text_7:any;
-  _text_8:any;
-  _el_9:any;
-  /*private*/ _appEl_9:import3.AppElement;
-  _Button_9_4:import14.Wrapper_Button;
+  _el_8:any;
+  _text_9:any;
   _text_10:any;
-  _text_11:any;
+  _el_11:any;
   _text_12:any;
   _el_13:any;
-  /*private*/ _appEl_13:import3.AppElement;
-  _Slide_13_4:import13.Wrapper_Slide;
   _text_14:any;
-  _el_15:any;
-  _text_16:any;
+  _text_15:any;
+  _el_16:any;
   _text_17:any;
-  _el_18:any;
-  /*private*/ _appEl_18:import3.AppElement;
-  _Button_18_4:import14.Wrapper_Button;
+  _text_18:any;
   _text_19:any;
-  _text_20:any;
+  _el_20:any;
+  /*private*/ _appEl_20:import3.AppElement;
+  _Button_20_4:import14.Wrapper_Button;
   _text_21:any;
-  _el_22:any;
-  /*private*/ _appEl_22:import3.AppElement;
-  _Slide_22_4:import13.Wrapper_Slide;
+  _text_22:any;
   _text_23:any;
   _el_24:any;
+  /*private*/ _appEl_24:import3.AppElement;
+  _Slide_24_4:import13.Wrapper_Slide;
   _text_25:any;
-  _text_26:any;
-  _el_27:any;
-  /*private*/ _appEl_27:import3.AppElement;
-  _Button_27_4:import14.Wrapper_Button;
-  _text_28:any;
+  _el_26:any;
+  _text_27:any;
+  _el_28:any;
   _text_29:any;
   _text_30:any;
-  _text_31:any;
+  _el_31:any;
+  _text_32:any;
+  _el_33:any;
+  _text_34:any;
+  _text_35:any;
+  _text_36:any;
+  _el_37:any;
+  /*private*/ _appEl_37:import3.AppElement;
+  _Button_37_4:import14.Wrapper_Button;
+  _text_38:any;
+  _text_39:any;
+  _text_40:any;
+  _el_41:any;
+  /*private*/ _appEl_41:import3.AppElement;
+  _Slide_41_4:import13.Wrapper_Slide;
+  _text_42:any;
+  _el_43:any;
+  _text_44:any;
+  _el_45:any;
+  _text_46:any;
+  _text_47:any;
+  _el_48:any;
+  _text_49:any;
+  _text_50:any;
+  _el_51:any;
+  /*private*/ _appEl_51:import3.AppElement;
+  _Button_51_4:import14.Wrapper_Button;
+  _text_52:any;
+  _text_53:any;
+  _text_54:any;
+  _text_55:any;
+  _text_56:any;
   /*private*/ _expr_0:any;
   _map_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
@@ -148,121 +173,161 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
     this._appEl_2.initComponent(this._Slides_2_4.context,([] as any[]),compView_2);
     this._text_3 = this.renderer.createText((null as any),'\n        ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-slide',(null as any));
-    this.renderer.setElementAttribute(this._el_4,'style','background-color: green');
     this._appEl_4 = new import3.AppElement(4,2,this,this._el_4);
     var compView_4:any = import13.viewFactory_Slide0(this.viewUtils,this.injector(4),this._appEl_4);
     this._Slide_4_4 = new import13.Wrapper_Slide(new import16.ElementRef(this._el_4),this._Slides_2_4.context);
     this._appEl_4.initComponent(this._Slide_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'\n                ',(null as any));
-    this._el_6 = this.renderer.createElement((null as any),'h2',(null as any));
-    this._text_7 = this.renderer.createText(this._el_6,'Slide 1',(null as any));
-    this._text_8 = this.renderer.createText((null as any),'\n                ',(null as any));
-    this._el_9 = this.renderer.createElement((null as any),'button',(null as any));
-    this.renderer.setElementAttribute(this._el_9,'clear','');
-    this.renderer.setElementAttribute(this._el_9,'ion-button','');
-    this._appEl_9 = new import3.AppElement(9,4,this,this._el_9);
-    var compView_9:any = import14.viewFactory_Button0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._Button_9_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_9),this.renderer);
-    this._appEl_9.initComponent(this._Button_9_4.context,([] as any[]),compView_9);
-    this._text_10 = this.renderer.createText((null as any),' Skip ',(null as any));
-    compView_9.create(this._Button_9_4.context,[([] as any[]).concat([this._text_10])],(null as any));
-    this._text_11 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_6 = this.renderer.createElement((null as any),'img',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'class','tour-img');
+    this.renderer.setElementAttribute(this._el_6,'src','assets/img/update_profile.png');
+    this._text_7 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_8 = this.renderer.createElement((null as any),'h2',(null as any));
+    this._text_9 = this.renderer.createText(this._el_8,'Update Profile',(null as any));
+    this._text_10 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_11 = this.renderer.createElement((null as any),'p',(null as any));
+    this._text_12 = this.renderer.createText(this._el_11,'\n              Enter your birthday in the ',(null as any));
+    this._el_13 = this.renderer.createElement(this._el_11,'b',(null as any));
+    this._text_14 = this.renderer.createText(this._el_13,'Profile',(null as any));
+    this._text_15 = this.renderer.createText(this._el_11,' page so that we can keep you up-to-date with your horoscope via push notification and in ',(null as any));
+    this._el_16 = this.renderer.createElement(this._el_11,'b',(null as any));
+    this._text_17 = this.renderer.createText(this._el_16,'Today',(null as any));
+    this._text_18 = this.renderer.createText(this._el_11,' page.\n            ',(null as any));
+    this._text_19 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_20 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_20,'clear','');
+    this.renderer.setElementAttribute(this._el_20,'ion-button','');
+    this._appEl_20 = new import3.AppElement(20,4,this,this._el_20);
+    var compView_20:any = import14.viewFactory_Button0(this.viewUtils,this.injector(20),this._appEl_20);
+    this._Button_20_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_20),this.renderer);
+    this._appEl_20.initComponent(this._Button_20_4.context,([] as any[]),compView_20);
+    this._text_21 = this.renderer.createText((null as any),' Skip ',(null as any));
+    compView_20.create(this._Button_20_4.context,[([] as any[]).concat([this._text_21])],(null as any));
+    this._text_22 = this.renderer.createText((null as any),'\n        ',(null as any));
       compView_4.create(this._Slide_4_4.context,[([] as any[]).concat([
         this._text_5,
         this._el_6,
-        this._text_8,
-        this._el_9,
-        this._text_11
+        this._text_7,
+        this._el_8,
+        this._text_10,
+        this._el_11,
+        this._text_19,
+        this._el_20,
+        this._text_22
       ]
     )],(null as any));
-    this._text_12 = this.renderer.createText((null as any),'\n\n        ',(null as any));
-    this._el_13 = this.renderer.createElement((null as any),'ion-slide',(null as any));
-    this.renderer.setElementAttribute(this._el_13,'style','background-color: blue');
-    this._appEl_13 = new import3.AppElement(13,2,this,this._el_13);
-    var compView_13:any = import13.viewFactory_Slide0(this.viewUtils,this.injector(13),this._appEl_13);
-    this._Slide_13_4 = new import13.Wrapper_Slide(new import16.ElementRef(this._el_13),this._Slides_2_4.context);
-    this._appEl_13.initComponent(this._Slide_13_4.context,([] as any[]),compView_13);
-    this._text_14 = this.renderer.createText((null as any),'\n            ',(null as any));
-    this._el_15 = this.renderer.createElement((null as any),'h2',(null as any));
-    this._text_16 = this.renderer.createText(this._el_15,'Slide 2',(null as any));
-    this._text_17 = this.renderer.createText((null as any),'\n            ',(null as any));
-    this._el_18 = this.renderer.createElement((null as any),'button',(null as any));
-    this.renderer.setElementAttribute(this._el_18,'clear','');
-    this.renderer.setElementAttribute(this._el_18,'ion-button','');
-    this._appEl_18 = new import3.AppElement(18,13,this,this._el_18);
-    var compView_18:any = import14.viewFactory_Button0(this.viewUtils,this.injector(18),this._appEl_18);
-    this._Button_18_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_18),this.renderer);
-    this._appEl_18.initComponent(this._Button_18_4.context,([] as any[]),compView_18);
-    this._text_19 = this.renderer.createText((null as any),' Skip ',(null as any));
-    compView_18.create(this._Button_18_4.context,[([] as any[]).concat([this._text_19])],(null as any));
-    this._text_20 = this.renderer.createText((null as any),'\n        ',(null as any));
-      compView_13.create(this._Slide_13_4.context,[([] as any[]).concat([
-        this._text_14,
-        this._el_15,
-        this._text_17,
-        this._el_18,
-        this._text_20
+    this._text_23 = this.renderer.createText((null as any),'\n\n        ',(null as any));
+    this._el_24 = this.renderer.createElement((null as any),'ion-slide',(null as any));
+    this._appEl_24 = new import3.AppElement(24,2,this,this._el_24);
+    var compView_24:any = import13.viewFactory_Slide0(this.viewUtils,this.injector(24),this._appEl_24);
+    this._Slide_24_4 = new import13.Wrapper_Slide(new import16.ElementRef(this._el_24),this._Slides_2_4.context);
+    this._appEl_24.initComponent(this._Slide_24_4.context,([] as any[]),compView_24);
+    this._text_25 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_26 = this.renderer.createElement((null as any),'img',(null as any));
+    this.renderer.setElementAttribute(this._el_26,'class','tour-img');
+    this.renderer.setElementAttribute(this._el_26,'src','assets/img/navigate.png');
+    this._text_27 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_28 = this.renderer.createElement((null as any),'h2',(null as any));
+    this._text_29 = this.renderer.createText(this._el_28,'Browse',(null as any));
+    this._text_30 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_31 = this.renderer.createElement((null as any),'p',(null as any));
+    this._text_32 = this.renderer.createText(this._el_31,'\n              Go to the ',(null as any));
+    this._el_33 = this.renderer.createElement(this._el_31,'b',(null as any));
+    this._text_34 = this.renderer.createText(this._el_33,'Browse',(null as any));
+    this._text_35 = this.renderer.createText(this._el_31,' tab to find your horoscope and click on the image icon to read the content.',(null as any));
+    this._text_36 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_37 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_37,'clear','');
+    this.renderer.setElementAttribute(this._el_37,'ion-button','');
+    this._appEl_37 = new import3.AppElement(37,24,this,this._el_37);
+    var compView_37:any = import14.viewFactory_Button0(this.viewUtils,this.injector(37),this._appEl_37);
+    this._Button_37_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_37),this.renderer);
+    this._appEl_37.initComponent(this._Button_37_4.context,([] as any[]),compView_37);
+    this._text_38 = this.renderer.createText((null as any),' Skip ',(null as any));
+    compView_37.create(this._Button_37_4.context,[([] as any[]).concat([this._text_38])],(null as any));
+    this._text_39 = this.renderer.createText((null as any),'\n        ',(null as any));
+      compView_24.create(this._Slide_24_4.context,[([] as any[]).concat([
+        this._text_25,
+        this._el_26,
+        this._text_27,
+        this._el_28,
+        this._text_30,
+        this._el_31,
+        this._text_36,
+        this._el_37,
+        this._text_39
       ]
     )],(null as any));
-    this._text_21 = this.renderer.createText((null as any),'\n\n        ',(null as any));
-    this._el_22 = this.renderer.createElement((null as any),'ion-slide',(null as any));
-    this.renderer.setElementAttribute(this._el_22,'style','background-color: red');
-    this._appEl_22 = new import3.AppElement(22,2,this,this._el_22);
-    var compView_22:any = import13.viewFactory_Slide0(this.viewUtils,this.injector(22),this._appEl_22);
-    this._Slide_22_4 = new import13.Wrapper_Slide(new import16.ElementRef(this._el_22),this._Slides_2_4.context);
-    this._appEl_22.initComponent(this._Slide_22_4.context,([] as any[]),compView_22);
-    this._text_23 = this.renderer.createText((null as any),'\n            ',(null as any));
-    this._el_24 = this.renderer.createElement((null as any),'h2',(null as any));
-    this._text_25 = this.renderer.createText(this._el_24,'Slide 3',(null as any));
-    this._text_26 = this.renderer.createText((null as any),'\n            ',(null as any));
-    this._el_27 = this.renderer.createElement((null as any),'button',(null as any));
-    this.renderer.setElementAttribute(this._el_27,'clear','');
-    this.renderer.setElementAttribute(this._el_27,'ion-button','');
-    this._appEl_27 = new import3.AppElement(27,22,this,this._el_27);
-    var compView_27:any = import14.viewFactory_Button0(this.viewUtils,this.injector(27),this._appEl_27);
-    this._Button_27_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_27),this.renderer);
-    this._appEl_27.initComponent(this._Button_27_4.context,([] as any[]),compView_27);
-    this._text_28 = this.renderer.createText((null as any),' Continue ',(null as any));
-    compView_27.create(this._Button_27_4.context,[([] as any[]).concat([this._text_28])],(null as any));
-    this._text_29 = this.renderer.createText((null as any),'\n        ',(null as any));
-      compView_22.create(this._Slide_22_4.context,[([] as any[]).concat([
-        this._text_23,
-        this._el_24,
-        this._text_26,
-        this._el_27,
-        this._text_29
+    this._text_40 = this.renderer.createText((null as any),'\n\n        ',(null as any));
+    this._el_41 = this.renderer.createElement((null as any),'ion-slide',(null as any));
+    this._appEl_41 = new import3.AppElement(41,2,this,this._el_41);
+    var compView_41:any = import13.viewFactory_Slide0(this.viewUtils,this.injector(41),this._appEl_41);
+    this._Slide_41_4 = new import13.Wrapper_Slide(new import16.ElementRef(this._el_41),this._Slides_2_4.context);
+    this._appEl_41.initComponent(this._Slide_41_4.context,([] as any[]),compView_41);
+    this._text_42 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_43 = this.renderer.createElement((null as any),'img',(null as any));
+    this.renderer.setElementAttribute(this._el_43,'class','tour-img');
+    this.renderer.setElementAttribute(this._el_43,'src','assets/img/share.png');
+    this._text_44 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_45 = this.renderer.createElement((null as any),'h2',(null as any));
+    this._text_46 = this.renderer.createText(this._el_45,'Share',(null as any));
+    this._text_47 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_48 = this.renderer.createElement((null as any),'p',(null as any));
+    this._text_49 = this.renderer.createText(this._el_48,'\n              Share your horoscope result to your friends or to your followers via Facebook or Twitter.\n            ',(null as any));
+    this._text_50 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_51 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_51,'clear','');
+    this.renderer.setElementAttribute(this._el_51,'ion-button','');
+    this._appEl_51 = new import3.AppElement(51,41,this,this._el_51);
+    var compView_51:any = import14.viewFactory_Button0(this.viewUtils,this.injector(51),this._appEl_51);
+    this._Button_51_4 = new import14.Wrapper_Button((null as any),'',this.parentInjector.get(import15.Config),new import16.ElementRef(this._el_51),this.renderer);
+    this._appEl_51.initComponent(this._Button_51_4.context,([] as any[]),compView_51);
+    this._text_52 = this.renderer.createText((null as any),' Continue ',(null as any));
+    compView_51.create(this._Button_51_4.context,[([] as any[]).concat([this._text_52])],(null as any));
+    this._text_53 = this.renderer.createText((null as any),'\n        ',(null as any));
+      compView_41.create(this._Slide_41_4.context,[([] as any[]).concat([
+        this._text_42,
+        this._el_43,
+        this._text_44,
+        this._el_45,
+        this._text_47,
+        this._el_48,
+        this._text_50,
+        this._el_51,
+        this._text_53
       ]
     )],(null as any));
-    this._text_30 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._text_54 = this.renderer.createText((null as any),'\n    ',(null as any));
       compView_2.create(this._Slides_2_4.context,[([] as any[]).concat([
         this._text_3,
         this._el_4,
-        this._text_12,
-        this._el_13,
-        this._text_21,
-        this._el_22,
-        this._text_30
+        this._text_23,
+        this._el_24,
+        this._text_40,
+        this._el_41,
+        this._text_54
       ]
     )],(null as any));
-    this._text_31 = this.renderer.createText((null as any),'\n',(null as any));
+    this._text_55 = this.renderer.createText((null as any),'\n',(null as any));
     compView_0.create(this._Content_0_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
         this._text_1,
         this._el_2,
-        this._text_31
+        this._text_55
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
+    this._text_56 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._map_0 = import4.pureProxy1((p0:any):{[key: string]:any} => {
       return {pager: p0};
     });
-    var disposable_0:Function = this.renderer.listen(this._el_9,'click',this.eventHandler(this._handle_click_9_0.bind(this)));
-    var disposable_1:Function = this.renderer.listen(this._el_18,'click',this.eventHandler(this._handle_click_18_0.bind(this)));
-    var disposable_2:Function = this.renderer.listen(this._el_27,'click',this.eventHandler(this._handle_click_27_0.bind(this)));
+    var disposable_0:Function = this.renderer.listen(this._el_20,'click',this.eventHandler(this._handle_click_20_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_37,'click',this.eventHandler(this._handle_click_37_0.bind(this)));
+    var disposable_2:Function = this.renderer.listen(this._el_51,'click',this.eventHandler(this._handle_click_51_0.bind(this)));
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -272,30 +337,55 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
       this._text_5,
       this._el_6,
       this._text_7,
-      this._text_8,
-      this._el_9,
+      this._el_8,
+      this._text_9,
       this._text_10,
-      this._text_11,
+      this._el_11,
       this._text_12,
       this._el_13,
       this._text_14,
-      this._el_15,
-      this._text_16,
+      this._text_15,
+      this._el_16,
       this._text_17,
-      this._el_18,
+      this._text_18,
       this._text_19,
-      this._text_20,
+      this._el_20,
       this._text_21,
-      this._el_22,
+      this._text_22,
       this._text_23,
       this._el_24,
       this._text_25,
-      this._text_26,
-      this._el_27,
-      this._text_28,
+      this._el_26,
+      this._text_27,
+      this._el_28,
       this._text_29,
       this._text_30,
-      this._text_31
+      this._el_31,
+      this._text_32,
+      this._el_33,
+      this._text_34,
+      this._text_35,
+      this._text_36,
+      this._el_37,
+      this._text_38,
+      this._text_39,
+      this._text_40,
+      this._el_41,
+      this._text_42,
+      this._el_43,
+      this._text_44,
+      this._el_45,
+      this._text_46,
+      this._text_47,
+      this._el_48,
+      this._text_49,
+      this._text_50,
+      this._el_51,
+      this._text_52,
+      this._text_53,
+      this._text_54,
+      this._text_55,
+      this._text_56
     ]
     ,[
       disposable_0,
@@ -306,14 +396,14 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import22.Button) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._Button_9_4.context; }
-    if (((token === import23.Slide) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 11)))) { return this._Slide_4_4.context; }
-    if (((token === import22.Button) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Button_18_4.context; }
-    if (((token === import23.Slide) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 20)))) { return this._Slide_13_4.context; }
-    if (((token === import22.Button) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 28)))) { return this._Button_27_4.context; }
-    if (((token === import23.Slide) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 29)))) { return this._Slide_22_4.context; }
-    if (((token === import23.Slides) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 30)))) { return this._Slides_2_4.context; }
-    if (((token === import24.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 31)))) { return this._Content_0_4.context; }
+    if (((token === import22.Button) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) { return this._Button_20_4.context; }
+    if (((token === import23.Slide) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Slide_4_4.context; }
+    if (((token === import22.Button) && ((37 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._Button_37_4.context; }
+    if (((token === import23.Slide) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 39)))) { return this._Slide_24_4.context; }
+    if (((token === import22.Button) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 52)))) { return this._Button_51_4.context; }
+    if (((token === import23.Slide) && ((41 <= requestNodeIndex) && (requestNodeIndex <= 53)))) { return this._Slide_41_4.context; }
+    if (((token === import23.Slides) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 54)))) { return this._Slides_2_4.context; }
+    if (((token === import24.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 55)))) { return this._Content_0_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -325,21 +415,21 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
     if (this._Slides_2_4.detectChangesInternal(this,this._el_2,throwOnChange)) { this._appEl_2.componentView.markAsCheckOnce(); }
     if (this._Slide_4_4.detectChangesInternal(this,this._el_4,throwOnChange)) { this._appEl_4.componentView.markAsCheckOnce(); }
     const currVal_4:any = '';
-    this._Button_9_4.check_clear(currVal_4,throwOnChange,false);
-    if (this._Button_9_4.detectChangesInternal(this,this._el_9,throwOnChange)) { this._appEl_9.componentView.markAsCheckOnce(); }
-    if (this._Slide_13_4.detectChangesInternal(this,this._el_13,throwOnChange)) { this._appEl_13.componentView.markAsCheckOnce(); }
+    this._Button_20_4.check_clear(currVal_4,throwOnChange,false);
+    if (this._Button_20_4.detectChangesInternal(this,this._el_20,throwOnChange)) { this._appEl_20.componentView.markAsCheckOnce(); }
+    if (this._Slide_24_4.detectChangesInternal(this,this._el_24,throwOnChange)) { this._appEl_24.componentView.markAsCheckOnce(); }
     const currVal_6:any = '';
-    this._Button_18_4.check_clear(currVal_6,throwOnChange,false);
-    if (this._Button_18_4.detectChangesInternal(this,this._el_18,throwOnChange)) { this._appEl_18.componentView.markAsCheckOnce(); }
-    if (this._Slide_22_4.detectChangesInternal(this,this._el_22,throwOnChange)) { this._appEl_22.componentView.markAsCheckOnce(); }
+    this._Button_37_4.check_clear(currVal_6,throwOnChange,false);
+    if (this._Button_37_4.detectChangesInternal(this,this._el_37,throwOnChange)) { this._appEl_37.componentView.markAsCheckOnce(); }
+    if (this._Slide_41_4.detectChangesInternal(this,this._el_41,throwOnChange)) { this._appEl_41.componentView.markAsCheckOnce(); }
     const currVal_8:any = '';
-    this._Button_27_4.check_clear(currVal_8,throwOnChange,false);
-    if (this._Button_27_4.detectChangesInternal(this,this._el_27,throwOnChange)) { this._appEl_27.componentView.markAsCheckOnce(); }
+    this._Button_51_4.check_clear(currVal_8,throwOnChange,false);
+    if (this._Button_51_4.detectChangesInternal(this,this._el_51,throwOnChange)) { this._appEl_51.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
-      if ((this.numberOfChecks === 0)) { this._Button_9_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_18_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_27_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_20_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_37_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_51_4.context.ngAfterContentInit(); }
     }
     const currVal_0:any = this._Content_0_4.context._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
@@ -350,21 +440,21 @@ class _View_TutorialPage0 extends import1.AppView<import0.TutorialPage> {
   }
   destroyInternal():void {
     this._Slide_4_4.context.ngOnDestroy();
-    this._Slide_13_4.context.ngOnDestroy();
-    this._Slide_22_4.context.ngOnDestroy();
+    this._Slide_24_4.context.ngOnDestroy();
+    this._Slide_41_4.context.ngOnDestroy();
     this._Content_0_4.context.ngOnDestroy();
   }
-  private _handle_click_9_0($event:any):boolean {
+  private _handle_click_20_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.nextPage()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_18_0($event:any):boolean {
+  private _handle_click_37_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.nextPage()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_27_0($event:any):boolean {
+  private _handle_click_51_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.nextPage()) !== false);
     return (true && pd_0);

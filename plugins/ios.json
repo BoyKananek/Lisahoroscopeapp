@@ -8,37 +8,48 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-facebook4": {
             "APP_ID": "1333155163379937",
             "APP_NAME": "Lisa Horoscope",
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-screen-orientation": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "397348636938",
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        }
+    }
 }

@@ -154,8 +154,8 @@ export class ProfilePage {
 
                 }
                 var alert = this.alertCtrl.create({
-                  title: "Update user",
-                  subTitle: "Completed",
+                  title: "Profile updated",
+                  subTitle: "Your profile has been successfully updated",
                   buttons: ["Ok"]
                 });
                 alert.present();

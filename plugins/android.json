@@ -38,7 +38,18 @@
         },
         "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "397348636938",
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscopeapp"
+        }
+    }
 }

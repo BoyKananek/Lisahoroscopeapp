@@ -149,7 +149,6 @@ var _View_SignupPage0 = (function (_super) {
         this._appEl_9.initComponent(this._Content_9_4.context, [], compView_9);
         this._text_10 = this.renderer.createText(null, '\n    ', null);
         this._el_11 = this.renderer.createElement(null, 'div', null);
-        this.renderer.setElementAttribute(this._el_11, 'ion-fixed', '');
         this._text_12 = this.renderer.createText(this._el_11, '\n    ', null);
         this._el_13 = this.renderer.createElement(this._el_11, 'h5', null);
         this.renderer.setElementAttribute(this._el_13, 'class', 'light-gray-color');
@@ -413,9 +412,10 @@ var _View_SignupPage0 = (function (_super) {
         this._text_99 = this.renderer.createText(this._el_11, '\n    ', null);
         this._text_100 = this.renderer.createText(null, '\n', null);
         compView_9.create(this._Content_9_4.context, [
-            [].concat([this._el_11]),
+            [],
             [].concat([
                 this._text_10,
+                this._el_11,
                 this._text_100
             ]),
             []
