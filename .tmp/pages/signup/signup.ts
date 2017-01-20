@@ -62,8 +62,7 @@ export class SignupPage {
       this.disableSubmit = false ;
     }
     else{
-      
-      this.http.post("https://lisahoroscope.herokuapp.com/api/signup",data)
+      this.http.post("https://horoscope.lisaguru.com/api/signup",data)
         .subscribe(data =>{
           GoogleAnalytics.trackEvent("User","Sign up with email");
           var alert = this.alertCtrl.create({

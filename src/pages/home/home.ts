@@ -17,7 +17,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController) {
     GoogleAnalytics.trackView("TodayPage");
     this.data = params.get('data');
-    this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+    this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -38,7 +38,7 @@ export class HomePage {
               dismissOnPageChange: true
             });
             loader.present();
-            this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.data.sign, this.data)
+            this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + this.data.sign, this.data)
               .subscribe(
               response => {
                 if (response.json().success == false) {
@@ -78,7 +78,7 @@ export class HomePage {
       });
   }
   doRefresh(refresher) {
-    this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+    this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -99,7 +99,7 @@ export class HomePage {
               dismissOnPageChange: true
             });
             loader.present();
-            this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.data.sign, this.data)
+            this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + this.data.sign, this.data)
               .subscribe(
               response => {
                 if (response.json().success == false) {
@@ -144,7 +144,7 @@ export class HomePage {
     }, 2000);
   }
   ionViewDidEnter() {
-    /*this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+    /*this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -165,7 +165,7 @@ export class HomePage {
               dismissOnPageChange: true
             });
             loader.present();
-            this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.data.sign, this.data)
+            this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + this.data.sign, this.data)
               .subscribe(
               response => {
                 if (response.json().success == false) {

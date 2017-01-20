@@ -16,7 +16,7 @@ export var HomePage = (function () {
         this.isDataAvailable = false;
         GoogleAnalytics.trackView("TodayPage");
         this.data = params.get('data');
-        this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+        this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
             .subscribe(function (data) {
             if (data.json().success == false) {
                 console.log('Pull user data error');
@@ -38,7 +38,7 @@ export var HomePage = (function () {
                         dismissOnPageChange: true
                     });
                     loader.present();
-                    _this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + _this.data.sign, _this.data)
+                    _this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + _this.data.sign, _this.data)
                         .subscribe(function (response) {
                         if (response.json().success == false) {
                             var alert = _this.alertCtrl.create({
@@ -75,7 +75,7 @@ export var HomePage = (function () {
     }
     HomePage.prototype.doRefresh = function (refresher) {
         var _this = this;
-        this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+        this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
             .subscribe(function (data) {
             if (data.json().success == false) {
                 console.log('Pull user data error');
@@ -97,7 +97,7 @@ export var HomePage = (function () {
                         dismissOnPageChange: true
                     });
                     loader.present();
-                    _this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + _this.data.sign, _this.data)
+                    _this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + _this.data.sign, _this.data)
                         .subscribe(function (response) {
                         if (response.json().success == false) {
                             var alert = _this.alertCtrl.create({
@@ -137,7 +137,7 @@ export var HomePage = (function () {
         }, 2000);
     };
     HomePage.prototype.ionViewDidEnter = function () {
-        /*this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+        /*this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
           .subscribe(data => {
             if (data.json().success == false) {
               console.log('Pull user data error');
@@ -158,7 +158,7 @@ export var HomePage = (function () {
                   dismissOnPageChange: true
                 });
                 loader.present();
-                this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.data.sign, this.data)
+                this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + this.data.sign, this.data)
                   .subscribe(
                   response => {
                     if (response.json().success == false) {

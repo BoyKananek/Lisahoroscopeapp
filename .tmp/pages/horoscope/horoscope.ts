@@ -18,9 +18,10 @@ export class HoroscopePage {
     this.sign = params.get('zodiac');
     this.data = params.get('data');
     GoogleAnalytics.trackView("HoroscopePage");
+    GoogleAnalytics.trackEvent("Horoscope","View the horoscope: "+this.sign);
   }
   ionViewDidEnter() {
-    this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+    this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -40,7 +41,7 @@ export class HoroscopePage {
             dismissOnPageChange: true
           });
           loader.present();
-          this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + this.sign, this.data)
+          this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + this.sign, this.data)
             .subscribe(
             response => {
               if (response.json().success == false) {

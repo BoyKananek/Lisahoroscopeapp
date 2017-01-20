@@ -98,7 +98,7 @@ export var LoginPage = (function () {
             var data = {
                 email: this.forgetEmail
             };
-            this.http.post("https://lisahoroscope.herokuapp.com/api/forgotPassword", data)
+            this.http.post("https://horoscope.lisaguru.com/api/forgotPassword", data)
                 .subscribe(function (data) {
                 if (data.json().success == false) {
                     var alert = _this.alertCtrl.create({
@@ -129,7 +129,7 @@ export var LoginPage = (function () {
     LoginPage.prototype.gotoProfile = function () {
         var _this = this;
         console.log('GO to profile');
-        this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+        this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
             .subscribe(function (data) {
             if (data.json().success == false) {
                 var alert = _this.alertCtrl.create({
@@ -204,7 +204,7 @@ export var LoginPage = (function () {
             else {
                 GoogleAnalytics.trackEvent("User", "login with email");
                 console.log("Logging in with email");
-                this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
+                this.http.post("https://horoscope.lisaguru.com/api/login", data)
                     .subscribe(function (data) {
                     _this.data = data.json();
                     if (_this.data.success === false) {
@@ -267,7 +267,7 @@ export var LoginPage = (function () {
         var data = {
             email: email
         };
-        this.http.post("https://lisahoroscope.herokuapp.com/api/resendEmail", data)
+        this.http.post("https://horoscope.lisaguru.com/api/resendEmail", data)
             .subscribe(function (data) {
             console.log('resend the email');
             var alert = _this.alertCtrl.create({
@@ -304,7 +304,7 @@ export var LoginPage = (function () {
                     name: name,
                     picture: picture
                 };
-                http.post("https://lisahoroscope.herokuapp.com/api/loginfb", dataObj)
+                http.post("https://horoscope.lisaguru.com/api/loginfb", dataObj)
                     .subscribe(function (data) {
                     events.publish('logined', data.json()); //trigger the event to start
                     console.log("Successful");

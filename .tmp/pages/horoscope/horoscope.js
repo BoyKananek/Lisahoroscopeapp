@@ -15,10 +15,11 @@ export var HoroscopePage = (function () {
         this.sign = params.get('zodiac');
         this.data = params.get('data');
         GoogleAnalytics.trackView("HoroscopePage");
+        GoogleAnalytics.trackEvent("Horoscope", "View the horoscope: " + this.sign);
     }
     HoroscopePage.prototype.ionViewDidEnter = function () {
         var _this = this;
-        this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
+        this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
             .subscribe(function (data) {
             if (data.json().success == false) {
                 console.log('Pull user data error');
@@ -39,7 +40,7 @@ export var HoroscopePage = (function () {
                     dismissOnPageChange: true
                 });
                 loader.present();
-                _this.http.post('https://lisahoroscope.herokuapp.com/auth/horoscope/' + _this.sign, _this.data)
+                _this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + _this.sign, _this.data)
                     .subscribe(function (response) {
                     if (response.json().success == false) {
                         var alert = _this.alertCtrl.create({

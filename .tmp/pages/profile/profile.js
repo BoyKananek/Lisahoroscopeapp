@@ -146,7 +146,7 @@ export var ProfilePage = (function () {
         }
         else {
             //update user data
-            this.http.post('https://lisahoroscope.herokuapp.com/auth/updateUser/' + this.date, this.data)
+            this.http.post('https://horoscope.lisaguru.com/auth/updateUser/' + this.date, this.data)
                 .subscribe(function (response) {
                 var loader = _this.loadingCtrl.create({
                     content: "Loading ...",
@@ -155,7 +155,7 @@ export var ProfilePage = (function () {
                 });
                 loader.present();
                 if (response.json().success == true) {
-                    _this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', _this.data)
+                    _this.http.post('https://horoscope.lisaguru.com/auth/userinfo', _this.data)
                         .subscribe(function (data) {
                         if (data.json().success == false) {
                             console.log('Pull user data error');
@@ -207,7 +207,7 @@ export var ProfilePage = (function () {
                         GoogleAnalytics.trackEvent("User", "Logout");
                         if (_this.data.type === "email") {
                             console.log('Logout with email');
-                            _this.http.post('https://lisahoroscope.herokuapp.com/api/logout', _this.data)
+                            _this.http.post('https://horoscope.lisaguru.com/api/logout', _this.data)
                                 .subscribe(function (data) {
                                 console.log('Remove session!!');
                             }, function (error) {
@@ -218,7 +218,7 @@ export var ProfilePage = (function () {
                         else {
                             //facebook logout
                             console.log('Logout with facebook');
-                            _this.http.post('https://lisahoroscope.herokuapp.com/api/logout', _this.data)
+                            _this.http.post('https://horoscope.lisaguru.com/api/logout', _this.data)
                                 .subscribe(function (data) {
                                 console.log('Remove session!!');
                             }, function (error) {
