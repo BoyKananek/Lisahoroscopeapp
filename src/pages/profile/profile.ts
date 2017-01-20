@@ -219,9 +219,6 @@ export class ProfilePage {
               this.app.getRootNav().setRoot(LoginPage);
               facebookConnectPlugin.logout(function (result) {
                 console.log('Facebook logout successful');
-                var tem: any = {
-                  logout: true
-                };
                 events.publish('logout');//trigger the event to start
               }, function (err) {
                 console.log(err);
