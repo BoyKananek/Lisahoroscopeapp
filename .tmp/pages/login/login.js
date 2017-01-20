@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Facebook } from 'ionic-native';
+import { Facebook, GoogleAnalytics } from 'ionic-native';
 import { NavController, AlertController, Events, LoadingController, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { SignupPage } from '../signup/signup';
@@ -21,6 +21,7 @@ export var LoginPage = (function () {
         this.TermsOfServicesPage = TermsOfServicesPage;
         this.disableSubmit = false;
         this.data = null;
+        GoogleAnalytics.trackView('LoginPage');
     }
     LoginPage.prototype.loginHandler = function (dataObj) {
         this.data = dataObj[0];
@@ -93,6 +94,7 @@ export var LoginPage = (function () {
             alert.present();
         }
         else {
+            GoogleAnalytics.trackEvent("User", "Request new password");
             var data = {
                 email: this.forgetEmail
             };
@@ -200,6 +202,7 @@ export var LoginPage = (function () {
                 this.disableSubmit = false;
             }
             else {
+                GoogleAnalytics.trackEvent("User", "login with email");
                 console.log("Logging in with email");
                 this.http.post("https://lisahoroscope.herokuapp.com/api/login", data)
                     .subscribe(function (data) {
@@ -287,6 +290,7 @@ export var LoginPage = (function () {
         var http = this.http;
         var events = this.events;
         var alert = this.alertCtrl;
+        GoogleAnalytics.trackEvent("User", "Login with facebook");
         facebookConnectPlugin.login(['public_profile', 'email'], function (response) {
             console.log("Starting login with FBBBBB!");
             facebookConnectPlugin.api("me/?fields=id,email,name,picture.type(large)", ["email"], function (result) {

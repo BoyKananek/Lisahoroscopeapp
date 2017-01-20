@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { Facebook } from 'ionic-native';
+import { Facebook, GoogleAnalytics } from 'ionic-native';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -16,6 +16,7 @@ export var ProfilePage = (function () {
         this.disableSubmit = false;
         this.data = params.get('data');
         this.date = this.data.birthday;
+        GoogleAnalytics.trackView("ProfilePage");
         //check image which is exist or not
         if (this.data.type == "email") {
             this.image = 'assets/img/profile.png';
@@ -203,6 +204,7 @@ export var ProfilePage = (function () {
                 {
                     text: 'Yes',
                     handler: function () {
+                        GoogleAnalytics.trackEvent("User", "Logout");
                         if (_this.data.type === "email") {
                             console.log('Logout with email');
                             _this.http.post('https://lisahoroscope.herokuapp.com/api/logout', _this.data)
@@ -226,9 +228,6 @@ export var ProfilePage = (function () {
                             _this.app.getRootNav().setRoot(LoginPage);
                             facebookConnectPlugin.logout(function (result) {
                                 console.log('Facebook logout successful');
-                                var tem = {
-                                    logout: true
-                                };
                                 events.publish('logout'); //trigger the event to start
                             }, function (err) {
                                 console.log(err);

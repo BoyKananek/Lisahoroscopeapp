@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { GoogleAnalytics } from 'ionic-native';
 import { LoginPage } from '../login/login';
 export var HomePage = (function () {
     function HomePage(navCtrl, params, app, alertCtrl, events, http, loadingCtrl) {
@@ -13,6 +14,7 @@ export var HomePage = (function () {
         this.http = http;
         this.loadingCtrl = loadingCtrl;
         this.isDataAvailable = false;
+        GoogleAnalytics.trackView("TodayPage");
         this.data = params.get('data');
         this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)
             .subscribe(function (data) {

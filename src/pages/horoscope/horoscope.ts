@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, App, LoadingController, AlertController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { LoginPage } from '../login/login';
+import { GoogleAnalytics } from 'ionic-native';
+
 @Component({
   selector: 'page-horoscope',
   templateUrl: 'horoscope.html'
@@ -15,7 +17,8 @@ export class HoroscopePage {
   constructor(public navCtrl: NavController, public params: NavParams, public app: App, public http: Http, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
     this.sign = params.get('zodiac');
     this.data = params.get('data');
-    
+    GoogleAnalytics.trackView("HoroscopePage");
+    GoogleAnalytics.trackEvent("Horoscope","View the horoscope: "+this.sign);
   }
   ionViewDidEnter() {
     this.http.post('https://lisahoroscope.herokuapp.com/auth/userinfo', this.data)

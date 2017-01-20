@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController, ActionSheetController } from 'ionic-angular';
-import { SocialSharing} from 'ionic-native';
+import { SocialSharing,GoogleAnalytics } from 'ionic-native';
 
 import { HomePage } from '../home/home';
 import { BrowsePage } from '../browse/browse';
@@ -101,6 +101,7 @@ export class TabsPage {
             {
               text: 'Share via Facebook',
               handler: () => {
+                GoogleAnalytics.trackEvent("User","Share via Facebook");
                 console.log('Share on facebook');
                 SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(() => {
                   let confirm = this.alertCtrl.create({
@@ -110,12 +111,13 @@ export class TabsPage {
                   });
                   confirm.present();
                 }).catch(()=>{
-                  let confirm = this.alertCtrl.create({
+                  console.log("cancel share with facebook");
+                  /*let confirm = this.alertCtrl.create({
                     title: 'Share failed',
                     subTitle: 'Bad connection error. Please try again.',
                     buttons: ['OK']
                   });
-                  confirm.present();
+                  confirm.present();*/
                 });
               }
             },
@@ -123,6 +125,7 @@ export class TabsPage {
               text: "Share via Twitter",
               handler: () => {
                 console.log('Share on Twitter');
+                GoogleAnalytics.trackEvent("User","Share via Twitter");
                 SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(() => {
                   let confirm = this.alertCtrl.create({
                     title: 'Share completed',
@@ -131,12 +134,13 @@ export class TabsPage {
                   });
                   confirm.present();
                 }).catch(()=>{
-                  let confirm = this.alertCtrl.create({
+                  console.log("cancel share with twitter");
+                  /*let confirm = this.alertCtrl.create({
                     title: 'Share failed',
                     subTitle: 'Bad connection error. Please try again.',
                     buttons: ['OK']
                   });
-                  confirm.present();
+                  confirm.present(); */
                 });
               }
             },

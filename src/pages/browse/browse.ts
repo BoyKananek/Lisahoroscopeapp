@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { HoroscopePage } from '../horoscope/horoscope';
-
+import { GoogleAnalytics } from 'ionic-native';
 @Component({
   selector: 'page-browse',
   templateUrl: 'browse.html'
@@ -10,7 +10,7 @@ export class BrowsePage {
   data : any;
   constructor(public navCtrl: NavController, public params: NavParams) {
     this.data = params.get('data');
-    
+    GoogleAnalytics.trackView("BrowsePage");
   }
   gotoAries() {
     this.navCtrl.push(HoroscopePage, { zodiac: 'aries',data: this.data });

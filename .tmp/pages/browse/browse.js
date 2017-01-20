@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HoroscopePage } from '../horoscope/horoscope';
+import { GoogleAnalytics } from 'ionic-native';
 export var BrowsePage = (function () {
     function BrowsePage(navCtrl, params) {
         this.navCtrl = navCtrl;
         this.params = params;
         this.data = params.get('data');
+        GoogleAnalytics.trackView("BrowsePage");
     }
     BrowsePage.prototype.gotoAries = function () {
         this.navCtrl.push(HoroscopePage, { zodiac: 'aries', data: this.data });

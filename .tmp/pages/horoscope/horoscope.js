@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, App, LoadingController, AlertController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { LoginPage } from '../login/login';
+import { GoogleAnalytics } from 'ionic-native';
 export var HoroscopePage = (function () {
     function HoroscopePage(navCtrl, params, app, http, loadingCtrl, alertCtrl) {
         this.navCtrl = navCtrl;
@@ -13,6 +14,7 @@ export var HoroscopePage = (function () {
         this.isDataAvailable = false;
         this.sign = params.get('zodiac');
         this.data = params.get('data');
+        GoogleAnalytics.trackView("HoroscopePage");
     }
     HoroscopePage.prototype.ionViewDidEnter = function () {
         var _this = this;

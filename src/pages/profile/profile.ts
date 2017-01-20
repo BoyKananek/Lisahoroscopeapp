@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, App, AlertController, Events, LoadingController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { Facebook } from 'ionic-native';
+import { Facebook, GoogleAnalytics } from 'ionic-native';
 import { Http, Headers } from '@angular/http';
 
 import 'rxjs/Rx';
@@ -28,6 +28,8 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController) {
     this.data = params.get('data');
     this.date = this.data.birthday;
+    GoogleAnalytics.trackView("ProfilePage");
+
     //check image which is exist or not
     if (this.data.type == "email") {
       this.image = 'assets/img/profile.png';
@@ -196,6 +198,7 @@ export class ProfilePage {
         {
           text: 'Yes',
           handler: () => {
+            GoogleAnalytics.trackEvent("User","Logout");
             if (this.data.type === "email") {
               console.log('Logout with email');
               this.http.post('https://lisahoroscope.herokuapp.com/api/logout', this.data)

@@ -28,6 +28,7 @@ export class MyApp {
 
     this.push.rx.notification()
       .subscribe((msg) => {
+        GoogleAnalytics.trackEvent("User","Come with notification");
         var alert = this.alertCtr.create({
           title: msg.title,
           subTitle: msg.text,
@@ -40,6 +41,7 @@ export class MyApp {
     var trackingID = 'UA-1947597-21';
     GoogleAnalytics.startTrackerWithId(trackingID).then(()=>{
       console.log('Google analytics is ready now');
+      GoogleAnalytics.trackView("Start app");
     })
     .catch(e => console.log("Error starting google analytics"));
   }

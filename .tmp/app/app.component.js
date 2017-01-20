@@ -23,6 +23,7 @@ export var MyApp = (function () {
         });
         this.push.rx.notification()
             .subscribe(function (msg) {
+            GoogleAnalytics.trackEvent("User", "Come with notification");
             var alert = _this.alertCtr.create({
                 title: msg.title,
                 subTitle: msg.text,
@@ -35,6 +36,7 @@ export var MyApp = (function () {
         var trackingID = 'UA-1947597-21';
         GoogleAnalytics.startTrackerWithId(trackingID).then(function () {
             console.log('Google analytics is ready now');
+            GoogleAnalytics.trackView("Start app");
         })
             .catch(function (e) { return console.log("Error starting google analytics"); });
     };

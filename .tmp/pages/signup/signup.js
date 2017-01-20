@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { GoogleAnalytics } from 'ionic-native';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
 export var SignupPage = (function () {
     function SignupPage(navCtrl, http, alertCtrl, loadingCtrl) {
@@ -8,6 +9,7 @@ export var SignupPage = (function () {
         this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
         this.disableSubmit = false;
+        GoogleAnalytics.trackView("SignUpPage");
     }
     SignupPage.prototype.validateEmail = function (email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -62,6 +64,7 @@ export var SignupPage = (function () {
         else {
             this.http.post("https://lisahoroscope.herokuapp.com/api/signup", data)
                 .subscribe(function (data) {
+                GoogleAnalytics.trackEvent("User", "Sign up with email");
                 var alert = _this.alertCtrl.create({
                     title: data.json().title,
                     subTitle: data.json().message,
