@@ -75,8 +75,8 @@ export class SignupPage {
         this.navCtrl.pop();
         },error => {
           var alert = this.alertCtrl.create({
-            title: "Sign up failed",
-            subTitle: "This email is already taken",
+            title: "Connection failed",
+            subTitle: "Apologies for the inconvenience. Please try again later.",
             buttons: ["Close"]
           });
           alert.present();
