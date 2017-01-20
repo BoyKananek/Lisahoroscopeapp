@@ -222,13 +222,14 @@ export var ProfilePage = (function () {
                             }, function (error) {
                                 console.log(error);
                             });
+                            _this.navCtrl.pop();
                             _this.app.getRootNav().setRoot(LoginPage);
                             facebookConnectPlugin.logout(function (result) {
                                 console.log('Facebook logout successful');
                                 var tem = {
                                     logout: true
                                 };
-                                events.publish('logout', tem); //trigger the event to start
+                                events.publish('logout'); //trigger the event to start
                             }, function (err) {
                                 console.log(err);
                             });

@@ -98,15 +98,15 @@ export var TabsPage = (function () {
                                 console.log('Share on facebook');
                                 SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(function () {
                                     var confirm = _this.alertCtrl.create({
-                                        title: 'Shared',
-                                        subTitle: 'Already share on Facebook',
+                                        title: 'Share completed',
+                                        subTitle: 'You have successfully shared this on Facebook',
                                         buttons: ['OK']
                                     });
                                     confirm.present();
                                 }).catch(function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Share failed',
-                                        subTitle: 'Please try again',
+                                        subTitle: 'Bad connection error. Please try again.',
                                         buttons: ['OK']
                                     });
                                     confirm.present();
@@ -119,15 +119,15 @@ export var TabsPage = (function () {
                                 console.log('Share on Twitter');
                                 SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(function () {
                                     var confirm = _this.alertCtrl.create({
-                                        title: 'Shared',
-                                        subTitle: 'Already shared on Twitter',
+                                        title: 'Share completed',
+                                        subTitle: 'You have successfully shared this on twitter',
                                         buttons: ['OK']
                                     });
                                     confirm.present();
                                 }).catch(function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Share failed',
-                                        subTitle: 'Please try again',
+                                        subTitle: 'Bad connection error. Please try again.',
                                         buttons: ['OK']
                                     });
                                     confirm.present();

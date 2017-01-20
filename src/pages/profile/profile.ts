@@ -24,7 +24,7 @@ export class ProfilePage {
   //profile image
   image: any;
   disableSubmit: boolean = false;
-  _logoutsub: (dataObj: any) => void;
+  _logoutsub: () => void;
   constructor(public navCtrl: NavController, params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController) {
     this.data = params.get('data');
     this.date = this.data.birthday;
@@ -79,6 +79,7 @@ export class ProfilePage {
     };
     this.events.subscribe('logout', this._logoutsub);
   }
+  
   ionViewDidLeave() {
     console.log('Leaving this page');
     if (this._logoutsub) {
@@ -214,14 +215,14 @@ export class ProfilePage {
                 }, error => {
                   console.log(error);
                 })
-
+              this.navCtrl.pop();
               this.app.getRootNav().setRoot(LoginPage);
               facebookConnectPlugin.logout(function (result) {
                 console.log('Facebook logout successful');
                 var tem: any = {
                   logout: true
                 };
-                events.publish('logout', tem);//trigger the event to start
+                events.publish('logout');//trigger the event to start
               }, function (err) {
                 console.log(err);
               });

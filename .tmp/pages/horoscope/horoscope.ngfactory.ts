@@ -568,7 +568,7 @@ class _View_HoroscopePage1 extends import1.AppView<any> {
     this._el_102 = this.renderer.createElement(this._el_98,'span',(null as any));
     this.renderer.setElementAttribute(this._el_102,'class','pink-title t-uppercase');
     this._el_103 = this.renderer.createElement(this._el_102,'strong',(null as any));
-    this._text_104 = this.renderer.createText(this._el_103,' Healthy ',(null as any));
+    this._text_104 = this.renderer.createText(this._el_103,' Health ',(null as any));
     this._text_105 = this.renderer.createText(this._el_98,'\n        ',(null as any));
     this._text_106 = this.renderer.createText(this._el_96,'\n        ',(null as any));
     this._el_107 = this.renderer.createElement(this._el_96,'div',(null as any));

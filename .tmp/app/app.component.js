@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform, AlertController } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { StatusBar, Splashscreen, GoogleAnalytics } from 'ionic-native';
 import { Push } from '@ionic/cloud-angular';
 import { LoginPage } from '../pages/login/login';
 export var MyApp = (function () {
@@ -12,6 +12,7 @@ export var MyApp = (function () {
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
+            _this.initGoogleAnalytics();
             StatusBar.styleDefault();
             Splashscreen.hide();
         });
@@ -30,6 +31,13 @@ export var MyApp = (function () {
             alert.present();
         });
     }
+    MyApp.prototype.initGoogleAnalytics = function () {
+        var trackingID = 'UA-1947597-21';
+        GoogleAnalytics.startTrackerWithId(trackingID).then(function () {
+            console.log('Google analytics is ready now');
+        })
+            .catch(function (e) { return console.log("Error starting google analytics"); });
+    };
     MyApp.decorators = [
         { type: Component, args: [{
                     template: "<ion-nav [root]=\"rootPage\"></ion-nav>"

@@ -1,11 +1,8 @@
 cordova.define("cordova-plugin-google-analytics.UniversalAnalytics", function(require, exports, module) {
 function UniversalAnalyticsPlugin() {}
 
-UniversalAnalyticsPlugin.prototype.startTrackerWithId = function(id, dispatchPeriod, success, error) {
-  if (typeof dispatchPeriod === 'undefined' || dispatchPeriod === null) {
-    dispatchPeriod = 30;
-  }  
-  cordova.exec(success, error, 'UniversalAnalytics', 'startTrackerWithId', [id, dispatchPeriod]);
+UniversalAnalyticsPlugin.prototype.startTrackerWithId = function(id, success, error) {
+  cordova.exec(success, error, 'UniversalAnalytics', 'startTrackerWithId', [id]);
 };
 
 UniversalAnalyticsPlugin.prototype.setAllowIDFACollection = function(enable, success, error) {
@@ -50,9 +47,6 @@ UniversalAnalyticsPlugin.prototype.trackView = function(screen, campaingUrl, new
 };
 
 UniversalAnalyticsPlugin.prototype.addCustomDimension = function(key, value, success, error) {
-  if (typeof key !== "number") {
-    throw Error("key must be a valid integer not '" + typeof key + "'");
-  }
   cordova.exec(success, error, 'UniversalAnalytics', 'addCustomDimension', [key, value]);
 };
 

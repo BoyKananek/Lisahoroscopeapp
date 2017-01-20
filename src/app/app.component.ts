@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform, AlertController } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { StatusBar, Splashscreen, GoogleAnalytics } from 'ionic-native';
 import { Push, PushToken } from '@ionic/cloud-angular';
 import { LoginPage } from '../pages/login/login';
 
@@ -15,6 +15,7 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      this.initGoogleAnalytics();
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
@@ -34,5 +35,13 @@ export class MyApp {
         })
         alert.present();
       });
+  }
+  initGoogleAnalytics() {
+    var trackingID = 'UA-1947597-21';
+    GoogleAnalytics.startTrackerWithId(trackingID).then(()=>{
+      console.log('Google analytics is ready now');
+      GoogleAnalytics.trackView('LoginPage');
+    })
+    .catch(e => console.log("Error starting google analytics"));
   }
 }

@@ -134,7 +134,7 @@ module.exports.metadata =
     "cordova-plugin-app-event": "1.2.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
     "phonegap-plugin-push": "1.9.2",
-    "cordova-plugin-google-analytics": "1.7.4"
+    "cordova-plugin-google-analytics": "1.6.0"
 };
 // BOTTOM OF METADATA
 });

@@ -20,12 +20,8 @@
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
         NSString* accountId = [command.arguments objectAtIndex:0];
-        NSNumber* dispatchPeriod = [command.arguments objectAtIndex:1];
 
-        if ([dispatchPeriod isKindOfClass:[NSNumber class]])
-            [GAI sharedInstance].dispatchInterval = [dispatchPeriod doubleValue];
-        else 
-            [GAI sharedInstance].dispatchInterval = 30;
+        [GAI sharedInstance].dispatchInterval = 10;
 
         [[GAI sharedInstance] trackerWithTrackingId:accountId];
 
@@ -52,15 +48,11 @@
 - (void) addCustomDimensionsToTracker: (id<GAITracker>)tracker
 {
     if (_customDimensions) {
-      for (NSString *key in _customDimensions.allKeys) {
+      for (NSString *key in _customDimensions) {
         NSString *value = [_customDimensions objectForKey:key];
 
-        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-        f.numberStyle = NSNumberFormatterDecimalStyle;
-        NSNumber *myKey = [f numberFromString:@"42"];
-
         /* NSLog(@"Setting tracker dimension slot %@: <%@>", key, value); */
-        [tracker set:[GAIFields customDimensionForIndex:myKey.unsignedIntegerValue]
+        [tracker set:[GAIFields customDimensionForIndex:[key intValue]]
         value:value];
       }
     }
@@ -163,14 +155,14 @@
 - (void) addCustomDimension: (CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    NSNumber* key = [command.arguments objectAtIndex:0];
+    NSString* key = [command.arguments objectAtIndex:0];
     NSString* value = [command.arguments objectAtIndex:1];
 
     if ( ! _customDimensions) {
       _customDimensions = [[NSMutableDictionary alloc] init];
     }
 
-    _customDimensions[key.stringValue] = value;
+    _customDimensions[key] = value;
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -189,7 +181,7 @@
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
         NSNumber *key = nil;
-        NSString *value = nil;
+        NSNumber *value = nil;
 
         if ([command.arguments count] > 0)
             key = [command.arguments objectAtIndex:0];
@@ -199,7 +191,7 @@
 
         id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
 
-        [tracker set:[GAIFields customMetricForIndex:[key intValue]] value:value];
+        [tracker set:[GAIFields customMetricForIndex:[key intValue]] value:[value stringValue]];
 
 
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
