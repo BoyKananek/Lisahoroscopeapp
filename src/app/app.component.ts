@@ -11,7 +11,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   rootPage = LoginPage;
 
-  constructor(platform: Platform, public push: Push, public alertCtr: AlertController) {
+  constructor(platform: Platform, public push: Push,public alertCtr: AlertController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
