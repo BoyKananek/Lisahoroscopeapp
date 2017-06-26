@@ -68,12 +68,16 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-    <plugin name="cordova-sqlite-storage" spec="~2.0.0" />
     <icon src="resources/android/icon/ic_launcher-xhdpi.png" />
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-android-support-gradle-release" spec="~0.0.1" />
+    <plugin name="cordova-plugin-app-event" spec="file:node_modules/cordova-plugin-app-event" />
     <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
         <variable name="APP_ID" value="1333155163379937" />
         <variable name="APP_NAME" value="Lisa Horoscope" />
     </plugin>
+    <plugin name="cordova-sqlite-storage" spec="~2.0.0" />
+    <plugin name="es6-promise-plugin" spec="~4.1.0" />
     <plugin name="phonegap-plugin-push" spec="~1.9.2">
         <variable name="SENDER_ID" value="397348636938" />
     </plugin>

@@ -7,18 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        },
         "cordova-plugin-facebook4": {
             "APP_ID": "1333155163379937",
             "APP_NAME": "Lisa Horoscope",
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        },
-        "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "cordova-plugin-splashscreen": {
@@ -30,13 +21,7 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        },
         "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        },
-        "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         },
         "ionic-plugin-keyboard": {
@@ -48,11 +33,25 @@
         },
         "cordova-plugin-google-analytics": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        }
-    },
-    "dependent_plugins": {
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
         "cordova-plugin-app-event": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "cordova-android-support-gradle-release": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
-    }
+    },
+    "dependent_plugins": {}
 }

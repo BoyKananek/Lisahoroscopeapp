@@ -1,0 +1,37 @@
+{
+  "_from": "cordova-android-play-services-gradle-release",
+  "_id": "cordova-android-play-services-gradle-release@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-Pc48TAiFJYiAI7mkSq4e03eKMmk=",
+  "_location": "/cordova-android-play-services-gradle-release",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-android-play-services-gradle-release",
+    "name": "cordova-android-play-services-gradle-release",
+    "escapedName": "cordova-android-play-services-gradle-release",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-android-play-services-gradle-release/-/cordova-android-play-services-gradle-release-0.0.1.tgz",
+  "_shasum": "3dce3c4c088525888023b9a44aae1ed3778a3269",
+  "_spec": "cordova-android-play-services-gradle-release",
+  "_where": "/Users/kan-anek/Documents/Lisahoroscopeapp/node_modules",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Cordova/Phonegap plugin to align various versions of the Play Services library specified by other plugins to the latest release version",
+  "devDependencies": {},
+  "license": "MIT",
+  "name": "cordova-android-play-services-gradle-release",
+  "version": "0.0.1"
+}
