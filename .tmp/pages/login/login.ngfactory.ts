@@ -283,10 +283,10 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
   _el_130:any;
   _NavPush_130_3:import27.Wrapper_NavPush;
   _text_131:any;
-  _text_132:any;
-  _el_133:any;
-  _NavPush_133_3:import27.Wrapper_NavPush;
-  _text_134:any;
+  _el_132:any;
+  _text_133:any;
+  _el_134:any;
+  _NavPush_134_3:import27.Wrapper_NavPush;
   _text_135:any;
   _text_136:any;
   _text_137:any;
@@ -295,6 +295,7 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
   _text_140:any;
   _text_141:any;
   _text_142:any;
+  _text_143:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_4:any;
@@ -373,7 +374,7 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this.renderer.setElementAttribute(this._el_30,'class','form-wrapper');
     this._text_31 = this.renderer.createText(this._el_30,'\n          ',(null as any));
     this._el_32 = this.renderer.createElement(this._el_30,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_32,'class','form-container pd-16');
+    this.renderer.setElementAttribute(this._el_32,'class','form-container');
     this._text_33 = this.renderer.createText(this._el_32,'\n          ',(null as any));
     this._el_34 = this.renderer.createElement(this._el_32,'ion-card',(null as any));
     this._Card_34_3 = new import19.Wrapper_Card(this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_34),this.renderer);
@@ -599,35 +600,38 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._text_127 = this.renderer.createText(this._el_124,'\n                ',(null as any));
     this._el_128 = this.renderer.createElement(this._el_124,'p',(null as any));
     this.renderer.setElementAttribute(this._el_128,'class','t-center gray-color font-size-small');
-    this._text_129 = this.renderer.createText(this._el_128,'By using LISA Horoscope APP, you agree to our',(null as any));
+    this._text_129 = this.renderer.createText(this._el_128,'By using LISA Horoscope APP, you agree to our\n                  ',(null as any));
     this._el_130 = this.renderer.createElement(this._el_128,'button',(null as any));
     this.renderer.setElementAttribute(this._el_130,'class','pink-text-link t-underline');
+    this.renderer.setElementAttribute(this._el_130,'style','padding-right: 3px !important;');
     this._NavPush_130_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
     this._text_131 = this.renderer.createText(this._el_130,'Terms of Services',(null as any));
-    this._text_132 = this.renderer.createText(this._el_128,'and',(null as any));
-    this._el_133 = this.renderer.createElement(this._el_128,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_133,'class','pink-text-link t-underline');
-    this._NavPush_133_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
-    this._text_134 = this.renderer.createText(this._el_133,'Privacy Policy',(null as any));
-    this._text_135 = this.renderer.createText(this._el_124,'\n              ',(null as any));
-    this._text_136 = this.renderer.createText(this._el_122,'\n            ',(null as any));
-    this._text_137 = this.renderer.createText(this._el_105,'\n        ',(null as any));
-    this._text_138 = this.renderer.createText(this._el_103,'\n      ',(null as any));
-    this._text_139 = this.renderer.createText(this._el_101,'\n    ',(null as any));
-    this._text_140 = this.renderer.createText(this._el_3,'\n    ',(null as any));
-    this._text_141 = this.renderer.createText((null as any),'\n',(null as any));
+    this._el_132 = this.renderer.createElement(this._el_128,'span',(null as any));
+    this._text_133 = this.renderer.createText(this._el_132,'and',(null as any));
+    this._el_134 = this.renderer.createElement(this._el_128,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_134,'class','pink-text-link t-underline');
+    this.renderer.setElementAttribute(this._el_134,'style','padding-left: 3px !important;');
+    this._NavPush_134_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
+    this._text_135 = this.renderer.createText(this._el_134,'Privacy Policy',(null as any));
+    this._text_136 = this.renderer.createText(this._el_124,'\n              ',(null as any));
+    this._text_137 = this.renderer.createText(this._el_122,'\n            ',(null as any));
+    this._text_138 = this.renderer.createText(this._el_105,'\n        ',(null as any));
+    this._text_139 = this.renderer.createText(this._el_103,'\n      ',(null as any));
+    this._text_140 = this.renderer.createText(this._el_101,'\n    ',(null as any));
+    this._text_141 = this.renderer.createText(this._el_3,'\n    ',(null as any));
+    this._text_142 = this.renderer.createText((null as any),'\n',(null as any));
     compView_1.create(this._Content_1_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
         this._text_2,
         this._el_3,
-        this._text_141
+        this._text_142
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_142 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_143 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import8.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_36,'click',this.eventHandler(this._handle_click_36_0.bind(this)));
     this._expr_2 = import8.UNINITIALIZED;
@@ -656,7 +660,7 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._expr_34 = import8.UNINITIALIZED;
     var disposable_5:Function = this.renderer.listen(this._el_116,'click',this.eventHandler(this._handle_click_116_0.bind(this)));
     var disposable_6:Function = this.renderer.listen(this._el_130,'click',this.eventHandler(this._handle_click_130_0.bind(this)));
-    var disposable_7:Function = this.renderer.listen(this._el_133,'click',this.eventHandler(this._handle_click_133_0.bind(this)));
+    var disposable_7:Function = this.renderer.listen(this._el_134,'click',this.eventHandler(this._handle_click_134_0.bind(this)));
     this.init(([] as any[]),[
       this._text_0,
       this._el_1,
@@ -790,9 +794,9 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
       this._text_129,
       this._el_130,
       this._text_131,
-      this._text_132,
-      this._el_133,
-      this._text_134,
+      this._el_132,
+      this._text_133,
+      this._el_134,
       this._text_135,
       this._text_136,
       this._text_137,
@@ -800,7 +804,8 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
       this._text_139,
       this._text_140,
       this._text_141,
-      this._text_142
+      this._text_142,
+      this._text_143
     ]
     ,[
       disposable_0,
@@ -846,10 +851,10 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     if (((token === import37.Row) && ((26 <= requestNodeIndex) && (requestNodeIndex <= 99)))) { return this._Row_26_3.context; }
     if (((token === import45.Button) && ((116 <= requestNodeIndex) && (requestNodeIndex <= 117)))) { return this._Button_116_4.context; }
     if (((token === import46.NavPush) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 131)))) { return this._NavPush_130_3.context; }
-    if (((token === import46.NavPush) && ((133 <= requestNodeIndex) && (requestNodeIndex <= 134)))) { return this._NavPush_133_3.context; }
-    if (((token === import37.Col) && ((103 <= requestNodeIndex) && (requestNodeIndex <= 138)))) { return this._Col_103_3.context; }
-    if (((token === import37.Row) && ((101 <= requestNodeIndex) && (requestNodeIndex <= 139)))) { return this._Row_101_3.context; }
-    if (((token === import47.Content) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 141)))) { return this._Content_1_4.context; }
+    if (((token === import46.NavPush) && ((134 <= requestNodeIndex) && (requestNodeIndex <= 135)))) { return this._NavPush_134_3.context; }
+    if (((token === import37.Col) && ((103 <= requestNodeIndex) && (requestNodeIndex <= 139)))) { return this._Col_103_3.context; }
+    if (((token === import37.Row) && ((101 <= requestNodeIndex) && (requestNodeIndex <= 140)))) { return this._Row_101_3.context; }
+    if (((token === import47.Content) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 142)))) { return this._Content_1_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -905,8 +910,8 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._NavPush_130_3.check_navPush(currVal_37,throwOnChange,false);
     this._NavPush_130_3.detectChangesInternal(this,this._el_130,throwOnChange);
     const currVal_39:any = this.context.PrivacyPolicyPage;
-    this._NavPush_133_3.check_navPush(currVal_39,throwOnChange,false);
-    this._NavPush_133_3.detectChangesInternal(this,this._el_133,throwOnChange);
+    this._NavPush_134_3.check_navPush(currVal_39,throwOnChange,false);
+    this._NavPush_134_3.detectChangesInternal(this,this._el_134,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
       if (this._query_Button_64_1.dirty) {
@@ -1079,9 +1084,9 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     const pd_0:any = ((<any>this._NavPush_130_3.context.onClick()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_133_0($event:any):boolean {
+  private _handle_click_134_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this._NavPush_133_3.context.onClick()) !== false);
+    const pd_0:any = ((<any>this._NavPush_134_3.context.onClick()) !== false);
     return (true && pd_0);
   }
 }

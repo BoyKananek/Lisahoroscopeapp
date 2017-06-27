@@ -45,6 +45,7 @@
 		0BD55633FDF94261A81C5BBB /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B97CB19D0B467D8A401D48 /* CDVLogger.m */; };
 		8285188EDF1348D7A0A2D9EA /* AppDelegate+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CFC113A10E48979A55B12E /* AppDelegate+APPAppEvent.m */; };
 		FDF3A19B89DC4291B71BD0DC /* CDVPlugin+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 218D8C031ED241AFB84C123F /* CDVPlugin+APPAppEvent.m */; };
+		9F4BA7B442844AC0B7DDB72F /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B7351A508270438A81EDB246 /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		3706BCB3E8D84357917DDADC /* AppDelegate+APPAppEvent.h */ = {isa = PBXFileReference; name = "AppDelegate+APPAppEvent.h"; path = "cordova-plugin-app-event/AppDelegate+APPAppEvent.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		CE3F8706DE4F4F64A9668400 /* CDVPlugin+APPAppEvent.h */ = {isa = PBXFileReference; name = "CDVPlugin+APPAppEvent.h"; path = "cordova-plugin-app-event/CDVPlugin+APPAppEvent.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		2F755D2A764545E38E534F76 /* APPAppEventDelegate.h */ = {isa = PBXFileReference; name = "APPAppEventDelegate.h"; path = "cordova-plugin-app-event/APPAppEventDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B7351A508270438A81EDB246 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		ECCE892490314DF094612F47 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,8 @@
 				3706BCB3E8D84357917DDADC /* AppDelegate+APPAppEvent.h */,
 				CE3F8706DE4F4F64A9668400 /* CDVPlugin+APPAppEvent.h */,
 				2F755D2A764545E38E534F76 /* APPAppEventDelegate.h */,
+				B7351A508270438A81EDB246 /* CDVDevice.m */,
+				ECCE892490314DF094612F47 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = Horoscope/Plugins;
@@ -528,6 +533,7 @@
 				0BD55633FDF94261A81C5BBB /* CDVLogger.m in Sources */,
 				8285188EDF1348D7A0A2D9EA /* AppDelegate+APPAppEvent.m in Sources */,
 				FDF3A19B89DC4291B71BD0DC /* CDVPlugin+APPAppEvent.m in Sources */,
+				9F4BA7B442844AC0B7DDB72F /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

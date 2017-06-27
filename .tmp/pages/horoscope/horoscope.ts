@@ -17,6 +17,7 @@ export class HoroscopePage {
   constructor(public navCtrl: NavController, public params: NavParams, public app: App, public http: Http, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
     this.sign = params.get('zodiac');
     this.data = params.get('data');
+    console.log(this.sign);
     GoogleAnalytics.trackView("HoroscopePage");
     GoogleAnalytics.trackEvent("Horoscope","View the horoscope: "+this.sign);
   }

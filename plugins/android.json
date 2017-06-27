@@ -54,11 +54,10 @@
         },
         "cordova-android-support-gradle-release": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
-        }
-    },
-    "dependent_plugins": {
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
-    }
+    },
+    "dependent_plugins": {}
 }

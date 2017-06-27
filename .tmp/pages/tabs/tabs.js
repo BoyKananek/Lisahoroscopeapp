@@ -97,7 +97,7 @@ export var TabsPage = (function () {
                             handler: function () {
                                 GoogleAnalytics.trackEvent("User", "Share via Facebook");
                                 console.log('Share on facebook');
-                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscopeapp/' + data, 'https://lisaguru.com/horoscopeapp/' + data).then(function () {
+                                SocialSharing.shareViaFacebook("My horoscope result", 'https://lisaguru.com/horoscope/' + data, 'https://lisaguru.com/horoscope/' + data).then(function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Share completed',
                                         subTitle: 'You have successfully shared this on Facebook',
@@ -120,7 +120,7 @@ export var TabsPage = (function () {
                             handler: function () {
                                 console.log('Share on Twitter');
                                 GoogleAnalytics.trackEvent("User", "Share via Twitter");
-                                SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscopeapp/' + data, 'https://lisaguru.com/horoscope/horoscopeapp/' + data).then(function () {
+                                SocialSharing.shareViaTwitter("My horoscope result", 'https://lisaguru.com/horoscope/horoscope/' + data, 'https://lisaguru.com/horoscope/horoscope/' + data).then(function () {
                                     var confirm = _this.alertCtrl.create({
                                         title: 'Share completed',
                                         subTitle: 'You have successfully shared this on twitter',

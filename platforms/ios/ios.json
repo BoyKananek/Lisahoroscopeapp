@@ -79,6 +79,10 @@
                         {
                             "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -202,6 +206,9 @@
         },
         "cordova-android-support-gradle-release": {
             "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.lisahoroscope"
         }
     },
     "dependent_plugins": {},
@@ -301,6 +308,14 @@
             "clobbers": [
                 "cordova.logger"
             ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -317,6 +332,7 @@
         "cordova-plugin-x-socialsharing": "5.1.8",
         "cordova-plugin-console": "1.0.7",
         "cordova-plugin-app-event": "1.2.0",
-        "cordova-android-support-gradle-release": "0.0.1"
+        "cordova-android-support-gradle-release": "0.0.1",
+        "cordova-plugin-device": "1.1.6"
     }
 }

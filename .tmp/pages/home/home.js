@@ -31,6 +31,7 @@ export var HomePage = (function () {
                 _this.data = data.json();
                 if (_this.data.birthday) {
                     _this.imgsign = "assets/img/" + _this.data.sign + ".png";
+                    console.log(_this.imgsign);
                     //pull result
                     var loader = _this.loadingCtrl.create({
                         content: "Loading ...",

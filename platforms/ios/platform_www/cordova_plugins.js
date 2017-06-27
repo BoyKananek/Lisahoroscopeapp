@@ -95,6 +95,14 @@ module.exports = [
         "clobbers": [
             "cordova.logger"
         ]
+    },
+    {
+        "id": "cordova-plugin-device.device",
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -113,7 +121,8 @@ module.exports.metadata =
     "cordova-plugin-x-socialsharing": "5.1.8",
     "cordova-plugin-console": "1.0.7",
     "cordova-plugin-app-event": "1.2.0",
-    "cordova-android-support-gradle-release": "0.0.1"
+    "cordova-android-support-gradle-release": "0.0.1",
+    "cordova-plugin-device": "1.1.6"
 };
 // BOTTOM OF METADATA
 });

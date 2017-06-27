@@ -14,6 +14,7 @@ export var HoroscopePage = (function () {
         this.isDataAvailable = false;
         this.sign = params.get('zodiac');
         this.data = params.get('data');
+        console.log(this.sign);
         GoogleAnalytics.trackView("HoroscopePage");
         GoogleAnalytics.trackEvent("Horoscope", "View the horoscope: " + this.sign);
     }
