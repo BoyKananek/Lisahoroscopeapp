@@ -98,7 +98,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Lf35BvStGxqPmgVAY8Dr+YZ73xU=
+		UcBVlvLFqJVvBJ0QV4BUxMqm2zI=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		WgEZk8zb5X1d6/Yua2vzlEZ7FzE=
+		rQYSKTorZ6BGCGASBYUkhedR1zo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		3c0P57TKQY2aqvbYrrjWcFwhe/g=
+		/bR4FuEEP8zsh4+B/Ksh0An9coE=
 		</data>
 		<key>www/assets/fonts/FontAwesome.otf</key>
 		<data>
@@ -334,11 +334,11 @@
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		gjdya1YgwqMvHfkbqlGnMG7ig64=
+		LtdFMjx+Vjka3s5QL10Lf7NM/7c=
 		</data>
 		<key>www/build/main.js.map</key>
 		<data>
-		YpzaTVlIEJ7hfDfKoww1jqReKIo=
+		A3OpR+TNsccNYcTDYe7Vj9jt9F0=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -776,22 +776,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WgEZk8zb5X1d6/Yua2vzlEZ7FzE=
+			rQYSKTorZ6BGCGASBYUkhedR1zo=
 			</data>
 			<key>hash2</key>
 			<data>
-			m/W2+giYLOwCQ2dN/m+aSfdInXKtM76CiJ8azG7BZgU=
+			kgYtN379OBAoVrQHzn6PSgdffz+mQctKqBTkWGNZ57g=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3c0P57TKQY2aqvbYrrjWcFwhe/g=
+			/bR4FuEEP8zsh4+B/Ksh0An9coE=
 			</data>
 			<key>hash2</key>
 			<data>
-			8TSjCBjv2WyonUGWXUycQUc3pQZjAIM5ahgjMeRyZJM=
+			79fsy3slRwmyXKop5SfEOrCe5M+3eXIzoX2Hk7MpKDo=
 			</data>
 		</dict>
 		<key>www/assets/fonts/FontAwesome.otf</key>
@@ -1315,22 +1315,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gjdya1YgwqMvHfkbqlGnMG7ig64=
+			LtdFMjx+Vjka3s5QL10Lf7NM/7c=
 			</data>
 			<key>hash2</key>
 			<data>
-			vPBKGXW9ncUUvTvNH2cbNILFLBd1j61YVDj6J1HusUk=
+			cc+IoxlIf3v4gFs6vRW3zHhgIhMeBkuo23cIzPqFGKw=
 			</data>
 		</dict>
 		<key>www/build/main.js.map</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YpzaTVlIEJ7hfDfKoww1jqReKIo=
+			A3OpR+TNsccNYcTDYe7Vj9jt9F0=
 			</data>
 			<key>hash2</key>
 			<data>
-			rxpwwhrLhbMy16moAfTZ5xOfU+A7IAymW9dxWzlullo=
+			VXMZUAmmZHUISFkk/qmxO6uxtTbizfHouMvaj3ZfknE=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>

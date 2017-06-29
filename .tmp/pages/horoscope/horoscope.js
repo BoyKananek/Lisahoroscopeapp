@@ -14,58 +14,89 @@ export var HoroscopePage = (function () {
         this.isDataAvailable = false;
         this.sign = params.get('zodiac');
         this.data = params.get('data');
-        console.log(this.sign);
         GoogleAnalytics.trackView("HoroscopePage");
         GoogleAnalytics.trackEvent("Horoscope", "View the horoscope: " + this.sign);
     }
     HoroscopePage.prototype.ionViewDidEnter = function () {
         var _this = this;
-        this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
-            .subscribe(function (data) {
-            if (data.json().success == false) {
-                console.log('Pull user data error');
-                var alert = _this.alertCtrl.create({
-                    title: data.json().message,
-                    buttons: ["Ok"]
-                });
-                alert.present();
-                _this.app.getRootNav().setRoot(LoginPage);
-            }
-            else {
-                //update data session;
-                _this.data = data.json();
-                _this.imgsign = "assets/img/" + _this.sign + ".png";
-                var loader = _this.loadingCtrl.create({
-                    content: "Loading ...",
-                    duration: 4000,
-                    dismissOnPageChange: true
-                });
-                loader.present();
-                _this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + _this.sign, _this.data)
-                    .subscribe(function (response) {
-                    if (response.json().success == false) {
-                        var alert = _this.alertCtrl.create({
-                            title: response.json().message,
-                            buttons: ["Ok"]
-                        });
-                        alert.present();
-                        _this.app.getRootNav().setRoot(LoginPage);
-                    }
-                    _this.result = response.json();
-                    _this.isDataAvailable = true;
-                }, function (error) {
-                    console.log(error.text());
+        if (this.data.type != 'guest') {
+            this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
+                .subscribe(function (data) {
+                if (data.json().success == false) {
+                    console.log('Pull user data error');
                     var alert = _this.alertCtrl.create({
-                        title: "Server down",
-                        message: "Please try again later",
+                        title: data.json().message,
                         buttons: ["Ok"]
                     });
                     alert.present();
+                    _this.app.getRootNav().setRoot(LoginPage);
+                }
+                else {
+                    //update data session;
+                    _this.data = data.json();
+                    _this.imgsign = "assets/img/" + _this.sign + ".png";
+                    var loader = _this.loadingCtrl.create({
+                        content: "Loading ...",
+                        duration: 4000,
+                        dismissOnPageChange: true
+                    });
+                    loader.present();
+                    _this.http.post('https://horoscope.lisaguru.com/auth/horoscope/' + _this.sign, _this.data)
+                        .subscribe(function (response) {
+                        if (response.json().success == false) {
+                            var alert = _this.alertCtrl.create({
+                                title: response.json().message,
+                                buttons: ["Ok"]
+                            });
+                            alert.present();
+                            _this.app.getRootNav().setRoot(LoginPage);
+                        }
+                        _this.result = response.json();
+                        _this.isDataAvailable = true;
+                    }, function (error) {
+                        console.log(error.text());
+                        var alert = _this.alertCtrl.create({
+                            title: "Server down",
+                            message: "Please try again later",
+                            buttons: ["Ok"]
+                        });
+                        alert.present();
+                    });
+                }
+            }, function (error) {
+                console.log(error);
+            });
+        }
+        else {
+            this.imgsign = "assets/img/" + this.sign + ".png";
+            var loader = this.loadingCtrl.create({
+                content: "Loading ...",
+                duration: 4000,
+                dismissOnPageChange: true
+            });
+            loader.present();
+            this.http.get('https://horoscope.lisaguru.com/api/horoscope/' + this.sign)
+                .subscribe(function (response) {
+                if (response.json().success == false) {
+                    var alert = _this.alertCtrl.create({
+                        title: response.json().message,
+                        buttons: ["Ok"]
+                    });
+                    alert.present();
+                    _this.app.getRootNav().setRoot(LoginPage);
+                }
+                _this.result = response.json();
+                _this.isDataAvailable = true;
+            }, function (error) {
+                console.log(error.text());
+                var alert = _this.alertCtrl.create({
+                    title: "Server down",
+                    message: "Please try again later",
+                    buttons: ["Ok"]
                 });
-            }
-        }, function (error) {
-            console.log(error);
-        });
+                alert.present();
+            });
+        }
     };
     HoroscopePage.decorators = [
         { type: Component, args: [{

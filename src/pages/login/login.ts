@@ -162,6 +162,10 @@ export class LoginPage {
     });
     loader.present();
   }
+  gotonextPage(){
+    // GO NEXT PAGE WITHOUT LOGIN
+    this.navCtrl.push(TabsPage,{data: {type:'guest'} });
+  }
   gotoSignUp() {
     this.navCtrl.push(SignupPage);
   }

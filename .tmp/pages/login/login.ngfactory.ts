@@ -234,68 +234,73 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
   _text_87:any;
   _text_88:any;
   _el_89:any;
+  /*private*/ _appEl_89:import3.AppElement;
+  _Button_89_4:import26.Wrapper_Button;
   _text_90:any;
-  _el_91:any;
-  /*private*/ _appEl_91:import3.AppElement;
-  _Button_91_4:import26.Wrapper_Button;
-  _text_92:any;
+  _text_91:any;
+  _el_92:any;
   _text_93:any;
-  _text_94:any;
+  _el_94:any;
+  /*private*/ _appEl_94:import3.AppElement;
+  _Button_94_4:import26.Wrapper_Button;
   _text_95:any;
   _text_96:any;
-  _el_97:any;
+  _text_97:any;
   _text_98:any;
   _text_99:any;
-  _text_100:any;
-  _el_101:any;
-  _Row_101_3:import18.Wrapper_Row;
+  _el_100:any;
+  _text_101:any;
   _text_102:any;
-  _el_103:any;
-  _Col_103_3:import18.Wrapper_Col;
-  _text_104:any;
-  _el_105:any;
-  _text_106:any;
-  _el_107:any;
-  _text_108:any;
-  _el_109:any;
-  _text_110:any;
-  _el_111:any;
-  _text_112:any;
-  _el_113:any;
-  _text_114:any;
+  _text_103:any;
+  _el_104:any;
+  _Row_104_3:import18.Wrapper_Row;
+  _text_105:any;
+  _el_106:any;
+  _Col_106_3:import18.Wrapper_Col;
+  _text_107:any;
+  _el_108:any;
+  _text_109:any;
+  _el_110:any;
+  _text_111:any;
+  _el_112:any;
+  _text_113:any;
+  _el_114:any;
   _text_115:any;
   _el_116:any;
-  /*private*/ _appEl_116:import3.AppElement;
-  _Button_116_4:import26.Wrapper_Button;
   _text_117:any;
   _text_118:any;
-  _text_119:any;
+  _el_119:any;
+  /*private*/ _appEl_119:import3.AppElement;
+  _Button_119_4:import26.Wrapper_Button;
   _text_120:any;
   _text_121:any;
-  _el_122:any;
+  _text_122:any;
   _text_123:any;
-  _el_124:any;
-  _text_125:any;
-  _el_126:any;
-  _text_127:any;
-  _el_128:any;
-  _text_129:any;
-  _el_130:any;
-  _NavPush_130_3:import27.Wrapper_NavPush;
-  _text_131:any;
-  _el_132:any;
-  _text_133:any;
-  _el_134:any;
-  _NavPush_134_3:import27.Wrapper_NavPush;
-  _text_135:any;
+  _text_124:any;
+  _el_125:any;
+  _text_126:any;
+  _el_127:any;
+  _text_128:any;
+  _el_129:any;
+  _text_130:any;
+  _el_131:any;
+  _text_132:any;
+  _el_133:any;
+  _NavPush_133_3:import27.Wrapper_NavPush;
+  _text_134:any;
+  _el_135:any;
   _text_136:any;
-  _text_137:any;
+  _el_137:any;
+  _NavPush_137_3:import27.Wrapper_NavPush;
   _text_138:any;
   _text_139:any;
   _text_140:any;
   _text_141:any;
   _text_142:any;
   _text_143:any;
+  _text_144:any;
+  _text_145:any;
+  _text_146:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_4:any;
@@ -315,6 +320,7 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
   /*private*/ _expr_28:any;
   /*private*/ _expr_31:any;
   /*private*/ _expr_34:any;
+  /*private*/ _expr_37:any;
   constructor(viewUtils:import5.ViewUtils,parentInjector:import6.Injector,declarationEl:import3.AppElement) {
     super(_View_LoginPage0,renderType_LoginPage,import7.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import8.ChangeDetectorStatus.CheckAlways);
   }
@@ -531,107 +537,118 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._text_87 = this.renderer.createText((null as any),'Login',(null as any));
     compView_86.create(this._Button_86_4.context,[([] as any[]).concat([this._text_87])],(null as any));
     this._text_88 = this.renderer.createText(this._el_32,'\n          ',(null as any));
-    this._el_89 = this.renderer.createElement(this._el_32,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_89,'class','flex-align-center');
-    this._text_90 = this.renderer.createText(this._el_89,'\n            ',(null as any));
-    this._el_91 = this.renderer.createElement(this._el_89,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_91,'class','pink-text-btn');
-    this.renderer.setElementAttribute(this._el_91,'clear','');
-    this.renderer.setElementAttribute(this._el_91,'ion-button','');
-    this._appEl_91 = new import3.AppElement(91,89,this,this._el_91);
-    var compView_91:any = import26.viewFactory_Button0(this.viewUtils,this.injector(91),this._appEl_91);
-    this._Button_91_4 = new import26.Wrapper_Button((null as any),'',this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_91),this.renderer);
-    this._appEl_91.initComponent(this._Button_91_4.context,([] as any[]),compView_91);
-    this._text_92 = this.renderer.createText((null as any),'Forgot Password?',(null as any));
-    compView_91.create(this._Button_91_4.context,[([] as any[]).concat([this._text_92])],(null as any));
-    this._text_93 = this.renderer.createText(this._el_89,'\n          ',(null as any));
-    this._text_94 = this.renderer.createText(this._el_32,'\n        ',(null as any));
-    this._text_95 = this.renderer.createText(this._el_30,'\n       ',(null as any));
-    this._text_96 = this.renderer.createText(this._el_28,'\n\n       ',(null as any));
-    this._el_97 = this.renderer.createElement(this._el_28,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_97,'class','clearfix');
-    this._text_98 = this.renderer.createText(this._el_28,'\n\n      ',(null as any));
-    this._text_99 = this.renderer.createText(this._el_26,'\n    ',(null as any));
-    this._text_100 = this.renderer.createText(this._el_3,'\n\n    ',(null as any));
-    this._el_101 = this.renderer.createElement(this._el_3,'ion-row',(null as any));
-    this._Row_101_3 = new import18.Wrapper_Row();
-    this._text_102 = this.renderer.createText(this._el_101,'\n      ',(null as any));
-    this._el_103 = this.renderer.createElement(this._el_101,'ion-col',(null as any));
-    this._Col_103_3 = new import18.Wrapper_Col();
-    this._text_104 = this.renderer.createText(this._el_103,'\n        ',(null as any));
-    this._el_105 = this.renderer.createElement(this._el_103,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_105,'class','');
-    this._text_106 = this.renderer.createText(this._el_105,'\n            ',(null as any));
-    this._el_107 = this.renderer.createElement(this._el_105,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_107,'class','row');
-    this._text_108 = this.renderer.createText(this._el_107,'\n              ',(null as any));
-    this._el_109 = this.renderer.createElement(this._el_107,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_109,'class','col no-padding');
-    this._text_110 = this.renderer.createText(this._el_109,'\n                ',(null as any));
-    this._el_111 = this.renderer.createElement(this._el_109,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_111,'class','flex-align-center');
-    this._text_112 = this.renderer.createText(this._el_111,'\n                    ',(null as any));
-    this._el_113 = this.renderer.createElement(this._el_111,'span',(null as any));
-    this.renderer.setElementAttribute(this._el_113,'class','gray-color font-size-regular f-bold');
-    this._text_114 = this.renderer.createText(this._el_113,'Don\'t have an account?',(null as any));
-    this._text_115 = this.renderer.createText(this._el_111,'\n                    ',(null as any));
-    this._el_116 = this.renderer.createElement(this._el_111,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_116,'class','pink-text-btn');
-    this.renderer.setElementAttribute(this._el_116,'clear','');
-    this.renderer.setElementAttribute(this._el_116,'ion-button','');
-    this.renderer.setElementAttribute(this._el_116,'style','padding-left:10px;');
-    this._appEl_116 = new import3.AppElement(116,111,this,this._el_116);
-    var compView_116:any = import26.viewFactory_Button0(this.viewUtils,this.injector(116),this._appEl_116);
-    this._Button_116_4 = new import26.Wrapper_Button((null as any),'',this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_116),this.renderer);
-    this._appEl_116.initComponent(this._Button_116_4.context,([] as any[]),compView_116);
-    this._text_117 = this.renderer.createText((null as any),' Sign up ',(null as any));
-    compView_116.create(this._Button_116_4.context,[([] as any[]).concat([this._text_117])],(null as any));
-    this._text_118 = this.renderer.createText(this._el_111,'\n                ',(null as any));
-    this._text_119 = this.renderer.createText(this._el_109,'\n              ',(null as any));
-    this._text_120 = this.renderer.createText(this._el_107,'\n            ',(null as any));
-    this._text_121 = this.renderer.createText(this._el_105,'\n            ',(null as any));
-    this._el_122 = this.renderer.createElement(this._el_105,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_122,'class','row');
-    this._text_123 = this.renderer.createText(this._el_122,'\n              ',(null as any));
-    this._el_124 = this.renderer.createElement(this._el_122,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_124,'class','col no-padding');
-    this._text_125 = this.renderer.createText(this._el_124,'\n                ',(null as any));
-    this._el_126 = this.renderer.createElement(this._el_124,'hr',(null as any));
-    this._text_127 = this.renderer.createText(this._el_124,'\n                ',(null as any));
-    this._el_128 = this.renderer.createElement(this._el_124,'p',(null as any));
-    this.renderer.setElementAttribute(this._el_128,'class','t-center gray-color font-size-small');
-    this._text_129 = this.renderer.createText(this._el_128,'By using LISA Horoscope APP, you agree to our\n                  ',(null as any));
-    this._el_130 = this.renderer.createElement(this._el_128,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_130,'class','pink-text-link t-underline');
-    this.renderer.setElementAttribute(this._el_130,'style','padding-right: 3px !important;');
-    this._NavPush_130_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
-    this._text_131 = this.renderer.createText(this._el_130,'Terms of Services',(null as any));
-    this._el_132 = this.renderer.createElement(this._el_128,'span',(null as any));
-    this._text_133 = this.renderer.createText(this._el_132,'and',(null as any));
-    this._el_134 = this.renderer.createElement(this._el_128,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_134,'class','pink-text-link t-underline');
-    this.renderer.setElementAttribute(this._el_134,'style','padding-left: 3px !important;');
-    this._NavPush_134_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
-    this._text_135 = this.renderer.createText(this._el_134,'Privacy Policy',(null as any));
-    this._text_136 = this.renderer.createText(this._el_124,'\n              ',(null as any));
-    this._text_137 = this.renderer.createText(this._el_122,'\n            ',(null as any));
-    this._text_138 = this.renderer.createText(this._el_105,'\n        ',(null as any));
-    this._text_139 = this.renderer.createText(this._el_103,'\n      ',(null as any));
-    this._text_140 = this.renderer.createText(this._el_101,'\n    ',(null as any));
-    this._text_141 = this.renderer.createText(this._el_3,'\n    ',(null as any));
-    this._text_142 = this.renderer.createText((null as any),'\n',(null as any));
+    this._el_89 = this.renderer.createElement(this._el_32,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_89,'block','');
+    this.renderer.setElementAttribute(this._el_89,'class','primary-btn');
+    this.renderer.setElementAttribute(this._el_89,'ion-button','');
+    this._appEl_89 = new import3.AppElement(89,32,this,this._el_89);
+    var compView_89:any = import26.viewFactory_Button0(this.viewUtils,this.injector(89),this._appEl_89);
+    this._Button_89_4 = new import26.Wrapper_Button((null as any),'',this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_89),this.renderer);
+    this._appEl_89.initComponent(this._Button_89_4.context,([] as any[]),compView_89);
+    this._text_90 = this.renderer.createText((null as any),'Guest user',(null as any));
+    compView_89.create(this._Button_89_4.context,[([] as any[]).concat([this._text_90])],(null as any));
+    this._text_91 = this.renderer.createText(this._el_32,'\n          ',(null as any));
+    this._el_92 = this.renderer.createElement(this._el_32,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_92,'class','flex-align-center');
+    this._text_93 = this.renderer.createText(this._el_92,'\n            ',(null as any));
+    this._el_94 = this.renderer.createElement(this._el_92,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_94,'class','pink-text-btn');
+    this.renderer.setElementAttribute(this._el_94,'clear','');
+    this.renderer.setElementAttribute(this._el_94,'ion-button','');
+    this._appEl_94 = new import3.AppElement(94,92,this,this._el_94);
+    var compView_94:any = import26.viewFactory_Button0(this.viewUtils,this.injector(94),this._appEl_94);
+    this._Button_94_4 = new import26.Wrapper_Button((null as any),'',this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_94),this.renderer);
+    this._appEl_94.initComponent(this._Button_94_4.context,([] as any[]),compView_94);
+    this._text_95 = this.renderer.createText((null as any),'Forgot Password?',(null as any));
+    compView_94.create(this._Button_94_4.context,[([] as any[]).concat([this._text_95])],(null as any));
+    this._text_96 = this.renderer.createText(this._el_92,'\n          ',(null as any));
+    this._text_97 = this.renderer.createText(this._el_32,'\n        ',(null as any));
+    this._text_98 = this.renderer.createText(this._el_30,'\n       ',(null as any));
+    this._text_99 = this.renderer.createText(this._el_28,'\n\n       ',(null as any));
+    this._el_100 = this.renderer.createElement(this._el_28,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_100,'class','clearfix');
+    this._text_101 = this.renderer.createText(this._el_28,'\n\n      ',(null as any));
+    this._text_102 = this.renderer.createText(this._el_26,'\n    ',(null as any));
+    this._text_103 = this.renderer.createText(this._el_3,'\n    ',(null as any));
+    this._el_104 = this.renderer.createElement(this._el_3,'ion-row',(null as any));
+    this._Row_104_3 = new import18.Wrapper_Row();
+    this._text_105 = this.renderer.createText(this._el_104,'\n      ',(null as any));
+    this._el_106 = this.renderer.createElement(this._el_104,'ion-col',(null as any));
+    this._Col_106_3 = new import18.Wrapper_Col();
+    this._text_107 = this.renderer.createText(this._el_106,'\n        ',(null as any));
+    this._el_108 = this.renderer.createElement(this._el_106,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_108,'class','');
+    this._text_109 = this.renderer.createText(this._el_108,'\n            ',(null as any));
+    this._el_110 = this.renderer.createElement(this._el_108,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_110,'class','row');
+    this._text_111 = this.renderer.createText(this._el_110,'\n              ',(null as any));
+    this._el_112 = this.renderer.createElement(this._el_110,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_112,'class','col no-padding');
+    this._text_113 = this.renderer.createText(this._el_112,'\n                ',(null as any));
+    this._el_114 = this.renderer.createElement(this._el_112,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_114,'class','flex-align-center');
+    this._text_115 = this.renderer.createText(this._el_114,'\n                    ',(null as any));
+    this._el_116 = this.renderer.createElement(this._el_114,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_116,'class','gray-color font-size-regular f-bold');
+    this._text_117 = this.renderer.createText(this._el_116,'Don\'t have an account?',(null as any));
+    this._text_118 = this.renderer.createText(this._el_114,'\n                    ',(null as any));
+    this._el_119 = this.renderer.createElement(this._el_114,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_119,'class','pink-text-btn');
+    this.renderer.setElementAttribute(this._el_119,'clear','');
+    this.renderer.setElementAttribute(this._el_119,'ion-button','');
+    this.renderer.setElementAttribute(this._el_119,'style','padding-left:10px;');
+    this._appEl_119 = new import3.AppElement(119,114,this,this._el_119);
+    var compView_119:any = import26.viewFactory_Button0(this.viewUtils,this.injector(119),this._appEl_119);
+    this._Button_119_4 = new import26.Wrapper_Button((null as any),'',this.parentInjector.get(import28.Config),new import29.ElementRef(this._el_119),this.renderer);
+    this._appEl_119.initComponent(this._Button_119_4.context,([] as any[]),compView_119);
+    this._text_120 = this.renderer.createText((null as any),' Sign up ',(null as any));
+    compView_119.create(this._Button_119_4.context,[([] as any[]).concat([this._text_120])],(null as any));
+    this._text_121 = this.renderer.createText(this._el_114,'\n                ',(null as any));
+    this._text_122 = this.renderer.createText(this._el_112,'\n              ',(null as any));
+    this._text_123 = this.renderer.createText(this._el_110,'\n            ',(null as any));
+    this._text_124 = this.renderer.createText(this._el_108,'\n            ',(null as any));
+    this._el_125 = this.renderer.createElement(this._el_108,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_125,'class','row');
+    this._text_126 = this.renderer.createText(this._el_125,'\n              ',(null as any));
+    this._el_127 = this.renderer.createElement(this._el_125,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_127,'class','col no-padding');
+    this._text_128 = this.renderer.createText(this._el_127,'\n                ',(null as any));
+    this._el_129 = this.renderer.createElement(this._el_127,'hr',(null as any));
+    this._text_130 = this.renderer.createText(this._el_127,'\n                ',(null as any));
+    this._el_131 = this.renderer.createElement(this._el_127,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_131,'class','t-center gray-color font-size-small');
+    this._text_132 = this.renderer.createText(this._el_131,'By using LISA Horoscope APP, you agree to our\n                  ',(null as any));
+    this._el_133 = this.renderer.createElement(this._el_131,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_133,'class','pink-text-link t-underline');
+    this.renderer.setElementAttribute(this._el_133,'style','padding-right: 3px !important;');
+    this._NavPush_133_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
+    this._text_134 = this.renderer.createText(this._el_133,'Terms of Services',(null as any));
+    this._el_135 = this.renderer.createElement(this._el_131,'span',(null as any));
+    this._text_136 = this.renderer.createText(this._el_135,'and',(null as any));
+    this._el_137 = this.renderer.createElement(this._el_131,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_137,'class','pink-text-link t-underline');
+    this.renderer.setElementAttribute(this._el_137,'style','padding-left: 3px !important;');
+    this._NavPush_137_3 = new import27.Wrapper_NavPush(this.parentInjector.get(import9.NavController,(null as any)));
+    this._text_138 = this.renderer.createText(this._el_137,'Privacy Policy',(null as any));
+    this._text_139 = this.renderer.createText(this._el_127,'\n              ',(null as any));
+    this._text_140 = this.renderer.createText(this._el_125,'\n            ',(null as any));
+    this._text_141 = this.renderer.createText(this._el_108,'\n        ',(null as any));
+    this._text_142 = this.renderer.createText(this._el_106,'\n      ',(null as any));
+    this._text_143 = this.renderer.createText(this._el_104,'\n    ',(null as any));
+    this._text_144 = this.renderer.createText(this._el_3,'\n    ',(null as any));
+    this._text_145 = this.renderer.createText((null as any),'\n',(null as any));
     compView_1.create(this._Content_1_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
         this._text_2,
         this._el_3,
-        this._text_142
+        this._text_145
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_143 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_146 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import8.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_36,'click',this.eventHandler(this._handle_click_36_0.bind(this)));
     this._expr_2 = import8.UNINITIALIZED;
@@ -656,11 +673,13 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._expr_28 = import8.UNINITIALIZED;
     var disposable_3:Function = this.renderer.listen(this._el_86,'click',this.eventHandler(this._handle_click_86_0.bind(this)));
     this._expr_31 = import8.UNINITIALIZED;
-    var disposable_4:Function = this.renderer.listen(this._el_91,'click',this.eventHandler(this._handle_click_91_0.bind(this)));
+    var disposable_4:Function = this.renderer.listen(this._el_89,'click',this.eventHandler(this._handle_click_89_0.bind(this)));
     this._expr_34 = import8.UNINITIALIZED;
-    var disposable_5:Function = this.renderer.listen(this._el_116,'click',this.eventHandler(this._handle_click_116_0.bind(this)));
-    var disposable_6:Function = this.renderer.listen(this._el_130,'click',this.eventHandler(this._handle_click_130_0.bind(this)));
-    var disposable_7:Function = this.renderer.listen(this._el_134,'click',this.eventHandler(this._handle_click_134_0.bind(this)));
+    var disposable_5:Function = this.renderer.listen(this._el_94,'click',this.eventHandler(this._handle_click_94_0.bind(this)));
+    this._expr_37 = import8.UNINITIALIZED;
+    var disposable_6:Function = this.renderer.listen(this._el_119,'click',this.eventHandler(this._handle_click_119_0.bind(this)));
+    var disposable_7:Function = this.renderer.listen(this._el_133,'click',this.eventHandler(this._handle_click_133_0.bind(this)));
+    var disposable_8:Function = this.renderer.listen(this._el_137,'click',this.eventHandler(this._handle_click_137_0.bind(this)));
     this.init(([] as any[]),[
       this._text_0,
       this._el_1,
@@ -753,59 +772,62 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
       this._text_88,
       this._el_89,
       this._text_90,
-      this._el_91,
-      this._text_92,
+      this._text_91,
+      this._el_92,
       this._text_93,
-      this._text_94,
+      this._el_94,
       this._text_95,
       this._text_96,
-      this._el_97,
+      this._text_97,
       this._text_98,
       this._text_99,
-      this._text_100,
-      this._el_101,
+      this._el_100,
+      this._text_101,
       this._text_102,
-      this._el_103,
-      this._text_104,
-      this._el_105,
-      this._text_106,
-      this._el_107,
-      this._text_108,
-      this._el_109,
-      this._text_110,
-      this._el_111,
-      this._text_112,
-      this._el_113,
-      this._text_114,
+      this._text_103,
+      this._el_104,
+      this._text_105,
+      this._el_106,
+      this._text_107,
+      this._el_108,
+      this._text_109,
+      this._el_110,
+      this._text_111,
+      this._el_112,
+      this._text_113,
+      this._el_114,
       this._text_115,
       this._el_116,
       this._text_117,
       this._text_118,
-      this._text_119,
+      this._el_119,
       this._text_120,
       this._text_121,
-      this._el_122,
+      this._text_122,
       this._text_123,
-      this._el_124,
-      this._text_125,
-      this._el_126,
-      this._text_127,
-      this._el_128,
-      this._text_129,
-      this._el_130,
-      this._text_131,
-      this._el_132,
-      this._text_133,
-      this._el_134,
-      this._text_135,
+      this._text_124,
+      this._el_125,
+      this._text_126,
+      this._el_127,
+      this._text_128,
+      this._el_129,
+      this._text_130,
+      this._el_131,
+      this._text_132,
+      this._el_133,
+      this._text_134,
+      this._el_135,
       this._text_136,
-      this._text_137,
+      this._el_137,
       this._text_138,
       this._text_139,
       this._text_140,
       this._text_141,
       this._text_142,
-      this._text_143
+      this._text_143,
+      this._text_144,
+      this._text_145,
+      this._text_146
     ]
     ,[
       disposable_0,
@@ -815,7 +837,8 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
       disposable_4,
       disposable_5,
       disposable_6,
-      disposable_7
+      disposable_7,
+      disposable_8
     ]
     ,[
       subscription_0,
@@ -846,15 +869,16 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     if (((token === import39.CardContent) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 83)))) { return this._CardContent_56_3.context; }
     if (((token === import39.Card) && ((54 <= requestNodeIndex) && (requestNodeIndex <= 84)))) { return this._Card_54_3.context; }
     if (((token === import45.Button) && ((86 <= requestNodeIndex) && (requestNodeIndex <= 87)))) { return this._Button_86_4.context; }
-    if (((token === import45.Button) && ((91 <= requestNodeIndex) && (requestNodeIndex <= 92)))) { return this._Button_91_4.context; }
-    if (((token === import37.Col) && ((28 <= requestNodeIndex) && (requestNodeIndex <= 98)))) { return this._Col_28_3.context; }
-    if (((token === import37.Row) && ((26 <= requestNodeIndex) && (requestNodeIndex <= 99)))) { return this._Row_26_3.context; }
-    if (((token === import45.Button) && ((116 <= requestNodeIndex) && (requestNodeIndex <= 117)))) { return this._Button_116_4.context; }
-    if (((token === import46.NavPush) && ((130 <= requestNodeIndex) && (requestNodeIndex <= 131)))) { return this._NavPush_130_3.context; }
-    if (((token === import46.NavPush) && ((134 <= requestNodeIndex) && (requestNodeIndex <= 135)))) { return this._NavPush_134_3.context; }
-    if (((token === import37.Col) && ((103 <= requestNodeIndex) && (requestNodeIndex <= 139)))) { return this._Col_103_3.context; }
-    if (((token === import37.Row) && ((101 <= requestNodeIndex) && (requestNodeIndex <= 140)))) { return this._Row_101_3.context; }
-    if (((token === import47.Content) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 142)))) { return this._Content_1_4.context; }
+    if (((token === import45.Button) && ((89 <= requestNodeIndex) && (requestNodeIndex <= 90)))) { return this._Button_89_4.context; }
+    if (((token === import45.Button) && ((94 <= requestNodeIndex) && (requestNodeIndex <= 95)))) { return this._Button_94_4.context; }
+    if (((token === import37.Col) && ((28 <= requestNodeIndex) && (requestNodeIndex <= 101)))) { return this._Col_28_3.context; }
+    if (((token === import37.Row) && ((26 <= requestNodeIndex) && (requestNodeIndex <= 102)))) { return this._Row_26_3.context; }
+    if (((token === import45.Button) && ((119 <= requestNodeIndex) && (requestNodeIndex <= 120)))) { return this._Button_119_4.context; }
+    if (((token === import46.NavPush) && ((133 <= requestNodeIndex) && (requestNodeIndex <= 134)))) { return this._NavPush_133_3.context; }
+    if (((token === import46.NavPush) && ((137 <= requestNodeIndex) && (requestNodeIndex <= 138)))) { return this._NavPush_137_3.context; }
+    if (((token === import37.Col) && ((106 <= requestNodeIndex) && (requestNodeIndex <= 142)))) { return this._Col_106_3.context; }
+    if (((token === import37.Row) && ((104 <= requestNodeIndex) && (requestNodeIndex <= 143)))) { return this._Row_104_3.context; }
+    if (((token === import47.Content) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 145)))) { return this._Content_1_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -899,19 +923,22 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     this._Button_86_4.check_block(currVal_29,throwOnChange,false);
     if (this._Button_86_4.detectChangesInternal(this,this._el_86,throwOnChange)) { this._appEl_86.componentView.markAsCheckOnce(); }
     const currVal_32:any = '';
-    this._Button_91_4.check_clear(currVal_32,throwOnChange,false);
-    if (this._Button_91_4.detectChangesInternal(this,this._el_91,throwOnChange)) { this._appEl_91.componentView.markAsCheckOnce(); }
-    this._Row_101_3.detectChangesInternal(this,this._el_101,throwOnChange);
-    this._Col_103_3.detectChangesInternal(this,this._el_103,throwOnChange);
+    this._Button_89_4.check_block(currVal_32,throwOnChange,false);
+    if (this._Button_89_4.detectChangesInternal(this,this._el_89,throwOnChange)) { this._appEl_89.componentView.markAsCheckOnce(); }
     const currVal_35:any = '';
-    this._Button_116_4.check_clear(currVal_35,throwOnChange,false);
-    if (this._Button_116_4.detectChangesInternal(this,this._el_116,throwOnChange)) { this._appEl_116.componentView.markAsCheckOnce(); }
-    const currVal_37:any = this.context.TermsOfServicesPage;
-    this._NavPush_130_3.check_navPush(currVal_37,throwOnChange,false);
-    this._NavPush_130_3.detectChangesInternal(this,this._el_130,throwOnChange);
-    const currVal_39:any = this.context.PrivacyPolicyPage;
-    this._NavPush_134_3.check_navPush(currVal_39,throwOnChange,false);
-    this._NavPush_134_3.detectChangesInternal(this,this._el_134,throwOnChange);
+    this._Button_94_4.check_clear(currVal_35,throwOnChange,false);
+    if (this._Button_94_4.detectChangesInternal(this,this._el_94,throwOnChange)) { this._appEl_94.componentView.markAsCheckOnce(); }
+    this._Row_104_3.detectChangesInternal(this,this._el_104,throwOnChange);
+    this._Col_106_3.detectChangesInternal(this,this._el_106,throwOnChange);
+    const currVal_38:any = '';
+    this._Button_119_4.check_clear(currVal_38,throwOnChange,false);
+    if (this._Button_119_4.detectChangesInternal(this,this._el_119,throwOnChange)) { this._appEl_119.componentView.markAsCheckOnce(); }
+    const currVal_40:any = this.context.TermsOfServicesPage;
+    this._NavPush_133_3.check_navPush(currVal_40,throwOnChange,false);
+    this._NavPush_133_3.detectChangesInternal(this,this._el_133,throwOnChange);
+    const currVal_42:any = this.context.PrivacyPolicyPage;
+    this._NavPush_137_3.check_navPush(currVal_42,throwOnChange,false);
+    this._NavPush_137_3.detectChangesInternal(this,this._el_137,throwOnChange);
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
       if (this._query_Button_64_1.dirty) {
@@ -939,8 +966,9 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
       this._TextInput_79_7.context.ngAfterContentChecked();
       if ((this.numberOfChecks === 0)) { this._Item_77_4.context.ngAfterContentInit(); }
       if ((this.numberOfChecks === 0)) { this._Button_86_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_91_4.context.ngAfterContentInit(); }
-      if ((this.numberOfChecks === 0)) { this._Button_116_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_89_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_94_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_119_4.context.ngAfterContentInit(); }
     }
     const currVal_0:any = this._Content_1_4.context._sbPadding;
     if (import5.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
@@ -1029,13 +1057,18 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     }
     const currVal_31:any = this.context.disableSubmit;
     if (import5.checkBinding(throwOnChange,this._expr_31,currVal_31)) {
-      this.renderer.setElementProperty(this._el_91,'disabled',currVal_31);
+      this.renderer.setElementProperty(this._el_89,'disabled',currVal_31);
       this._expr_31 = currVal_31;
     }
     const currVal_34:any = this.context.disableSubmit;
     if (import5.checkBinding(throwOnChange,this._expr_34,currVal_34)) {
-      this.renderer.setElementProperty(this._el_116,'disabled',currVal_34);
+      this.renderer.setElementProperty(this._el_94,'disabled',currVal_34);
       this._expr_34 = currVal_34;
+    }
+    const currVal_37:any = this.context.disableSubmit;
+    if (import5.checkBinding(throwOnChange,this._expr_37,currVal_37)) {
+      this.renderer.setElementProperty(this._el_119,'disabled',currVal_37);
+      this._expr_37 = currVal_37;
     }
     this.detectViewChildrenChanges(throwOnChange);
   }
@@ -1069,24 +1102,29 @@ class _View_LoginPage0 extends import1.AppView<import0.LoginPage> {
     const pd_0:any = ((<any>this.context.loginEmail()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_91_0($event:any):boolean {
+  private _handle_click_89_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.gotonextPage()) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_94_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.forgotPassword()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_116_0($event:any):boolean {
+  private _handle_click_119_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.gotoSignUp()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_130_0($event:any):boolean {
+  private _handle_click_133_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this._NavPush_130_3.context.onClick()) !== false);
+    const pd_0:any = ((<any>this._NavPush_133_3.context.onClick()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_134_0($event:any):boolean {
+  private _handle_click_137_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this._NavPush_134_3.context.onClick()) !== false);
+    const pd_0:any = ((<any>this._NavPush_137_3.context.onClick()) !== false);
     return (true && pd_0);
   }
 }

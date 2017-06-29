@@ -54,6 +54,7 @@
               </ion-card-content>
           </ion-card>
           <button ion-button block [disabled]="disableSubmit" class="primary-btn" (click)="loginEmail();">Login</button>
+          <button ion-button block [disabled]="disableSubmit" class="primary-btn" (click)="gotonextPage();">Guest user</button>
           <div class="flex-align-center">
             <button ion-button clear [disabled]="disableSubmit" class="pink-text-btn" (click)="forgotPassword();">Forgot Password?</button>
           </div>
@@ -64,7 +65,6 @@
 
       </ion-col>
     </ion-row>
-
     <ion-row>
       <ion-col>
         <div class="">

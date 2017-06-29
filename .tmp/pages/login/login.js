@@ -159,6 +159,10 @@ export var LoginPage = (function () {
         });
         loader.present();
     };
+    LoginPage.prototype.gotonextPage = function () {
+        // GO NEXT PAGE WITHOUT LOGIN
+        this.navCtrl.push(TabsPage, { data: { type: 'guest' } });
+    };
     LoginPage.prototype.gotoSignUp = function () {
         this.navCtrl.push(SignupPage);
     };

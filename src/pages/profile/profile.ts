@@ -38,6 +38,27 @@ export class ProfilePage {
     }
   }
   ionViewDidEnter() {
+    if(this.data.type == 'guest'){
+      var alert = this.alertCtrl.create({
+              title: "This feature is required to login first.",
+              subTitle: "Do you want to login? ",
+              buttons: [
+                {
+                  text: 'Yes',
+                  handler: () => {
+                    this.app.getRootNav().setRoot(LoginPage);
+                  }
+                },
+                {
+                  text: 'No',
+                  handler: () => {
+                    this.navCtrl.parent.select(1);
+                  }
+                }
+              ]
+            });
+      alert.present();
+    } 
     var temp = this.date.split('-');
     console.log(temp[1]);
     if (temp[1] === '01' || temp[1] === 'Jan') {

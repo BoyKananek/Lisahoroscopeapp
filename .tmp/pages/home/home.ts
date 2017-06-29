@@ -17,7 +17,8 @@ export class HomePage {
   constructor(public navCtrl: NavController, public params: NavParams, public app: App, public alertCtrl: AlertController, public events: Events, public http: Http, public loadingCtrl: LoadingController) {
     GoogleAnalytics.trackView("TodayPage");
     this.data = params.get('data');
-    this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
+    if(this.data.type != 'guest'){
+      this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
           console.log('Pull user data error');
@@ -31,7 +32,7 @@ export class HomePage {
           this.data = data.json();
           if (this.data.birthday) {
             this.imgsign = "assets/img/" + this.data.sign + ".png";
-            console.log(this.imgsign);   
+            
             //pull result
             let loader = this.loadingCtrl.create({
               content: "Loading ...",
@@ -77,6 +78,7 @@ export class HomePage {
       }, error => {
         console.log(error);
       });
+    }
   }
   doRefresh(refresher) {
     this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
@@ -145,6 +147,27 @@ export class HomePage {
     }, 2000);
   }
   ionViewDidEnter() {
+    if(this.data.type == 'guest'){
+      var alert = this.alertCtrl.create({
+              title: "This feature is required to login first.",
+              subTitle: "Do you want to login? ",
+              buttons: [
+                {
+                  text: 'Yes',
+                  handler: () => {
+                    this.app.getRootNav().setRoot(LoginPage);
+                  }
+                },
+                {
+                  text: 'No',
+                  handler: () => {
+                    this.navCtrl.parent.select(1);
+                  }
+                }
+              ]
+            });
+      alert.present();
+    } 
     /*this.http.post('https://horoscope.lisaguru.com/auth/userinfo', this.data)
       .subscribe(data => {
         if (data.json().success == false) {
